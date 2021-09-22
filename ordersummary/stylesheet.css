@@ -57,10 +57,10 @@ img {
 
 body {
   width: 100%;
-  height: 100vh;
+  min-height: 100vh;
   font-family: var(--ff-primary);
   background-color: var(--clr-blue-pale);
-  padding: 0 var(--pad-mobile);
+  padding: var(--pad-mobile);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -71,6 +71,7 @@ body {
 }
 
 .component {
+  margin: 1em 0;
   width: 100%;
   flex-grow: 1;
   display: grid;
