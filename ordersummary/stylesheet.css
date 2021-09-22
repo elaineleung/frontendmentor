@@ -15,18 +15,18 @@
 
 html,
 body,
-h2,
+h1,
 h3,
 p {
   margin: 0;
 }
 
-h2,
+h1,
 h3 {
   color: var(--clr-blue-dark);
 }
 
-h2 {
+h1 {
   font-size: 22px;
   font-weight: 900;
 }
