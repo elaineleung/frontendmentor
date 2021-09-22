@@ -16,23 +16,16 @@
 html,
 body,
 h1,
-h3,
 p {
   margin: 0;
 }
 
-h1,
-h3 {
+h1 {
   color: var(--clr-blue-dark);
 }
 
 h1 {
   font-size: 22px;
-  font-weight: 900;
-}
-
-h3 {
-  font-size: 14px;
   font-weight: 900;
 }
 
@@ -42,10 +35,6 @@ p {
   margin: 0;
   color: var(--clr-blue-des);
 }
-
-/* a {
-  font-size: 13px;
-} */
 
 html, body {
   font-size: var(--fs-body);
@@ -123,6 +112,12 @@ body {
 .plan__info {
   font-size: 14.5px;
   text-align: left;
+}
+
+.info__heading {
+  color: var(--clr-blue-dark);
+  font-size: 14px;
+  font-weight: 900;
 }
 
 .plan__change {
