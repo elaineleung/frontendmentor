@@ -34,7 +34,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Link to Github repo](https://github.com/elaineleung/frontendmentor/tree/main/ordersummary)
+- Solution URL: [Link to GitHub repo](https://github.com/elaineleung/frontendmentor/tree/main/ordersummary)
 - Live Site URL: [Link to live site](https://elaineleung.github.io/frontendmentor/ordersummary/)
 
 ## My process

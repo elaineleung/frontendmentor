@@ -85,7 +85,7 @@ body {
 
 .order__image {
   width: 100%;
-  height: 10em;
+  height: 12em;
   object-fit: cover;
   background-position: center;
   border-radius: 1em 1em 0 0;
@@ -108,14 +108,6 @@ body {
   align-items: center;
   row-gap: 1.6em;
 }
-
-/* .content__title {
-  margin-top: 0.2em;
-} */
-
-/* .content__body {
-  width: 90%;
-} */
 
 .content__plan {
   width: 100%;
