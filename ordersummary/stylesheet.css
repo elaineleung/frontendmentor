@@ -188,7 +188,8 @@ body {
 @media (min-width: 375px) {
   body {
     background-image: url("./images/pattern-background-desktop.svg");
-    background-position: 50% -20%;
+    /* background-position: 50% -20%; */
+    background-size: contain;
   }
   .component {
     max-width: 375px;
