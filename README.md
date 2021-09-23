@@ -10,4 +10,5 @@ Comments and suggestions can be sent via [@elaineclleung](./https://twitter.com/
 
 | No. | Project Name |
 | --- | ----------- |
-| 1   | [3 Column Preview Card](./ordersummary)|
+| 1   | [Order summary card component](./ordersummary)|
+| 2   | [Stats preview card component](./statspreview)|
