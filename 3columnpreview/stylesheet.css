@@ -29,10 +29,6 @@ p {
   margin: 0;
 }
 
-h1 {
-  visibility: hidden;
-}
-
 p {
   line-height: 1.7;
   margin: 0;
@@ -59,6 +55,7 @@ body {
   background-image: url("./images/pattern-background-mobile.svg");
   background-position: top;
   background-repeat: no-repeat;
+  position: relative;
 }
 
 body,
@@ -76,6 +73,14 @@ body,
   place-content: center;
   height: fit-content;
 }
+
+.sr-only{
+  position:absolute;
+  top:-500px;
+  width:1px;
+  height:1px;
+  overflow:hidden;
+  }
 
 .card {
   display: flex;
