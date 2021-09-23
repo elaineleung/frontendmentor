@@ -118,7 +118,7 @@ body,
   margin-bottom: 0.7em;
 }
 
-p.section__body {
+.section__body {
   color: var(--clr-white-trsp);
   margin-bottom: 1.8em;
 }
@@ -177,6 +177,12 @@ footer {
   }
   .section__logo {
     width: 4.3em;
+  }
+  .section__title {
+    margin-bottom: 0.6em;
+  }
+  .section__body {
+    margin-bottom: 5.4em;
   }
   .section-orange {
     border-radius: 0.5em 0 0 0.5em ;
