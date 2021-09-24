@@ -1,0 +1,19 @@
+{
+  "challenges": [
+    {
+      "name": "ordersummary",
+      "title": "Order summary card component",
+      "id": 1
+    },
+    {
+      "name": "statspreview",
+      "title": "Stats preview card component",
+      "id": 2
+    },
+    {
+      "name": "3columnpreview",
+      "title": "Three-column preview card component",
+      "id": 3
+    }
+  ]
+}

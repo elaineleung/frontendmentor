@@ -4,7 +4,7 @@ This repository contains [Frontend Mentor](https://www.frontendmentor.io/challen
 
 Comments and suggestions can be sent via [@elaineclleung](https://twitter.com/elaineclleung)
 
-(GH index page still in construction!)
+(GH index page still under construction!)
 
 ## Projects
 
