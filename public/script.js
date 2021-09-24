@@ -8,7 +8,7 @@ function getData() {
     },
   };
 
-  fetch("/public/challenges.json", options)
+  fetch("https://raw.githubusercontent.com/elaineleung/frontendmentor/main/public/challenges.json", options)
     .then((response) => response.json())
     .then((data) => {
       data.challenges.map((item) => {
