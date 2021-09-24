@@ -17,7 +17,7 @@ function getData() {
         <a href="/${item.name}">
           <div class="card">
             <div class="card__image">
-              <img src="/${item.name}/design/desktop.png" />
+              <img src="/frontendmentor/${item.name}/design/desktop.png" />
             </div>
             <h3 class="card__title">${item.title}</h3>
           </div>
