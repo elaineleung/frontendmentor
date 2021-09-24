@@ -1,14 +1,14 @@
 const gridEl = document.getElementById("gridEl");
 
 function getData() {
-  const options = {
-    method: "GET",
-    headers: {
-      "Content-Type": "application/json",
-    },
-  };
+  // const options = {
+  //   method: "GET",
+  //   headers: {
+  //     "Content-Type": "application/json",
+  //   },
+  // };
 
-  fetch("./challenges.json", options)
+  fetch("./challenges.json")
     .then((response) => response.json())
     .then((data) => {
       data.challenges.map((item) => {
