@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Profile card component</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="stylesheet.css" />
+  </head>
+  <body>
+    <header class="header">
+        <h1 class="sr-only">
+          Frontend Mentor challenge: Profile card component
+        </h1>
+    </header>
+    <main class="main">
+      <div class="main__wrapper">
+        <section class="card">
+          <div class="card__header">
+            <div class="card__img">
+              <img
+                src="./images/image-victor.jpg"
+                alt="profile picture of Victor"
+              />
+            </div>
+          </div>
+          <div class="card__profile">
+            <p class="profile__name">
+              Victor Crest <span class="profile__age">26</span>
+            </p>
+            <div class="profile__location">London</div>
+          </div>
+          <div class="card__stats">
+            <div class="stat">
+              80K <span class="stat__label">Followers</span>
+            </div>
+            <div class="stat">803K <span class="stat__label">Likes</span></div>
+            <div class="stat">1.4K <span class="stat__label">Photos</span></div>
+          </div>
+        </section>
+      </div>
+    </main>
+    <footer class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="https://twitter.com/elaineclleung">Elaine</a>.
+    </footer>
+  </body>
+</html>
