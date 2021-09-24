@@ -118,7 +118,7 @@ body {
 }
 
 .card__image img {
-  height: 12em;
+  height: 11em;
   object-fit: cover;
   object-position: center;
   transform: scale(1);
@@ -126,7 +126,7 @@ body {
 }
 
 .card__image:hover img {
-  transform: scale(1.1);
+  transform: scale(1.15);
 }
 
 .card__title {

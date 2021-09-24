@@ -4,7 +4,7 @@ This repository contains [Frontend Mentor](https://www.frontendmentor.io/challen
 
 Comments and suggestions can be sent via [@elaineclleung](https://twitter.com/elaineclleung)
 
-(GH index page still under construction!)
+GitHub landing page: [https://elaineleung.github.io/frontendmentor/](https://elaineleung.github.io/frontendmentor/)
 
 ## Projects
 
@@ -13,3 +13,4 @@ Comments and suggestions can be sent via [@elaineclleung](https://twitter.com/el
 | 1   | [Order summary card component](https://elaineleung.github.io/frontendmentor/ordersummary)         |
 | 2   | [Stats preview card component](https://elaineleung.github.io/frontendmentor/statspreview)         |
 | 3   | [Three-column preview card component](https://elaineleung.github.io/frontendmentor/3columnpreview)|
+| 4   | [Profile card component](https://elaineleung.github.io/frontendmentor/profilecard)|
