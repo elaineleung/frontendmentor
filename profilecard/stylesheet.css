@@ -227,7 +227,8 @@ footer {
 }
 
 .attribution {
-  padding-top: 1.5em;
+  position: fixed;
+  bottom: 5px;
   font-size: 11px;
   text-align: center;
   color: black;
