@@ -7,8 +7,11 @@ function getData() {
   //     "Content-Type": "application/json",
   //   },
   // };
+  // const URL = window.document.URL === "http://127.0.0.1:5500/"
+  //   ? "./challenges.json"
+  //   : "./public/challenges.json"
 
-  fetch("./challenges.json")
+  fetch("./public/challenges.json")
     .then((response) => response.json())
     .then((data) => {
       data.challenges.map((item) => {
