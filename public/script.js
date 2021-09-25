@@ -17,7 +17,7 @@ function getData() {
       data.challenges.map((item) => {
         const div = document.createElement("div");
         div.innerHTML = `
-        <a href="/${item.name}">
+        <a href="./${item.name}">
           <div class="card">
             <div class="card__image">
               <img src="./${item.name}/design/desktop.png" />
