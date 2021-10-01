@@ -126,7 +126,7 @@ body::after {
   width: 100%;
 }
 
-.description__intro h1 {
+.description__intro h2 {
   font-size: 2.1rem;
   letter-spacing: -1px;
   max-width: 300px;
@@ -313,7 +313,7 @@ footer {
     background: transparent;
     align-items: flex-start;
   }
-  .description__intro h1 {
+  .description__intro h2 {
     margin-bottom: 0.3em;
     max-width: 450px;
     font-size: 2.8rem;
