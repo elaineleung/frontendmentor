@@ -19,6 +19,11 @@
       "name": "profilecard",
       "title": "Profile card component",
       "id": 4
+    },
+    {
+      "name": "socialproofsection",
+      "title": "Social proof section",
+      "id": 4
     }
   ]
 }

@@ -14,3 +14,4 @@ GitHub landing page: [https://elaineleung.github.io/frontendmentor/](https://ela
 | 2   | [Stats preview card component](https://elaineleung.github.io/frontendmentor/statspreview)         |
 | 3   | [Three-column preview card component](https://elaineleung.github.io/frontendmentor/3columnpreview)|
 | 4   | [Profile card component](https://elaineleung.github.io/frontendmentor/profilecard)|
+| 5   | [Social proof section](https://elaineleung.github.io/frontendmentor/socialproofsection/)|
