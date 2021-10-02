@@ -23,7 +23,12 @@
     {
       "name": "socialproofsection",
       "title": "Social proof section",
-      "id": 4
+      "id": 5
+    },
+    {
+      "name": "fourcardfeaturesection",
+      "title": "Four card feature section",
+      "id": 6
     }
   ]
 }

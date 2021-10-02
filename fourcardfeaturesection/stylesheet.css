@@ -1,0 +1,279 @@
+:root {
+  --clr-red: hsl(0, 78%, 62%);
+  --clr-cyan: hsl(180, 62%, 55%);
+  --clr-orange: hsl(34, 97%, 64%);
+  --clr-blue: hsl(212, 86%, 64%);
+  --clr-blue-dark: hsl(234, 12%, 34%);
+  --clr-blue-gray: hsl(229, 6%, 66%);
+  --clr-gray-xlight: hsl(0, 0%, 98%);
+  --fs-body: 15px;
+  --pad-hor: 8vw;
+  --pad-ver: 5.5em;
+  --ff-primary: "Poppins", sans-serif;
+}
+
+@media (min-width: 1150px) {
+  :root {
+    --pad-hor: 6vw;
+    --pad-ver: 5.2em;
+  }
+}
+
+*,
+*:after,
+*:before {
+  box-sizing: border-box;
+}
+
+html,
+body,
+h1,
+h2,
+p {
+  margin: 0;
+}
+
+p {
+  line-height: 1.7;
+  margin: 0;
+}
+
+html,
+body {
+  font-size: var(--fs-body);
+  background-color: var(--clr-gray-xlight);
+}
+
+img {
+  width: 100%;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  min-height: 100vh;
+  position: relative;
+  font-family: var(--ff-primary);
+  color: var(--clr-blue-gray);
+  padding: 0;
+}
+
+.sr-only {
+  position: absolute;
+  top: -500px;
+  width: 1px;
+  height: 1px;
+}
+
+/* Typography */
+body,
+.intro,
+.cards,
+.cards > *,
+.cards_center > * {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+main {
+  width: 100%;
+  flex-grow: 1;
+  margin: 0 auto;
+  display: grid;
+  place-content: center;
+  height: fit-content;
+  position: relative;
+  overflow: hidden;
+  padding: var(--pad-ver) var(--pad-hor);
+}
+
+.intro {
+  text-align: center;
+  margin-bottom: 5em;
+}
+
+.intro__title,
+.card__title {
+  color: var(--clr-blue-dark);
+}
+
+.intro__title {
+  font-size: 24px;
+}
+
+.title_main {
+  font-weight: 200;
+}
+
+.title_sub {
+  font-weight: 600;
+  margin-bottom: 0.6em;
+}
+
+.intro__body {
+  color: var(--clr-blue-gray);
+}
+
+.cards,
+.cards_center {
+  row-gap: 1.5em;
+  width: 100%;
+  text-align: left;
+}
+
+.card {
+  height: 100%;
+  padding: 2em;
+  width: 100%;
+  border-radius: 0.5em;
+  text-align: left;
+  position: relative;
+  box-shadow: 1px 10px 20px rgb(207, 214, 224);
+}
+
+.card p {
+  width: 100%;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+.card__title {
+  width: 100%;
+  margin: 0;
+  text-align: left;
+  font-weight: 600;
+  margin-bottom: 0.2em;
+}
+
+.card__body {
+  margin-bottom: 1.6em;
+}
+
+.card__icon {
+  width: 4.5em;
+  height: 4.5em;
+  background-repeat: no-repeat;
+  align-self: flex-end;
+}
+
+.icon_supervisor {
+  background-image: url("./images/icon-supervisor.svg");
+}
+.icon_team {
+  background-image: url("./images/icon-team-builder.svg");
+}
+.icon_karma {
+  background-image: url("./images/icon-karma.svg");
+}
+.icon_calculator {
+  background-image: url("./images/icon-calculator.svg");
+}
+
+.card::before,
+.cards_center .card::before {
+  content: "";
+  height: 4px;
+  width: 100%;
+  border-radius: 1em 1em 0 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: var(--clr-bkg);
+}
+
+.card_supervisor::before {
+  --clr-bkg: var(--clr-cyan);
+}
+.card_team::before {
+  --clr-bkg: var(--clr-red);
+}
+.card_karma::before {
+  --clr-bkg: var(--clr-orange);
+}
+.card_calculator::before {
+  --clr-bkg: var(--clr-blue);
+}
+/* .card_team::before,
+.card_karma::before {
+  content: '';
+  height: 4px;
+  width: 100%;
+  border-radius: 1em 1em 0 0;
+  position: absolute;
+  top: 0;
+  background-color: var(--clr-cyan);
+} */
+
+footer {
+  padding: 1em 0;
+  background: transparent;
+  display: none;
+  width: 100%;
+  text-align: center;
+  padding: 0.2em;
+  /* position: fixed; */
+}
+
+.attribution {
+  background: transparent;
+  bottom: 5px;
+  font-size: 11px;
+  text-align: center;
+  color: black;
+}
+
+.attribution a {
+  font-size: inherit;
+  color: inherit;
+}
+
+@media (min-width: 768px) {
+  main {
+    max-width: 1275px;
+  }
+  .intro {
+    margin-bottom: 4em;
+  }
+  .intro__title {
+    font-size: 36px;
+    line-height: 1.45;
+  }
+  .title_sub {
+    margin-bottom: 0.45em;
+  }
+  .intro__body {
+    width: 46%;
+  }
+  .cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 2em;
+  }
+  .cards_center {
+    row-gap: 2em;
+  }
+  .card__title {
+    font-size: 20px;
+    margin-bottom: 0.4em;
+  }
+  .card__body {
+    margin-bottom: 2.8em;
+  }
+  .card {
+    height: fit-content;
+    align-self: center;
+    height: unset;
+  }
+  footer {
+    display: block;
+    position: fixed;
+  }
+}
+
+/* @media (min-width: 1150px) {
+  
+} */
