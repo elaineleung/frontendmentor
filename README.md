@@ -15,3 +15,4 @@ GitHub landing page: [https://elaineleung.github.io/frontendmentor/](https://ela
 | 3   | [Three-column preview card component](https://elaineleung.github.io/frontendmentor/3columnpreview)|
 | 4   | [Profile card component](https://elaineleung.github.io/frontendmentor/profilecard)|
 | 5   | [Social proof section](https://elaineleung.github.io/frontendmentor/socialproofsection/)|
+| 5   | [Four card feature section](https://elaineleung.github.io/frontendmentor/fourcardfeaturesection/)|
