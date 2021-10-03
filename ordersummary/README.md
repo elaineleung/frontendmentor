@@ -18,7 +18,7 @@ This is a solution to the [Order summary card challenge on Frontend Mentor](http
 
 ## Overview
 
-This is an order summary card component, which is soemthing users usually encounter when making a transaction such as purchasing a product or renewing their subscription.
+This is an order summary card component, which is something users usually encounter when making a transaction such as purchasing a product or renewing their subscription.
 
 ### The challenge
 
