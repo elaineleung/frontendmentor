@@ -178,6 +178,7 @@ main {
 .component {
   box-shadow: 1px 10px 20px hsl(212, 23%, 85%);
   height: fit-content;
+  width: 318px;
 }
 
 .intro > *,
@@ -285,11 +286,9 @@ footer {
   color: inherit;
 }
 
-@media (min-width: 768px) {
-  main {
-    max-width: 830px;
-  }
+@media (min-width: 1150px) {
   .component {
+    width: 635px;
     display: grid;
     place-content: center;
     flex-direction: unset;
