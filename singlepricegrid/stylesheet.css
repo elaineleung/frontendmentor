@@ -287,7 +287,7 @@ footer {
 
 @media (min-width: 768px) {
   main {
-    max-width: 800px;
+    max-width: 825px;
   }
   .component {
     display: grid;
