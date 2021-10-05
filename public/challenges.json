@@ -29,6 +29,11 @@
       "name": "fourcardfeaturesection",
       "title": "Four card feature section",
       "id": 6
+    },
+    {
+      "name": "singlepricegrid",
+      "title": "Single price grid component",
+      "id": 7
     }
   ]
 }
