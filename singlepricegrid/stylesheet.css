@@ -32,7 +32,7 @@
 @media (min-width: 1150px) {
   :root {
     --pad-hor: 6vw;
-    --pad-ver: 5.2em;
+    --pad-ver: 5.4em;
   }
 }
 
@@ -317,7 +317,7 @@ footer {
   }
   .price,
   .whyus {
-    padding: 2.55em var(--pad-hor-c) 2.4em;
+    padding: 2.4 var(--pad-hor-c);
 
   }
   .price {
