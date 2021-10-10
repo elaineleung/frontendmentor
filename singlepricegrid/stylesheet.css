@@ -317,8 +317,7 @@ footer {
   }
   .price,
   .whyus {
-    padding: 2.4 var(--pad-hor-c);
-
+    padding: 2.4em var(--pad-hor-c);
   }
   .price {
     grid-area: price;
