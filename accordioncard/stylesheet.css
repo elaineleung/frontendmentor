@@ -1,0 +1,369 @@
+:root {
+  --clr-blue-xdesat: hsl(238, 29%, 16%);
+  --clr-red-soft: hsl(14, 88%, 65%);
+  --clr-violet-soft: hsl(273, 75%, 66%);
+  --clr-blue-soft: hsl(240, 73%, 65%);
+  --clr-bluegray-xdark: hsl(237, 12%, 33%);
+  --clr-bluegray-dark: hsl(240, 6%, 50%);
+  --clr-bluegray-light: hsl(240, 5%, 91%);
+  --clr-white: hsl(0, 0%, 100%);
+  --fs-body: 12px;
+  --fs-q: 13px;
+  --fs-title: 32px;
+  --pad-hor: 12px;
+  --pad-ver: 48px;
+  --ff-primary: "Kumbh Sans", sans-serif;
+}
+
+@media (min-width: 1150px) {
+  :root {
+    --fs-q: 14px;
+  }
+}
+
+*,
+*:after,
+*:before {
+  box-sizing: border-box;
+}
+
+html,
+body,
+section,
+h1,
+h2,
+h3,
+p,
+span {
+  margin: 0;
+}
+
+p {
+  line-height: 1.45;
+}
+
+html,
+body {
+  font-size: var(--fs-body);
+}
+
+img {
+  width: 100%;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  min-width: 375px;
+  min-height: 100vh;
+  position: relative;
+  font-family: var(--ff-primary);
+  font-weight: 400;
+  color: var(--clr-blue-gray);
+  background: linear-gradient(
+    180deg,
+    var(--clr-violet-soft),
+    50%,
+    var(--clr-blue-soft)
+  );
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: var(--pad-ver) var(--pad-hor);
+}
+
+.sr-only {
+  position: absolute;
+  top: -500px;
+  width: 1px;
+  height: 1px;
+}
+
+/* Typography */
+
+.content__title {
+  font-weight: 700;
+  font-size: var(--fs-title);
+  color: var(--clr-blue-xdesat);
+  text-align: center;
+  margin-bottom: 16px;
+  letter-spacing: -0.4px;
+}
+
+.question {
+  color: var(--clr-bluegray-xdark);
+  font-size: var(--fs-q);
+}
+
+.answer {
+  color: var(--clr-bluegray-dark);
+}
+
+.question:hover,
+.answer:focus {
+  color: var(--clr-red-soft);
+}
+
+.faq.active .question {
+  color: var(--clr-blue-xdesat);
+  font-weight: 700;
+}
+
+
+/* Structure */
+
+.component,
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.component {
+  flex-grow: 1;
+  height: 100%;
+  position: relative;
+  text-align: center;
+  padding-top: 100px;
+  margin: 0 auto;
+}
+
+.card > *,
+.faq > * {
+  width: 100%;
+}
+
+.card {
+  height: 100%;
+  border-radius: 2em;
+  background: var(--clr-white);
+  position: relative;
+  box-shadow: 0px 10px 40px hsl(257, 35%, 47%);
+  row-gap: 60px;
+  padding: 34px 0 48px;
+}
+
+.card__image {
+  position: relative;
+  width: 100%;
+  height: 180px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: transparent;
+  margin-top: -142px;
+  margin-left: 24px;
+}
+
+.image_wrapper,
+.image__shadow_wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.image {
+  position: absolute;
+  left: 4px;
+  background-image: url("./images/illustration-woman-online-mobile.svg");
+  height: 196px;
+  width: 266px;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.image__shadow_wrapper {
+  height: 104px;
+}
+
+.image__shadow {
+  position: absolute;
+  top: -6px;
+  left: 32px;
+  background-image: url("./images/bg-pattern-mobile.svg");
+  height: 104px;
+  width: 240px;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.card__content {
+  width: 327px;
+  padding: 0 24px;
+  background: inherit;
+}
+
+.faq {
+  padding: 15px 0;
+  border-bottom: 1px solid var(--clr-bluegray-light);
+  text-align: left;
+  position: relative;
+  background: transparent;
+}
+
+.question {
+  background: transparent;
+  position: relative;
+  cursor: pointer;
+  /* font-size: 13px; */
+}
+
+.faq.active .question {
+  margin-bottom: 12px;
+}
+
+.question::before {
+  content: "";
+  top: 30%;
+  right: 0;
+  position: absolute;
+  background-image: url("./images/icon-arrow-down.svg");
+  width: 0.8em;
+  height: 0.6em;
+  background-repeat: no-repeat;
+}
+
+.faq.active .question::before {
+  background-image: url("./images/icon-arrow-down.svg");
+  transform: rotate(180deg);
+}
+
+.answer {
+  width: 100%;
+  height: 0;
+  visibility: hidden;
+  transform: translateY(-50%);
+}
+
+.faq.active .answer {
+  height: 100%;
+  transform: translateY(0%);
+  transition: visibility 0.3s, transform 0.3s, height 0.3s;
+  visibility: visible;
+  margin-bottom: 4px;
+}
+
+footer {
+  padding: 1.5em 0;
+  background: transparent;
+  display: none;
+  width: 100%;
+  text-align: center;
+  padding: 0.2em;
+  color: black;
+  /* position: fixed; */
+}
+
+
+.attribution {
+  background: transparent;
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  font-size: inherit;
+  color: black;
+}
+
+@media (min-width: 1150px) {
+  .component {
+    width: 920px;
+    padding-top: 82px;
+  }
+  .card {
+    flex-direction: row;
+    width: inherit;
+    padding: 0;
+    min-height: 509px;
+    margin-left: 44px;
+    margin-bottom: 1em;
+  }
+
+  .card > * {
+    width: 50%;
+  }
+
+  .card__image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    justify-content: flex-start;
+    width: 50%;
+    height: 100%;
+    max-height: 100%;
+    margin:0;
+    overflow: hidden;
+    padding: 0;
+    border-radius: 2em 0 0 2em;
+  }
+
+ .image_wrapper {
+    height: inherit;
+  }
+
+  .image {
+    background-image: url("./images/illustration-woman-online-desktop.svg");
+    background-size: cover;
+    height: 359px;
+    width: 472px;
+    top: 70px;
+    left: -84px;
+    z-index: 10;
+  }
+
+  .card::before {
+    content: "";
+    position: absolute;
+    background-image: url("./images/illustration-box-desktop.svg");
+    top: 203px;
+    left: -93px;
+    height: 184px;
+    width: 191px;
+    z-index: 20;
+  }
+
+  .image__shadow_wrapper {
+    height: inherit;
+    position: absolute;
+  }
+
+  .image__shadow {
+    background-image: url("./images/bg-pattern-desktop.svg");
+    background-size: cover;
+    top: -296px;
+    left: -578px;
+    height: 945px;
+    width: 966px;
+  }
+
+  .card__content {
+    margin-left: auto;
+    width: 50%;
+    padding: 18px 94px 38px 16px;
+    background: transparent;
+    align-self: center;
+  }
+
+  .content__title {
+    text-align: left;
+    margin-bottom: 24px;
+  }
+  .question {
+    font-size: 14px;
+  }
+  .faq.active .question {
+    margin-bottom: 8px;
+  }
+  .question::before {
+    right: 14px;
+  }
+  .faq.active .answer {
+    margin-bottom: 4px;
+  }
+
+  footer {
+    display: block;
+  }
+}

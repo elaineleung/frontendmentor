@@ -17,3 +17,4 @@ GitHub landing page: [https://elaineleung.github.io/frontendmentor/](https://ela
 | 5   | [Social proof section](https://elaineleung.github.io/frontendmentor/socialproofsection/)| [Link to GitHub repo](https://github.com/elaineleung/frontendmentor/tree/main/socialproofsection) |
 | 6   | [Four card feature section](https://elaineleung.github.io/frontendmentor/fourcardfeaturesection/)| [Link to GitHub repo](https://github.com/elaineleung/frontendmentor/tree/main/fourcardfeaturesection) |
 | 7   | [Single price grid component](https://elaineleung.github.io/frontendmentor/singlepricegrid/)| [Link to GitHub repo](https://github.com/elaineleung/frontendmentor/tree/main/singlepricegrid) |
+| 8   | [Single price grid component](https://elaineleung.github.io/frontendmentor/accordioncard/)| [Link to GitHub repo](https://github.com/elaineleung/frontendmentor/tree/main/accordioncard) |

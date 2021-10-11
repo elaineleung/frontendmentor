@@ -76,6 +76,7 @@ body {
   font-weight: 400;
   color: var(--clr-blue-gray);
   padding: 0;
+  overflow: auto;
 }
 
 .sr-only {
@@ -161,6 +162,8 @@ body,
  justify-content: center;
  height: min-content;
  border-radius: 0.4em;
+ box-shadow: 1px 10px 20px hsl(212, 23%, 85%);
+ width: 318px;
 }
 
 main {
@@ -173,12 +176,6 @@ main {
   position: relative;
   padding: var(--pad-ver) var(--pad-hor);
   text-align: left;
-}
-
-.component {
-  box-shadow: 1px 10px 20px hsl(212, 23%, 85%);
-  height: fit-content;
-  width: 318px;
 }
 
 .intro > *,

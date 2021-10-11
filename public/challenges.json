@@ -34,6 +34,11 @@
       "name": "singlepricegrid",
       "title": "Single price grid component",
       "id": 7
+    },
+    {
+      "name": "accordioncard",
+      "title": "Accordion FAQ component",
+      "id": 8
     }
   ]
 }
