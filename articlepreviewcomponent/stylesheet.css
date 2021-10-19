@@ -137,6 +137,7 @@ body {
   border-radius: 0.6em;
   background: var(--clr-white);
   position: relative;
+  box-shadow: 0 10px 20px hsl(209, 34%, 88%);
   /* row-gap: 20px; */
 }
 
@@ -305,6 +306,7 @@ footer {
     padding: 0;
     margin-bottom: 1em;
     height: 280px;
+    box-shadow: 0 20px 30px hsl(207, 53%, 93%);
   }
   .card__image {
     height: 100%;
