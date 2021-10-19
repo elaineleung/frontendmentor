@@ -49,11 +49,6 @@ p {
   line-height: 1.55;
 }
 
-button {
-  border: 0;
-  cursor: pointer;
-}
-
 html,
 body {
   font-size: var(--fs-body);
@@ -262,7 +257,8 @@ body {
 }
 
 .bubble__share {
-  padding: 7px 5px;
+  cursor: pointer;
+  padding: 7.5px 9px;
   border-radius: 50%;
   background: var(--clr-grayblue-light);
 }
