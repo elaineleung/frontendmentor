@@ -39,6 +39,11 @@
       "name": "accordioncard",
       "title": "Accordion FAQ component",
       "id": 8
+    },
+    {
+      "name": "articlepreviewcomponent",
+      "title": "Article preview component",
+      "id": 9
     }
   ]
 }

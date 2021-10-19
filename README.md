@@ -18,3 +18,4 @@ GitHub landing page: [https://elaineleung.github.io/frontendmentor/](https://ela
 | 6   | [Four card feature section](https://elaineleung.github.io/frontendmentor/fourcardfeaturesection/)| [Link to GitHub repo](https://github.com/elaineleung/frontendmentor/tree/main/fourcardfeaturesection) |
 | 7   | [Single price grid component](https://elaineleung.github.io/frontendmentor/singlepricegrid/)| [Link to GitHub repo](https://github.com/elaineleung/frontendmentor/tree/main/singlepricegrid) |
 | 8   | [Accordion FAQ component](https://elaineleung.github.io/frontendmentor/accordioncard/)| [Link to GitHub repo](https://github.com/elaineleung/frontendmentor/tree/main/accordioncard) |
+| 9   | [Article preview component](https://elaineleung.github.io/frontendmentor/articlepreviewcomponent)| [Link to GitHub repo](https://github.com/elaineleung/frontendmentor/tree/main/articlepreviewcomponent) |
