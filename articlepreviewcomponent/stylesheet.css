@@ -18,11 +18,6 @@
   :root {
     --fs-title: 20px;
     --lh-title: 1.38;
-    --pad-ver: 150px;
-  }
-}
-@media (min-width: 1440px) {
-  :root {
     --pad-ver: 260px;
   }
 }
@@ -132,13 +127,12 @@ body {
 }
 
 .card {
-  width: 100%;
+  width: 327px;
   height: 100%;
   border-radius: 0.6em;
   background: var(--clr-white);
   position: relative;
   box-shadow: 0 10px 20px hsl(209, 34%, 88%);
-  /* row-gap: 20px; */
 }
 
 .card-container {
@@ -148,7 +142,7 @@ body {
 
 .card__image {
   position: relative;
-	background-color: hsla(187, 60%, 97%, 0.123);
+  background-color: hsla(187, 60%, 97%, 0.123);
   background-image: url("./images/drawers.jpg");
   width: 100%;
   height: 200px;
@@ -308,13 +302,14 @@ footer {
     padding: 0;
     margin-bottom: 1em;
     height: 280px;
+		border-radius: 0.7em;
     box-shadow: 0 20px 30px hsl(207, 53%, 93%);
   }
   .card__image {
     height: 100%;
     width: 284px;
     background-position: top left;
-    border-radius: 0.6em 0 0 0.6em;
+    border-radius: 0.7em 0 0 0.7em;
   }
   .card__main {
     width: 446px;
@@ -344,7 +339,7 @@ footer {
     bottom: 83px;
     left: 227px;
     width: 248px;
-    box-shadow: 0px 10px 10px hsl(213, 18%, 90%);
+    box-shadow: 0px 10px 20px hsl(213, 18%, 90%);
   }
 
   .bubble .social__bubble-wrapper {
@@ -359,14 +354,13 @@ footer {
   .bubble .social__bubble-wrapper::after {
     position: absolute;
     content: "";
-	width: 0px;
-	height: 0px;
-	border: 1em solid transparent;
-	left: 45%;
-	bottom: -25px;
-	border-top: 13px solid var(--clr-grayblue-xdark);
-}
-
+    width: 0px;
+    height: 0px;
+    border: 1em solid transparent;
+    left: 45%;
+    bottom: -25px;
+    border-top: 13px solid var(--clr-grayblue-xdark);
+  }
 
   .bubble .social__profile {
     display: flex;
