@@ -53,6 +53,8 @@ Users should be able to:
 
 This was easier than I expected; there weren't major issues I ran into, aside from the need to add or change div containers to the HTML structure while working on the CSS. I did spend some time to experiment with possible configurations in changing the state. I don't usually use composite classes in CSS, but I did that in this case, which made it easier to work with the JS.
 
+I did realize I left out a few things after uploading; I forgot about the box shadow and also, the image had a filter or overlay that I missed. I did try to add this afterwards; wish I had caught it earlier!
+
 ### Useful resources
 
 - [Triangle notch on callout](https://codepen.io/moniqueward/pen/yNGQBz) - This codepen helped me with adding the bottom triangle in the popout callout.
