@@ -16,7 +16,7 @@
 
 @media (min-width: 1150px) {
   :root {
-    --fs-title: 20.4px;
+    --fs-title: 20px;
     --lh-title: 1.38;
     --pad-ver: 150px;
   }
@@ -323,6 +323,9 @@ footer {
     background: inherit;
     padding-top: 32px;
     padding-bottom: 2px;
+  }
+  .content__title {
+    letter-spacing: 0.2px;
   }
   .content__body {
     letter-spacing: 0.1px;
