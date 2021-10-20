@@ -1,0 +1,364 @@
+:root {
+  --clr-red-desat: hsl(0, 36%, 70%);
+  --clr-red-desatlight: hsla(0, 28%, 65%, 0.644);
+  /* --clr-red-desatbkg: rgba(218, 216, 216, 0.26); */
+  --clr-red-soft: hsl(0, 93%, 68%);
+  --clr-grayred-dark: hsl(0, 6%, 24%);
+  --clr-grayblue-light: hsl(210, 46%, 95%);
+  --clr-grayblue-dark: #6e8098;
+  --clr-white: hsl(0, 0%, 100%);
+  --fs-body: 14px;
+  --fs-input: 14px;
+  --fs-title: 40px;
+  --lh-body: 1.58;
+  --lh-title: 1.06;
+  --ls-title: 11px;
+  --ls-input: -0.1px;
+  --mar-span: 0px;
+  --pad-hor: 8.53vw;
+  --pad-ver-s: 31.5px;
+  --pad-ver-m: 63px;
+  --ff-primary: "Josefin Sans", sans-serif;
+  --bkg-body: linear-gradient(135deg, hsl(0, 0%, 100%), hsl(0, 100%, 98%));
+  --bkg-btn: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+}
+
+@media (min-width: 769px) {
+  :root {
+    --pad-ver-s: 40px;
+    --pad-ver-m: 63px;
+    /* --bkg-body: linear-gradient(135deg, hsl(0, 0%, 100%), hsl(0, 40%, 91%)); */
+  }
+}
+
+@media (min-width: 1150px) {
+  :root {
+    --fs-body: 16px;
+    --fs-title: 64px;
+    --fs-input: 16px;
+    --lh-title: 1.05;
+    --lh-body: 1.76;
+    --ls-title: 16.8px;
+    --ls-input: -0.16px;
+    --mar-span: 4px;
+    --pad-hor: 11.5vw;
+    --pad-ver-s: 65px;
+    --pad-ver-m: 70px;
+  }
+}
+
+*,
+*:after,
+*:before {
+  box-sizing: border-box;
+}
+
+html,
+body,
+main,
+section,
+h1,
+h2,
+h3,
+p,
+span {
+  margin: 0;
+}
+
+p {
+  line-height: var(--lh-body);
+}
+
+html,
+body {
+  font-size: var(--fs-body);
+}
+
+img {
+  width: 100%;
+}
+
+input {
+  background-color: inherit;
+  width: 100%;
+}
+
+input,
+input:valid,
+input:invalid,
+input:focus,
+input:active {
+  border: none;
+  outline: 0;
+}
+
+button {
+  border: 0;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  min-width: 375px;
+  min-height: 100vh;
+  position: relative;
+  font-family: var(--ff-primary);
+  font-weight: 400;
+  color: var(--clr-red-desat);
+  background: var(--bkg-body);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0;
+}
+
+.sr-only {
+  position: absolute;
+  top: -500px;
+  width: 1px;
+  height: 1px;
+}
+
+/* Typography */
+
+.content__body {
+  letter-spacing: 0.1px;    
+}
+
+h2.content__title {
+  font-weight: 300;
+  font-size: var(--fs-title);
+  color: var(--clr-grayblue-xdark);
+  line-height: var(--lh-title);
+  letter-spacing: var(--ls-title);
+  text-transform: uppercase;    
+}
+
+h2.content__title span {
+  color: var(--clr-grayred-dark);
+  font-weight: 700;
+  display: block;
+  margin-bottom: var(--mar-span);
+}
+
+.content__body {
+  font-size: var(--fs-body);
+}
+
+.input__email {
+  font-size: var(--fs-input);
+  color: var(--clr-grayred-dark);
+  font-family: inherit;
+  font-weight: 700;
+  letter-spacing: var(--ls-input);    
+}
+
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: var(--clr-red-desatlight);
+}
+::-moz-placeholder { /* Firefox 19+ */
+  color: var(--clr-red-desatlight);
+}
+:-ms-input-placeholder { /* IE 10+ */
+  color: var(--clr-red-desatlight);
+}
+:-moz-placeholder { /* Firefox 18- */
+  color: var(--clr-red-desatlight);
+}
+
+/* Structure */
+
+.header,
+.hero, 
+.main
+.attribution {
+  width: 100%;
+}
+
+.container {
+  width: 100%;
+  padding-left: var(--pad-hor);
+  padding-right: var(--pad-hor);
+}
+
+.header {
+  padding-top: var(--pad-ver-s);
+  padding-bottom: var(--pad-ver-s);
+  background: transparent;
+}
+
+.logo {
+  background-image: url('./images/logo.svg');
+  height: 21px;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.hero {
+  background-image: url("./images/hero-mobile.jpg");
+  height: 250px;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.main,
+.main__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.main {
+  background: transparent;
+  text-align: center;
+  height: 100%;
+  min-width: 375px;
+  max-width: 500px;
+  padding-top: var(--pad-ver-m);
+  padding-bottom: var(--pad-ver-m);
+}
+
+.main > *,
+.main__content > * {
+  width: 100%;
+}
+
+.main__content {
+  margin-bottom: 32px;
+}
+
+.content__title {
+  margin-bottom: 15px;
+}
+
+.main__signup {
+  height: 76px;
+}
+
+.signup {
+  border: 1.8px solid var(--clr-red-desatlight);
+  border-radius: 1.8em;
+}
+
+.signup,
+.signup__input {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.signup__input {
+  padding: 1.02em 1.6em;
+}
+
+.signup__submit {
+  width: 80px;
+  border-radius: 1.8em;
+  background: var(--bkg-btn);
+  box-shadow: 0px 10px 20px var(--clr-red-desatlight);
+}
+
+.visually-hidden {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+.disabled {
+  display: none;
+}
+
+.attribution {
+  padding: 1em 0;
+  background: transparent;
+  display: none;
+  text-align: center;
+  color: inherit;
+  /* position: fixed; */
+}
+
+.attribution {
+  background: transparent;
+  font-size: 11px;
+  text-align: inherit;
+  padding-left: var(--pad-hor);
+  padding-right: var(--pad-hor);
+}
+
+.attribution a {
+  font-size: inherit;
+  color: inherit;
+}
+
+@media (min-width: 769px) {
+  body {
+    display: grid;
+    grid-template-columns: 5fr 3.67fr;
+    grid-template-areas: 
+    "header hero"
+    "main hero"
+    "footer hero";
+  }
+  body::after {
+    content: '';
+    position: absolute;
+    background: var(--bkg-body);
+    background-image: url('./images/bg-pattern-desktop.svg');
+    background-repeat: no-repeat;
+    background-position: bottom left;
+    background-size: cover;
+    z-index: -1;
+    opacity: 0.9;
+    width: 100%;
+    height: 100%;
+    min-height: 100vh;
+  }
+  .header {
+    grid-area: header;
+  }
+  .hero {
+    background-image: url("./images/hero-desktop.jpg");
+    grid-area: hero;
+    height: 100%;
+    background-position: center;
+  }
+  .main {
+    position: relative;
+    grid-area: main;
+    text-align: left;
+    max-width: 775px;
+  }
+  .attribution {
+    grid-area: footer;
+    display: block;
+  }
+}
+
+
+@media (min-width: 1150px) {
+
+  .logo {
+    height: 33px;
+  }
+  .content__title {
+    margin-bottom: 16px;
+  }
+  .main__content {
+    margin-bottom: 40px;
+  }
+  .signup {
+    border: 1.6px solid var(--clr-red-desatlight);
+    border-radius: 1.8em;
+  }
+  .signup__input {
+    padding: 1.02em 1.8em;
+  }
+  .signup__submit {
+    width: 130px;
+  }
+}
