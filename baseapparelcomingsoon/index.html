@@ -43,19 +43,21 @@
             and our launch deals.
           </p>
         </div>
-        <div class="main__signup">
-          <div class="signup" id="signupEl">
+        <div class="main__signup" id="signupEl">
+          <form class="signup" id="formEl">
             <div class="signup__input">
               <input
                 type="email"
+                name="email"
                 id="inputEl"
                 class="input__email"
                 placeholder="Email Address"
-                title="Please provide a valid e-mail"
                 maxlength="50"
+                minlength="8"
+                pattern="^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$"
                 required
               />
-              <div class="input__error disabled">
+              <div class="input__error-icon">
                 <svg
                   class="icon-error"
                   xmlns="http://www.w3.org/2000/svg"
@@ -73,7 +75,7 @@
                 </svg>
               </div>
             </div>
-            <button class="signup__submit" name="submit">
+            <button id="btnEl" class="signup__submit" name="submit" type="submit">
               <span class="visually-hidden">Submit</span>
               <svg
                 class="icon-submit"
@@ -89,7 +91,8 @@
                 />
               </svg>
             </button>
-          </div>
+          </form>
+          <div id="messageEl" class="input__error-message"></div>
         </div>
       </div>
     </main>

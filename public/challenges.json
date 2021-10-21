@@ -44,6 +44,11 @@
       "name": "articlepreviewcomponent",
       "title": "Article preview component",
       "id": 9
+    },
+    {
+      "name": "baseapparelcomingsoon",
+      "title": "Base Apparel coming soon page",
+      "id": 10
     }
   ]
 }
