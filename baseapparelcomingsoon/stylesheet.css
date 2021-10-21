@@ -258,7 +258,7 @@ h2.content__title > span {
 
 .signup {
   border: 1.8px solid var(--clr-red-desatlight);
-  border-radius: 1.8em;
+  border-radius: 2em;
   position: relative;
 }
 
