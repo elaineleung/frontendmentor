@@ -173,6 +173,8 @@ body {
   margin-bottom: 12px;
 }
 
+/* profile and social section */
+
 .main__social,
 .main__social .card-container,
 .social__content,
@@ -195,27 +197,10 @@ body {
   position: relative;
 }
 
-/* .social__bubble,  */
-.bubble .social__profile {
-  display: none;
-}
+/* .social__bubble  */
 
 .social__bubble-wrapper {
   display: none;
-}
-
-.bubble .social__bubble {
-  width: 100%;
-}
-.bubble .social__bubble-wrapper {
-  display: flex;
-  width: 100%;
-  align-items: center;
-}
-
-.main__social.bubble {
-  background: var(--clr-grayblue-xdark);
-  margin-top: 3px;
 }
 
 .profile__photo {
@@ -264,6 +249,27 @@ svg.icon-share path {
   fill: var(--clr-grayblue-dark);
 }
 
+/* social bubble active state */
+
+.main__social.bubble {
+  background: var(--clr-grayblue-xdark);
+  margin-top: 3px;
+}
+
+.bubble .social__profile {
+  display: none;
+}
+
+.bubble .social__bubble {
+  width: 100%;
+}
+
+.bubble .social__bubble-wrapper {
+  display: flex;
+  width: 100%;
+  align-items: center;
+}
+
 .bubble .bubble__share,
 .bubble button {
   background: var(--clr-grayblue-dark);
@@ -272,6 +278,8 @@ svg.icon-share path {
 .bubble svg.icon-share path {
   fill: var(--clr-grayblue-light);
 }
+
+/* footer */
 
 footer {
   padding: 1.5em 0;
