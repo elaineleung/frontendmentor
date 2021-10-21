@@ -9,7 +9,7 @@
   --fs-title: 40px;
   --fs-body: 14px;
   --fs-input: 14px;
-  --fs-small: 14px;
+  --fs-small: 13px;
   --lh-body: 1.58;
   --lh-title: 1.06;
   --ls-title: 11px;
@@ -39,14 +39,14 @@
     --fs-body: 16px;
     --fs-title: 64px;
     --fs-input: 16px;
-    --lh-title: 1.05;
+    --lh-title: 1.04;
     --lh-body: 1.76;
-    --ls-title: 16.8px;
+    --ls-title: 16.7px;
     --ls-input: -0.16px;
-    --mar-span: 4.5px;
+    --mar-span: 4.2px;
     --pad-hor: 11.5vw;
     --pad-ver-s: 65px;
-    --pad-ver-m: 68px;
+    --pad-ver-m: 69px;
   }
 }
 
@@ -303,8 +303,7 @@ h2.content__title > span {
 
 .signup__submit:hover {
   background: var(--bkg-btn-hov);
-  /* height: 103%; */
-  box-shadow: 0px 10px 20px var(--clr-red-xdesatlight);
+  box-shadow: 0px 12px 25px var(--clr-red-xdesatlight);
 }
 
 .error .signup {
@@ -371,14 +370,12 @@ h2.content__title > span {
   body::after {
     content: '';
     position: absolute;
-    background: var(--bkg-body);
     background-image: url('./images/bg-pattern-desktop.svg');
     background-repeat: no-repeat;
     background-position: bottom left;
-    background-size: cover;
-    background-blend-mode: multiply;
+    background-size: 58% 100%;
     z-index: -1;
-    width: 35%;
+    width: 100%;
     height: 100%;
     min-height: 100vh;
   }
@@ -437,20 +434,21 @@ h2.content__title > span {
   }
   .signup {
     border: 1.6px solid var(--clr-red-desatlight);
-    border-radius: 1.8em;
+    border-radius: 2.2em;
   }
   .signup__input {
-    padding: 14.72px 27.2px 12.8px;
+    padding: 17.02px 27.2px 15.4px;
   }
   .error .signup__input {
-    padding: 12.12px 26.2px 8.3px;
+    padding: 15.32px 26.2px 12.2px;
   }
   .input__error-icon {
     width: 158px;
   }
   .signup__submit {
     width: 100px;
-    height: 50px;
+    height: 57px;
     top: 0px;
+    border-radius: 2.2em;
   }
 }
