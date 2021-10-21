@@ -254,12 +254,12 @@ h2.content__title > span {
 
 .main__signup {
   height: 66px;
+  position: relative;
 }
 
 .signup {
   border: 1.8px solid var(--clr-red-desatlight);
   border-radius: 2em;
-  position: relative;
 }
 
 .signup,
@@ -293,8 +293,8 @@ h2.content__title > span {
   cursor: pointer;
   position: absolute;
   right: -0.5px;
-  top: -1px;
-  height: 102%;
+  top: 0.5px;
+  height: 46px;
   width: 80px;
   border-radius: 2em;
   background: var(--bkg-btn);
@@ -303,11 +303,16 @@ h2.content__title > span {
 
 .signup__submit:hover {
   background: var(--bkg-btn-hov);
+  /* height: 103%; */
   box-shadow: 0px 10px 20px var(--clr-red-xdesatlight);
 }
 
 .error .signup {
   border: 2px solid var(--clr-red-soft);
+}
+
+.error .signup__input {
+  padding: 10.12px 26.2px 8.3px;
 }
 
 .error .input__error-message {
@@ -437,10 +442,15 @@ h2.content__title > span {
   .signup__input {
     padding: 14.72px 27.2px 12.8px;
   }
+  .error .signup__input {
+    padding: 12.12px 26.2px 8.3px;
+  }
   .input__error-icon {
     width: 158px;
   }
   .signup__submit {
     width: 100px;
+    height: 50px;
+    top: 0px;
   }
 }
