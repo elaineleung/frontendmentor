@@ -19,4 +19,4 @@ GitHub landing page: [https://elaineleung.github.io/frontendmentor/](https://ela
 | 7   | [Single price grid component](https://elaineleung.github.io/frontendmentor/singlepricegrid/)| [Link to GitHub repo](https://github.com/elaineleung/frontendmentor/tree/main/singlepricegrid) |
 | 8   | [Accordion FAQ component](https://elaineleung.github.io/frontendmentor/accordioncard/)| [Link to GitHub repo](https://github.com/elaineleung/frontendmentor/tree/main/accordioncard) |
 | 9   | [Article preview component](https://elaineleung.github.io/frontendmentor/articlepreviewcomponent)| [Link to GitHub repo](https://github.com/elaineleung/frontendmentor/tree/main/articlepreviewcomponent) |
-| 10  | [Article preview component](https://elaineleung.github.io/frontendmentor/baseapparelcomingsoon)| [Link to GitHub repo](https://github.com/elaineleung/frontendmentor/tree/main/baseapparelcomingsoon) |
+| 10  | [Base Apparel coming soon page](https://elaineleung.github.io/frontendmentor/baseapparelcomingsoon)| [Link to GitHub repo](https://github.com/elaineleung/frontendmentor/tree/main/baseapparelcomingsoon) |
