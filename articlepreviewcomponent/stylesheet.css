@@ -66,7 +66,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: var(--pad-ver) var(--pad-hor) 1em;
+  padding: 0;
 }
 
 .sr-only {
@@ -124,6 +124,7 @@ body {
   height: 100%;
   position: relative;
   text-align: left;
+  padding: var(--pad-ver) var(--pad-hor) calc(var(--pad-ver) - 2em);
 }
 
 .card {
@@ -282,12 +283,13 @@ svg.icon-share path {
 /* footer */
 
 footer {
-  padding: 1.5em 0;
+  height: 2em;
+  display: grid;
+  place-content: center;
   background: transparent;
-  display: none;
+  /* display: none; */
   width: 100%;
   text-align: center;
-  padding: 0.2em;
   color: black;
   /* position: fixed; */
 }
