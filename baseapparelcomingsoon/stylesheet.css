@@ -15,7 +15,7 @@
   --ls-title: 11px;
   --ls-input: -0.1px;
   --mar-span: 0px;
-  --pad-hor: 8.53vw;
+  --pad-hor: 32px;
   --pad-ver-s: 31.5px;
   --pad-ver-m: 63px;
   --ff-primary: "Josefin Sans", sans-serif;
@@ -44,7 +44,7 @@
     --ls-title: 16.7px;
     --ls-input: -0.16px;
     --mar-span: 4.2px;
-    --pad-hor: 11.5vw;
+    --pad-hor: 138px;
     --pad-ver-s: 65px;
     --pad-ver-m: 69px;
   }
@@ -189,6 +189,8 @@ h2.content__title > span {
 
 .container {
   width: 100%;
+  height: 100%;
+  text-align: center;
   padding-left: var(--pad-hor);
   padding-right: var(--pad-hor);
 }
@@ -214,38 +216,25 @@ h2.content__title > span {
 }
 
 .main {
+  width: 100%;
+  height: 100%;
   display: flex;
+  padding-top: var(--pad-ver-m);
+  padding-bottom: var(--pad-ver-m);
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 100%;
-}
-
-.main {
-  padding-top: var(--pad-ver-m);
-  padding-bottom: var(--pad-ver-m);
   background: transparent;
-  text-align: center;
-  width: 100%;
 }
 
-.main .container {
-  min-width: 375px;
-  max-width: 500px;
-  height: 100%;
-}
-
-.main__content > * {
-  width: 100%;
+.container > * {
+  margin: 0 auto;
+  min-width: 311px;
+  max-width: 450px;
 }
 
 .main__content {
   margin-bottom: 32px;
-}
-
-.main__content,
-.main__signup {
-  width: 100%;
 }
 
 .content__title {
@@ -335,19 +324,11 @@ h2.content__title > span {
 
 .attribution {
   padding: 1em 0;
+  width: 100%;
   background: transparent;
-  display: none;
-  text-align: center;
   color: inherit;
-  /* position: fixed; */
-}
-
-.attribution {
-  background: transparent;
   font-size: 11px;
-  text-align: inherit;
-  padding-left: var(--pad-hor);
-  padding-right: var(--pad-hor);
+  /* position: fixed; */
 }
 
 .attribution a {
@@ -365,7 +346,7 @@ h2.content__title > span {
     "main hero"
     "footer hero";
     row-gap: 0;
-    align-items: flex-start;
+    justify-content: center;
   }
   body::after {
     content: '';
@@ -397,15 +378,19 @@ h2.content__title > span {
     height: 100%;
     position: relative;
     grid-area: main;
-    text-align: left;
   }
   .main,
   .main__content {
     align-items: flex-start;
     justify-content: flex-start;
   }
-  .main .container {
-    max-width: 580px;
+  .container {
+    width: fit-content;
+    text-align: left;
+    align-self: center;
+  }
+  .container > * {
+    width: 444px;
   }
   .input__error-message {
     padding: 10px 30px;
@@ -426,8 +411,8 @@ h2.content__title > span {
   .content__title {
     margin-bottom: 20.5px;
   }
-  .main .container {
-    max-width: 776px;
+  .container {
+    padding-right: calc(var(--pad-hor) + 56px);
   }
   .main__content {
     margin-bottom: 40px;

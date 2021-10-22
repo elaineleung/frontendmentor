@@ -379,7 +379,4 @@ footer {
     background: var(--clr-white);
     margin-top: 0;
   }
-  footer {
-    display: block;
-  }
 }
