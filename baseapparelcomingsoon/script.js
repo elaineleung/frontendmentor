@@ -44,4 +44,3 @@ formEl.addEventListener("focusout", (event) => {
     ? formEl.classList.remove("focus")
     : document.getElementById(`${event.target.id}`).classList.remove("focus")
 });
-
