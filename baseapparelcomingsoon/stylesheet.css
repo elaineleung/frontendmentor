@@ -2,7 +2,7 @@
   --clr-red-desat: hsl(0, 36%, 70%);
   --clr-red-desatlight: hsla(0, 31%, 72%, 0.582);
   --clr-red-xdesatlight: hsla(0, 40%, 67%, 0.712);
-  /* --clr-red-desatbkg: rgba(218, 216, 216, 0.26); */
+  --clr-red-dark: hsl(0, 27%, 50%);
   --clr-red-soft: hsl(0, 93%, 68%);
   --clr-grayred-dark: hsl(0, 6%, 24%);
   --clr-white: hsl(0, 0%, 100%);
@@ -88,15 +88,18 @@ input {
 
 input,
 input:valid,
-input:invalid,
+input:invalid
 input:focus,
-input:active {
+input:active
+ {
   border: none;
   outline: 0;
 }
 
-button {
+button,
+button:focus {
   border: 0;
+  outline: 0;
 }
 
 body {
@@ -424,6 +427,9 @@ h2.content__title > span {
   .signup__input {
     padding: 17.02px 27.2px 15.4px;
   }
+  .focus .signup__input {
+    padding: 16.32px 26.2px 13.2px;
+  }
   .error .signup__input {
     padding: 15.32px 26.2px 12.2px;
   }
@@ -432,8 +438,16 @@ h2.content__title > span {
   }
   .signup__submit {
     width: 100px;
-    height: 57px;
-    top: 0px;
+    height: 58px;
+    top: 0.59px;
     border-radius: 2.2em;
   }
 }
+
+/* Utils  */
+.focus,
+.signup__submit.focus
+{ 
+  border: 2px solid var(--clr-red-dark);
+}
+
