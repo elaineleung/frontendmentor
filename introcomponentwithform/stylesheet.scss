@@ -47,6 +47,7 @@
     --fs-body: 15px;
     --fs-title: 49px;
     --fs-input: 14px;
+    --fs-cta: 15px;
     --fs-banner: 15px;
     --lh-title: 1.12;
     --lh-body: 1.72;
@@ -55,6 +56,7 @@
     --ls-body: 0.56px;
     --ls-input: 0.2px;
     --ls-banner: 0.15px;
+    --ls-cta: 1px;
     --mar-span: 4.2px;
     /* --pad-hor: 138px; */
   }
@@ -158,7 +160,7 @@ h2.intro__title {
   text-transform: uppercase;
   letter-spacing: var(--ls-cta);
   line-height: var(--lh-cta);
-  font-weight: 500;
+  font-weight: 600;
 }
 
 .signup__tns {
@@ -487,7 +489,7 @@ button.signup__submit {
   }
 
   button.signup__submit {
-    padding: 20px 0 15px;
+    padding: 21px 0 15px;
   }
 
   .signup__tns {
