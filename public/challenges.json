@@ -49,6 +49,11 @@
       "name": "baseapparelcomingsoon",
       "title": "Base Apparel coming soon page",
       "id": 10
+    },
+    {
+      "name": "introcomponentwithform",
+      "title": "Intro component with sign up form",
+      "id": 11
     }
   ]
 }
