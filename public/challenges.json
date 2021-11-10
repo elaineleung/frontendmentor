@@ -54,6 +54,11 @@
       "name": "introcomponentwithform",
       "title": "Intro component with sign up form",
       "id": 11
+    },
+    {
+      "name": "pingcomingsoonpage",
+      "title": "Ping coming soon page",
+      "id": 12
     }
   ]
 }

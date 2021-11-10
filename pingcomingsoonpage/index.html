@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <title>Frontend Mentor | Ping coming soon page</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@0,300;0,600;0,700;1,300;1,600&display=swap" rel="stylesheet"> 
+  <link rel="stylesheet" href="normalize.css" />
+  <link rel="stylesheet" href="stylesheet.css" />
+  <script src="https://kit.fontawesome.com/3b2a4fa45f.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <header class="header">
+    <h1 class="sr-only">
+      Frontend Mentor challenge: Ping coming soon page
+    </h1>
+    <div class="logo"></div>
+  </header>
+  <main class="component">
+    <section class="content">
+      <h2 class="content__title">We are launching <span>soon!</span></h2>
+      <p class="content__subtitle">Subscribe and get notified</p>
+      <div class="content__signup" id="signupEl">
+        <form id="formEl" class="signup__form">
+          <div class="form__input input__email" id="emailEl">
+            <input
+              class="input input-email"
+              type="email"
+              name="email address"
+              id="email"
+              placeholder=" "
+              minlength="8"
+              pattern="^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$"
+              required
+            />
+            <label for="email address">Your email address...</label>
+            <p class="input__message message-email"></p>
+          </div>
+          <button
+            id="btnEl"
+            class="signup__submit"
+            name="submit"
+            type="submit"
+          >
+          Notify Me
+          </button>
+        </form>
+      </div>
+      <div class="content__image"></div>
+    </section>
+  </main>
+  <footer class="footer">
+    <div class="footer__content">
+      <div class="footer__social">
+        <span class="social facebook">
+          <i class="fab fa-facebook-f"></i>
+        </span>
+        <span class="social twitter">
+          <i class="fab fa-twitter"></i>
+        </span>
+        <span class="social instagram">
+          <i class="fab fa-instagram"></i>
+        </span>
+      </div>
+      <div class="footer__copyright">&copy; Copyright Ping. All rights reserved.</div>  
+    </div>
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="https://twitter.com/elaineclleung">Elaine</a>.
+    </div>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>

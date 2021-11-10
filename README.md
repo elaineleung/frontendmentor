@@ -21,3 +21,4 @@ GitHub landing page: [https://elaineleung.github.io/frontendmentor/](https://ela
 | 9   | [Article preview component](https://elaineleung.github.io/frontendmentor/articlepreviewcomponent)| [Link to GitHub repo](https://github.com/elaineleung/frontendmentor/tree/main/articlepreviewcomponent) |
 | 10  | [Base Apparel coming soon page](https://elaineleung.github.io/frontendmentor/baseapparelcomingsoon)| [Link to GitHub repo](https://github.com/elaineleung/frontendmentor/tree/main/baseapparelcomingsoon) |
 | 11  | [Intro component with sign up form](https://elaineleung.github.io/frontendmentor/introcomponentwithform)| [Link to GitHub repo](https://github.com/elaineleung/frontendmentor/tree/main/introcomponentwithform) |
+| 12  | [Ping coming soon page](https://elaineleung.github.io/frontendmentor/pingcomingsoonpage)| [Link to GitHub repo](https://github.com/elaineleung/frontendmentor/tree/main/pingcomingsoonpage) |
