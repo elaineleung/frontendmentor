@@ -3,7 +3,7 @@
   --clr-blue-pale: hsl(223, 100%, 88%);
   --clr-blue-xpale: hsla(223, 100%, 88%, 0.5);
   --clr-red-light: hsl(354, 100%, 66%);
-  --clr-red-xlight:rgba(255, 82, 99, 0.685);
+  --clr-red-xlight: rgba(255, 82, 99, 0.685);
   --clr-gray: hsl(0, 0%, 59%);
   --clr-blue-xdark: hsl(209, 33%, 12%);
   --clr-white: hsl(0, 0%, 100%);
@@ -13,7 +13,7 @@
   --fs-body: 20px;
   --fs-input: 12px;
   --fs-cta: 12px;
-  --fs-small: 12px;
+  --fs-small: 10px;
   --fs-xsmall: 10px;
   --lh-cta: 1.15;
   --lh-body: 1.65;
@@ -22,9 +22,7 @@
   --ls-title: 0px;
   --ls-body: 0px;
   --ls-input: 0.1px;
-  --mar-span: 0px;
   --pad-hor: 24px;
-  --pad-ver: 92px;
   --pad-ver-s: 35px;
   --ff-primary: "Libre Franklin", sans-serif;
 }
@@ -33,7 +31,6 @@
   :root {
     --pad-ver-s: 37px;
     --pad-ver-m: 70px;
-    /* --bkg-body: linear-gradient(135deg, hsl(0, 0%, 100%), hsl(0, 40%, 91%)); */
   }
 }
 
@@ -44,16 +41,14 @@
     --fs-subtitle: 20px;
     --fs-input: 16px;
     --fs-cta: 16px;
-    --fs-xsmall: 12px;
+    --fs-small: 12px;
     --lh-body: 1.72;
     --lh-title: 1.69;
-    --lh-banner: 1.74;
     --ls-body: 0.56px;
     --ls-title: 0.3px;
     --ls-input: 0px;
     --ls-message: 0.2px;
     --ls-cta: 0.1px;
-    --mar-span: 4.2px;
   }
 }
 
@@ -162,7 +157,7 @@ h2.content__title::first-letter {
 
 .footer__copyright {
   color: var(--clr-gray);
-  font-size: var(--fs-xsmall);
+  font-size: var(--fs-small);
   font-weight: 300;
 }
 
@@ -460,6 +455,10 @@ button.signup__submit {
   margin-bottom: 28px;
 }
 
+.footer__social a {
+  text-decoration: none;
+}
+
 .social {
   display: -ms-grid;
   display: grid;
@@ -574,7 +573,7 @@ span.instagram {
     margin-bottom: 25px;
   }
   .footer__copyright {
-    margin-bottom: 26px;
+    margin-bottom: 28px;
   }
 }
 /*# sourceMappingURL=stylesheet.css.map */
