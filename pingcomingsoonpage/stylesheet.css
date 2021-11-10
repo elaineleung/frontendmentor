@@ -152,7 +152,7 @@ h2.content__title::first-letter {
   color: var(--clr-white);
   letter-spacing: var(--ls-cta);
   line-height: var(--lh-cta);
-  font-weight: 500;
+  font-weight: 600;
 }
 
 .footer__copyright {
@@ -581,7 +581,7 @@ span.instagram {
     width: 47.5%;
   }
   .footer__social {
-    width: 70%;
+    width: 58%;
     margin-bottom: 25px;
   }
   .footer__copyright {
