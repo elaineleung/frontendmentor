@@ -309,7 +309,9 @@ h2.content__title::first-letter {
 
 .content__image {
   background-image: url("./images/illustration-dashboard.png");
-  width: 100%;
+  width: 327px;
+  height: 193px;
+  margin: 0 auto;
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -322,7 +324,7 @@ h2.content__title::first-letter {
 }
 
 .signup__form {
-  width: 86%;
+  width: 281.2px;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
@@ -429,7 +431,7 @@ span.instagram {
   color: inherit;
 }
 
-@media (min-width: 1098px) {
+@media (min-width: 980px) {
   .logo {
     background-image: url("./images/logo.svg");
     width: 86px;
@@ -457,12 +459,11 @@ span.instagram {
   .content__image {
     width: 640px;
     height: 391px;
-    margin: 0 auto;
   }
   .signup__form {
     flex-direction: row;
     column-gap: 16px;
-    width: 45.8%;
+    width: 637px;
     div {
       > label {
         top: 18px;
