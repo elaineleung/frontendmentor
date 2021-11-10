@@ -232,7 +232,7 @@ h2.content__title::first-letter {
     .input__message {
       display: none;
       color: var(--clr-red-light);
-      font-size: var(--fs-xsmall);
+      font-size: var(--fs-small);
       line-height: var(--lh-message);
       letter-spacing: var(--ls-message);
       font-weight: 600;
@@ -429,6 +429,16 @@ span.instagram {
 .attribution a {
   font-size: inherit;
   color: inherit;
+}
+
+.visually-hidden {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
 }
 
 @media (min-width: 980px) {
