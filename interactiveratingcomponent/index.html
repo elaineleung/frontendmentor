@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="normalize.css" />
+    <link rel="stylesheet" href="stylesheet.css" />
+
+    <title>Frontend Mentor | Interactive rating component</title>
+  </head>
+  <body>
+    <main id="cardEl" class="card component">
+      <section id="ratingEl" class="rating">
+        <div class="header rating__header">
+          <div class="rating__logo">
+            <img
+              class="logo__star"
+              src="/images/icon-star.svg"
+              alt="orange star shaped icon"
+            />
+          </div>
+          <h1 class="rating__title">How did we do?</h1>
+        </div>
+  
+        <!-- Rating state start -->
+        <div class="rating__content">
+          <div class="rating__body">
+            Please let us know how we did with your support request. All feedback
+            is appreciated to help us improve our offering!
+          </div>
+  
+          <form id="formEl" class="rating__form">
+            <div id="scoreEl" class="rating__buttons">
+              <input type="button" class="rating__btn" value="1" />
+              <input type="button" class="rating__btn" value="2" />
+              <input type="button" class="rating__btn" value="3" />
+              <input type="button" class="rating__btn" value="4" />
+              <input type="button" class="rating__btn" value="5" />
+            </div>
+            <div>
+              <button id="submitEl" class="rating__submit">Submit</button>
+            </div>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer footer__content">
+      <div class="footer__attribution">
+        <p>
+          Challenge by
+          <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+            >Frontend Mentor</a
+          >. Coded by <a href="https://twitter.com/elaineclleung">Elaine</a>.
+        </p>
+        <p>
+          Back to my <a href="https://elaineleung.github.io/frontendmentor/">Frontend Mentor Challenges</a>
+        </p>
+      </div>
+    </footer>
+  </body>
+  <script src="script.js"></script>
+</html>

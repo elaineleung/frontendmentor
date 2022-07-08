@@ -59,6 +59,11 @@
       "name": "pingcomingsoonpage",
       "title": "Ping coming soon page",
       "id": 12
+    },
+    {
+      "name": "interactiveratingcomponent",
+      "title": "Interactive rating component solution",
+      "id": 13
     }
   ]
 }
