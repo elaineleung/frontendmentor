@@ -36,8 +36,6 @@ Users should be able to:
 
 ![Desktop view of solution](./design/desktop.png)
 
-![Desktop view of submitted state](./design/mobile-submitted.png)
-
 
 ### Links
 
