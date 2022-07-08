@@ -29,7 +29,7 @@ formEl.addEventListener("submit", (event) => {
       <div class="thankyou__header">
         <img
             class="thankyou__img"
-            src="/images/illustration-thank-you.svg"
+            src="./images/illustration-thank-you.svg"
             alt="mobile phone surrounded by different kinds of icons"
           />
         <div class="thankyou__score">You selected ${selected} out of 5</div>
