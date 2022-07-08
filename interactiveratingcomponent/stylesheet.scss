@@ -29,8 +29,8 @@
 @media (min-width: 980px) {
   :root {
     --fs-body: 15px;
-    --fs-title-rating: 28px;
-    --fs-title-ty: 28px;
+    --fs-title-rating: 27px;
+    --fs-title-ty: 27px;
     --fs-subtitle: 20px;
     --fs-input: 16px;
     --fs-cta: 14px;
@@ -108,7 +108,7 @@ body {
 /* Typography */
 
 h1.rating__title {
-  font-weight: 400;
+  font-weight: 700;
   color: var(--clr-white);
   font-size: var(--fs-title-rating);
   line-height: var(--lh-title);
@@ -116,7 +116,7 @@ h1.rating__title {
 }
 
 h1.thankyou__title {
-  font-weight: 400;
+  font-weight: 700;
   color: var(--clr-white);
   font-size: var(--fs-title-ty);
   line-height: var(--lh-title);
@@ -311,7 +311,7 @@ h1.thankyou__title {
   .rating__logo {
     width: 48px;
     height: 48px;
-    margin-bottom: 26px;
+    margin-bottom: 27px;
   }
   .logo__star {
     width: 16px;
@@ -319,7 +319,7 @@ h1.thankyou__title {
     margin: 0 auto;
   }
   h1.rating__title {
-    margin-bottom: 4px;
+    margin-bottom: 5px;
   }
   .rating__form {
     width: 97.5%;
@@ -344,14 +344,13 @@ h1.thankyou__title {
     text-align: center;
     padding: 13px 0 15px;
   }
-  
   .thankyou__img {
     width: 162px;
     margin-bottom: 27px;
     margin-right: 8px;
   }
   .thankyou__score {
-    margin: 0 auto 28px;
+    margin: 0 auto 29px;
     padding: 9px 18px 6px;
     border-radius: 15px;
   }
