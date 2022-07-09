@@ -26,7 +26,7 @@ Users should be able to:
 
 ![Mobile view of solution](./design/mobile.png)
 
-![Desktop view of solution](./design/desktop.png)
+![Desktop view of solution](./design/desktop-view.png)
 
 ### Links
 
