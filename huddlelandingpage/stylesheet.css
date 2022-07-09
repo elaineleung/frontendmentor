@@ -98,6 +98,7 @@ body {
   background: var(--clr-violet);
   background-image: url("./images/bg-mobile.svg");
   background-repeat: no-repeat;
+  background-size: contain;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -188,6 +189,14 @@ body {
   margin: 14px 0 64px;
 }
 
+.hero {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
 .hero__img {
   padding: 41px 0 55px;
 }
@@ -240,9 +249,15 @@ body {
       -ms-flex-direction: column;
           flex-direction: column;
   width: 100%;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
 }
 
 .footer__social {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 auto;
+          flex: 0 1 auto;
   width: 105px;
   margin: 0 auto;
   display: -webkit-box;
@@ -271,13 +286,28 @@ body {
 }
 
 .footer__attribution {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
   text-align: center;
   width: 100%;
-  -ms-flex-item-align: end;
-      align-self: flex-end;
+  height: 100%;
 }
 
-.block {
+.footer__attribution-content {
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  margin: 0 auto;
+}
+
+.block-title {
+  display: inline;
+}
+
+.block-footer {
   display: block;
 }
 
@@ -305,18 +335,10 @@ span.instagram {
   font-size: 14px;
 }
 
-.footer__content {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
-}
-
 @media (min-width: 980px) {
   body {
     background-image: url("./images/bg-desktop.svg");
+    background-size: unset;
   }
   .header__logo {
     width: 216px;
@@ -324,7 +346,7 @@ span.instagram {
     margin-left: -4px;
   }
   .main {
-    margin: 69px 0 15px;
+    margin: 68px 0 15px;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
@@ -332,17 +354,28 @@ span.instagram {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
+    gap: 2rem;
   }
   .hero {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin: 0;
+    width: 54.8%;
+    max-width: 800px;
     text-align: left;
   }
   .hero__img {
     padding: 0;
   }
   .intro {
-    width: 524px;
+    max-width: 524px;
     text-align: left;
-    margin: 42px 8px 0 0;
+    margin: 43px 8px 0 0;
   }
   .intro__title {
     margin-bottom: 19px;
@@ -378,7 +411,10 @@ span.instagram {
   span.instagram {
     font-size: 20px;
   }
-  .block {
+  .block-title {
+    display: block;
+  }
+  .block-footer {
     display: inline;
   }
 }
