@@ -23,3 +23,4 @@ GitHub landing page: [https://elaineleung.github.io/frontendmentor/](https://ela
 | 11  | [Intro component with sign up form](https://elaineleung.github.io/frontendmentor/introcomponentwithform)| [Link to GitHub repo](https://github.com/elaineleung/frontendmentor/tree/main/introcomponentwithform) |
 | 12  | [Ping coming soon page](https://elaineleung.github.io/frontendmentor/pingcomingsoonpage)| [Link to GitHub repo](https://github.com/elaineleung/frontendmentor/tree/main/pingcomingsoonpage) |
 | 13  | [Interactive rating component solution](https://elaineleung.github.io/frontendmentor/interactiveratingcomponent/)| [Link to GitHub repo](https://github.com/elaineleung/frontendmentor/tree/main/interactiveratingcomponent) |
+| 14  | [Huddle landing page](https://elaineleung.github.io/frontendmentor/huddlelandingpage/)| [Link to GitHub repo](https://github.com/elaineleung/frontendmentor/tree/main/huddlelandingpage) |
