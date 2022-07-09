@@ -274,6 +274,9 @@ span.instagram {
 }
 
 @media (min-width: 980px) {
+  body {
+    background-image: url("./images/bg-desktop.svg");
+  }
   .header {
     &__logo {
       width: 216px;
