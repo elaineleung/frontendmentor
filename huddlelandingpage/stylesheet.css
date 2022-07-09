@@ -8,7 +8,7 @@
   --fs-score: 13.5px;
   --fs-cta: 12px;
   --fs-small: 14px;
-  --fs-xsmall: 10px;
+  --fs-xsmall: 9px;
   --lh-body: 1.5;
   --lh-para: 1.5;
   --lh-title: 1.5;
@@ -31,6 +31,7 @@
     --fs-input: 16px;
     --fs-cta: 18px;
     --fs-small: 12px;
+    --fs-xsmall: 10px;
     --fs-score: 15px;
     --lh-body: 1.6;
     --lh-para: 1.5;
@@ -335,10 +336,13 @@ span.instagram {
   font-size: 14px;
 }
 
-@media (min-width: 980px) {
+@media (min-width: 800px) {
   body {
-    background-image: url("./images/bg-desktop.svg");
+    background-size: cover;
   }
+}
+
+@media (min-width: 980px) {
   .header__logo {
     width: 216px;
     margin-bottom: 14px;
@@ -415,6 +419,13 @@ span.instagram {
   }
   .block-footer {
     display: inline;
+  }
+}
+
+@media (min-width: 1400px) {
+  body {
+    background-image: url("./images/bg-desktop.svg");
+    background-size: contain;
   }
 }
 /*# sourceMappingURL=stylesheet.css.map */
