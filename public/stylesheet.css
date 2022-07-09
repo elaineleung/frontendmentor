@@ -4,8 +4,9 @@
   --clr-white-trsp: hsla(0, 0%, 100%, 0.75);
   --clr-gray-xlight: hsl(0, 0%, 95%);
   --fs-body: 1.1rem;
+  --fs-title: 3rem;
   --pad-ver: 10vh;
-  --pad-hor: 15vw;
+  --pad-hor: 13vw;
   --ff-primary: "Lexend Deca", sans-serif;
   --ff-secondary: "Big Shoulders Display", sans-serif;
 }
@@ -80,7 +81,7 @@ body {
 }
 
 .title {
-  font-size: 3.2rem;
+  font-size: var(--fs-title);
   margin-bottom: 0.8em;
 }
 

@@ -1,33 +1,99 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="normalize.css" />
+    <link rel="stylesheet" href="stylesheet.css" />
+    <script
+      src="https://kit.fontawesome.com/3b2a4fa45f.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>
+      Frontend Mentor | Huddle landing page with single introductory section
+    </title>
+  </head>
+  <body class="component">
+    <header class="header">
+      <img
+        class="header__logo"
+        src="./images/logo.svg"
+        alt="Huddle company logo"
+      />
+    </header>
+    <main class="main">
+      <section class="hero">
+        <div class="hero__img">
+          <img
+            src="./images/illustration-mockups.svg"
+            alt="Desktop and mobile website mockups"
+          />
+        </div>
+      </section>
+      <section class="intro">
+        <h1 class="intro__title">Build The Community Your Fans Will Love</h1>
+        <p class="intro__body">
+          Huddle re-imagines the way we build communities. You have a voice, but
+          so does your audience. Create connections with your users as you
+          engage in genuine discussion.
+        </p>
+        <div class="intro__cta">
+          <a class="intro__cta-btn" href="/">Register</a>
+        </div>
+      </section>
+    </main>
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Huddle landing page with single introductory section</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
-
-  Build The Community Your Fans Will Love
-
-  Huddle re-imagines the way we build communities. You have a voice, but so does your audience. 
-  Create connections with your users as you engage in genuine discussion. 
-
-  Register
-
-  <footer>
-    <p class="attribution">
-      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-      Coded by <a href="#">Your Name Here</a>.
-    </p>
-  </footer>
-</body>
+    <footer class="footer">
+      <div class="footer__content">
+        <div class="footer__social">
+          <a class="footer__social-group" href="https://www.facebook.com">
+            <span class="visually-hidden">Facebook</span>
+            <span class="footer__social-icon facebook">
+              <i class="fab fa-facebook-f" data-icon="facebook"></i>
+            </span>
+          </a>
+          <a class="footer__social-group" href="https://www.twitter.com">
+            <span class="visually-hidden">Twitter</span>
+            <span class="footer__social-icon twitter">
+              <i class="fab fa-twitter" data-icon="twitter"></i>
+            </span>
+          </a>
+          <a class="footer__social-group" href="https://www.instagram.com">
+            <span class="visually-hidden">Instagram</span>
+            <span class="footer__social-icon instagram">
+              <i class="fab fa-instagram" data-icon="instagram"></i>
+            </span>
+          </a>
+        </div>
+      </div>
+      <div class="footer__attribution">
+        <p>
+          Challenge by
+          <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+            >Frontend Mentor</a
+          >. Coded by <a href="https://twitter.com/elaineclleung">Elaine</a>.
+          <span class="block">
+            Other
+            <a href="https://elaineleung.github.io/frontendmentor/"
+              >Frontend Mentor Challenges</a
+            >
+            by Elaine
+          </span>
+        </p>
+      </div>
+    </footer>
+  </body>
 </html>
