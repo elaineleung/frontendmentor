@@ -356,8 +356,8 @@ span.instagram {
         align-self: left;
     padding: 16px 63px 19px 64px;
     border-radius: 32px;
-    -webkit-box-shadow: 2px 2px 5px #473573;
-            box-shadow: 2px 2px 5px #473573;
+    -webkit-box-shadow: 2px 4px 10px #3e2f65;
+            box-shadow: 2px 4px 10px #3e2f65;
   }
   .footer__social {
     width: 152px;
