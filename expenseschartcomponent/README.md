@@ -54,7 +54,7 @@ Users should be able to:
 
 ### What I learned
 
-This is the first junior level project I worked on; the biggest difference I find between a junior project and a newbie one is the proficiency that is requried in Javascript. The JSON part wasn't that difficult since I actually use JSON on my own FM Github main site. Perhaps the biggest challenge I found wasn't with the coding but in naming the classes in SCSS because I found myself nesting too many levels and eventually needed to figure out how to write everything in a way that's still succinct but readable. Overall, this was a fun weekend project, and I was proud of how bar graph turned.
+This is the first junior level project I worked on; the biggest difference I find between a junior project and a newbie one is the proficiency that is requried in Javascript. The JSON part wasn't that difficult since I actually use JSON on my own FM Github main site. Perhaps the biggest challenge I found wasn't with the coding but in figuring out the dimensions and sizes for everything because sometimes things don't line up with the designs given. It was also a challenge to name the classes in SCSS because I found myself nesting too many levels and eventually needed to figure out how to write everything in a way that's still succinct but readable. Overall, this was a fun weekend project, and I was proud of how bar graph turned.
 
 ### Continued development
 
