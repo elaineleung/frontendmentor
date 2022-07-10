@@ -26,12 +26,13 @@
 html,
 body,
 h1,
+h2,
 p {
   margin: 0;
 }
 
 p {
-  line-height: 1.7;
+  line-height: 1.6;
   margin: 0;
 }
 
@@ -94,9 +95,9 @@ body {
   /* border: 1px solid magenta; */
   display: grid;
   width: 100%;
-  grid-template-columns: repeat(auto-fit, minmax(12em, 1fr));
-  column-gap: 1em;
-  row-gap: 1em;
+  grid-template-columns: repeat(auto-fit, minmax(16em, 1fr));
+  column-gap: 1.2em;
+  row-gap: 1.2em;
   margin-bottom: 5em;
 }
 
@@ -108,7 +109,9 @@ body {
   border-radius: 0.5em;
 }
 
-.card:hover {
+.card__image:hover,
+.card__title:hover,
+.card__text:hover {
   color: var(--clr-cyan-xdark);
   cursor: pointer;
 }
@@ -132,6 +135,11 @@ body {
 }
 
 .card__title {
-  font-size: 0.9rem;
+  font-size: 1rem;
+  margin: 0.5em 0 0.3em;
+}
+
+.card__text {
+  font-size: 0.8rem;
   margin-bottom: 0;
 }

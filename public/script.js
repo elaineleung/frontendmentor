@@ -17,14 +17,20 @@ function getData() {
       data.challenges.map((item) => {
         const div = document.createElement("div");
         div.innerHTML = `
-        <a href="./${item.name}">
-          <div class="card">
+        <div class="card">
+          <a href="./${item.name}">
             <div class="card__image">
               <img src="./${item.name}/design/desktop.png" />
             </div>
-            <h3 class="card__title">${item.title}</h3>
+          </a>
+          <a href="./${item.name}">
+            <h2 class="card__title">${item.title}</h2>
+          </a>
+          <a class="card__text" href="https://github.com/elaineleung/frontendmentor/tree/main/${item.name}">
+            Github repo here
+          </a>
           </div>
-        </a>
+      
         `;
         gridEl.appendChild(div);
       });
