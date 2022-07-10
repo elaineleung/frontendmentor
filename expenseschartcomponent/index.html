@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="normalize.css" />
+    <link rel="stylesheet" href="stylesheet.css" />
+    <title>Frontend Mentor | Expenses chart component</title>
+  </head>
+  <body>
+    <main class="component">
+      <section class="spending">
+        <h1 class="spending__title">Spending - Last 7 days</h1>
+        <div id="barsEl" class="spending__bars bars"></div>
+        
+        <div class="spending__stats stats">
+          <h2 class="spending__subtitle">Total this month</h2>
+          <div class="spending__container">
+            <p class="stats__total">$478.33</p>
+            <div class="stats__change">
+              <p class="stats__change-val">+2.4%</p>
+              <p class="stats__change-text">from last month</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="balance">
+        <div class="balance__stats">
+          <h2 class="balance__stats-title">My balance</h2>
+          <p class="balance__stats-val">$921.48</p>
+        </div>
+        <img
+          src="./images/logo.svg"
+          alt="two overlapping circles logo"
+          class="balance__img"
+        />
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="footer__attribution">
+        <p class="footer__attribution-content">
+          Challenge by
+          <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+            >Frontend Mentor</a
+          >. Coded by <a href="https://twitter.com/elaineclleung">Elaine</a>.
+          <span class="block-footer">
+            Other
+            <a href="https://elaineleung.github.io/frontendmentor/"
+              >Frontend Mentor Challenges</a
+            >
+            by Elaine
+          </span>
+        </p>
+      </div>
+    </footer>
+  </body>
+  <script type="module" src="index.js"></script>
+</html>
