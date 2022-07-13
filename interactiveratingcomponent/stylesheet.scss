@@ -2,10 +2,11 @@
   --clr-orange: hsl(25, 97%, 53%);
   --clr-grey-light: hsl(217, 12%, 63%);
   --clr-grey-medium: hsl(216, 12%, 54%);
-  --clr-blue-dark: hsl(213, 19%, 18%);
+  --clr-blue-meddark: hsl(215, 20%, 17%);
+  --clr-blue-dark: hsl(215, 27%, 12%);
   --clr-blue-medium: hsl(213, 18%, 21%);
-  --clr-blue-medlight: hsl(213, 18%, 22%);
-  --clr-blue-xdark: hsl(216, 12%, 8%);
+  --clr-blue-medlight: hsl(210, 19%, 18%);
+  --clr-blue-xdark: hsl(228, 11%, 9%);
   --clr-white: hsl(0, 0%, 100%);
   --fs-title-rating: 23.8px;
   --fs-title-ty: 24px;
@@ -178,7 +179,7 @@ h1.thankyou__title {
 
 .card {
   width: 327px;
-  background-color: var(--clr-blue-dark);
+  background: linear-gradient(to bottom, var(--clr-blue-meddark), var(--clr-blue-dark));
   padding: var(--pad-hor);
   margin-top: 154px;
   border-radius: 0.8em;
