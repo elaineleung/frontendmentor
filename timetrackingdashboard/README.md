@@ -75,7 +75,7 @@ Probably would be good to figure out what the ellipsis menu is meant to do, sinc
 
 - [Styling radio buttons](https://markheath.net/post/customize-radio-button-css) - This helped me with styling the radio buttons
 - [Pure CSS Custom Styled Radio Buttons](https://moderncss.dev/pure-css-custom-styled-radio-buttons/) - This has a bit more info and examples on styling radio buttons, plus more explanation
-- [Firefox "feature" in remembering inputs](https://stackoverflow.com/questions/5985839/bug-with-firefox-disabled-attribute-of-input-not-resetting-when-refreshing) - A useful Stac Overflow thread about inputs
+- [Firefox "feature" in remembering inputs](https://stackoverflow.com/questions/5985839/bug-with-firefox-disabled-attribute-of-input-not-resetting-when-refreshing) - A useful Stack Overflow thread about inputs
 
 ## Author
 

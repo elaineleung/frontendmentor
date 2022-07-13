@@ -3,18 +3,29 @@ const [...inputsEl] = document.querySelectorAll(".profile__duration-option")
 
 let selected = "weekly"
 
+const areasMap = {
+  "work": "Work",
+  "play": "Play",
+  "study": "Study",
+  "exercise": "Exercise",
+  "social": "Social",
+  "self-care": "Self Care"
+}
+
 fetch("./data.json")
   .then( response => response.json())
   .then( data => {
     updateValues(data)
     inputsEl.map( input => {
-      input.value === selected && input.checked
+      input.value === selected && input.classList.add('selected')
       input.autocomplete = "off"
       input.addEventListener("click", (event) => {
         selected = event.target.value
         updateValues(data)
         inputsEl.map( input => {
-          input.value != selected ? input.checked = false : true
+          input.classList.remove("selected")
+          input.value === selected && input.classList.add('selected')
+          // input.value != selected ? input.checked = false : true
         })
       })
     })
@@ -23,7 +34,7 @@ fetch("./data.json")
 function updateValues(data) {
   cardsEl.map( card => {
     // find the dataset that matches the card's life area 
-    const stats = data.find( item => item.title === card.id )
+    const stats = data.find( item => item.title === areasMap[card.id] )
     const { current, previous } = stats.timeframes[selected]
     // find the elements within the card
     const statsNow = card.querySelector(".card__stats-now")
