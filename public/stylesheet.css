@@ -3,10 +3,12 @@
   --clr-cyan-xdark: hsl(179, 100%, 13%);
   --clr-white-trsp: hsla(0, 0%, 100%, 0.75);
   --clr-gray-xlight: hsl(0, 0%, 95%);
+  --clr-aqua-xlight: hsl(192, 100%, 96%);
+  --bs-aqua: hsl(192, 31%, 81%);
   --fs-body: 1.1rem;
   --fs-title: 3rem;
   --pad-ver: 10vh;
-  --pad-hor: 13vw;
+  --pad-hor: 14vw;
   --ff-primary: "Lexend Deca", sans-serif;
   --ff-secondary: "Big Shoulders Display", sans-serif;
 }
@@ -61,12 +63,12 @@ body {
 }
 
 body {
-  background-color: var(--clr-gray-xlight);
+  background-color: var(--clr-aqua-xlight);
   font-family: var(--ff-primary);
 }
 
 .fm_logo {
-  width: 30vw;
+  width: 20vw;
   min-width: 200px;
 }
 
@@ -96,8 +98,8 @@ body {
   display: grid;
   width: 100%;
   grid-template-columns: repeat(auto-fit, minmax(16em, 1fr));
-  column-gap: 1.2em;
-  row-gap: 1.2em;
+  column-gap: 1.7em;
+  row-gap: 1.5em;
   margin-bottom: 5em;
 }
 
@@ -105,8 +107,9 @@ body {
   width: 100%;
   height: 100%;
   background: white;
-  padding: 1em;
+  padding: 0;
   border-radius: 0.5em;
+  box-shadow: 0.1em 0.2em 0.5em var(--bs-aqua);
 }
 
 .card__image:hover,
@@ -120,6 +123,7 @@ body {
   width: 100%;
   position: relative;
   overflow: hidden;
+  border-radius: 0.5em 0.5em 0 0; 
 }
 
 .card__image img {
@@ -134,9 +138,13 @@ body {
   transform: scale(1.15);
 }
 
+.card__content {
+  padding: 1.2em 1.6em 1.4em;
+}
+
 .card__title {
   font-size: 1rem;
-  margin: 0.5em 0 0.3em;
+  margin: 0 0 0.3em;
 }
 
 .card__text {

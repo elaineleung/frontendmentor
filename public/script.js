@@ -23,14 +23,15 @@ function getData() {
               <img src="./${item.name}/design/desktop.png" />
             </div>
           </a>
-          <a href="./${item.name}">
-            <h2 class="card__title">${item.title}</h2>
-          </a>
-          <a class="card__text" href="https://github.com/elaineleung/frontendmentor/tree/main/${item.name}">
-            Github repo here
-          </a>
+          <div class="card__content">
+            <a href="./${item.name}">
+              <h2 class="card__title">${item.title}</h2>
+            </a>
+            <a class="card__text" href="https://github.com/elaineleung/frontendmentor/tree/main/${item.name}">
+              Github repo here
+            </a>
           </div>
-      
+        </div>
         `;
         gridEl.appendChild(div);
       });
