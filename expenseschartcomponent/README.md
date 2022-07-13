@@ -62,7 +62,7 @@ Not sure how I'd use this in other projects, but I think one thing that can be w
 
 ### Useful resources
 
-- [clamp()](https://developer.mozilla.org/en-US/docs/Web/CSS/clamp) - This might have been the first time I really looked into how to use clamp as I felt I wanted to see whether I could change the margins of the hovered amount div. 
+- [min(), max(), clamp()](https://css-tricks.com/min-max-and-clamp-are-css-magic/) - This might have been the first time I really looked into how to use clamp, and even though I didn't end up using clamp() in the end, this is still useful for reference
 
 ## Author
 
