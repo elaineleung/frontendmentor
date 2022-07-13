@@ -305,10 +305,11 @@ body {
       }
     }
     &-amount {
-      // position: absolute;
+      position: absolute;
       width: fit-content;
       align-self: stretch;
-      margin: 0 clamp(-1.3em, -1em, -1.5em) 0.5em;
+      top: -2.7em;
+      left: -50%;
       background-color: var(--clr-brown-dark);
       border-radius: 0.3em;
       padding: 0.4em 0.5em;
@@ -325,11 +326,7 @@ body {
   &__change {
     &-val {
       margin-top: 0.25em;
-      // margin-bottom: 0.1em;
     }
-    // &-text {
-    //   font-size: var(--fs-p-text);
-    // }
   }
 }
 
@@ -406,8 +403,6 @@ body {
       }
       &-amount {
         top: -2.6em;
-        left: -0.8em;
-        margin: 0 clamp(-0.75em, -0.8em, -0.9em) 0.5em;
       }
       &-label {
         padding: 0.4em 0 0.7em;

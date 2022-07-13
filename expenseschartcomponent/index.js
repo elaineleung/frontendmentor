@@ -7,6 +7,7 @@ fetch("./data.json")
 })
 .then(data => {
   const max = Math.max(...data.map( day => day.amount ))
+  
   data.map( info => {
     const dayDiv = document.createElement("div")
     const amountDiv = document.createElement("div")
@@ -21,6 +22,7 @@ fetch("./data.json")
     barDiv.classList.add('bars__day-bar')
     barDiv.addEventListener("mouseenter", (e) => {
       amountDiv.classList.add("hover")
+      amountDiv.style.marginLeft = `-${(amountDiv.offsetWidth / 2 / 10)}pt`
     })
     barDiv.addEventListener("mouseleave", (e) => {
       amountDiv.classList.remove("hover")
@@ -33,6 +35,9 @@ fetch("./data.json")
     labelDiv.textContent = info.day
 
     barsEl.appendChild(dayDiv)
-    dayDiv.appendChild(amountDiv, barDiv, labelDiv)  
+    dayDiv.appendChild(amountDiv)  
+    dayDiv.appendChild(barDiv, labelDiv)  
+
+    // dayDiv.appendChild(labelDiv)  
   })
 });

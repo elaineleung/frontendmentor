@@ -363,13 +363,15 @@ body {
 }
 
 .bars__day-amount {
+  position: absolute;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
   -ms-flex-item-align: stretch;
       -ms-grid-row-align: stretch;
       align-self: stretch;
-  margin: 0 clamp(-1.3em, -1em, -1.5em) 0.5em;
+  top: -2.7em;
+  left: -50%;
   background-color: var(--clr-brown-dark);
   border-radius: 0.3em;
   padding: 0.4em 0.5em;
@@ -458,8 +460,6 @@ body {
   }
   .bars__day-amount {
     top: -2.6em;
-    left: -0.8em;
-    margin: 0 clamp(-0.75em, -0.8em, -0.9em) 0.5em;
   }
   .bars__day-label {
     padding: 0.4em 0 0.7em;
