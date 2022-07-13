@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="stylesheet.css" />
+    <title>Frontend Mentor | Time tracking dashboard</title>
+  </head>
+  <body>
+    <main class="component">
+      <section class="profile">
+        <div class="profile__user">
+          <div class="profile__user-avatar">
+            <img
+              src="./images/image-jeremy.png"
+              alt="profile picture of user"
+            />
+          </div>
+          <h1 class="profile__user-title">
+            Report for <span class="profile__user-name">Jeremy Robson</span>
+          </h1>
+        </div>
+        <div class="profile__duration">
+          <input
+            class="profile__duration-option"
+            type="radio"
+            id="daily"
+            value="daily"
+            autocomplete="off"
+          />
+          <label for="daily">Daily</label>
+          
+          <input
+            class="profile__duration-option"
+            type="radio"
+            id="weekly"
+            value="weekly"
+            autocomplete="off"
+            checked
+          />
+          <label for="weekly">Weekly</label>
+
+          <input
+            class="profile__duration-option"
+            type="radio"
+            id="monthly"
+            value="monthly"
+            autocomplete="off"
+          />
+          <label for="monthly">Monthly</label>
+        </div>
+      </section>
+      <section class="cards">
+        <div id="Work" class="work card card-work">
+          <div class="card__container">
+            <div class="card__header">
+              <h2 class="card__header-title">Work</h2>
+              <button class="card__header-option">
+                <svg class="ellipsis" width="21" height="5" xmlns="http://www.w3.org/2000/svg"><path d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z" fill-rule="evenodd"/></svg>
+              </button>
+            </div>
+            <div class="card__stats">
+              <p class="card__stats-now"></p>
+              <p class="card__stats-prev"></p>
+            </div>
+          </div>
+        </div>
+        <div id="Play" class="play card card-play">
+          <div class="card__container">
+            <div class="card__header">
+              <h2 class="card__header-title">Play</h2>
+              <button class="card__header-option">
+                <svg class="ellipsis" width="21" height="5" xmlns="http://www.w3.org/2000/svg"><path d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z" fill-rule="evenodd"/></svg>
+              </button>
+            </div>
+            <div class="card__stats">
+              <p class="card__stats-now"></p>
+              <p class="card__stats-prev"></p>
+            </div>
+          </div>
+        </div>
+        <div id="Study" class="study card card-study">
+          <div class="card__container">
+            <div class="card__header">
+              <h2 class="card__header-title">Study</h2>
+              <button class="card__header-option">
+                <svg class="ellipsis" width="21" height="5" xmlns="http://www.w3.org/2000/svg"><path d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z" fill-rule="evenodd"/></svg>
+              </button>
+            </div>
+            <div class="card__stats">
+              <p class="card__stats-now"></p>
+              <p class="card__stats-prev"></p>
+            </div>
+          </div>
+        </div>
+        <div id="Exercise" class="exercise card card-exercise">
+          <div class="card__container">
+            <div class="card__header">
+              <h2 class="card__header-title">Exercise</h2>
+              <button class="card__header-option">
+                <svg class="ellipsis" width="21" height="5" xmlns="http://www.w3.org/2000/svg"><path d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z" fill-rule="evenodd"/></svg>
+              </button>
+            </div>
+
+            <div class="card__stats">
+              <p class="card__stats-now"></p>
+              <p class="card__stats-prev"></p>
+            </div>
+          </div>
+        </div>
+        <div id="Social" class="social card card-social">
+          <div class="card__container">
+            <div class="card__header">
+              <h2 class="card__header-title">Social</h2>
+              <button class="card__header-option">
+                <svg class="ellipsis" width="21" height="5" xmlns="http://www.w3.org/2000/svg"><path d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z" fill-rule="evenodd"/></svg>
+              </button>
+            </div>
+            <div class="card__stats">
+              <p class="card__stats-now"></p>
+              <p class="card__stats-prev"></p>
+            </div>
+          </div>
+        </div>
+        <div id="Self Care" class="selfcare card card-selfcare">
+          <div class="card__container">
+            <div class="card__header">
+              <h2 class="card__header-title">Self Care</h2>
+              <button class="card__header-option">
+                <svg class="ellipsis" width="21" height="5" xmlns="http://www.w3.org/2000/svg"><path d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z" fill-rule="evenodd"/></svg>
+              </button>
+            </div>
+            <div class="card__stats">
+              <p class="card__stats-now"></p>
+              <p class="card__stats-prev"></p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="footer__attribution">
+        <p class="footer__attribution-content">
+          Challenge by
+          <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+            >Frontend Mentor</a
+          >. Coded by <a href="https://twitter.com/elaineclleung">Elaine</a>.
+          <span class="block-footer">
+            Other
+            <a href="https://elaineleung.github.io/frontendmentor/"
+              >Frontend Mentor Challenges</a
+            >
+            by Elaine
+          </span>
+        </p>
+      </div>
+    </footer>
+  </body>
+  <script src="index.js"></script>
+</html>
