@@ -56,9 +56,7 @@ There are a few things I did differently here in this challenge than in the prev
 
 A few things I learned here:
 
-- Instead of using an anchor/paragraph tag or a plain div for the timeframes, I opted to try radio buttons. I didn't want to use an anchor tag since there's no actual link, and I felt that a plain div might not be too helpful for screen readers. This is more for accessibility than styling, and I'd be interested to find out whether that's more helpful or not.
-
-- I ran into some issues when I was trying to use the `checked` property of the radio button. It turns out that there's something quirky that happens with Firefox when it comes to using certain inputs, and I haven't quite figured it out yet; all I know is that I needed to add `autocomplete="off"` in the inputs as well as other tweaks.
+- Instead of using an anchor/paragraph tag or a plain div for the timeframes, I opted to try radio buttons. I didn't want to use an anchor tag since there's no actual link, and I felt that a plain div might not be too helpful for screen readers. This is more for accessibility than styling, but inputs can contain information that would be useful for the JS portion, and I'd be interested to find out whether that's more helpful or not. However, I ran into some issues when I was trying to use the `checked` property of the radio button. It turns out that there's something quirky that happens with Firefox when it comes to using certain inputs, and I haven't quite figured it out yet; all I know is that I needed to add `autocomplete="off"` in the inputs as well as other tweaks; the problem with that is that, Frontend Mentor's HTML validations gave me an error as that is not allowed for this kind of input. In the end, I used a plain button instead and needed to rewrite my SCSS, HTML and JS. I would have preferred to use the radio button.
 
 - Flexbox is definitely more complicated than I thought, and I need more time to figure how to make it work. I don't want to just give up on the idea of using it, but I do need some more learning. 
 
