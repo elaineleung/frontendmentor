@@ -336,6 +336,7 @@ body {
 }
 
 .bars__day {
+  position: relative;
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -344,7 +345,6 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  position: relative;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -364,14 +364,12 @@ body {
 
 .bars__day-amount {
   position: absolute;
+  top: -2.7em;
+  left: -50%;
+  margin-left: -0.2em;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
-  -ms-flex-item-align: stretch;
-      -ms-grid-row-align: stretch;
-      align-self: stretch;
-  top: -2.7em;
-  left: -50%;
   background-color: var(--clr-brown-dark);
   border-radius: 0.3em;
   padding: 0.4em 0.5em;
@@ -460,6 +458,7 @@ body {
   }
   .bars__day-amount {
     top: -2.6em;
+    margin-left: 0.6em;
   }
   .bars__day-label {
     padding: 0.4em 0 0.7em;

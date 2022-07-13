@@ -22,7 +22,6 @@ fetch("./data.json")
     barDiv.classList.add('bars__day-bar')
     barDiv.addEventListener("mouseenter", (e) => {
       amountDiv.classList.add("hover")
-      amountDiv.style.marginLeft = `-${(amountDiv.offsetWidth / 2 / 10)}pt`
     })
     barDiv.addEventListener("mouseleave", (e) => {
       amountDiv.classList.remove("hover")

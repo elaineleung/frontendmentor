@@ -289,10 +289,10 @@ body {
 
 .bars {
   &__day {
+    position: relative;
     width: 100%;
     display: flex;
     flex-direction: column;
-    position: relative;
     align-items: center;
     &-bar {
       width: 100%;
@@ -306,10 +306,10 @@ body {
     }
     &-amount {
       position: absolute;
-      width: fit-content;
-      align-self: stretch;
       top: -2.7em;
       left: -50%;
+      margin-left: -0.2em;
+      width: fit-content;
       background-color: var(--clr-brown-dark);
       border-radius: 0.3em;
       padding: 0.4em 0.5em;
@@ -403,6 +403,7 @@ body {
       }
       &-amount {
         top: -2.6em;
+        margin-left: 0.6em;
       }
       &-label {
         padding: 0.4em 0 0.7em;
