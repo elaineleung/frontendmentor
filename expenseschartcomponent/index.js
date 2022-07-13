@@ -14,6 +14,7 @@ fetch("./data.json")
     const labelDiv = document.createElement("p")
     
     dayDiv.classList.add('bars__day')
+    
     amountDiv.classList.add('bars__day-amount')
     amountDiv.textContent = `$${info.amount}`
     
@@ -24,16 +25,14 @@ fetch("./data.json")
     barDiv.addEventListener("mouseleave", (e) => {
       amountDiv.classList.remove("hover")
     })
+
     info.amount === max && barDiv.classList.add('highlight')
     barDiv.style.height = `${info.amount * 0.1595}em`
 
-
-    labelDiv.classList.add('bars__day-label')
-    
+    labelDiv.classList.add('bars__day-label')  
     labelDiv.textContent = info.day
+
     barsEl.appendChild(dayDiv)
-    dayDiv.appendChild(amountDiv)  
-    dayDiv.appendChild(barDiv)
-    dayDiv.appendChild(labelDiv)
+    dayDiv.appendChild(amountDiv, barDiv, labelDiv)  
   })
 });
