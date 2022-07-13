@@ -47,7 +47,7 @@ Users should be able to:
 
 ### What I learned
 
-This was a fairly simple challenge and was one of the fastest ones I completed; it's usually the styling that takes me the most time in the FEM challenges, and there wasn't much here to style for this one. Fetching data was easy also since this was an open API, no need to sign up and no need for authentication. 
+There wasn't really anything new here for me. This was a fairly simple challenge and was one of the fastest ones I completed; it's usually the styling that takes me the most time in the FEM challenges, and there wasn't much here to style for this one. Fetching data was easy also since this was an open API, no need to sign up and no need for authentication. The only thing was perhaps learning the HTML codes for curly apostrophe symbols.
 
 ### Useful resources
 
