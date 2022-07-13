@@ -8,6 +8,8 @@ fetch("./data.json")
   .then( data => {
     updateValues(data)
     inputsEl.map( input => {
+      input.value === selected && input.checked
+      input.autocomplete = "off"
       input.addEventListener("click", (event) => {
         selected = event.target.value
         updateValues(data)
