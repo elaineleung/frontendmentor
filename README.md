@@ -26,3 +26,4 @@ GitHub landing page: [https://elaineleung.github.io/frontendmentor/](https://ela
 | 14  | [Huddle landing page](https://elaineleung.github.io/frontendmentor/huddlelandingpage/)| [Link to GitHub repo](https://github.com/elaineleung/frontendmentor/tree/main/huddlelandingpage) |
 | 15  | [Expenses chart component solution](https://elaineleung.github.io/frontendmentor/expenseschartcomponent/)| [Link to GitHub repo](https://github.com/elaineleung/frontendmentor/tree/main/expenseschartcomponent/) |
 | 16  | [Time tracking dashboard](https://elaineleung.github.io/frontendmentor/timetrackingdashboard/)| [Link to GitHub repo](https://github.com/elaineleung/frontendmentor/tree/main/timetrackingdashboard/) |
+| 17  | [Advice generator app](https://elaineleung.github.io/frontendmentor/advicegeneratorapp/)| [Link to GitHub repo](https://github.com/elaineleung/frontendmentor/tree/main/advicegeneratorapp/) |

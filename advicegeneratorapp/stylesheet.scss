@@ -1,0 +1,239 @@
+:root {
+  --clr-white: hsl(0, 0%, 100%);
+  --clr-bg: hsl(220, 22%, 16%);
+  --clr-blue-grayish: hsl(217, 19%, 38%);
+  --clr-blue-darkgrayish: hsl(218, 20%, 24%);
+
+  --clr-cyan-light: hsl(193, 38%, 86%);
+  --clr-green-neon: hsl(150, 100%, 66%);
+
+  --fs-body: 18px;
+  --fs-p: 1rem;
+  --fs-h1: 0.6rem;
+  --fs-quote: 1.3rem;
+  --fs-xsmall: 0.5rem;
+
+  --lh-body: 1.5;
+  --lh-p: 1.5;
+  --lh-quote: 1.42;
+
+  --ls-body: 0px;
+  --ls-h1: 0.34em;
+
+  --pad-hor: 0.9em;
+  --pad-top: 6.7em;
+  --pad-bottom: 5px;
+  --ff-primary: Manrope, Arial, sans-serif;
+}
+
+@media (min-width: 780px) {
+  :root {
+    --fs-body: 18px;
+    --fs-p: 1rem;
+    --fs-h1: 0.7rem;
+    --fs-quote: 1.52rem;
+    --fs-xsmall: 0.6rem;
+    
+    --lh-body: 1.5;
+    --lh-p: 1.5;
+    --lh-quote: 1.38;
+
+    --ls-body: 0px;
+    --ls-h1: 0.34em;    
+    --pad-hor: 2em;
+    --pad-top: 12.45em;
+    --pad-bottom: 5px;
+  }
+}
+
+p {
+  line-height: var(--lh-body);
+}
+
+html,
+body {
+  font-size: var(--fs-body);
+}
+
+img {
+  width: 100%;
+}
+
+button {
+  font-family: inherit;
+}
+
+button,
+button:focus {
+  border: 0;
+  outline: 0;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  min-height: 100vh;
+  position: relative;
+  font-family: var(--ff-primary);
+  font-size: var(--fs-body);
+  font-weight: 800;
+  color: var(--clr-cyan-light);
+  background: var(--clr-bg);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: var(--pad-top) var(--pad-hor) var(--pad-bottom);
+}
+
+/* Typography */
+
+.advice {
+  &__title {
+    color: var(--clr-green-neon);
+    font-size: var(--fs-h1);
+    letter-spacing: var(--ls-h1);
+    text-transform: uppercase;
+  }
+  &__quote {
+    // color: var(--clr-green-neon);
+    font-size: var(--fs-quote);
+    line-height: var(--lh-quote);
+    // letter-spacing: var(--ls-h1);
+    // text-transform: uppercase;
+  }
+}
+
+
+.footer {
+  color: var(--clr-white);
+  font-weight: 400;
+  &__attribution {
+    text-align: center;
+    font-size: var(--fs-xsmall);
+    color: inherit;
+  }
+  &__attribution a {
+    font-size: inherit;
+    color: inherit;
+  }
+}
+
+
+/* Structure */
+
+.component {
+  background-color: var(--clr-blue-darkgrayish);
+  min-width: 18em;
+  padding: 2.2em 0.9em 3.55em;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  border-radius: 0.6em;
+  position: relative;
+}
+
+.advice {
+  &__title {
+    margin-bottom: 2.2em;    
+  }
+  &__quote {
+    margin-bottom: 0.95em;    
+  }
+  &__dice {
+    background-color: var(--clr-green-neon);
+    width: 3.5em;
+    position: absolute;
+    bottom: -1.65em;
+    left: 50%;
+    margin-left: -1.75em;
+    border-radius: 50%;
+    padding: 1.05em;
+    cursor: pointer;
+    &:hover {
+      box-shadow: 0em 0em 1.4em var(--clr-green-neon);
+    }
+  }
+}
+
+.border {
+  &__divider {
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 1em;
+    background-image: url('./images/pattern-divider-mobile.svg');
+  }
+}
+
+.footer {
+  display: flex;
+  width: 100%;
+  flex: 1;
+  padding: 3.25em 0 0.5em;
+  &__attribution {
+    align-self: flex-end;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    &-content {
+      margin: 0 auto;
+    }
+  }
+}
+
+// Utils
+
+.block-footer {
+  display: block;
+}
+
+
+// media queries
+
+@media (min-width: 780px) {
+  .component {
+    width: 30em;
+    padding: 2.65em 2.4em 3.95em;
+  }
+
+  .advice {
+    &__title {
+      margin-bottom: 1.9em;    
+    }
+    &__quote {
+      margin-bottom: 1.44em;    
+    }
+    &__dice {
+      background-color: var(--clr-green-neon);
+      width: 3.55em;
+      position: absolute;
+      bottom: -1.75em;
+      left: 50%;
+      margin-left: -1.85em;
+      border-radius: 50%;
+      padding: 1.12em;
+      cursor: pointer;
+      &:hover {
+        box-shadow: 0em 0em 1.4em var(--clr-green-neon);
+      }
+    }
+  }
+  
+  .border {
+    &__divider {
+      width: 100%;
+      background-position: center;
+      background-repeat: no-repeat;
+      height: 1em;
+      background-image: url('./images/pattern-divider-desktop.svg');
+    }
+  }
+  
+  .footer {
+    padding: 4.25em 0 0.5em;
+  }
+  .block-footer {
+    display: inline-block;
+  }
+}

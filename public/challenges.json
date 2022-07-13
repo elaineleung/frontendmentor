@@ -111,6 +111,13 @@
       "level": "Junior",
       "interalhost": true,
       "id": 16
+    },
+    {
+      "name": "advicegeneratorapp",
+      "title": "Advice generator app",
+      "level": "Junior",
+      "interalhost": true,
+      "id": 17
     }
   ]
 }
