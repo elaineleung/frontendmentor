@@ -3,7 +3,7 @@
 // Make arrow point up
 // Make question bold and change font color
 
-const faqs = [...document.getElementsByClassName("faq")]
+const faqs = document.querySelectorAll(".faq")
 
 faqs.forEach( faqEl => {
     const questionEl = faqEl.querySelector('.question')

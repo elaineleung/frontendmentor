@@ -341,7 +341,7 @@ footer {
   .card__content {
     margin-left: auto;
     width: 50%;
-    padding: 18px 94px 38px 16px;
+    padding: 34px 94px 38px 0px;
     background: transparent;
     align-self: center;
   }

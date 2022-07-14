@@ -1,17 +1,44 @@
 :root {
+  // footer --clr-cyan-darkmod: 
+  --clr-pmr-300: hsl(168, 34%, 41%);
+   //graphic design text --clr-cyan-darkds 
+  --clr-pmr-400: hsl(167, 40%, 24%);
+  // photography text --clr-blue-dark
+  --clr-pmr-900: hsl(198, 62%, 26%);
+  
+   // neutral
+  --clr-neut-100: hsl(210, 4%, 67%);
+  --clr-neut-200: hsl(232, 10%, 55%);
+  --clr-neut-400: hsl(213, 9%, 39%);
+  --clr-neut-700: hsl(212, 27%, 19%);
+
   --clr-white: hsl(0, 0%, 100%);
-  --clr-bg: hsl(220, 22%, 16%);
-  --clr-blue-grayish: hsl(217, 19%, 38%);
-  --clr-blue-darkgrayish: hsl(218, 20%, 24%);
+  --clr-red: hsl(7, 99%, 70%);
+  --clr-yellow: hsl(51, 100%, 49%);
 
-  --clr-cyan-light: hsl(193, 38%, 86%);
-  --clr-green-neon: hsl(150, 100%, 66%);
+  --ff-primary: 'Barlow', sans-serif;
+  --ff-secondary: 'Fraunces', serif;
 
-  --fs-body: 18px;
-  --fs-p: 1rem;
-  --fs-h1: 0.6rem;
-  --fs-quote: 1.3rem;
-  --fs-xsmall: 0.5rem;
+  --ff-body: var(--ff-primary);
+  --ff-heading: var(--ff-secondary);
+
+  --fw-600: 600;
+  --fw-700: 700;
+  --fw-900: 900;
+
+  --fs-100: 0.8125rem;
+  --fs-200: 0.875rem;
+  --fs-300: 0.9375rem;
+  --fs-400: 1rem;
+  --fs-500: 1.125rem;
+  --fs-600: 1.875rem;
+  --fs-700: 2.5rem;
+  --fs-800: 2.8rem;
+  --fs-900: 3.5rem;
+
+  --fs-body: var(--fs-500);
+  --fs-h1: var(--fs-900);
+  --fs-nav: var(--fs-200);
 
   --lh-body: 1.5;
   --lh-p: 1.5;
@@ -23,10 +50,9 @@
   --pad-hor: 0.9em;
   --pad-top: 6.7em;
   --pad-bottom: 5px;
-  --ff-primary: Manrope, Arial, sans-serif;
 }
 
-@media (min-width: 780px) {
+@media (min-width: 50em) {
   :root {
     --fs-body: 18px;
     --fs-p: 1rem;
@@ -46,9 +72,80 @@
   }
 }
 
-p {
-  line-height: var(--lh-body);
+/* Remove default margin */
+
+*, 
+*::before, 
+*::after {
+  box-sizing: border-box;
 }
+/*
+  2. Remove default margin
+*/
+* {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+
+html, body {
+  height: 100%;
+}
+
+body {
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+
+/* Avoid text overflows */
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+   scroll-behavior: auto;
+  }
+  
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
 
 html,
 body {
@@ -84,41 +181,6 @@ body {
   align-items: center;
   text-align: center;
   padding: var(--pad-top) var(--pad-hor) var(--pad-bottom);
-}
-
-/* Typography */
-
-.advice {
-  &__title {
-    color: var(--clr-green-neon);
-    font-size: var(--fs-h1);
-    letter-spacing: var(--ls-h1);
-    text-transform: uppercase;
-  }
-  &__quote {
-    // color: var(--clr-green-neon);
-    font-size: var(--fs-quote);
-    line-height: var(--lh-quote);
-    opacity: 1;
-    transition: opacity 3s ease-in;
-    // letter-spacing: var(--ls-h1);
-    // text-transform: uppercase;
-  }
-}
-
-
-.footer {
-  color: var(--clr-white);
-  font-weight: 400;
-  &__attribution {
-    text-align: center;
-    font-size: var(--fs-xsmall);
-    color: inherit;
-  }
-  &__attribution a {
-    font-size: inherit;
-    color: inherit;
-  }
 }
 
 
@@ -190,6 +252,15 @@ body {
   display: block;
 }
 
+.visually-hidden {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
 
 // media queries
 
