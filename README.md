@@ -27,3 +27,4 @@ GitHub landing page: [https://elaineleung.github.io/frontendmentor/](https://ela
 | 15  | [Expenses chart component solution](https://elaineleung.github.io/frontendmentor/expenseschartcomponent/)| [Link to GitHub repo](https://github.com/elaineleung/frontendmentor/tree/main/expenseschartcomponent/) |
 | 16  | [Time tracking dashboard](https://elaineleung.github.io/frontendmentor/timetrackingdashboard/)| [Link to GitHub repo](https://github.com/elaineleung/frontendmentor/tree/main/timetrackingdashboard/) |
 | 17  | [Advice generator app](https://elaineleung.github.io/frontendmentor/advicegeneratorapp/)| [Link to GitHub repo](https://github.com/elaineleung/frontendmentor/tree/main/advicegeneratorapp/) |
+| 18  | [Sunnyside agency landing page](https://elaineleung.github.io/frontendmentor/sunnysideagencylandingpage/)| [Link to GitHub repo](https://github.com/elaineleung/frontendmentor/tree/main/sunnysideagencylandingpage/) |

@@ -16,8 +16,6 @@ This is a solution to the [Sunnyside agency landing page challenge on Frontend M
 - [Author](#author)
 - [Acknowledgments](#acknowledgments)
 
-**Note: Delete this note and update the table of contents based on what sections you keep.**
-
 ## Overview
 
 ### The challenge
@@ -29,20 +27,16 @@ Users should be able to:
 
 ### Screenshot
 
-![](./screenshot.jpg)
+![Mobile view of solution](./design/mobile.png)
 
-Add a screenshot of your solution. The easiest way to do this is to use Firefox to view your project, right-click the page and select "Take a Screenshot". You can choose either a full-height screenshot or a cropped one based on how long the page is. If it's very long, it might be best to crop it.
+![Mobile menu](./design/mobile-menu.png)
 
-Alternatively, you can use a tool like [FireShot](https://getfireshot.com/) to take the screenshot. FireShot has a free option, so you don't need to purchase it.
-
-Then crop/optimize/edit your image however you like, add it to your project, and update the file path in the image above.
-
-**Note: Delete this note and the paragraphs above when you add your screenshot. If you prefer not to add a screenshot, feel free to remove this entire section.**
+![Desktop view of solution](./design/desktop.png)
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [Link to GitHub repo](https://github.com/elaineleung/frontendmentor/tree/main/sunnysideagencylandingpage/)
+- Live Site URL: [Link to live site](https://elaineleung.github.io/frontendmentor/sunnysideagencylandingpage/)
 
 ## My process
 
@@ -53,41 +47,66 @@ Then crop/optimize/edit your image however you like, add it to your project, and
 - Flexbox
 - CSS Grid
 - Mobile-first workflow
-- [React](https://reactjs.org/) - JS library
-- [Next.js](https://nextjs.org/) - React framework
-- [Styled Components](https://styled-components.com/) - For styles
-
-**Note: These are just examples. Delete this note and replace the list above with your own choices**
+- CUBE CSS
+- SASS/SCSS
 
 ### What I learned
 
-- `<ul role="list">`
-- CUBE CSS
-- responsive images
+This sort of website is one of the first things I learned when I started web development, and back then it was about using `float` and there wasn't a mobile-first workflow approach either, but overtime thankfully I've picked up more useful tools such as flexbox, grid, BEM, and custom variables. 
+
+Since this is a landing page and not a component, there's a much higher chance I could reuse the code here for future projects, and so I decided to use this challenge to learn how to approach basic landing pages differently than what I'm used to doing. That for me means learning the CUBE CSS methodology, and it also means "unlearning" a lot of what I've learned in the past, namely BEM, which I've gotten too used to. 
+
+Here's a short, non-exhaustive list of useful things I learned in this challenge:
+
+- `<ul role="list">` for things like `nav`
+- responsive images in the HTML
+- using `data-variant` for styling CSS
+- how to properly use `clamp()`
+- CUBE CSS (more on this later)
+
+I recall that before I had learned about BEM, I was looking at another methodology called ITCSS (Inverted Triangle CSS), but it got too complicated for me, and there also wasn't enough resources around me to refer to at that time. When I heard about BEM, the methodology seemed simple enough, and that's what I have been using, despite its various shortcomings, such as not being able to fully utlize the inherent cascading nature of CSS. 
+
+I found out about CUBE CSS through Kevin Powell, whose latest video series feature him working on an FEM challenge using the CUBE CSS approach, which was developed by Andy Bell. He also did a video where he coded a FEM component to demonstrate what CUBE CSS is. Unfortunately there aren't that many other resources around on CUBE CSS, and the ones that are around involve packages (I wanted to keep this challenge as simple as possible). Thankfully, Andy Bell did put out some tutorials on his website, and I ended up using one of this tutorial projects as my main resource; I also used Kevin's code in his repo as another resource. It's interesting to compare the differences between the two, and in the end I also ended up using what makes most sense to me with respect to this challenge, which sort of resembled a combination of BEM (in terms of the naming convention) coupled with CUBE CSS. Interestingly enough, it turns out that months ago I had bought myself a copy of "Every Layout", which Andy Bell had a hand in developing, and so this was a good opportunity to delve more into the layouts while working on CUBE CSS.
+
+The main feature of CUBE CSS is that it focuses on firstly construction the composition (e.g., wrapper layouts) and utilities (e.g., font properties), both of which should form the bulk of the CSS needed, and the blocks would come after, followed by exceptions (as in, anything not covered by the above). For me, this was a good start and a very promising model that can be used from now on. The CSS is still fairly messy (mainly because FEM's challenges have a lot of stylings typically), but at least things are functional and readable for the most part by my standards.
+
+Also, one useful piece of code in this challenge is the `<picture>` element for switching differently sized images:
+
+```
+<picture class="gallery__item-milkbottles">
+  <source
+    media="(max-width: 749px)"
+    srcset="./images/mobile/image-gallery-milkbottles.jpg"
+  />
+  <source
+    media="(min-width: 750px)"
+    srcset="./images/desktop/image-gallery-milkbottles.jpg"
+  />
+  <img
+    src="./images/desktop/image-gallery-milkbottles.jpg"
+    alt="milk bottles with a blue background and clouds"
+  />
+</picture>
+```
+
 
 ### Continued development
 
-Use this section to outline areas that you want to continue focusing on in future projects. These could be concepts you're still not completely comfortable with or techniques you found useful that you want to refine and perfect.
-
-**Note: Delete this note and the content within this section and replace with your own plans for continued development.**
+This can be a good layout for all sorts of landing pages, and I also hope to continue delving into CUBE CSS and become less reliant on BEM.
 
 ### Useful resources
 
-- [Example resource 1](https://www.example.com) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
-- [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
+- [Every Layout](https://every-layout.dev/) - This is where I learned about the lobomotized owl
+- [Using clamp() and clamp calculator](https://css-tricks.com/linearly-scale-font-size-with-css-clamp-based-on-the-viewport/) - Possibly the single most useful explanation I've read on clamp, and it also has a tool that helps with calculating the clamp values
+- [CUBE CSS](https://piccalil.li/blog/cube-css/) - Andy Bell's post on what CUBE CSS is
+- [Building a dashboard with CUBE CSS](https://piccalil.li/tutorial/build-a-dashboard-with-cube-css/) - Andy Bell's tutorial on how to build a dashboard with CUBE CSS; the code he gave was probably most useful to me
 
-**Note: Delete this note and replace the list above with resources that helped you during the challenge. These could come in handy for anyone viewing your solution or for yourself when you look back on this project in the future.**
 
 ## Author
 
-- Website - [Add your name here](https://www.your-site.com)
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
-- Twitter - [@yourusername](https://www.twitter.com/yourusername)
-
-**Note: Delete this note and add/remove/edit lines above based on what links you'd like to share.**
+- Frontend Mentor - [@elaineleung](https://www.frontendmentor.io/profile/elaineleung)
+- Twitter - [@elaineclleung](https://twitter.com/elaineclleung)
 
 ## Acknowledgments
 
-This is where you can give a hat tip to anyone who helped you out on this project. Perhaps you worked in a team or got some inspiration from someone else's solution. This is the perfect place to give them some credit.
-
-**Note: Delete this note and edit this section's content as necessary. If you completed this challenge by yourself, feel free to delete this section entirely.**
+Much thanks to Kevin Powell for his many videos that helped me in this challenge!
