@@ -119,11 +119,6 @@ ol[role="list"] {
   list-style: none;
 }
 
-nav ul,
-nav ol {
-  list-style: none;
-}
-
 /* Set core root defaults */
 
 html:focus-within {
@@ -368,6 +363,12 @@ h6 {
   padding-block: var(--size-900);
 }
 
+.list-style-none {
+  list-style: none;
+}
+
+// Composition 
+
 .flow > * + * {
   margin-top: var(--flow-space, 1rem);
 }
@@ -429,6 +430,9 @@ body {
   font-size: var(--fs-body);
   line-height: var(--lh-body);
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
 }
 
 :focus {
@@ -575,7 +579,7 @@ nav {
 }
 
 .nav-footer {
-  width: 100%;
+  width: 16rem;
   margin-bottom: 5.3rem;
   .nav {
     &__items {
@@ -643,7 +647,6 @@ nav {
   background-size: cover;
   background-position: bottom center;
   align-items: center;
-  height: 29.9em;
   padding: 0 var(--pad-header);
   &__container {
     width: 100%;
@@ -656,6 +659,7 @@ nav {
 }
 
 .hero {
+  height: 24.6rem;
   &__title {
     line-height: 1.22;
     letter-spacing: var(--ls-h1);
@@ -808,6 +812,9 @@ nav {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
       gap: 1.72rem;
+      li {
+        margin: auto;
+      }
     }
     &-icon {
       display: block;
@@ -820,7 +827,8 @@ nav {
     }
   }
   &__attribution {
-    align-self: flex-end;
+    flex: 1;
+    display: flex;
     text-align: center;
     width: 100%;
     height: 100%;
@@ -832,7 +840,12 @@ nav {
     }
     &-content {
       margin: 0 auto;
+      align-self: flex-end;
+      .block-footer {
+        display: block;
+      }
     }
+
   }
 }
 
@@ -854,7 +867,6 @@ nav {
 
 @media (min-width: 750px) {
   .header {
-    height: 50rem;
     background-image: url("./images/desktop/image-header.jpg");
     &__container {
       padding-top: 1.6rem;
@@ -862,6 +874,7 @@ nav {
   }
 
   .hero {
+    height: 37.7rem;
     &__title {
       line-height: 1.22;
       margin: 6.75rem 0 5.85rem;
@@ -928,9 +941,13 @@ nav {
     &__social {
       margin-bottom: 2.2rem;
     }
-  }
-  .block-footer {
-    display: inline-block;
+    &__attribution {
+      &-content {
+        .block-footer {
+          display: inline-block;
+        }
+      }      
+    }
   }
 }
 

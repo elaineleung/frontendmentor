@@ -102,11 +102,6 @@ ol[role="list"] {
   list-style: none;
 }
 
-nav ul,
-nav ol {
-  list-style: none;
-}
-
 /* Set core root defaults */
 html:focus-within {
   scroll-behavior: smooth;
@@ -377,6 +372,10 @@ h6 {
   padding-block: var(--size-900);
 }
 
+.list-style-none {
+  list-style: none;
+}
+
 .flow > * + * {
   margin-top: var(--flow-space, 1rem);
 }
@@ -441,6 +440,16 @@ body {
   font-size: var(--fs-body);
   line-height: var(--lh-body);
   text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
 }
 
 :focus {
@@ -601,7 +610,7 @@ nav a:hover {
 }
 
 .nav-footer {
-  width: 100%;
+  width: 16rem;
   margin-bottom: 5.3rem;
 }
 
@@ -677,7 +686,6 @@ nav a:hover {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  height: 29.9em;
   padding: 0 var(--pad-header);
 }
 
@@ -695,6 +703,10 @@ nav a:hover {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+}
+
+.hero {
+  height: 24.6rem;
 }
 
 .hero__title {
@@ -903,6 +915,10 @@ nav a:hover {
   gap: 1.72rem;
 }
 
+.footer__social ul li {
+  margin: auto;
+}
+
 .footer__social-icon {
   display: block;
 }
@@ -916,8 +932,12 @@ nav a:hover {
 }
 
 .footer__attribution {
-  -ms-flex-item-align: end;
-      align-self: flex-end;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   text-align: center;
   width: 100%;
   height: 100%;
@@ -933,6 +953,12 @@ nav a:hover {
 
 .footer__attribution-content {
   margin: 0 auto;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+}
+
+.footer__attribution-content .block-footer {
+  display: block;
 }
 
 @media (min-width: 450px) {
@@ -949,11 +975,13 @@ nav a:hover {
 
 @media (min-width: 750px) {
   .header {
-    height: 50rem;
     background-image: url("./images/desktop/image-header.jpg");
   }
   .header__container {
     padding-top: 1.6rem;
+  }
+  .hero {
+    height: 37.7rem;
   }
   .hero__title {
     line-height: 1.22;
@@ -1021,7 +1049,7 @@ nav a:hover {
   .footer__social {
     margin-bottom: 2.2rem;
   }
-  .block-footer {
+  .footer__attribution-content .block-footer {
     display: inline-block;
   }
 }
