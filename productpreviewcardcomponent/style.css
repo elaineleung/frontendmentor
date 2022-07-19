@@ -266,6 +266,7 @@ body {
 .card__image {
   background-image: url("./images/image-product-mobile.jpg");
   background-size: cover;
+  background-repeat: no-repeat;
   height: 15rem;
   border-radius: 0.75em 0.75em 0 0;
 }
@@ -362,7 +363,6 @@ body {
   .card__image {
     background-image: url("./images/image-product-desktop.jpg");
     background-size: cover;
-    background-position: 0 -0.5rem;
     height: 100%;
     border-radius: 0.75em 0 0 0.75em;
   }
