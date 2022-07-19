@@ -247,7 +247,8 @@ body {
   border-radius: 0.75em;
   max-width: 30rem;
   &__image {
-    background-image: url('./images/image-product-mobile.jpg');
+    background-image: linear-gradient(rgba(0, 0, 0, 0.05),
+    rgba(0, 0, 0, 0.05)), url('./images/image-product-mobile.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     height: 15rem;
@@ -326,7 +327,9 @@ body {
     max-width: initial;
     width: 37.5rem;
     &__image {
-      background-image: url('./images/image-product-desktop.jpg');
+      background-image: 
+      linear-gradient(rgba(0, 0, 0, 0.05),
+                       rgba(0, 0, 0, 0.05)), url('./images/image-product-desktop.jpg');
       background-size: cover;
       height: 100%;
       border-radius: 0.75em 0 0 0.75em;
