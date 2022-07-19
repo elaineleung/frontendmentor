@@ -57,7 +57,7 @@
   --size-800: 4rem;
   --size-900: 5rem;
   --pad-header: var(--size-500);
-  --max-main: 85rem;
+  --max-main: 78rem;
   --max-testimonials: 85rem;
 }
 
@@ -781,6 +781,7 @@ nav a:hover {
   height: 37.5rem;
   background-position: top;
   background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .service.graphic {
@@ -1089,6 +1090,12 @@ nav a:hover {
   .intro__content.standout {
     width: clamp(18rem, calc(5.4348rem + 28.4058vw), 31rem);
     padding-right: 3.3rem;
+  }
+}
+
+@media (min-width: 1680px) {
+  .service {
+    background-position: 0 -2.5rem;
   }
 }
 /*# sourceMappingURL=stylesheet.css.map */
