@@ -125,6 +125,13 @@
       "level": "Junior",
       "interalhost": true,
       "id": 18
+    },
+    {
+      "name": "productpreviewcardcomponent",
+      "title": "Product preview card component",
+      "level": "Junior",
+      "interalhost": true,
+      "id": 19
     }
   ]
 }
