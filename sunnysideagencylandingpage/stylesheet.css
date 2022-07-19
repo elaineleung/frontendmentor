@@ -540,7 +540,8 @@ nav a:hover {
     outline: 1px solid;
   }
   .button:hover {
-    background: rgba(255, 255, 255, 0.8);
+    background: rgba(255, 255, 255, 0.3);
+    color: var(--clr-white);
   }
   .button[data-variant="secondary"] {
     margin-left: 0.5rem;
@@ -1048,7 +1049,7 @@ nav a:hover {
     margin-right: 0.8rem;
   }
   .footer__social {
-    margin-bottom: 2.2rem;
+    margin-bottom: 1rem;
   }
   .footer__attribution-content .block-footer {
     display: inline-block;

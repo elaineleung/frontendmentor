@@ -517,7 +517,8 @@ nav {
       outline: 1px solid;
     }
     &:hover {
-      background: hsla(0, 0%, 100%, 0.8);
+      background: hsla(0, 0%, 100%, 0.3);
+      color: var(--clr-white);
     }
   }
   .button[data-variant="secondary"] {

@@ -5,13 +5,17 @@ const diceEl = document.getElementById("diceEl")
 const url = "https://api.adviceslip.com/advice"
 const max = 224  // max number of quotes from endpoint
 
-diceEl.addEventListener("click", () => {
+loadAdvice()
+
+diceEl.addEventListener("click", loadAdvice)
+
+function loadAdvice() {
   const random = Math.floor(Math.random() * max)
  
   fetch(`${url}/${random}`)
     .then( response => response.json())
     .then( data => {
-      numEl.textContent = data.slip.id
-      adviceEl.textContent = data.slip.advice
+      numEl.textContent = `Advice #${data.slip.id}`
+      adviceEl.textContent = `“${data.slip.advice}”`
    })
-})
+}
