@@ -670,7 +670,7 @@ nav a:hover {
 }
 
 /* Blocks */
-.hero {
+.header {
   background-image: url("./images/mobile/image-header.jpg");
   background-size: cover;
   background-position: bottom center;
@@ -681,20 +681,7 @@ nav a:hover {
   padding: 0 var(--pad-header);
 }
 
-.hero__title {
-  line-height: 1.22;
-  letter-spacing: var(--ls-h1);
-  margin: 5.35rem 0 3.1rem;
-}
-
-.hero__arrow {
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-  margin: 0 auto;
-}
-
-.header {
+.header__container {
   width: 100%;
   padding-top: 1.8rem;
   display: -webkit-box;
@@ -708,6 +695,19 @@ nav a:hover {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+}
+
+.hero__title {
+  line-height: 1.22;
+  letter-spacing: var(--ls-h1);
+  margin: 5.35rem 0 3.1rem;
+}
+
+.hero__arrow {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 0 auto;
 }
 
 .logo {
@@ -948,9 +948,12 @@ nav a:hover {
 }
 
 @media (min-width: 750px) {
-  .hero {
+  .header {
     height: 50rem;
     background-image: url("./images/desktop/image-header.jpg");
+  }
+  .header__container {
+    padding-top: 1.6rem;
   }
   .hero__title {
     line-height: 1.22;
@@ -961,9 +964,6 @@ nav a:hover {
     width: -webkit-fit-content;
     width: -moz-fit-content;
     width: fit-content;
-  }
-  .header {
-    padding-top: 1.6rem;
   }
   .logo {
     margin-top: 0.6rem;

@@ -638,13 +638,24 @@ nav {
 
 /* Blocks */
 
-.hero {
+.header {
   background-image: url("./images/mobile/image-header.jpg");
   background-size: cover;
   background-position: bottom center;
   align-items: center;
   height: 29.9em;
   padding: 0 var(--pad-header);
+  &__container {
+    width: 100%;
+    padding-top: 1.8rem;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+.hero {
   &__title {
     line-height: 1.22;
     letter-spacing: var(--ls-h1);
@@ -654,15 +665,6 @@ nav {
     width: fit-content;
     margin: 0 auto;
   }
-}
-
-.header {
-  width: 100%;
-  padding-top: 1.8rem;
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-between;
 }
 
 .logo {
@@ -851,9 +853,15 @@ nav {
 }
 
 @media (min-width: 750px) {
-  .hero {
+  .header {
     height: 50rem;
     background-image: url("./images/desktop/image-header.jpg");
+    &__container {
+      padding-top: 1.6rem;
+    }
+  }
+
+  .hero {
     &__title {
       line-height: 1.22;
       margin: 6.75rem 0 5.85rem;
@@ -863,9 +871,7 @@ nav {
       width: fit-content;
     }
   }
-  .header {
-    padding-top: 1.6rem;
-  }
+
   .logo {
     margin-top: 0.6rem;
     width: 10.6rem;
