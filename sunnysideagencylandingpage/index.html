@@ -26,21 +26,20 @@
     <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   </head>
   <body class="bg-light font-primary clr-neutral-200">
-    <section class="hero">
+    <article class="hero">
       <header class="header / wrapper max-main">
-        <div class="logo">
+        <div role="logo" class="logo">
           <img
             src="./images/logo.svg"
             alt="sunnyside company logo"
             class="logo__img"
           />
         </div>
-        <nav class="nav-primary">
+        <nav class="nav-header">
           <div class="nav__inner" id="navEl">
             <ul
               class="nav__items / fs-nav-header"
-              role="list"
-              aria-label="primary"
+              aria-label="Primary" 
             >
               <li class="nav__items-link"><a href="#">About</a></li>
               <li class="nav__items-link"><a href="#">Services</a></li>
@@ -66,7 +65,7 @@
       <div class="hero__arrow">
         <img src="./images/icon-arrow-down.svg" alt="scroll down for more" />
       </div>
-    </section>
+    </article>
 
     <main>
       <article class="intro transform / columns-two fs-intro">
@@ -104,7 +103,6 @@
             extend your brand in digital places.
           </p>
           <button
-            href="/"
             class="intro__content-cta standout / button"
             data-variant="secondary"
           >
@@ -201,7 +199,8 @@
           </div>
         </div>
       </article>
-      <section class="gallery">
+      <article class="gallery" aria-label="gallery">
+        <h2 class="visually-hidden">Gallery</h2>
         <picture class="gallery__item-milkbottles">
           <source
             media="(max-width: 749px)"
@@ -258,7 +257,7 @@
             alt="many sugar cubes stacked to form a wall against a pink background"
           />
         </picture>
-      </section>
+      </article>
     </main>
 
     <footer class="footer / bg-primary-300 clr-primary-400">
@@ -276,15 +275,15 @@
           />
         </svg>
       </div>
-      <nav class="nav footer__nav / fs-nav-footer">
-        <ul role="list" class="nav__items">
+      <nav class="nav-footer">
+        <ul aria-label="Footer" class="nav__items">
           <li class="nav__items-link item-about"><a href="#">About</a></li>
           <li class="nav__items-link item-services"><a href="#">Services</a></li>
           <li class="nav__items-link item-projects"><a href="#">Projects</a></li>
         </ul>
       </nav>
       <div class="footer__social">
-        <ul role="list" aria-label="social links">
+        <ul aria-label="social links">
           <li>
             <a class="footer__social-icon" aria-label="facebook" href="https://www.facebook.com">
               <span class="visually-hidden">Facebook</span>

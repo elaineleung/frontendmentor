@@ -29,7 +29,11 @@
   --fs-h1: 2.5rem;
   --fs-heading-intro: clamp(2rem, calc(1.8239rem + 0.7512vw), 2.5rem);
   --fs-heading-services: 1.74rem;
-  --fs-heading-testimonials: clamp(1.025rem, calc(0.9370rem + 0.3756vw), 1.275rem);
+  --fs-heading-testimonials: clamp(
+    1.025rem,
+    calc(0.937rem + 0.3756vw),
+    1.275rem
+  );
 
   --fs-intro: 1.13rem;
   --fs-services: 1.025rem;
@@ -39,7 +43,7 @@
   --fs-nav-footer: 1.13rem;
   --fs-attribution: 0.8rem;
   --fs-button-primary: 1.025rem;
-  
+
   --lh-body: 1.65;
   --lh-heading-intro: 1.21;
   --lh-services: 1.65;
@@ -75,7 +79,7 @@
     --fs-nav-header: 1.13rem;
     --fs-button-primary: 1.025rem;
     --fs-button-secondary: 1rem;
-    
+
     --ls-h1: 0.68rem;
     --ls-button-primary: -0.035rem;
     --ls-button-secondary: 0.015rem;
@@ -346,7 +350,6 @@ h6 {
   max-width: var(--max-testimonials);
 }
 
-
 .padding-block-400 {
   padding-block: var(--size-400);
 }
@@ -359,7 +362,6 @@ h6 {
 .padding-block-900 {
   padding-block: var(--size-900);
 }
-
 
 .flow > * + * {
   margin-top: var(--flow-space, 1rem);
@@ -375,7 +377,7 @@ h6 {
   > * + * {
     margin-top: 2rem;
   }
-} 
+}
 
 @media (min-width: 750px) {
   .columns-two {
@@ -514,43 +516,7 @@ nav {
   }
 }
 
-/* Blocks */
-
-.hero {
-  background-image: url("./images/mobile/image-header.jpg");
-  background-size: cover;
-  background-position: bottom center;
-  align-items: center;
-  height: 29.9em;
-  padding: 0 var(--pad-header);
-  &__title {
-    line-height: 1.22;
-    letter-spacing: var(--ls-h1);
-    margin: 5.35rem 0 3.1rem;
-  }
-  &__arrow {
-    width: fit-content;
-    margin: 0 auto;
-  }
-}
-
-.header {
-  width: 100%;
-  padding-top: 1.8rem;
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.logo {
-  width: 7.8rem;
-  img {
-    width: 100%;
-  }
-}
-
-.nav-primary {
+.nav-header {
   align-items: flex-end;
   position: relative;
   .nav {
@@ -603,6 +569,104 @@ nav {
   }
 }
 
+.nav-footer {
+  width: 100%;
+  margin-bottom: 5.3rem;
+  .nav {
+    &__items {
+      display: flex;
+      justify-content: space-between;
+      a {
+        color: var(--clr-primary-400);
+        &:hover {
+          color: var(--clr-white);
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 750px) {
+  .nav-header {
+    .nav {
+      &__inner {
+        display: block;
+        background-color: transparent;
+        position: relative;
+        top: 0;
+        width: 29.2rem;
+        margin-right: 0.5rem;
+        height: fit-content;
+        &:before {
+          content: "";
+          border: 0;
+        }
+      }
+      &__items {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        padding-top: 0.5rem;
+        &-link {
+          line-height: var(--lh-nav);
+          letter-spacing: var(--ls-nav);
+          margin: auto 0;
+          padding-top: 0.1rem;
+        }
+        a {
+          color: var(--clr-white);
+        }
+        &-cta {
+          margin: 0;
+        }
+      }
+      &__button {
+        display: none;
+      }
+    }
+  }
+  .nav-footer {
+    width: 18.6rem;
+    margin-bottom: 5.3rem;
+  }
+}
+
+/* Blocks */
+
+.hero {
+  background-image: url("./images/mobile/image-header.jpg");
+  background-size: cover;
+  background-position: bottom center;
+  align-items: center;
+  height: 29.9em;
+  padding: 0 var(--pad-header);
+  &__title {
+    line-height: 1.22;
+    letter-spacing: var(--ls-h1);
+    margin: 5.35rem 0 3.1rem;
+  }
+  &__arrow {
+    width: fit-content;
+    margin: 0 auto;
+  }
+}
+
+.header {
+  width: 100%;
+  padding-top: 1.8rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  width: 7.8rem;
+  img {
+    width: 100%;
+  }
+}
+
 .intro {
   &__image {
     height: 19.5rem;
@@ -622,7 +686,7 @@ nav {
     justify-content: center;
     margin-inline: auto;
     padding: 4rem 0 3.65rem;
-    width: clamp(21rem, calc(14.0000rem + 29.8667vw), 30rem);
+    width: clamp(21rem, calc(14rem + 29.8667vw), 30rem);
     h2 {
       padding-bottom: 1.55rem;
       line-height: var(--lh-heading-intro);
@@ -711,7 +775,6 @@ nav {
   grid-template-columns: 1fr 1fr;
 }
 
-
 .footer {
   display: flex;
   flex-direction: column;
@@ -730,22 +793,6 @@ nav {
       fill: var(--clr-primary-500);
     }
   }
-  &__nav {
-    width: 100%;
-    margin-bottom: 5.3rem;
-    .nav {
-      &__items {
-        display: flex;
-        justify-content: space-between;
-        a {
-          color: var(--clr-primary-400);
-          &:hover {
-            color: var(--clr-white);
-          }
-        }
-      }
-    }
-  }
   &__social {
     width: 10.5rem;
     padding-right: 0.2rem;
@@ -759,7 +806,7 @@ nav {
       display: block;
       svg {
         fill: var(--clr-primary-500);
-      }  
+      }
       &:hover svg {
         fill: var(--clr-white);
       }
@@ -818,44 +865,6 @@ nav {
     margin-top: 0.6rem;
     width: 10.6rem;
   }
-  .nav-primary {
-    .nav {
-      &__inner {
-        display: block;
-        background-color: transparent;
-        position: relative;
-        top: 0;
-        width: 29.2rem;
-        margin-right: 0.5rem;
-        height: fit-content;
-        &:before {
-          content: "";
-          border: 0;
-        }
-      }
-      &__items {
-        display: flex;
-        justify-content: space-between;
-        width: 100%;
-        padding-top: 0.5rem;
-        &-link {
-          line-height: var(--lh-nav);
-          letter-spacing: var(--ls-nav);
-          margin: auto 0;   
-          padding-top: 0.1rem;       
-        }
-        a {
-          color: var(--clr-white);
-        }
-        &-cta {
-          margin: 0;
-        }
-      }
-      &__button {
-        display:none;
-      }
-    }
-  }
   .intro {
     &__image {
       height: 37.5rem;
@@ -882,7 +891,7 @@ nav {
       }
       button {
         margin-top: 2.75rem;
-        align-self:flex-start;
+        align-self: flex-start;
       }
     }
   }
@@ -905,10 +914,6 @@ nav {
       margin-bottom: 2.45rem;
       margin-right: 0.8rem;
     }
-    &__nav {
-      width: 18.6rem;
-      margin-bottom: 5.3rem;
-    }
     &__social {
       margin-bottom: 1.2rem;
     }
@@ -925,7 +930,7 @@ nav {
       margin-bottom: 3.78rem;
     }
   }
-  
+
   .testimonial {
     line-height: var(--lh-testimonials);
     * {
@@ -938,14 +943,13 @@ nav {
       margin-bottom: 4rem;
       letter-spacing: var(--ls-testimonials);
     }
-  }  
+  }
 
   .gallery {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
   }
 }
-
 
 @media (min-width: 1400px) {
   .intro {
@@ -961,4 +965,3 @@ nav {
   }
 }
 // media queries
-
