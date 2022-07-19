@@ -119,6 +119,11 @@ ol[role="list"] {
   list-style: none;
 }
 
+nav ul,
+nav ol {
+  list-style: none;
+}
+
 /* Set core root defaults */
 
 html:focus-within {
