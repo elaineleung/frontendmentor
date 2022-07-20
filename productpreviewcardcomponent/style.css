@@ -18,8 +18,8 @@
   --fs-body: var(--fs-400);
   --fs-p: var(--fs-200);
   --fs-product-name: var(--fs-700);
-  --ff-primary: "Montserrat", sans-serif;
-  --ff-secondary: "Fraunces", serif;
+  --ff-primary: "Montserrat", 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  --ff-secondary: 'Fraunces', Georgia, 'Times New Roman', Times, serif;
   --lh-none: 1;
   --lh-footer: 1.15;
   --lh-body: 1.64;
@@ -120,11 +120,11 @@ h6 {
 
 /* utility classes  */
 .font-primary {
-  font-family: 'Montserrat', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: var(--ff-primary);
 }
 
 .font-secondary {
-  font-family: 'Fraunces', Georgia, 'Times New Roman', Times, serif;
+  font-family: var(--ff-secondary);
 }
 
 .fs-100 {
@@ -160,11 +160,11 @@ h6 {
 }
 
 .fw-medium {
-  font-weight: 500;
+  font-weight: var(--fw-500);
 }
 
 .fw-bold {
-  font-weight: 700;
+  font-weight: var(--fw-700);
 }
 
 .lh-none {
@@ -235,20 +235,6 @@ body {
   height: 100%;
   min-height: 100vh;
   padding: 1.75rem 1rem 0.5rem;
-}
-
-@media (min-width: 750px) {
-  .columns {
-    display: -ms-grid;
-    display: grid;
-    grid-auto-flow: column;
-    grid-auto-columns: 1fr;
-  }
-  .columns > * {
-    -webkit-box-flex: 1;
-        -ms-flex-positive: 1;
-            flex-grow: 1;
-  }
 }
 
 .component {

@@ -22,8 +22,8 @@
   --fs-p: var(--fs-200);
   --fs-product-name: var(--fs-700);
 
-  --ff-primary: "Montserrat", sans-serif;
-  --ff-secondary: "Fraunces", serif;
+  --ff-primary: "Montserrat", 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  --ff-secondary: 'Fraunces', Georgia, 'Times New Roman', Times, serif;
 
   --lh-none: 1;
   --lh-footer: 1.15;
@@ -135,40 +135,40 @@ h6 {
 
 
 .font-primary {
-  font-family: 'Montserrat', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: var(--ff-primary);
 }
 .font-secondary {
-  font-family: 'Fraunces', Georgia, 'Times New Roman', Times, serif
+  font-family: var(--ff-secondary);
 }
 .fs-100 {
-  font-size: var(--fs-100)
+  font-size: var(--fs-100);
 }
 .fs-200 {
-  font-size: var(--fs-200)
+  font-size: var(--fs-200);
 }
 .fs-300 {
-  font-size: var(--fs-300)
+  font-size: var(--fs-300);
 }
 .fs-400 {
-  font-size: var(--fs-400)
+  font-size: var(--fs-400);
 }
 .fs-600 {
-  font-size: var(--fs-600)
+  font-size: var(--fs-600);
 }
 .fs-700 {
-  font-size: var(--fs-700)
+  font-size: var(--fs-700);
 }
 .fs-800 {
-  font-size: var(--fs-800)
+  font-size: var(--fs-800);
 }
 .fs-product-name {
   font-size: var(--fs-800);
 }
 .fw-medium {
-  font-weight: 500;
+  font-weight: var(--fw-500);
 }
 .fw-bold {
-  font-weight: 700;
+  font-weight: var(--fw-700);
 }
 
 .lh-none {
@@ -224,16 +224,6 @@ body {
   padding: 1.75rem 1rem 0.5rem;
 }
 
-@media (min-width: 750px) {
-  .columns {
-    display: grid;
-    grid-auto-flow:column;
-    grid-auto-columns: 1fr;
-    > * {
-      flex-grow: 1;
-    }
-  }
-}
 
 
 .component {
