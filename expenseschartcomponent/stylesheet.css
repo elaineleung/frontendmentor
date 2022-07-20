@@ -359,7 +359,7 @@ body {
     height: 0.1em;
   }
   .bars__day-amount {
-    top: -3.25rem;
+    top: -2.75rem;
     margin-left: max(9pt, 0.5rem);
   }
   .bars__day-label {
