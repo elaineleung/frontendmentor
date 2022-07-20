@@ -28,14 +28,13 @@ fetch("./data.json")
     })
 
     info.amount === max && barDiv.classList.add('highlight')
-    barDiv.style.height = `${info.amount * 0.1595}em`
+    barDiv.style.height = `${info.amount * 0.179}rem`
 
     labelDiv.classList.add('bars__day-label')  
     labelDiv.textContent = info.day
 
     barsEl.appendChild(dayDiv)
-    dayDiv.appendChild(amountDiv)  
-    dayDiv.appendChild(barDiv, labelDiv)  
+    dayDiv.append(amountDiv, barDiv, labelDiv)  
 
     // dayDiv.appendChild(labelDiv)  
   })
