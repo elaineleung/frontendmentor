@@ -1,5 +1,3 @@
-(Main repo is [located here](https://github.com/elaineleung/fem-introsecdropdownnav); this current repo is just for record keeping and may not have latest updates)
-
 # Frontend Mentor - Product preview card component solution
 
 This is a solution to the [Product preview card component challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/product-preview-card-component-GO7UmttRfa). Frontend Mentor challenges help you improve your coding skills by building realistic projects. 
