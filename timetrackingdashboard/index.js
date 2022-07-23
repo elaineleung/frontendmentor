@@ -1,5 +1,5 @@
-const [...cardsEl] = document.querySelectorAll(".card")
-const [...inputsEl] = document.querySelectorAll(".profile__duration-option")
+const cardsEls = document.querySelectorAll(".card")
+const timeframeEls = document.querySelectorAll(".profile__duration-option")
 
 let selected = "weekly"
 
@@ -15,24 +15,24 @@ const areasMap = {
 fetch("./data.json")
   .then( response => response.json())
   .then( data => {
+    
     updateValues(data)
-    inputsEl.map( input => {
-      input.value === selected && input.classList.add('selected')
-      input.autocomplete = "off"
-      input.addEventListener("click", (event) => {
+    timeframeEls.forEach( timeframe => {
+      timeframe.value === selected && timeframe.classList.add('selected')
+      timeframe.addEventListener("click", (event) => {
         selected = event.target.value
         updateValues(data)
-        inputsEl.map( input => {
-          input.classList.remove("selected")
-          input.value === selected && input.classList.add('selected')
-          // input.value != selected ? input.checked = false : true
+        timeframeEls.forEach( timeframe => {
+          timeframe.value !== selected ? 
+          timeframe.classList.remove("selected")
+          : timeframe.classList.add('selected')
         })
       })
     })
   })
 
 function updateValues(data) {
-  cardsEl.map( card => {
+  cardsEls.forEach( card => {
     // find the dataset that matches the card's life area 
     const stats = data.find( item => item.title === areasMap[card.id] )
     const { current, previous } = stats.timeframes[selected]
@@ -41,11 +41,9 @@ function updateValues(data) {
     const statsPrev = card.querySelector(".card__stats-prev")
 
     function displayHour(num) {
-      return `${num}${num > 1 ? "hrs" : "hr"}`
+      return `${num}${num === 1 ? "hr" : "hrs"}`
     }
-
     statsNow.textContent = displayHour(current);
     statsPrev.textContent = `Last Week - ${displayHour(previous)}`;
-
   })
 }

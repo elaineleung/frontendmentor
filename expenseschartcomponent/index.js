@@ -20,12 +20,12 @@ fetch("./data.json")
     amountDiv.textContent = `$${info.amount}`
     
     barDiv.classList.add('bars__day-bar')
-    barDiv.addEventListener("mouseenter", (e) => {
-      amountDiv.classList.add("hover")
-    })
-    barDiv.addEventListener("mouseleave", (e) => {
-      amountDiv.classList.remove("hover")
-    })
+    // barDiv.addEventListener("mouseenter", (e) => {
+    //   amountDiv.classList.add("hover")
+    // })
+    // barDiv.addEventListener("mouseleave", (e) => {
+    //   amountDiv.classList.remove("hover")
+    // })
 
     info.amount === max && barDiv.classList.add('highlight')
     barDiv.style.height = `${info.amount * 0.179}rem`
@@ -34,7 +34,7 @@ fetch("./data.json")
     labelDiv.textContent = info.day
 
     barsEl.appendChild(dayDiv)
-    dayDiv.append(amountDiv, barDiv, labelDiv)  
+    dayDiv.append(barDiv, amountDiv, labelDiv)  
 
     // dayDiv.appendChild(labelDiv)  
   })

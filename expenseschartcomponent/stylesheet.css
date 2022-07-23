@@ -42,7 +42,6 @@
   :root {
     --fs-p-label: var(--fs-300);
     --fs-100: 0.8125rem;
-    --fs-200: 0.875rem;
     --fs-300: 1rem;
     --fs-400: 1.125rem;
     --fs-500: 1.25rem;
@@ -276,6 +275,9 @@ body {
 }
 .bars__day-label {
   padding: 0.75rem 0 0.15rem;
+}
+.bars__day-bar:hover ~ .bars__day-amount {
+  display: block;
 }
 
 .stats {

@@ -363,10 +363,16 @@ h6 {
   padding-block: var(--size-900);
 }
 
+.max-main {
+  max-width: var(--max-main);
+}
+.max-testimonials {
+  max-width: var(--max-testimonials);
+}
+
 .list-style-none {
   list-style: none;
 }
-
 // Composition 
 
 .flow > * + * {

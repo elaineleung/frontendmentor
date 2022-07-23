@@ -6,7 +6,6 @@
   --clr-brown-med: hsl(28, 10%, 53%);
   --clr-cream: hsl(27, 66%, 92%);
   --clr-orange-vpale: hsl(33, 100%, 98%);
-  // --fs-logo: 24px;
 
   --fs-100: 0.75rem; // 12px
   --fs-200: 0.8125rem; // 13px
@@ -50,7 +49,6 @@
     --fs-p-label: var(--fs-300);
 
     --fs-100: 0.8125rem; // 13px
-    --fs-200: 0.875rem; // 14px
     --fs-300: 1rem; // 16px
     --fs-400: 1.125rem; // 18px
     --fs-500: 1.25rem; // 18px
@@ -58,7 +56,6 @@
     --fs-800: 3rem; // 40px
 
     --lh-body: 1.2;
-    // --lh-body: 1.2;
 
     --pad-hor: 1rem;
     --pad-top: 2.1rem;
@@ -303,6 +300,9 @@ body {
     }
     &-label {
       padding: 0.75rem 0 0.15rem;
+    }
+    &-bar:hover ~ &-amount {
+      display: block;
     }
   }
 }
