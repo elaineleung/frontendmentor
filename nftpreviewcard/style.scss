@@ -247,6 +247,7 @@ a {
 .card {
   border-radius: 1rem;
   width: clamp(20.4375rem, calc(19.9401rem + 2.1221vw), 21.85rem);
+  box-shadow: 5px 7px 20px hsl(217, 51%, 9%);
   &__image {
     width: 100%;
     margin-bottom: clamp(1.2rem, calc(1.1577rem + 0.1803vw), 1.32rem);
