@@ -1,6 +1,6 @@
 function Intro() {
   return (
-    <section className="intro">
+    <div className="intro">
       <div className="intro__content">
         <h1 className="fs-h1 fw-bold clr-black">Make remote work</h1>
         <p className="clr-neutral-500">
@@ -9,7 +9,7 @@ function Intro() {
         </p>
         <a className="intro__cta cta">Learn more</a>
       </div>
-    </section>
+    </div>
   );
 }
 export default Intro;

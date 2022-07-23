@@ -5,7 +5,7 @@ import Meet from "../assets/client-meet.svg";
 
 function Clients() {
   return (
-    <section className="clients">
+    <div className="clients">
       <div className="client">
         {" "}
         <img src={`${Databiz}`} alt="" />
@@ -23,7 +23,7 @@ function Clients() {
         <img src={`${Maker}`} alt="" />
       </div>
 
-    </section>
+    </div>
   );
 }
 export default Clients;
