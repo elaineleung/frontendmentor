@@ -12,7 +12,7 @@ function MenuToggle({ openMenu, setOpenMenu }) {
       onClick={handleMenu}
       className="menu__icon cursor-pointer"
     >
-      <img src={menuBtn} alt="menu icon" className="menu__icon-btn" />
+      <img src={menuBtn} alt="open menu" className="menu__icon-btn" />
       <span className="visually-hidden">Click for menu</span>
     </button>
   );

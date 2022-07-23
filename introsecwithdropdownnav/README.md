@@ -14,8 +14,6 @@ This is a solution to the [Intro section with dropdown navigation challenge on F
   - [Continued development](#continued-development)
   - [Useful resources](#useful-resources)
 - [Author](#author)
-- [Acknowledgments](#acknowledgments)
-
 
 ## Overview
 
@@ -56,29 +54,29 @@ Users should be able to:
 
 I decided to use this project to brush up on React, which I haven't used in a while since I started using Next JS, and even though Next Js takes React as its core, there are a number of things that are done somewhat differently (as in prescriptively). Thankfully, I actually started in React when I first started learning web development, which was quite a dive into the deep end for a newbie, but thankfully I made it out alive and I think a lot of the skills I learned then helped me out a lot in learning JS as well.
 
+In the beginning I actually started building this with just HTML, SCSS, and JS, but very quickly I realized that I might want to try using React, as I anticipated I might need some advanced state handling, plus I might want to develop this more later. I also ended up checking out Vite since I had seen someone else use it and had wanted to learn more about it, and true to its name, it is a very fast tool to use. For quickly putting a React project together, Vite definitely is a great choice, and I will for sure be using it more in the future.
+
+I'm using CUBE CSS with this project as well, and even though I'm still quite reliant on BEM, I find myself slowly adopting CUBE CSS practices, such as the use of utilities. I also tried to make sure that there's optimal viewing no matter the size of the client. There was an instance or two of `clamp()`, and `max-width` also came in handy; it just took some to experiment since I don't know the sizes beforehand (which to me is part of the challenge). 
+
+Here's a short list of things I relearned/newly learned:
+- How to detect window width in React
+- Handling SVGs in React
+- Dropdown navbars 
+- Overlay with slide-in mobile menu
+- Using `srcset` in `<img>`. I used this in a `<picture>` element in another project, but this time I decided try something a bit different, and it worked quite well
+- Making sure footer is stretched to the bottom. I usually use flexbox on my plain JS projects, and I forgot that React needs something different.
+
 ### Continued development
 
-Use this section to outline areas that you want to continue focusing on in future projects. These could be concepts you're still not completely comfortable with or techniques you found useful that you want to refine and perfect.
-
-**Note: Delete this note and the content within this section and replace with your own plans for continued development.**
+I'd want to add React Router later when I have time so that this can be a somewhat functional app.
 
 ### Useful resources
 
-- [Example resource 1](https://www.example.com) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
-- [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
-
-**Note: Delete this note and replace the list above with resources that helped you during the challenge. These could come in handy for anyone viewing your solution or for yourself when you look back on this project in the future.**
+- [Responsive switching](https://developer.mozilla.org/en-US/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images) - How to use `srcset` and `sizes` in images. 
+- [How to build an accessiible toggle button](https://joshcollinsworth.com/blog/accessible-toggle-buttons) - I was looking at this when I wanted to see how to build a button to open the menu.
+- [How to import SVGs in React and Vite](https://www.freecodecamp.org/news/how-to-import-svgs-in-react-and-vite/) - This helped me when I needed to find a way to change properties on my SVGs (such as color change on hover)
 
 ## Author
 
-- Website - [Add your name here](https://www.your-site.com)
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
-- Twitter - [@yourusername](https://www.twitter.com/yourusername)
-
-**Note: Delete this note and add/remove/edit lines above based on what links you'd like to share.**
-
-## Acknowledgments
-
-This is where you can give a hat tip to anyone who helped you out on this project. Perhaps you worked in a team or got some inspiration from someone else's solution. This is the perfect place to give them some credit.
-
-**Note: Delete this note and edit this section's content as necessary. If you completed this challenge by yourself, feel free to delete this section entirely.**
+- Frontend Mentor - [@elaineleung](https://www.frontendmentor.io/profile/elaineleung)
+- Twitter - [@elaineclleung](https://twitter.com/elaineclleung)
