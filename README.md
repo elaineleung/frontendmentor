@@ -29,3 +29,4 @@ GitHub landing page: [https://elaineleung.github.io/frontendmentor/](https://ela
 | 17  | [Advice generator app](https://elaineleung.github.io/frontendmentor/advicegeneratorapp/)| [Link to GitHub repo](https://github.com/elaineleung/frontendmentor/tree/main/advicegeneratorapp/) |
 | 18  | [Sunnyside agency landing page](https://elaineleung.github.io/frontendmentor/sunnysideagencylandingpage/)| [Link to GitHub repo](https://github.com/elaineleung/frontendmentor/tree/main/sunnysideagencylandingpage/) |
 | 19  | [Product preview card component](https://elaineleung.github.io/frontendmentor/productpreviewcardcomponent/)| [Link to GitHub repo](https://github.com/elaineleung/frontendmentor/tree/main/productpreviewcardcomponent/) |
+| 20  | [Intro section with dropdown navigation solution](https://github.com/elaineleung/fem-introsecdropdownnav) | [Link to GitHub repo](https://github.com/elaineleung/fem-introsecdropdownnav) |

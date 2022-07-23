@@ -49,12 +49,10 @@
     --pad-hor: 32px;
   }
 }
-
 *,
 *:after,
 *:before {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 html,
@@ -101,16 +99,9 @@ body {
   font-weight: 400;
   color: var(--clr-grey-light);
   background: var(--clr-blue-xdark);
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-direction: column;
+  align-items: center;
   padding: 0;
 }
 
@@ -185,7 +176,6 @@ h1.thankyou__title {
 /* Structure */
 .card {
   width: 327px;
-  background: -webkit-gradient(linear, left top, left bottom, from(var(--clr-blue-meddark)), to(var(--clr-blue-dark)));
   background: linear-gradient(to bottom, var(--clr-blue-meddark), var(--clr-blue-dark));
   padding: var(--pad-hor);
   margin-top: 154px;
@@ -195,23 +185,15 @@ h1.thankyou__title {
 .rating__header {
   width: 100%;
   text-align: left;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: left;
-      -ms-flex-align: left;
-          align-items: left;
+  flex-direction: column;
+  align-items: left;
 }
 
 .rating__logo {
   background-color: var(--clr-blue-medium);
   width: 40px;
   height: 40px;
-  display: -ms-grid;
   display: grid;
   place-content: center;
   border-radius: 50%;
@@ -235,12 +217,8 @@ h1.rating__title {
 .rating__buttons {
   margin: 0 auto;
   width: 100.4%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  justify-content: space-between;
   margin-bottom: 24px;
 }
 
@@ -250,7 +228,6 @@ h1.rating__title {
   width: 42px;
   height: 42px;
   padding-top: 5.5px;
-  display: -ms-grid;
   display: grid;
   place-content: center;
   border-radius: 50%;
@@ -307,17 +284,12 @@ h1.thankyou__title {
 }
 
 .footer__content {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
+  flex: 1;
 }
 
 .footer__attribution {
-  -ms-flex-item-align: end;
-      align-self: flex-end;
+  align-self: flex-end;
 }
 
 @media (min-width: 980px) {
@@ -378,5 +350,4 @@ h1.thankyou__title {
   .thankyou__body {
     width: 98%;
   }
-}
-/*# sourceMappingURL=stylesheet.css.map */
+}/*# sourceMappingURL=stylesheet.css.map */

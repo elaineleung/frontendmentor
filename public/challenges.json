@@ -4,134 +4,143 @@
       "name": "ordersummary",
       "title": "Order summary card component",
       "level": "Newbie",
-      "interalhost": true,
+      "internalhost": true,
       "id": 1
     },
     {
       "name": "statspreview",
       "title": "Stats preview card component",
       "level": "Newbie",
-      "interalhost": true,
+      "internalhost": true,
       "id": 2
     },
     {
       "name": "3columnpreview",
       "title": "Three-column preview card component",
       "level": "Newbie",
-      "interalhost": true,
+      "internalhost": true,
       "id": 3
     },
     {
       "name": "profilecard",
       "title": "Profile card component",
       "level": "Newbie",
-      "interalhost": true,
+      "internalhost": true,
       "id": 4
     },
     {
       "name": "socialproofsection",
       "title": "Social proof section",
       "level": "Newbie",
-      "interalhost": true,
+      "internalhost": true,
       "id": 5
     },
     {
       "name": "fourcardfeaturesection",
       "title": "Four card feature section",
       "level": "Newbie",
-      "interalhost": true,
+      "internalhost": true,
       "id": 6
     },
     {
       "name": "singlepricegrid",
       "title": "Single price grid component",
       "level": "Newbie",
-      "interalhost": true,
+      "internalhost": true,
       "id": 7
     },
     {
       "name": "accordioncard",
       "title": "Accordion FAQ component",
       "level": "Newbie",
-      "interalhost": true,
+      "internalhost": true,
       "id": 8
     },
     {
       "name": "articlepreviewcomponent",
       "title": "Article preview component",
       "level": "Newbie",
-      "interalhost": true,
+      "internalhost": true,
       "id": 9
     },
     {
       "name": "baseapparelcomingsoon",
       "title": "Base Apparel coming soon page",
       "level": "Newbie",
-      "interalhost": true,
+      "internalhost": true,
       "id": 10
     },
     {
       "name": "introcomponentwithform",
       "title": "Intro component with sign up",
       "level": "Newbie",
-      "interalhost": true,
+      "internalhost": true,
       "id": 11
     },
     {
       "name": "pingcomingsoonpage",
       "title": "Ping coming soon page",
       "level": "Newbie",
-      "interalhost": true,
+      "internalhost": true,
       "id": 12
     },
     {
       "name": "interactiveratingcomponent",
       "title": "Interactive rating component solution",
       "level": "Newbie",
-      "interalhost": true,
+      "internalhost": true,
       "id": 13
     },
     {
       "name": "huddlelandingpage",
       "title": "Huddle landing page",
       "level": "Newbie",
-      "interalhost": true,
+      "internalhost": true,
       "id": 14
     },
     {
       "name": "expenseschartcomponent",
       "title": "Expenses chart component",
       "level": "Junior",
-      "interalhost": true,
+      "internalhost": true,
       "id": 15
     },
     {
       "name": "timetrackingdashboard",
       "title": "Time tracking dashboard",
       "level": "Junior",
-      "interalhost": true,
+      "internalhost": true,
       "id": 16
     },
     {
       "name": "advicegeneratorapp",
       "title": "Advice generator app",
       "level": "Junior",
-      "interalhost": true,
+      "internalhost": true,
       "id": 17
     },
     {
       "name": "sunnysideagencylandingpage",
       "title": "Sunnyside agency landing page",
       "level": "Junior",
-      "interalhost": true,
+      "internalhost": true,
       "id": 18
     },
     {
       "name": "productpreviewcardcomponent",
       "title": "Product preview card component",
       "level": "Newbie",
-      "interalhost": true,
+      "internalhost": true,
       "id": 19
+    },
+    {
+      "name": "introsecdropdownnav",
+      "title": "Intro section with dropdown navigation solution",
+      "level": "Junior",
+      "internalhost": false,
+      "id": 20,
+      "url": "https://fem-introsecdropdownnav.vercel.app/",
+      "repo": "https://github.com/elaineleung/fem-introsecdropdownnav"
     }
   ]
 }

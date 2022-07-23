@@ -16,18 +16,23 @@ function getData() {
     .then((data) => {
       data.challenges.map((item) => {
         const div = document.createElement("div");
+        const url = item.internalhost === true ? `./${item.name}` : item.url;
+        const repo = item.internalhost === true 
+        ? `https://github.com/elaineleung/frontendmentor/tree/main/${item.name}`
+        : item.repo
+
         div.innerHTML = `
         <div class="card">
-          <a href="./${item.name}">
+          <a href="${url}">
             <div class="card__image">
               <img src="./${item.name}/design/desktop.png" />
             </div>
           </a>
           <div class="card__content">
-            <a href="./${item.name}">
+            <a href="${url}">
               <h2 class="card__title">${item.title}</h2>
             </a>
-            <a class="card__text" href="https://github.com/elaineleung/frontendmentor/tree/main/${item.name}">
+            <a class="card__text" href="${repo}">
               Github repo here
             </a>
           </div>
@@ -66,7 +71,4 @@ function getData() {
 //     });
 // }
 
-
 getData();
-
-

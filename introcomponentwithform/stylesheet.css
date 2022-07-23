@@ -41,7 +41,6 @@
     /* --bkg-body: linear-gradient(135deg, hsl(0, 0%, 100%), hsl(0, 40%, 91%)); */
   }
 }
-
 @media (min-width: 1098px) {
   :root {
     --fs-body: 15px;
@@ -61,12 +60,10 @@
     /* --pad-hor: 138px; */
   }
 }
-
 *,
 *:after,
 *:before {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 html,
@@ -117,16 +114,9 @@ body {
   background-image: url("./images/bg-intro-mobile.png");
   background-repeat: no-repeat;
   background-size: cover;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-direction: column;
+  align-items: center;
   padding: 0;
 }
 
@@ -195,7 +185,6 @@ h2.intro__title {
 .signup__form > div {
   position: relative;
 }
-
 .signup__form > div > label {
   position: absolute;
   color: var(--clr-blue-dark);
@@ -207,10 +196,9 @@ h2.intro__title {
   left: 20px;
   letter-spacing: var(--ls-input);
 }
-
-.signup__form > div > input[type="text"],
-.signup__form > div > input[type="email"],
-.signup__form > div > input[type="password"] {
+.signup__form > div > input[type=text],
+.signup__form > div > input[type=email],
+.signup__form > div > input[type=password] {
   background: inherit;
   font-family: inherit;
   font-size: var(--fs-input);
@@ -219,65 +207,68 @@ h2.intro__title {
   color: var(--clr-blue-dark);
   letter-spacing: var(--ls-input);
 }
-
-.signup__form > div > input[type="text"]:active,
-.signup__form > div > input[type="email"]:active,
-.signup__form > div > input[type="password"]:active {
+.signup__form > div > input[type=text]:active,
+.signup__form > div > input[type=email]:active,
+.signup__form > div > input[type=password]:active {
   border: none;
   outline: 0;
 }
-
-.signup__form > div > input[type="text"]:focus,
-.signup__form > div > input[type="email"]:focus,
-.signup__form > div > input[type="password"]:focus {
+.signup__form > div > input[type=text]:focus,
+.signup__form > div > input[type=email]:focus,
+.signup__form > div > input[type=password]:focus {
   border: 1px solid var(--clr-blue-dark);
   outline: 0;
 }
-
-.signup__form > div > input[type="text"]:focus + label,
-.signup__form > div > input[type="email"]:focus + label,
-.signup__form > div > input[type="password"]:focus + label {
+.signup__form > div > input[type=text]:focus + label,
+.signup__form > div > input[type=email]:focus + label,
+.signup__form > div > input[type=password]:focus + label {
   opacity: 0;
 }
-
-.signup__form > div > input[type="text"]:not(:focus):not(:placeholder-shown):valid, .signup__form > div > input[type="text"]:not(:focus):not(:placeholder-shown):invalid,
-.signup__form > div > input[type="email"]:not(:focus):not(:placeholder-shown):valid,
-.signup__form > div > input[type="email"]:not(:focus):not(:placeholder-shown):invalid,
-.signup__form > div > input[type="password"]:not(:focus):not(:placeholder-shown):valid,
-.signup__form > div > input[type="password"]:not(:focus):not(:placeholder-shown):invalid {
+.signup__form > div > input[type=text]:not(:focus):not(:-moz-placeholder-shown):valid, .signup__form > div > input[type=text]:not(:focus):not(:-moz-placeholder-shown):invalid, .signup__form > div > input[type=email]:not(:focus):not(:-moz-placeholder-shown):valid, .signup__form > div > input[type=email]:not(:focus):not(:-moz-placeholder-shown):invalid, .signup__form > div > input[type=password]:not(:focus):not(:-moz-placeholder-shown):valid, .signup__form > div > input[type=password]:not(:focus):not(:-moz-placeholder-shown):invalid {
   background: inherit;
 }
-
-.signup__form > div > input[type="text"]:not(:focus):not(:placeholder-shown):valid + label, .signup__form > div > input[type="text"]:not(:focus):not(:placeholder-shown):invalid + label,
-.signup__form > div > input[type="email"]:not(:focus):not(:placeholder-shown):valid + label,
-.signup__form > div > input[type="email"]:not(:focus):not(:placeholder-shown):invalid + label,
-.signup__form > div > input[type="password"]:not(:focus):not(:placeholder-shown):valid + label,
-.signup__form > div > input[type="password"]:not(:focus):not(:placeholder-shown):invalid + label {
+.signup__form > div > input[type=text]:not(:focus):not(:-ms-input-placeholder):valid, .signup__form > div > input[type=text]:not(:focus):not(:-ms-input-placeholder):invalid, .signup__form > div > input[type=email]:not(:focus):not(:-ms-input-placeholder):valid, .signup__form > div > input[type=email]:not(:focus):not(:-ms-input-placeholder):invalid, .signup__form > div > input[type=password]:not(:focus):not(:-ms-input-placeholder):valid, .signup__form > div > input[type=password]:not(:focus):not(:-ms-input-placeholder):invalid {
+  background: inherit;
+}
+.signup__form > div > input[type=text]:not(:focus):not(:placeholder-shown):valid, .signup__form > div > input[type=text]:not(:focus):not(:placeholder-shown):invalid,
+.signup__form > div > input[type=email]:not(:focus):not(:placeholder-shown):valid,
+.signup__form > div > input[type=email]:not(:focus):not(:placeholder-shown):invalid,
+.signup__form > div > input[type=password]:not(:focus):not(:placeholder-shown):valid,
+.signup__form > div > input[type=password]:not(:focus):not(:placeholder-shown):invalid {
+  background: inherit;
+}
+.signup__form > div > input[type=text]:not(:focus):not(:-moz-placeholder-shown):valid + label, .signup__form > div > input[type=text]:not(:focus):not(:-moz-placeholder-shown):invalid + label, .signup__form > div > input[type=email]:not(:focus):not(:-moz-placeholder-shown):valid + label, .signup__form > div > input[type=email]:not(:focus):not(:-moz-placeholder-shown):invalid + label, .signup__form > div > input[type=password]:not(:focus):not(:-moz-placeholder-shown):valid + label, .signup__form > div > input[type=password]:not(:focus):not(:-moz-placeholder-shown):invalid + label {
   opacity: 0;
 }
-
-.signup__form > div > input[type="text"]:not(:focus):invalid.is-invalid,
-.signup__form > div > input[type="email"]:not(:focus):invalid.is-invalid,
-.signup__form > div > input[type="password"]:not(:focus):invalid.is-invalid {
+.signup__form > div > input[type=text]:not(:focus):not(:-ms-input-placeholder):valid + label, .signup__form > div > input[type=text]:not(:focus):not(:-ms-input-placeholder):invalid + label, .signup__form > div > input[type=email]:not(:focus):not(:-ms-input-placeholder):valid + label, .signup__form > div > input[type=email]:not(:focus):not(:-ms-input-placeholder):invalid + label, .signup__form > div > input[type=password]:not(:focus):not(:-ms-input-placeholder):valid + label, .signup__form > div > input[type=password]:not(:focus):not(:-ms-input-placeholder):invalid + label {
+  opacity: 0;
+}
+.signup__form > div > input[type=text]:not(:focus):not(:placeholder-shown):valid + label, .signup__form > div > input[type=text]:not(:focus):not(:placeholder-shown):invalid + label,
+.signup__form > div > input[type=email]:not(:focus):not(:placeholder-shown):valid + label,
+.signup__form > div > input[type=email]:not(:focus):not(:placeholder-shown):invalid + label,
+.signup__form > div > input[type=password]:not(:focus):not(:placeholder-shown):valid + label,
+.signup__form > div > input[type=password]:not(:focus):not(:placeholder-shown):invalid + label {
+  opacity: 0;
+}
+.signup__form > div > input[type=text]:not(:focus):invalid.is-invalid,
+.signup__form > div > input[type=email]:not(:focus):invalid.is-invalid,
+.signup__form > div > input[type=password]:not(:focus):invalid.is-invalid {
   background: url("./images/icon-error.svg");
   background-repeat: no-repeat;
   background-position: top 16px right 18px;
   border: 2px solid var(--clr-red);
   color: var(--clr-red);
 }
-
-.signup__form > div > input[type="text"]:not(:focus):invalid.is-invalid + label,
-.signup__form > div > input[type="email"]:not(:focus):invalid.is-invalid + label,
-.signup__form > div > input[type="password"]:not(:focus):invalid.is-invalid + label {
+.signup__form > div > input[type=text]:not(:focus):invalid.is-invalid + label,
+.signup__form > div > input[type=email]:not(:focus):invalid.is-invalid + label,
+.signup__form > div > input[type=password]:not(:focus):invalid.is-invalid + label {
   opacity: 0;
 }
-
-.signup__form > div > input[type="text"]:not(:focus):invalid.is-invalid ~ .input__message,
-.signup__form > div > input[type="email"]:not(:focus):invalid.is-invalid ~ .input__message,
-.signup__form > div > input[type="password"]:not(:focus):invalid.is-invalid ~ .input__message {
+.signup__form > div > input[type=text]:not(:focus):invalid.is-invalid ~ .input__message,
+.signup__form > div > input[type=email]:not(:focus):invalid.is-invalid ~ .input__message,
+.signup__form > div > input[type=password]:not(:focus):invalid.is-invalid ~ .input__message {
   display: block;
 }
-
 .signup__form > div .input__message {
   display: none;
   color: var(--clr-red);
@@ -286,16 +277,11 @@ h2.intro__title {
   font-weight: 500;
 }
 
-::-webkit-input-placeholder {
-  /* Chrome/Opera/Safari */
+::-moz-placeholder {
   display: none;
 }
 
 :-ms-input-placeholder {
-  display: none;
-}
-
-::-ms-input-placeholder {
   display: none;
 }
 
@@ -335,23 +321,12 @@ h2.intro__title {
 .main {
   width: clamp(375px, 65vw, 40em);
   height: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-flex: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
+  flex-grow: 1;
   padding: var(--pad-ver) var(--pad-hor) calc(var(--pad-ver) - 54px);
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   background: transparent;
   row-gap: 24px;
 }
@@ -370,8 +345,7 @@ h2.intro__title {
   padding: 18px 16px 17px;
   background-color: var(--clr-blue);
   border-radius: 10px;
-  -webkit-filter: drop-shadow(0px 7px 1px var(--clr-red-dark));
-          filter: drop-shadow(0px 7px 1px var(--clr-red-dark));
+  filter: drop-shadow(0px 7px 1px var(--clr-red-dark));
 }
 
 .banner__text {
@@ -387,19 +361,13 @@ h2.intro__title {
   background: var(--clr-white);
   padding: 24px;
   border-radius: 8px;
-  -webkit-filter: drop-shadow(0px 8px 1px var(--clr-red-dark));
-          filter: drop-shadow(0px 8px 1px var(--clr-red-dark));
+  filter: drop-shadow(0px 8px 1px var(--clr-red-dark));
 }
 
 .signup__form {
   width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
   row-gap: 16px;
   margin-bottom: 9px;
 }
@@ -413,12 +381,8 @@ h2.intro__title {
   border-radius: 5px;
   padding: 16px 18px 16px;
   position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  justify-content: space-between;
 }
 
 .input__message {
@@ -465,7 +429,6 @@ button.signup__submit {
 }
 
 .attribution {
-  display: -ms-grid;
   display: grid;
   place-content: center;
   width: 100%;
@@ -492,21 +455,16 @@ button.signup__submit {
   }
   .main {
     width: clamp(1000px, 77.1vw, 80em);
-    display: -ms-grid;
     display: grid;
     padding: 0;
     margin-top: 24px;
     place-content: center;
-        grid-template-areas: "intro banner" "intro signup";
-    -ms-grid-columns: 1fr 1fr;
-        grid-template-columns: 1fr 1fr;
-    -webkit-column-gap: 30px;
-            column-gap: 30px;
+    grid-template-areas: "intro banner" "intro signup";
+    grid-template-columns: 1fr 1fr;
+    -moz-column-gap: 30px;
+         column-gap: 30px;
   }
   .intro {
-    -ms-grid-row: 1;
-    -ms-grid-row-span: 2;
-    -ms-grid-column: 1;
     grid-area: intro;
     text-align: left;
     margin-top: 47px;
@@ -516,18 +474,13 @@ button.signup__submit {
     margin-bottom: 28px;
   }
   .banner {
-    -ms-grid-row: 1;
-    -ms-grid-column: 2;
     grid-area: banner;
     padding: 18px 16px 16px;
     border-radius: 10px;
     margin-top: 2px;
-    -webkit-filter: drop-shadow(0px 8px 1px var(--clr-red-dark));
-            filter: drop-shadow(0px 8px 1px var(--clr-red-dark));
+    filter: drop-shadow(0px 8px 1px var(--clr-red-dark));
   }
   .signup {
-    -ms-grid-row: 2;
-    -ms-grid-column: 2;
     grid-area: signup;
   }
   .signup__content {
@@ -548,8 +501,6 @@ button.signup__submit {
     padding: 17px 30px 15px;
     position: relative;
     width: 100%;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
   }
   .signup__form div > .input.is-invalid {
@@ -568,9 +519,6 @@ button.signup__submit {
     margin-bottom: 1px;
   }
   .attribution {
-    -ms-flex-item-align: end;
-        -ms-grid-row-align: end;
-        align-self: end;
+    align-self: end;
   }
-}
-/*# sourceMappingURL=stylesheet.css.map */
+}/*# sourceMappingURL=stylesheet.css.map */
