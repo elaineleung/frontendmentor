@@ -36,8 +36,9 @@ Users should be able to:
 ![Desktop view of solution](./design/desktop.png)
 ### Links
 
-- Solution URL: [Link to GitHub repo](https://github.com/elaineleung/frontendmentor/tree/main/introsecwithdropdownnav/)
-- Live Site URL: [Link to live site](https://elaineleung.github.io/frontendmentor/introsecwithdropdownnav/)
+- Solution URL: [Link to GitHub repo](https://github.com/elaineleung/fem-introsecdropdownnav)
+- Live Site URL: [Link to live site](https://fem-introsecdropdownnav.vercel.app/)
+- Main Frontend Mentor repository: [Link to FEM repo](https://github.com/elaineleung/frontendmentor)
 
 ## My process
 

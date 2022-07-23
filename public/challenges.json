@@ -86,7 +86,7 @@
     },
     {
       "name": "interactiveratingcomponent",
-      "title": "Interactive rating component solution",
+      "title": "Interactive rating component",
       "level": "Newbie",
       "internalhost": true,
       "id": 13
@@ -135,12 +135,19 @@
     },
     {
       "name": "introsecdropdownnav",
-      "title": "Intro section with dropdown navigation solution",
+      "title": "Intro section with dropdown navigation",
       "level": "Junior",
       "internalhost": false,
       "id": 20,
       "url": "https://fem-introsecdropdownnav.vercel.app/",
       "repo": "https://github.com/elaineleung/fem-introsecdropdownnav"
+    },
+    {
+      "name": "nftpreviewcard",
+      "title": "NFT preview card component",
+      "level": "Newbie",
+      "internalhost": true,
+      "id": 21
     }
   ]
 }
