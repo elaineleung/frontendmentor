@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+    <title>Frontend Mentor | NFT preview card component</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body class="bg-blue-900 clr-blue-100 font-primary fw-light">
+    <main class="component">
+      <div class="card / bg-blue-700 pad-100">
+        <div class="card__image" alt="click to view details">
+          <img
+            src="./images/image-equilibrium.jpg"
+            alt="Equilibrium, a multicolor cube"
+          />
+          <div class="card__image-overlay overlay">
+            <img src="./images/icon-view.svg" alt="" class="">
+          </div>
+        </div>
+
+        <h1 class="card__title / clr-white fs-h1 fw-semibold">
+          <a href="#">Equilibrium #3429</a>
+        </h1>
+        <p class="card__description fs-content">
+          Our Equilibrium collection promotes balance and calm.
+        </p>
+        <div class="card__info">
+          <div class="price">
+            <div class="price__unit" aria-hidden="true">
+              <svg width="11" height="18" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M11 10.216 5.5 18 0 10.216l5.5 3.263 5.5-3.262ZM5.5 0l5.496 9.169L5.5 12.43 0 9.17 5.5 0Z"
+                  fill="#00FFF8"
+                />
+              </svg>
+            </div>
+            <span class="price__value clr-cyan fw-semibold">0.041 ETH</span>
+          </div>
+          <div class="remaining">
+            <div class="remaining__icon">
+              <svg width="17" height="17" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M8.305 2.007a6.667 6.667 0 1 0 0 13.334 6.667 6.667 0 0 0 0-13.334Zm2.667 7.334H8.305a.667.667 0 0 1-.667-.667V6.007a.667.667 0 0 1 1.334 0v2h2a.667.667 0 0 1 0 1.334Z"
+                  fill="#8BACD9"
+                />
+              </svg>
+            </div>
+            <span class="remaining__text / fw-regular">3 days left</span>
+          </div>
+        </div>
+        <div class="divider" aria-hidden="true"></div>
+        <div class="card__creator">
+          <div class="creator__avatar">
+            <img src="./images/image-avatar.png" alt="" />
+          </div>
+          <p class="creator__info">
+            Creation of <a href="#">Jules Wyvern</a>
+          </p>
+        </div>
+      </div>
+    </main>
+
+    <footer class="footer / fs-100 lh-footer">
+      <span class="footer__content">
+        Challenge by
+        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+          >Frontend Mentor</a
+        >. Coded by <a href="https://twitter.com/elaineclleung">Elaine</a>.</span>
+      <span>&nbsp; Other
+        <a href="https://elaineleung.github.io/frontendmentor/"
+          >Frontend Mentor Challenges</a
+        >
+        by Elaine
+      </span>
+    </footer>
+  </body>
+</html>

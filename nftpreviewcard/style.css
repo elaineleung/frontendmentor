@@ -1,0 +1,343 @@
+:root {
+  --clr-blue-100: hsl(215, 51%, 70%);
+  --clr-cyan: hsl(178, 100%, 50%);
+  --clr-blue-900: hsl(217, 54%, 11%);
+  --clr-blue-700: hsl(216, 50%, 16%);
+  --clr-blue-400: hsl(215, 32%, 27%);
+  --clr-white: hsl(0, 0%, 100%);
+  --fs-100: 0.75rem;
+  --fs-200: 0.8125rem;
+  --fs-300: 0.875rem;
+  --fs-400: 0.9375rem;
+  --fs-500: 1rem;
+  --fs-600: 1.125rem;
+  --fs-700: 1.25rem;
+  --fs-800: 1.375rem;
+  --fs-900: 1.5;
+  --fs-body: var(--fs-500);
+  --fs-p: var(--fs-300);
+  --fs-h1: var(--fs-800);
+  --fs-content: clamp(1rem, calc(0.956rem + 0.1878vw), 1.125rem);
+  --fw-300: 300;
+  --fw-400: 400;
+  --fw-600: 600;
+  --ff-primary: "Outfit", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  --lh-none: 1;
+  --lh-h1: 1;
+  --lh-body: 1.6;
+  --lh-content: 1.65;
+  --max-header: 86.9rem;
+  --max-main: 80.35rem;
+}
+
+@media (min-width: 960px) {
+  :root {
+    --lh-content: 1.5;
+  }
+}
+/* Remove default margin */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/*
+  2. Remove default margin
+*/
+* {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role=list],
+ol[role=list] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+html,
+body {
+  height: 100%;
+}
+
+body {
+  text-rendering: optimizeSpeed;
+  line-height: var(--lh-body);
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  -webkit-text-decoration-skip: ink;
+          text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+/* Avoid text overflows */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+  *,
+*::before,
+*::after {
+    -webkit-animation-duration: 0.01ms !important;
+            animation-duration: 0.01ms !important;
+    -webkit-animation-iteration-count: 1 !important;
+            animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+/* utility classes  */
+.font-primary {
+  font-family: var(--ff-primary);
+}
+
+.fs-100 {
+  font-size: var(--fs-100);
+}
+
+.fs-200 {
+  font-size: var(--fs-200);
+}
+
+.fs-300 {
+  font-size: var(--fs-300);
+}
+
+.fs-400 {
+  font-size: var(--fs-400);
+}
+
+.fs-500 {
+  font-size: var(--fs-500);
+}
+
+.fs-600 {
+  font-size: var(--fs-600);
+}
+
+.fs-700 {
+  font-size: var(--fs-700);
+}
+
+.fs-800 {
+  font-size: var(--fs-800);
+}
+
+.fs-h1 {
+  font-size: var(--fs-h1);
+}
+
+.fs-content {
+  font-size: var(--fs-content);
+}
+
+.fw-light {
+  font-weight: var(--fw-300);
+}
+
+.fw-regular {
+  font-weight: var(--fw-400);
+}
+
+.fw-semibold {
+  font-weight: var(--fw-600);
+}
+
+.lh-none {
+  line-height: var(--lh-none);
+}
+
+.lh-h1 {
+  line-height: var(--lh-h1);
+}
+
+.lh-product-description {
+  line-height: var(--lh-product-description);
+}
+
+.lh-footer {
+  line-height: var(--lh-footer);
+}
+
+.bg-blue-900 {
+  background-color: var(--clr-blue-900);
+}
+
+.bg-blue-700 {
+  background-color: var(--clr-blue-700);
+}
+
+.clr-white {
+  color: var(--clr-white);
+}
+
+.clr-blue-100 {
+  color: var(--clr-blue-100);
+}
+
+.clr-blue-400 {
+  color: var(--clr-blue-100);
+}
+
+.clr-cyan {
+  color: var(--clr-cyan);
+}
+
+.text-uppercase {
+  text-transform: uppercase;
+}
+
+.pad-100 {
+  padding: 1.5rem;
+}
+
+body {
+  font-size: var(--fs-body);
+  display: flex;
+  flex-direction: column;
+}
+
+a {
+  color: var(--clr-white);
+  text-decoration: none;
+}
+a:hover, a:active {
+  color: var(--clr-cyan);
+}
+
+.component {
+  padding-inline: 1.5rem;
+  display: grid;
+  place-content: center;
+  flex: 1;
+  padding-top: 3.4rem;
+}
+
+.card {
+  border-radius: 1rem;
+  width: clamp(20.4375rem, 19.9401rem + 2.1221vw, 21.85rem);
+}
+.card__image {
+  width: 100%;
+  margin-bottom: clamp(1.2rem, 1.1577rem + 0.1803vw, 1.32rem);
+  position: relative;
+  cursor: pointer;
+}
+.card__image * {
+  border-radius: 0.5rem;
+}
+.card__image img {
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.card__image .overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  background-color: hsla(178deg, 100%, 50%, 0.5);
+  opacity: 0;
+  display: grid;
+  place-content: center;
+  transition: opacity 200ms ease-in-out;
+}
+.card__image .overlay img {
+  width: 3rem;
+  height: 2rem;
+}
+.card__image .overlay:hover {
+  opacity: 1;
+}
+.card__title {
+  margin-bottom: clamp(0.55rem, 0.4972rem + 0.2254vw, 0.7rem);
+}
+.card__description {
+  margin-bottom: clamp(0.75rem, 0.5739rem + 0.7512vw, 1.25rem);
+  line-height: var(--lh-content);
+}
+.card__info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: clamp(0.8rem, 0.6063rem + 0.8263vw, 1.35rem);
+  margin-bottom: 1rem;
+  border-bottom: 0.01rem var(--clr-blue-400) solid;
+}
+.card__creator {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: clamp(0.1rem, -0.0761rem + 0.7512vw, 0.6rem);
+}
+
+.price {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+}
+
+.remaining {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  -webkit-margin-end: 0.1rem;
+          margin-inline-end: 0.1rem;
+}
+
+.creator__avatar {
+  width: 2rem;
+  border-radius: 50%;
+  border: 1px var(--clr-white) solid;
+}
+.creator__avatar img {
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.creator__info {
+  letter-spacing: 0.01rem;
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 100%;
+  text-align: center;
+  padding: 1rem;
+  margin-inline: auto;
+}
+.footer span {
+  display: inline-block;
+}/*# sourceMappingURL=style.css.map */
