@@ -1,44 +1,131 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Tip calculator app</title>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Frontend Mentor | Tip calculator app</title>
+  </head>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
+  <body class="bg-neutral-300 font-primary fs-body clr-neutral-800">
+    <div class="component">
+      <header class="header">
+        <img class="logo" src="./images/logo.svg" alt="" />
+        <h1>
+          <span class="visually-hidden">Spilter Tip App</span>
+        </h1>
+      </header>
+      <main class="app / bg-white pad-app">
+        <article class="calculate / pad-calculate">
+          <div class="bill calculate__bill">
+            <img class="icon" src="./images/icon-dollar.svg" alt="" />
+            <label for="bill"><span class="title">Bill</span></label>
+            <input type="text" id="bill" name="bill" placeholder="0" />
+          </div>
+          <div
+            role="radiogroup"
+            aria-labelledby="tip-group"
+            id="tipsEl"
+            class="tip calculate__tip"
+          >
+            <h2 class="title">Select Tip %</h2>
+            <div class="options">
+              <div class="radiobtn">
+                <input
+                  type="radio"
+                  value="5"
+                  name="tip"
+                  id="5percent"
+                />
+                <label for="5percent">5%</label>
+              </div>
+              <div class="radiobtn">
+                <input type="radio" value="10" name="tip" id="10percent" />
+                <label for="10percent">10%</label>
+              </div>
+              <div class="radiobtn">
+                <input type="radio" value="15" name="tip" id="15percent" />
+                <label for="15percent">15%</label>
+              </div>
+              <div class="radiobtn">
+                <input type="radio" value="25" name="tip" id="25percent" />
+                <label for="25percent">25%</label>
+              </div>
+              <div class="radiobtn">
+                <input type="radio" value="50" name="tip" id="50percent" />
+                <label for="50percent">50%</label>
+              </div>
+              <div class="radiobtn">
+                <label for="custom" class="custom" id="customEl">
+                  <span class="visually-hidden">Custom</span>
+                  <input type="radio" name="tip" id="custom" value="0" />
+                  <input type="text" placeholder="Custom" name="tip-value" />
+                </label>
+              </div>
+            </div>
+          </div>
+          <div class="people calculate__people">
+            <img class="icon" src="./images/icon-person.svg" alt="" />
+            <div>
+              <label class="title" for="people">Number of People</label
+              >
+            </div>
+            <input
+              type="text"
+              id="people"
+              name="people"
+              placeholder="0"
+              pattern="^[1-9][0-9]*$"
+            />
+            <span id="invalidEl" class="message"></span>
+          </div>
+        </article>
+        <article class="results / bg-neutral-900 pad-results">
+          <div class="amount result">
+            <div class="title">Tip Amount <span>/ person</span></div>
+            <div class="value">$<span id="amountEl">0</span></div>
+          </div>
+          <div class="total result">
+            <div class="title">Total<span>/ person</span></div>
+            <div class="value">$<span id="totalEl">0</span></div>
+          </div>
 
-  Bill
+          <button class="reset / fs-reset text-uppercase" id="resetBtn">
+            Reset
+          </button>
+        </article>
+      </main>
+    </div>
 
-  Select Tip %
-  5%
-  10%
-  15%
-  25%
-  50%
-  Custom
-
-  Number of People
-
-  Tip Amount
-  / person
-
-  Total
-  / person
-
-  Reset
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
-</body>
+    <footer class="footer / fs-100 pad-footer lh-footer">
+      <span class="footer__content">
+        Challenge by
+        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+          >Frontend Mentor</a
+        >. Coded by <a href="https://twitter.com/elaineclleung">Elaine</a>.
+      </span>
+      <span
+        >Other
+        <a href="https://elaineleung.github.io/frontendmentor/"
+          >Frontend Mentor Challenges</a
+        >
+        by Elaine
+      </span>
+    </footer>
+  </body>
+  <script src="index.js"></script>
 </html>

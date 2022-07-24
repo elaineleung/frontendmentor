@@ -26,7 +26,7 @@
   --fw-900: 900;
 
   --fs-body: 1.125rem;
-  --fs-h1: 2.5rem;
+  --fs-h1: clamp(1.75rem, calc(-1.2500rem + 16.0000vw), 2.5rem);
   --fs-heading-intro: clamp(2rem, calc(1.8239rem + 0.7512vw), 2.5rem);
   --fs-heading-services: 1.74rem;
   --fs-heading-testimonials: clamp(
@@ -302,65 +302,12 @@ h6 {
   font-size: var(--fs-attribution);
 }
 
-.gap-top-300 {
-  margin-top: 0.8rem;
-}
-
-.gap-top-400 {
-  margin-top: 1rem;
-}
-
-.gap-top-500 {
-  margin-top: 1.33rem;
-}
-
-.gap-top-600 {
-  margin-top: 1.77rem;
-}
-
-.gap-top-700 {
-  margin-top: 2.4rem;
-}
-
-.pad-top-300 {
-  padding-top: 0.8rem;
-}
-
-.pad-top-400 {
-  padding-top: 1rem;
-}
-
-.pad-top-500 {
-  padding-top: 1.33rem;
-}
-
-.pad-top-600 {
-  padding-top: 1.77rem;
-}
-
-.pad-top-700 {
-  padding-top: 2.4rem;
-}
-
 .max-main {
   max-width: var(--max-main);
 }
 
 .max-testimonials {
   max-width: var(--max-testimonials);
-}
-
-.padding-block-400 {
-  padding-block: var(--size-400);
-}
-.padding-block-500 {
-  padding-block: var(--size-500);
-}
-.padding-block-700 {
-  padding-block: var(--size-700);
-}
-.padding-block-900 {
-  padding-block: var(--size-900);
 }
 
 .max-main {

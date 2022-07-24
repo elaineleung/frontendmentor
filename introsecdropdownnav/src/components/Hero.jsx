@@ -4,12 +4,26 @@ import desktopImg from '../assets/image-hero-desktop.png'
 function Hero() {
   return (
     <div className="hero">
-      <img
+      <picture>
+          <source
+            media="(max-width: 749px)"
+            srcSet={`${mobileImg}`}
+          />
+          <source
+            media="(min-width: 750px)"
+            srcset={`${desktopImg}`}
+          />
+          <img
+            src={`${desktopImg}`}
+            alt="A man typing into a laptop computer while standing"
+          />
+        </picture>
+      {/* <img
         srcSet={`${mobileImg} 750w, ${desktopImg} 960w`}
         sizes="(max-width: 960px) 750px, 960px"
         src={`${desktopImg}`}
         alt="A man typing into a laptop computer while standing"
-      ></img>
+      ></img> */}
     </div>
   );
 }
