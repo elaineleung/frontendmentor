@@ -396,13 +396,13 @@ a:hover, a:active {
   width: 100%;
 }
 .tip-custom [type=text]::-moz-placeholder {
-  color: var(--clr-neutral-800);
+  color: var(--clr-neutral-900);
 }
 .tip-custom [type=text]:-ms-input-placeholder {
-  color: var(--clr-neutral-800);
+  color: var(--clr-neutral-900);
 }
 .tip-custom [type=text]::placeholder {
-  color: var(--clr-neutral-800);
+  color: var(--clr-neutral-900);
 }
 
 .wrapper {
