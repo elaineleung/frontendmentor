@@ -56,9 +56,10 @@
 @media (min-width: 1080px) {
   :root {
     --fs-900: 3rem; // 24pt
+    --ls-value: -1px;
     --pad-app: 2rem;
     --pad-calculate: 0.8rem 1rem 0.95rem;
-    --pad-results: 2.45rem 2.5rem 2.5rem;
+    --pad-results: 2.5rem 2.5rem 2.5rem;
     --pad-footer: 4.9rem 0.5rem 1rem;
   }
 }
@@ -337,7 +338,7 @@ a {
   background-color: var(--clr-neutral-900);
   padding: 0.25rem 1rem;
   border-radius: 0.3rem;
-  color: var(--clr-white);
+  color: var(--clr-neutral-100);
   border: 2px solid var(--clr-neutral-900);
   &:hover {
     background-color: var(--clr-cyan-300);
@@ -521,6 +522,7 @@ a {
   .value {
     color: var(--clr-cyan-400);
     font-size: var(--fs-value);
+    letter-spacing: var(--ls-value);
   }
   .reset {
     flex: 1;
@@ -594,6 +596,9 @@ a {
     }
     .title {
       padding-top:0.3rem;
+      // span {
+      //   padding-top: 0.1rem;
+      // }
     }
   }
   .footer {
