@@ -8,7 +8,6 @@ fetch("./data.json")
    return response.json();
 })
 .then(data => {
-  // const max = Math.max(...data.map( day => day.amount ))
   
   data.forEach( (info, idx) => {
     const dayDiv = document.createElement("div")
