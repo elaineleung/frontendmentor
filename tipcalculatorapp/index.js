@@ -26,8 +26,8 @@ function reset() {
 }
 
 function clearDisplay() {
-  totalEl.textContent = "0";
-  amountEl.textContent = "0";
+  totalEl.textContent = "0.00";
+  amountEl.textContent = "0.00";
 }
 
 resetBtn.addEventListener("click", reset);
