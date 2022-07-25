@@ -4,6 +4,7 @@
   --clr-neutral-700: hsl(184, 14%, 56%);
   --clr-neutral-300: hsl(185, 41%, 84%);
   --clr-neutral-100: hsl(189, 41%, 97%);
+  --clr-cyan-900: hsl(183, 79%, 24%);
   --clr-cyan-500: hsl(172, 81%, 51%);
   --clr-cyan-400: hsl(172, 67%, 45%);
   --clr-cyan-300: hsl(173, 61%, 77%);
@@ -451,7 +452,7 @@ a:hover, a:active {
 }
 .calculate__bill img {
   position: absolute;
-  left: 1rem;
+  left: 1.2rem;
   top: 2.9rem;
   z-index: 5;
 }
@@ -489,7 +490,7 @@ a:hover, a:active {
 }
 .calculate__people img {
   position: absolute;
-  left: 1rem;
+  left: 1.2rem;
   top: 2.9rem;
   z-index: 5;
 }
@@ -529,6 +530,8 @@ a:hover, a:active {
 }
 .results .reset button {
   align-self: flex-end;
+  background-color: var(--clr-cyan-900);
+  border: 2px solid var(--clr-cyan-900);
   width: 100%;
   padding: 0.55rem 0 0.35rem;
   border-radius: 0.3rem;
