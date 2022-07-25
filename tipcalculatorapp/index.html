@@ -33,7 +33,7 @@
       </header>
       <main class="app / bg-white pad-app">
         <div class="app__container">
-          <article class="calculate / pad-calculate">
+          <section class="calculate / pad-calculate">
             <div class="bill calculate__bill">
               <img class="icon" src="./images/icon-dollar.svg" alt="" />
               <label for="bill"><span class="title">Bill</span></label>
@@ -48,31 +48,31 @@
               <h2 class="title">Select Tip %</h2>
               <div class="options">
                 <div class="radiobtn">
-                  <input type="radio" value="5" name="tip" id="5percent" />
+                  <input type="radio" value="5" name="tip" id="5percent" aria-labelledby="tip-group"/>
                   <label for="5percent">5%</label>
                 </div>
                 <div class="radiobtn">
-                  <input type="radio" value="10" name="tip" id="10percent" />
+                  <input type="radio" value="10" name="tip" id="10percent" aria-labelledby="tip-group"/>
                   <label for="10percent">10%</label>
                 </div>
                 <div class="radiobtn">
-                  <input type="radio" value="15" name="tip" id="15percent" />
+                  <input type="radio" value="15" name="tip" id="15percent" aria-labelledby="tip-group"/>
                   <label for="15percent">15%</label>
                 </div>
                 <div class="radiobtn">
-                  <input type="radio" value="25" name="tip" id="25percent" />
+                  <input type="radio" value="25" name="tip" id="25percent" aria-labelledby="tip-group"/>
                   <label for="25percent">25%</label>
                 </div>
                 <div class="radiobtn">
-                  <input type="radio" value="50" name="tip" id="50percent" />
+                  <input type="radio" value="50" name="tip" id="50percent" aria-labelledby="tip-group"/>
                   <label for="50percent">50%</label>
                 </div>
-                <div class="radiobtn">
-                  <label for="custom" class="custom" id="customEl">
+                <div class="radiobtn" id="customEl">
+                  <label for="custom" class="custom" id="custom" aria-labelledby="tip-group">
                     <span class="visually-hidden">Custom</span>
                     <input type="radio" name="tip" id="custom" value="0" />
-                    <input type="text" placeholder="Custom" name="tip-value" />
                   </label>
+                  <input type="text" placeholder="Custom" name="tip-value" />
                 </div>
               </div>
             </div>
@@ -90,8 +90,8 @@
               />
               <span id="invalidEl" class="message"></span>
             </div>
-          </article>
-          <article class="results / bg-neutral-900 pad-results">
+          </section>
+          <section class="results / bg-neutral-900 pad-results">
             <div class="results__container">
               <div class="amount result">
                 <div class="title">Tip Amount <span>/ person</span></div>
@@ -107,7 +107,7 @@
                 </button>
               </div>
             </div>
-          </article>
+          </section>
         </div>
       </main>
     </div>
