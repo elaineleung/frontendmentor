@@ -37,14 +37,16 @@
   --lh-body: 1.2;
   --lh-footer: 1.4;
 
-  --pad-hor: 1rem;
-  --pad-top: 3rem;
-  --pad-bottom: 0rem;
+  --pad-comp: 1rem;
+
+  // --pad-hor: 1rem;
+  // --pad-top: 3rem;
+  // --pad-bottom: 0rem;
 
   --ff-primary: "DM Sans", Arial, sans-serif;
 }
 
-@media (min-width: 780px) {
+@media (min-width: 980px) {
   :root {
     --fs-p-label: var(--fs-300);
 
@@ -57,9 +59,7 @@
 
     --lh-body: 1.2;
 
-    --pad-hor: 1rem;
-    --pad-top: 2.1rem;
-    --pad-bottom: 0rem;
+    --pad-comp: 2rem;
   }
 }
 
@@ -106,7 +106,6 @@ button:focus {
 
 body {
   width: 100%;
-  height: 100%;
   min-height: 100vh;
   position: relative;
   font-family: var(--ff-primary);
@@ -117,6 +116,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: flex-start;
   text-align: center;
   padding: 0;
   line-height: var(--lh-body);
@@ -212,16 +212,16 @@ body {
 .component {
   display: grid;
   place-content: center;
-  height: 100%;
-  padding: var(--pad-top) var(--pad-hor) var(--pad-bottom);
-  // padding-top: 4.2rem;
+  flex: 1;
+  padding: var(--pad-comp);
 }
 
 .container {
+  min-width: 342.6px;
   display: flex;
   flex-direction: column;
+  align-items: stretch;
   gap: 1rem;
-  min-width: 342.6px;
 }
 
 .spending,
@@ -231,7 +231,6 @@ body {
 }
 
 .balance {
-  order: 1;
   background-color: var(--clr-red-soft);
   padding: 1.25rem 1rem 1.45rem;
   justify-content: space-between;
@@ -266,6 +265,9 @@ body {
     gap: 0.78rem;
     align-items: flex-end;
     margin-bottom: 1.4rem;
+    > * {
+      flex: 1 1 1.25rem;
+    }
   }
 }
 
@@ -307,7 +309,6 @@ body {
   }
 }
 
-
 .stats {
   padding-top: 1.5rem;
   border-top: 0.175rem solid var(--clr-cream);
@@ -345,7 +346,7 @@ body {
   display: flex;
   width: 100%;
   padding: 0.75rem;
-  flex: 1;
+  flex: 0;
   &__attribution {
     flex: 1;
     display: flex;
@@ -362,9 +363,7 @@ body {
   }
 }
 
-
-
-@media (min-width: 780px) {
+@media (min-width: 980px) {
   // .component {
   //   padding-top: 11.4rem;
   // }
@@ -372,11 +371,12 @@ body {
     min-width: 540px;
     gap: 1.5rem;
   }
-  .spending, .balance {
+  .spending,
+  .balance {
     border-radius: 1.25rem;
   }
   .balance {
-    padding: 1.75rem 1.8rem 1.7rem; 
+    padding: 1.75rem 1.8rem 1.7rem;
     &__stats {
       &-title {
         margin-bottom: 0.6rem;
