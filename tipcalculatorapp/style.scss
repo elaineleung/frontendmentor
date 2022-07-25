@@ -51,13 +51,13 @@
   --bor: 1px solid pink;
 }
 
-@media (min-width: 720px) {
+@media (min-width: 1080px) {
   :root {
     --fs-900: 3rem; // 24pt
     --pad-app: 2rem 2rem;
     --pad-calculate: 0.8rem 1rem 0.95rem;
     --pad-results: 2.45rem 2.5rem 2.5rem;
-    --pad-footer: 2.9rem 0.5rem 1rem;
+    --pad-footer: clamp(1rem, calc(-0.2091rem + 3.4545vw), 2.9rem) 0.5rem 1rem;
   }
 }
 // @media (min-width: 960px) {
@@ -548,7 +548,7 @@ a {
 @media (min-width: 560px) {
   .component {
     justify-content: center;
-    gap: 5.45rem;
+    gap: clamp(2rem, calc(-4.9000rem + 11.5000vw), 5.45rem);
     // padding-bottom: 3rem;
   }
   .header {
