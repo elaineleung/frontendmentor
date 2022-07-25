@@ -595,7 +595,7 @@ a:hover, a:active {
     gap: 2.5rem;
   }
   .calculate .options {
-    gap: 0.9rem;
+    gap: 1rem 0.9rem;
   }
   .results__container {
     gap: 1.5rem;
