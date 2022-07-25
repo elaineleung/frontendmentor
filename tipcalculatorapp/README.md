@@ -16,7 +16,6 @@ This is a solution to the [Tip calculator app challenge on Frontend Mentor](http
 - [Author](#author)
 - [Acknowledgments](#acknowledgments)
 
-**Note: Delete this note and update the table of contents based on what sections you keep.**
 
 ## Overview
 
@@ -34,10 +33,12 @@ Users should be able to:
 
 ![Desktop view of solution](./design/desktop.png)
 
+![Desktop view of filled in solution](./design/desktop-completed.png)
+
 ### Links
 
-- Solution URL: [Link to GitHub repo](https://github.com/elaineleung/frontendmentor/tree/main/nftpreviewcard/)
-- Live Site URL: [Link to live site](https://elaineleung.github.io/frontendmentor/nftpreviewcard/)
+- Solution URL: [Link to GitHub repo](https://github.com/elaineleung/frontendmentor/tree/main/tipcalculatorapp/)
+- Live Site URL: [Link to live site](https://elaineleung.github.io/frontendmentor/tipcalculatorapp/)
 
 ## My process
 
@@ -48,58 +49,36 @@ Users should be able to:
 - Flexbox
 - CSS Grid
 - Mobile-first workflow
-- [React](https://reactjs.org/) - JS library
-- [Next.js](https://nextjs.org/) - React framework
-- [Styled Components](https://styled-components.com/) - For styles
-
-**Note: These are just examples. Delete this note and replace the list above with your own choices**
+- CUBE CSS
+- Sass
 
 ### What I learned
 
-Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
+In this challenge I got to revisit CSS grid, which I normally only use for simple centering and wrapping items. I also decided to use this challenge to explore a bit more about accessibility. The JS part wasn't too challenging since I've probably done more challenging things, but it was still a workout for me since I wanted to cover almost all use cases I can think of. Overall, the three biggest roadblocks I ran into was (a) struturing the elements, (b) working with radio inputs, and (c) figuring out how to maintain an optimal view while maintaining the sizes of the grid items. 
 
-To see how you can add code snippets, see below:
+The structuring shouldn't seem so complicated; it's all because of the differences in the mobile and desktop designs and layout. In the mobile one, the white background of the app stretches to the bottom of the viewport and only the top two corners were rounded, whereas in the desktop view, it's centered and all four corners are rounded. What helped immensely was that by now I've becoming fairly proficient with aligning things with flexbox. 
 
-```html
-<h1>Some HTML code I'm proud of</h1>
-```
-```css
-.proud-of-this-css {
-  color: papayawhip;
-}
-```
-```js
-const proudOfThisFunc = () => {
-  console.log('🎉')
-}
-```
+With radio inputs, I almost wanted to give up and just resort to using divs because of all the inherit properties and the customizations needed. The trickiest parts where figuring out how to group the custom input with a radio button and also how to style the labels without radio buttons. I still need to figure out how it group it together when tabbing, but overall I think it's quite functional for the moment. It's quite odd that I haven't yet found a resource that showed me what to do if one of the options in the radio group is an "Other" and needed a text input. This is something I see quite often in forms, so I thought there should be some tutorial out there that shows how to write this. Maybe I need to look a bit harder because I still want to figure out how others do it.
 
-If you want more help with writing markdown, we'd recommend checking out [The Markdown Guide](https://www.markdownguide.org/) to learn more.
-
-**Note: Delete this note and the content within this section and replace with your own learnings.**
+With optimal views, `clamp()` came to the rescue again, as it helps with responsiveness and making sure I got my min and max sizes. I know the code for it looks daunting, but in the end it saves me from writing more lines in the media queries, and I'd much prefer to keep the lines down to a minimum whenever possible. 
 
 ### Continued development
 
-Use this section to outline areas that you want to continue focusing on in future projects. These could be concepts you're still not completely comfortable with or techniques you found useful that you want to refine and perfect.
-
-**Note: Delete this note and the content within this section and replace with your own plans for continued development.**
+One of my personal projects (that I never got finish) actually has a layout somewhat similar to this one; this project could help me with further developing that project.
 
 ### Useful resources
 
-- [How to hide arrows in number input](https://www.w3schools.com/howto/howto_css_hide_arrow_number.asp) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
+- [The Magic of CSS Grid AUTO-FIT vs AUTO-FILL](https://www.youtube.com/watch?v=qII5BueXWD4) - Gary did a great job explaining how to use grid; this is probably the oen video that helped me most in using grid.
 
-**Note: Delete this note and replace the list above with resources that helped you during the challenge. These could come in handy for anyone viewing your solution or for yourself when you look back on this project in the future.**
+- [Pure CSS Custom Styled Radio Buttons](https://moderncss.dev/pure-css-custom-styled-radio-buttons/) - Stephanie's post here helped me figure out how to hide the radio button.
+
+- [Choice & Value Pair ](https://css-tricks.com/choice-value-pair/) - This was probably the only post I found that showed how to group a radio input with a text input.
 
 ## Author
 
-- Website - [Add your name here](https://www.your-site.com)
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
-- Twitter - [@yourusername](https://www.twitter.com/yourusername)
-
-**Note: Delete this note and add/remove/edit lines above based on what links you'd like to share.**
+- Frontend Mentor - [@elaineleung](https://www.frontendmentor.io/profile/elaineleung)
+- Twitter - [@elaineclleung](https://twitter.com/elaineclleung)
 
 ## Acknowledgments
 
-This is where you can give a hat tip to anyone who helped you out on this project. Perhaps you worked in a team or got some inspiration from someone else's solution. This is the perfect place to give them some credit.
-
-**Note: Delete this note and edit this section's content as necessary. If you completed this challenge by yourself, feel free to delete this section entirely.**
+Shoutout to CSS Tricks for having so many awesome articles!

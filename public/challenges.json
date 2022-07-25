@@ -148,6 +148,13 @@
       "level": "Newbie",
       "internalhost": true,
       "id": 21
+    },
+    {
+      "name": "tipcalculatorapp",
+      "title": "Tip calculator app",
+      "level": "Junior",
+      "internalhost": true,
+      "id": 22
     }
   ]
 }

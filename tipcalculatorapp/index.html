@@ -24,107 +24,110 @@
   <body class="bg-neutral-300 font-primary fs-body clr-neutral-800">
     <div class="component">
       <header class="header">
-        <img class="logo" src="./images/logo.svg" alt="" />
-        <h1>
-          <span class="visually-hidden">Spilter Tip App</span>
-        </h1>
+        <div class="container">
+          <img class="logo" src="./images/logo.svg" alt="" />
+          <h1>
+            <span class="visually-hidden">Spilter Tip App</span>
+          </h1>
+        </div>
       </header>
       <main class="app / bg-white pad-app">
-        <article class="calculate / pad-calculate">
-          <div class="bill calculate__bill">
-            <img class="icon" src="./images/icon-dollar.svg" alt="" />
-            <label for="bill"><span class="title">Bill</span></label>
-            <input type="text" id="bill" name="bill" placeholder="0" />
-          </div>
-          <div
-            role="radiogroup"
-            aria-labelledby="tip-group"
-            id="tipsEl"
-            class="tip calculate__tip"
-          >
-            <h2 class="title">Select Tip %</h2>
-            <div class="options">
-              <div class="radiobtn">
-                <input
-                  type="radio"
-                  value="5"
-                  name="tip"
-                  id="5percent"
-                />
-                <label for="5percent">5%</label>
-              </div>
-              <div class="radiobtn">
-                <input type="radio" value="10" name="tip" id="10percent" />
-                <label for="10percent">10%</label>
-              </div>
-              <div class="radiobtn">
-                <input type="radio" value="15" name="tip" id="15percent" />
-                <label for="15percent">15%</label>
-              </div>
-              <div class="radiobtn">
-                <input type="radio" value="25" name="tip" id="25percent" />
-                <label for="25percent">25%</label>
-              </div>
-              <div class="radiobtn">
-                <input type="radio" value="50" name="tip" id="50percent" />
-                <label for="50percent">50%</label>
-              </div>
-              <div class="radiobtn">
-                <label for="custom" class="custom" id="customEl">
-                  <span class="visually-hidden">Custom</span>
-                  <input type="radio" name="tip" id="custom" value="0" />
-                  <input type="text" placeholder="Custom" name="tip-value" />
-                </label>
+        <div class="app__container">
+          <article class="calculate / pad-calculate">
+            <div class="bill calculate__bill">
+              <img class="icon" src="./images/icon-dollar.svg" alt="" />
+              <label for="bill"><span class="title">Bill</span></label>
+              <input type="text" id="bill" name="bill" placeholder="0" />
+            </div>
+            <div
+              role="radiogroup"
+              aria-labelledby="tip-group"
+              id="tipsEl"
+              class="tip calculate__tip"
+            >
+              <h2 class="title">Select Tip %</h2>
+              <div class="options">
+                <div class="radiobtn">
+                  <input type="radio" value="5" name="tip" id="5percent" />
+                  <label for="5percent">5%</label>
+                </div>
+                <div class="radiobtn">
+                  <input type="radio" value="10" name="tip" id="10percent" />
+                  <label for="10percent">10%</label>
+                </div>
+                <div class="radiobtn">
+                  <input type="radio" value="15" name="tip" id="15percent" />
+                  <label for="15percent">15%</label>
+                </div>
+                <div class="radiobtn">
+                  <input type="radio" value="25" name="tip" id="25percent" />
+                  <label for="25percent">25%</label>
+                </div>
+                <div class="radiobtn">
+                  <input type="radio" value="50" name="tip" id="50percent" />
+                  <label for="50percent">50%</label>
+                </div>
+                <div class="radiobtn">
+                  <label for="custom" class="custom" id="customEl">
+                    <span class="visually-hidden">Custom</span>
+                    <input type="radio" name="tip" id="custom" value="0" />
+                    <input type="text" placeholder="Custom" name="tip-value" />
+                  </label>
+                </div>
               </div>
             </div>
-          </div>
-          <div class="people calculate__people">
-            <img class="icon" src="./images/icon-person.svg" alt="" />
-            <div>
-              <label class="title" for="people">Number of People</label
-              >
+            <div class="people calculate__people">
+              <img class="icon" src="./images/icon-person.svg" alt="" />
+              <div>
+                <label class="title" for="people">Number of People</label>
+              </div>
+              <input
+                type="text"
+                id="people"
+                name="people"
+                placeholder="0"
+                pattern="^[1-9][0-9]*$"
+              />
+              <span id="invalidEl" class="message"></span>
             </div>
-            <input
-              type="text"
-              id="people"
-              name="people"
-              placeholder="0"
-              pattern="^[1-9][0-9]*$"
-            />
-            <span id="invalidEl" class="message"></span>
-          </div>
-        </article>
-        <article class="results / bg-neutral-900 pad-results">
-          <div class="amount result">
-            <div class="title">Tip Amount <span>/ person</span></div>
-            <div class="value">$<span id="amountEl">0</span></div>
-          </div>
-          <div class="total result">
-            <div class="title">Total<span>/ person</span></div>
-            <div class="value">$<span id="totalEl">0</span></div>
-          </div>
-
-          <button class="reset / fs-reset text-uppercase" id="resetBtn">
-            Reset
-          </button>
-        </article>
+          </article>
+          <article class="results / bg-neutral-900 pad-results">
+            <div class="results__container">
+              <div class="amount result">
+                <div class="title">Tip Amount <span>/ person</span></div>
+                <div class="value">$<span id="amountEl">0</span></div>
+              </div>
+              <div class="total result">
+                <div class="title">Total<span>/ person</span></div>
+                <div class="value">$<span id="totalEl">0</span></div>
+              </div>
+              <div class="reset">
+                <button class="fs-reset text-uppercase" id="resetBtn">
+                  Reset
+                </button>
+              </div>
+            </div>
+          </article>
+        </div>
       </main>
     </div>
 
     <footer class="footer / fs-100 pad-footer lh-footer">
-      <span class="footer__content">
-        Challenge by
-        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
-          >Frontend Mentor</a
-        >. Coded by <a href="https://twitter.com/elaineclleung">Elaine</a>.
-      </span>
-      <span
-        >Other
-        <a href="https://elaineleung.github.io/frontendmentor/"
-          >Frontend Mentor Challenges</a
-        >
-        by Elaine
-      </span>
+      <div class="footer__content">
+        <span>
+          Challenge by
+          <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+            >Frontend Mentor</a
+          >. Coded by <a href="https://twitter.com/elaineclleung">Elaine</a>.
+        </span>
+        <span class="after"
+          >Other
+          <a href="https://elaineleung.github.io/frontendmentor/"
+            >Frontend Mentor Challenges</a
+          >
+          by Elaine
+        </span>
+      </div>
     </footer>
   </body>
   <script src="index.js"></script>
