@@ -32,3 +32,4 @@ GitHub landing page: [https://elaineleung.github.io/frontendmentor/](https://ela
 | 20  | [Intro section with dropdown navigation](https://github.com/elaineleung/fem-introsecdropdownnav) | [Link to GitHub repo](https://github.com/elaineleung/fem-introsecdropdownnav) |
 | 21  | [NFT preview card component](https://elaineleung.github.io/frontendmentor/nftpreviewcard/)| [Link to GitHub repo](https://github.com/elaineleung/frontendmentor/tree/main/nftpreviewcard/) |
 | 22  | [Tip calculator app](https://elaineleung.github.io/frontendmentor/tipcalculatorapp/)| [Link to GitHub repo](https://github.com/elaineleung/frontendmentor/tree/main/tipcalculatorapp/) |
+| 23  | [Testimonials grid section](https://elaineleung.github.io/frontendmentor/testimonialsgridsection/)| [Link to GitHub repo](https://github.com/elaineleung/frontendmentor/tree/main/testimonialsgridsection/) |
