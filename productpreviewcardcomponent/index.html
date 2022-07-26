@@ -24,7 +24,23 @@
   <body class="bg-cream font-primary clr-neutral-400">
     <main class="component">
       <div class="card / columns / bg-white">
-        <div class="card__image"></div>
+        <div class="card__image">
+          <picture>
+            <source
+              media="(max-width 559px)"
+              srcset="./images/image-product-mobile.jpg"
+            />
+            <source
+              media="(min-width 560px)"
+              srcset="./images/image-product-desktop.jpg"
+            />
+            <img
+              src="./images/image-product-desktop.jpg"
+              alt="bottle of perfume with leafy background"
+            />
+          </picture>
+        </div>
+
         <div class="card__content">
           <p class="product__type / fs-200 lh-none text-uppercase">Perfume</p>
           <h1

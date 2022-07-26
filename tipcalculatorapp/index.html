@@ -41,38 +41,50 @@
               <input type="text" id="bill" name="bill" placeholder="0" />
             </div>
             <div
-              role="radiogroup"
               id="tipsEl"
               class="tip calculate__tip"
             >
-              <h2 class="title">Select Tip %</h2>
-              <div class="options">
+              <h2 class="title" id="select_tip">Select Tip %</h2>
+              <ul aria-labelledby="select_tip" role="radiogroup">
+                <li role="radio" area-checked="false" tabindex="-1" data-value="5">5%</li>
+                <li role="radio" area-checked="false" tabindex="-1" data-value="10">10%</li>
+                <li role="radio" area-checked="false" tabindex="-1" data-value="15">15%</li>
+                <li role="radio" area-checked="false" tabindex="-1" data-value="25">25%</li>
+                <li role="radio" area-checked="false" tabindex="-1" data-value="5">50%</li>
+                <li role="radio" area-checked="false" tabindex="-1" data-value="5">
+                  <input type="text" placeholder="Custom" name="tip" />
+                </li>
+              </ul>
+            </div>              
+
+                <div class="options">
+
                 <div class="radiobtn">
-                  <input type="radio" value="5" name="tip" id="5percent" />
-                  <label for="5percent">5%</label>
+                  <input type="radio" value="5" name="tip" id="radio_btns" />
+                  <label for="5">5%</label>
                 </div>
                 <div class="radiobtn">
-                  <input type="radio" value="10" name="tip" id="10percent" />
-                  <label for="10percent">10%</label>
+                  <input type="radio" value="10" name="tip" id="radio_btns" />
+                  <label for="10">10%</label>
                 </div>
                 <div class="radiobtn">
-                  <input type="radio" value="15" name="tip" id="15percent" />
-                  <label for="15percent">15%</label>
+                  <input type="radio" value="15" name="tip" id="radio_btns" />
+                  <label for="15">15%</label>
                 </div>
                 <div class="radiobtn">
-                  <input type="radio" value="25" name="tip" id="25percent" />
-                  <label for="25percent">25%</label>
+                  <input type="radio" value="25" name="tip" id="radio_btns" />
+                  <label for="25">25%</label>
                 </div>
                 <div class="radiobtn">
-                  <input type="radio" value="50" name="tip" id="50percent" />
-                  <label for="50percent">50%</label>
+                  <input type="radio" value="50" name="tip" id="radio_btns" />
+                  <label for="50">50%</label>
                 </div>
                 <div class="radiobtn tip-custom" id="customEl">
                   <label for="custom">
                     <span class="visually-hidden">Custom</span>
-                    <input type="radio" name="tip" id="custom" value="0" />
+                    <input type="radio" name="custom" value="0" id="custom"/>
                   </label>
-                  <input type="text" id="custominput" placeholder="Custom" name="tip-value" />
+                  <input type="text" id="radio_btns" placeholder="Custom" name="tip" />
                 </div>
               </div>
             </div>

@@ -22,8 +22,8 @@
   --fs-p: var(--fs-200);
   --fs-product-name: var(--fs-700);
 
-  --ff-primary: "Montserrat", 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  --ff-secondary: 'Fraunces', Georgia, 'Times New Roman', Times, serif;
+  --ff-primary: "Montserrat", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  --ff-secondary: "Fraunces", Georgia, "Times New Roman", Times, serif;
 
   --lh-none: 1;
   --lh-footer: 1.15;
@@ -32,7 +32,6 @@
   --lh-product-description: 1.64;
 
   --ls-product-type: 0.25rem;
-
 }
 
 @media (min-width: 750px) {
@@ -40,7 +39,7 @@
     // --fs-200: 0.875rem; // 14pt
     // --fs-400: 1rem;
     // --fs-600: 1.25rem; // 20pt
-    --lh-product-description: 1.64
+    --lh-product-description: 1.64;
   }
 }
 
@@ -133,7 +132,6 @@ h6 {
 
 /* utility classes  */
 
-
 .font-primary {
   font-family: var(--ff-primary);
 }
@@ -211,7 +209,7 @@ h6 {
   text-transform: uppercase;
 }
 
-// Composition 
+// Composition
 
 body {
   font-size: var(--fs-body);
@@ -219,28 +217,39 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: 100%;
+  justify-content: flex-start;
   min-height: 100vh;
-  padding: 1.75rem 1rem 0.5rem;
 }
 
 .component {
   display: grid;
   place-content: center;
+  flex: 1;
+  padding: 1rem;
   height: 100%;
 }
 
 .card {
+  display: flex;
+  flex-direction: column;
   text-align: left;
   border-radius: 0.75em;
-  max-width: 30rem;
+  max-width: 420px;
+  min-width: 320px;
+
   &__image {
-    background-image: url('./images/image-product-mobile.jpg');
-    background-size: cover;
-    background-repeat: no-repeat;
+    flex: 1;
     height: 15rem;
-    border-radius: 0.75em 0.75em 0 0;  }
+    picture img {
+      width: 100%;
+      height: 15rem;
+      object-fit: cover;
+      border-radius: 0.75em 0.75em 0 0;
+    }
+  }
+
   &__content {
+    flex: 1;
     padding: 1.5rem;
   }
 }
@@ -286,7 +295,8 @@ body {
 }
 
 .attribution {
-  flex: 1;
+  flex: 0;
+  padding: 1rem;
   display: flex;
   width: 100%;
   height: 100%;
@@ -295,7 +305,7 @@ body {
     align-self: flex-end;
     margin-inline: auto;
     .block-footer {
-      display: none;
+      display: inline-block;
     }
     a {
       color: var(--clr-neutral-700);
@@ -303,18 +313,17 @@ body {
   }
 }
 
-@media (min-width: 750px) {
-  .component {
-    padding-top: 0.1rem;
-  }
+@media (min-width: 720px) {
   .card {
-    max-width: initial;
-    width: 37.5rem;
+    flex-direction: row;
+    max-width: 600px;
     &__image {
-      background-image: url('./images/image-product-desktop.jpg');
-      background-size: cover;
+      flex: 0 1 300px;
       height: 100%;
-      border-radius: 0.75em 0 0 0.75em;
+      picture img {
+        height: 100%;
+        border-radius: 0.75em 0 0 0.75em;
+      }
     }
     &__content {
       padding: 2rem;
@@ -358,7 +367,6 @@ body {
     }
   }
 }
-
 
 // background-image: linear-gradient(rgba(0, 0, 0, 0.05),
 // rgba(0, 0, 0, 0.05)), url('./images/image-product-mobile.jpg');
