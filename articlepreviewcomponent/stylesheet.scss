@@ -216,9 +216,9 @@ body {
   width: min(87vw, 450px);
   margin-inline: auto;
   position: relative;
-  box-shadow: 0 20px 50px hsl(207, 12%, 64%);
+  border-radius: 0.75rem;
+  box-shadow: 0 20px 50px hsl(213, 13%, 84%);
   &__image {
-    // flex: 1 1 285px; 
     img {
       width: 100%;
       height: clamp(12.5rem, calc(-0.0472rem + 52.8302vw), 16rem);
@@ -259,6 +259,7 @@ body {
     justify-content: space-between;
     padding-top: 0.5rem;
     padding-bottom: 1rem;
+    position: relative;
   }
   &__content {
     width: 100%;
@@ -272,10 +273,10 @@ body {
     place-content: center;  
     width: 1.8rem;
     height: 1.8rem;
+    margin-top: 0.5rem;
     cursor: pointer;
     border-radius: 50%;
     background-color: var(--clr-grayblue-light);
-    // margin-top: 0.25rem;
     svg.icon-share path {
       fill: var(--clr-grayblue-dark);
     }
@@ -334,6 +335,7 @@ body {
     }
   }
   .social__cta {
+    position: relative;
     background-color: var(--clr-blue-desatdark);
     margin-top: 0;
     svg.icon-share path {
@@ -346,10 +348,8 @@ body {
 
 footer {
   flex: 0;
-  height: 2em;
   display: grid;
   place-content: center;
-  background-color: transparent;
   width: 100%;
   text-align: center;
   color: black;
@@ -357,15 +357,14 @@ footer {
 }
 
 .attribution {
-  background-color: transparent;
-  font-size: 11px;
+  font-size: var(--fs-100);
   text-align: center;
+  a {
+    font-size: inherit;
+    color: black;
+  }
 }
 
-.attribution a {
-  font-size: inherit;
-  color: black;
-}
 
 @media (min-width: 1200px) {
   .container {
@@ -376,10 +375,9 @@ footer {
     width: clamp(26.5625rem, calc(6.7057rem + 63.5417vw), 45.625rem);
     margin-bottom: 1em;
     border-radius: 0.7em;
-    box-shadow: 0 20px 30px hsl(207, 53%, 93%);
+
     &__image {
       flex: 0 1 auto;
-      // height: 280px;
       img {
         width: 285px;
         height: 100%;

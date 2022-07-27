@@ -6,6 +6,7 @@
   --clr-neutral-400: hsl(228, 12%, 48%);
   --clr-neutral-700: hsl(212, 21%, 14%);
   --clr-blend: hsla(212, 21%, 14%, 0.2);
+  --bs-cream: hsla(32, 17%, 85%, 0.8);
   --fs-100: 0.75rem;
   --fs-200: 0.8125rem;
   --fs-300: 0.875rem;
@@ -248,8 +249,9 @@ body {
   flex-wrap: wrap;
   text-align: left;
   border-radius: 0.75em;
-  width: clamp(22.5rem, 15.6818rem + 29.0909vw, 27.5rem);
+  width: min(91.5vw, 420px);
   margin-inline: auto;
+  box-shadow: 1rem 1rem 3rem var(--bs-cream);
 }
 .card picture {
   flex: 1 1 300px;

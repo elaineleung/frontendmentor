@@ -1,12 +1,13 @@
 :root {
-  --clr-cyan-dark: hsl(184, 100%, 22%);
-  --clr-cyan-xdark: hsl(179, 100%, 13%);
-  --clr-white-trsp: hsla(0, 0%, 100%, 0.75);
-  --clr-gray-xlight: hsl(0, 0%, 95%);
-  --clr-aqua-xlight: hsl(192, 100%, 96%);
-  --bs-aqua: hsl(192, 31%, 81%);
-  --fs-body: 1.1rem;
-  --fs-title: 3rem;
+  --primary-100: 192, 100%, 96%;
+  --primary-200: 191, 23%, 77%;
+  --primary-700: 184, 100%, 22%;
+  --primary-900: 179, 100%, 13%;
+  --neutral-100: 0, 0%, 87%;
+  
+  --bs-aqua: hsl;
+  --fs-body: 1rem;
+  --fs-p: 1.125rem;
   --pad-ver: 10vh;
   --pad-hor: 14vw;
   --ff-primary: "Lexend Deca", sans-serif;
@@ -54,42 +55,40 @@ a {
 
 body {
   width: 100%;
-  height: 100%;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  /* justify-content: center; */
   position: relative;
-}
-
-body {
-  background-color: var(--clr-aqua-xlight);
+  background-color: hsl(var(--primary-100));
   font-family: var(--ff-primary);
 }
 
+.container {
+  width: min(90%, 60rem);
+  margin-inline: auto;
+}
+
 .fm_logo {
-  width: 20vw;
-  min-width: 200px;
+  width: min(50vw, 200px);
 }
 
 .header {
-  padding: var(--pad-ver) var(--pad-hor);
+  padding: var(--pad-ver) 0;
 }
 
 .main {
-  padding: 2em var(--pad-hor);
   display: flex;
   flex-direction: column;
-  width: 100%;
+  font-size: var(--fs-p);
 }
 
+
 .title {
-  font-size: var(--fs-title);
+  font-size: clamp(1.5rem, calc(0.9718rem + 2.2535vw), 3rem);
   margin-bottom: 0.8em;
 }
 
 .intro {
-  font-size: 1rem;
   margin-bottom: 2em;
 }
 
@@ -97,10 +96,10 @@ body {
   /* border: 1px solid magenta; */
   display: grid;
   width: 100%;
-  grid-template-columns: repeat(auto-fit, minmax(16em, 1fr));
-  column-gap: 1.7em;
-  row-gap: 1.5em;
-  margin-bottom: 5em;
+  grid-template-columns: repeat(auto-fill, minmax(16rem, 1fr));
+  column-gap: 1.7rem;
+  row-gap: 1.5rem;
+  margin-bottom: 5rem;
 }
 
 .card {
@@ -108,14 +107,14 @@ body {
   height: 100%;
   background: white;
   padding: 0;
-  border-radius: 0.5em;
-  box-shadow: 0.1em 0.2em 0.5em var(--bs-aqua);
+  border-radius: 0.5rem;
+  box-shadow: 0.2rem 0.2rem 0.5rem hsla(var(--primary-200), 0.9);
 }
 
 .card__image:hover,
 .card__title:hover,
 .card__text:hover {
-  color: var(--clr-cyan-xdark);
+  color: hsl(var(--primary-700));
   cursor: pointer;
 }
 
@@ -123,11 +122,11 @@ body {
   width: 100%;
   position: relative;
   overflow: hidden;
-  border-radius: 0.5em 0.5em 0 0; 
+  border-radius: 0.5rem 0.5rem 0 0; 
 }
 
 .card__image img {
-  height: 11em;
+  height: 11rem;
   object-fit: cover;
   object-position: center;
   transform: scale(1);
@@ -139,12 +138,15 @@ body {
 }
 
 .card__content {
-  padding: 1.2em 1.6em 1.4em;
+  padding: 1.2rem 1.6rem 1.4rem;
 }
 
 .card__title {
   font-size: 1rem;
   margin: 0 0 0.3em;
+}
+.card__title:hover {
+text-decoration: underline;
 }
 
 .card__text {

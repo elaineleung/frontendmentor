@@ -187,7 +187,8 @@ body {
   width: min(87vw, 450px);
   margin-inline: auto;
   position: relative;
-  box-shadow: 0 20px 50px hsl(207deg, 12%, 64%);
+  border-radius: 0.75rem;
+  box-shadow: 0 20px 50px hsl(213deg, 13%, 84%);
 }
 .card__image img {
   width: 100%;
@@ -227,6 +228,7 @@ body {
   justify-content: space-between;
   padding-top: 0.5rem;
   padding-bottom: 1rem;
+  position: relative;
 }
 .social__content {
   width: 100%;
@@ -239,6 +241,7 @@ body {
   place-content: center;
   width: 1.8rem;
   height: 1.8rem;
+  margin-top: 0.5rem;
   cursor: pointer;
   border-radius: 50%;
   background-color: var(--clr-grayblue-light);
@@ -298,6 +301,7 @@ body {
        column-gap: 1rem;
 }
 .toggle.social .social__cta {
+  position: relative;
   background-color: var(--clr-blue-desatdark);
   margin-top: 0;
 }
@@ -308,10 +312,8 @@ body {
 /* footer */
 footer {
   flex: 0;
-  height: 2em;
   display: grid;
   place-content: center;
-  background-color: transparent;
   width: 100%;
   text-align: center;
   color: black;
@@ -319,11 +321,9 @@ footer {
 }
 
 .attribution {
-  background-color: transparent;
-  font-size: 11px;
+  font-size: var(--fs-100);
   text-align: center;
 }
-
 .attribution a {
   font-size: inherit;
   color: black;
@@ -338,7 +338,6 @@ footer {
     width: clamp(26.5625rem, 6.7057rem + 63.5417vw, 45.625rem);
     margin-bottom: 1em;
     border-radius: 0.7em;
-    box-shadow: 0 20px 30px hsl(207deg, 53%, 93%);
   }
   .card__image {
     flex: 0 1 auto;
