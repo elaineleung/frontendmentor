@@ -26,25 +26,37 @@
   <body>
     <main class="component">
       <div class="card">
-        <div class="card__image image__wrapper"></div>
+        <!-- <div class="card__image image__wrapper"> -->
+        <picture class="card__image">
+          <source
+            media="(max-width 799px)"
+            srcset="./images/image-header-mobile.jpg"
+          />
+          <source
+            media="(min-width 800px)"
+            srcset="./images/image-header-desktop.jpg"
+          />
+          <img
+            src="./images/image-header-desktop.jpg"
+            alt="a group of people at a table working in an office"
+          />
+        </picture>
+        <!-- </div> -->
         <div class="card__content">
-          <div class="card__main">
-            <h1 class="card__title">
+          <div class="container">
+            <h1 class="title">
               Get <span class="title__highlight">insights</span> that help your
               business grow.
             </h1>
-            <p class="card__body">
+            <p class="textbody">
               Discover the benefits of data analytics and make better decisions
               regarding revenue, customer experience, and overall efficiency.
             </p>
           </div>
-          <div class="card__stats">
-            <div class="stats">
-              <p><span class="stats__highlight">10k+ </span>companies</p>
-              <p><span class="stats__highlight">314 </span>templates</p>
-              <p><span class="stats__highlight">12M+ </span>queries</p>
-            </div>
-          </div>
+          <div class="stats">
+            <p><span class="stats__highlight">10k+ </span><span>companies</span></p>
+            <p><span class="stats__highlight">314 </span><span>templates</span></p>
+            <p><span class="stats__highlight">12M+ </span><span>queries</span></p>          </div>
         </div>
       </div>
     </main>

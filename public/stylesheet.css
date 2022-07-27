@@ -64,12 +64,12 @@ body {
 }
 
 .container {
-  width: min(90%, 60rem);
+  width: min(90%, 80rem);
   margin-inline: auto;
 }
 
 .fm_logo {
-  width: min(50vw, 200px);
+  width: min(50vw, 250px);
 }
 
 .header {

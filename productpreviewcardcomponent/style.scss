@@ -247,8 +247,10 @@ body {
   width: min(91.5vw, 420px);
   margin-inline: auto;
   box-shadow: 1rem 1rem 3rem var(--bs-cream);
-  picture {
+  > * {
     flex: 1 1 300px;
+  }
+  picture {
     img {
       width: 100%;
       height: 15rem;
@@ -258,7 +260,6 @@ body {
   }
 
   &__content {
-    flex: 1 1 300px;
     padding: 1.5rem;
   }
 }
@@ -282,7 +283,7 @@ body {
       margin-left: 1.1rem;
       text-decoration: line-through;
     }
-  }
+  } 
   &__cta {
     cursor: pointer;
     border: 0;

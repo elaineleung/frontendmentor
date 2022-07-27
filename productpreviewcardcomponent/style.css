@@ -253,7 +253,7 @@ body {
   margin-inline: auto;
   box-shadow: 1rem 1rem 3rem var(--bs-cream);
 }
-.card picture {
+.card > * {
   flex: 1 1 300px;
 }
 .card picture img {
@@ -264,7 +264,6 @@ body {
   border-radius: 0.75em 0.75em 0 0;
 }
 .card__content {
-  flex: 1 1 300px;
   padding: 1.5rem;
 }
 

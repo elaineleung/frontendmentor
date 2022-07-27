@@ -10,7 +10,7 @@
   --ff-primary: "Inter", sans-serif;
   --ff-secondary: "Lexend Deca", sans-serif;
 }
-
+ 
 *,
 *:after,
 *:before {
@@ -60,8 +60,6 @@ body {
   flex-grow: 1;
   display: grid;
   place-content: center;
-  height: -webkit-fit-content;
-  height: -moz-fit-content;
   height: fit-content;
   padding: min(15%, 4rem) 0;
 }
@@ -78,20 +76,18 @@ body {
 .card__image {
   display: block;
   position: relative;
-  height: clamp(16rem, 11.6522rem + 18.5507vw, 20rem);
+  height: clamp(16rem, calc(11.6522rem + 18.5507vw), 20rem);
   border-radius: 0.5em 0.5em 0 0;
   background-color: var(--clr-accent);
-}
-.card__image img {
-  width: 100%;
-  height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-  -o-object-position: center 0rem;
-     object-position: center 0rem;
-  position: relative;
-  mix-blend-mode: multiply;
-  filter: brightness(1.1) contrast(0.7);
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 0rem;
+    position: relative;
+    mix-blend-mode: multiply;
+    filter: brightness(1.1) contrast(0.7);
+  }
 }
 
 .card__content {
@@ -102,51 +98,55 @@ body {
   align-items: center;
   text-align: center;
   gap: 2.2em;
-}
-.card__content .container {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  row-gap: 1.3em;
-}
-.card__content .title {
-  font-size: 28px;
-  letter-spacing: 0.3px;
-}
-.card__content .title__highlight {
-  color: var(--clr-accent);
-}
-.card__content p.textbody {
-  opacity: 0.6;
-  line-height: 1.75;
-}
-.card__content .stats {
-  width: 100%;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  width: 6rem;
-  margin-inline: auto;
-  text-transform: uppercase;
-  font-family: var(--ff-secondary);
-  font-size: 11px;
-  letter-spacing: 1px;
-  gap: 2em;
-  font-weight: 400;
-}
-.card__content .stats > * {
-  flex: 1 1 5rem;
-}
-.card__content .stats__highlight {
-  font-family: var(--ff-primary);
-  font-weight: 700;
-  display: block;
-  text-transform: none;
-  font-size: 1.5rem;
-}
-.card__content .stats__highlight + span {
-  opacity: 0.6;
+
+  .container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 1.3em;
+  }
+  .title {
+    font-size: 28px;
+    letter-spacing: 0.3px;
+    &__highlight {
+      color: var(--clr-accent);
+    }
+  }
+  
+  p.textbody {
+    opacity: 0.6;
+    line-height: 1.75;
+  }
+  .stats {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 6rem;
+    margin-inline: auto;
+    text-transform: uppercase;
+    font-family: var(--ff-secondary);
+    font-size: 11px;
+    letter-spacing: 1px;
+    gap: 2em;
+    font-weight: 400;
+    > * {
+      flex: 1 1 5rem;
+    }
+    &__highlight {
+      font-family: var(--ff-primary);
+      font-weight: 700;
+      display: block;
+      text-transform: none;
+      font-size: 1.5rem;
+      & + span {
+        opacity: 0.6;
+      }
+      // 
+    }
+  }  
+  
 }
 
 .attribution {
@@ -172,40 +172,40 @@ body {
     order: 2;
     height: 100%;
     border-radius: 0 0.5em 0.5em 0;
-  }
-  .card__image img {
-    -o-object-position: right 0rem;
-       object-position: right 0rem;
+    img {
+      object-position: right 0rem;
+    }
   }
   .card__content {
     flex: 1;
     order: 1;
     padding: 4rem 4.8rem 4.2rem;
     text-align: left;
+    .container {
+      align-items: flex-start;
+      gap: 1.45rem;
+    }
+    .title {
+      font-size: 2.25rem;
+      line-height: 1.3;
+      margin-top: 0.8rem;
+    }
+    p.textbody {
+      width: 90%;
+      line-height: 1.7;
+    }
+    .stats {
+      flex: 1;
+      align-items: flex-end;
+      width: 30rem;
+      &__highlight {
+        font-size: 1.625rem;
+        line-height: 1.5;
+        + span {
+          font-size: 0.875rem;
+        }
+      }
+    }
+
   }
-  .card__content .container {
-    align-items: flex-start;
-    gap: 1.45rem;
-  }
-  .card__content .title {
-    font-size: 2.25rem;
-    line-height: 1.3;
-    margin-top: 0.8rem;
-  }
-  .card__content p.textbody {
-    width: 90%;
-    line-height: 1.7;
-  }
-  .card__content .stats {
-    flex: 1;
-    align-items: flex-end;
-    width: 30rem;
-  }
-  .card__content .stats__highlight {
-    font-size: 1.625rem;
-    line-height: 1.5;
-  }
-  .card__content .stats__highlight + span {
-    font-size: 0.875rem;
-  }
-}/*# sourceMappingURL=stylesheet.css.map */
+}
