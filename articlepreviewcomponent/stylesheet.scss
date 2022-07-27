@@ -1,0 +1,469 @@
+:root {
+  --clr-grayblue-xdark: hsl(217, 19%, 35%);
+  --clr-blue-desatdark: hsl(214, 17%, 51%);
+  --clr-grayblue: hsl(212, 23%, 69%);
+  --clr-grayblue-light: hsl(210, 46%, 95%);
+  --clr-grayblue-dark: #6e8098;
+  --clr-white: hsl(0, 0%, 100%);
+
+  --fs-100: 0.6875rem; // 12pt
+  --fs-200: 0.8125rem; // 13pt
+  --fs-300: 0.875rem; // 14pt
+  --fs-400: 0.9375rem; // 15pt
+  --fs-500: 1rem; // 16pt
+  --fs-600: 1.125rem; // 18pt
+  --fs-700: 1.25rem; // 20pt
+  --fs-800: 1.5rem; // 24pt
+  --fs-900: 2rem; // 32pt
+
+  --fs-card: var(--fs-200);
+  --fs-title: var(--fs-500);
+
+  --lh-body: 1.5;
+  --lh-title: 1.5;
+  --lh-card: 1.54;
+
+  --ls-title: 0.2px;
+  --ls-card: 0.15px;
+
+  --ff-primary: Manrope, sans-serif;
+
+  --debug: solid 1px pink;
+}
+
+@media (min-width: 1150px) {
+  :root {
+    --fs-title: var(--fs-700);
+    --lh-title: 1.38;
+    --ls-card: 0.1px;
+  }
+}
+
+// CSS reset
+
+/* Remove default margin */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+/*
+  2. Remove default margin
+*/
+* {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  text-rendering: optimizeSpeed;
+  line-height: var(--lh-body);
+}
+
+/* A elements that don't have a class get default styles */
+
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+/* Avoid text overflows */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+// Utilities
+
+.visually-hidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: auto;
+  margin: 0;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+  white-space: nowrap;
+}
+
+// Blocks
+
+body {
+  min-height: 100vh;
+  font-family: var(--ff-primary);
+  font-size: var(--fs-500);
+  line-height: var(--lh-body);
+  font-weight: 500;
+  color: var(--clr-blue-desatdark);
+  background-color: var(--clr-grayblue-light);
+  display: flex;
+  flex-direction: column;
+
+  // * {
+  //   outline: var(--debug);
+  // }
+}
+
+.container {
+  width: 100%;
+  padding-inline: 2rem;
+}
+
+/* Typography */
+
+.card {
+  font-size: var(--fs-card);
+  line-height: var(--lh-card);
+  letter-spacing: var(--ls-card);
+}
+
+.text {
+  h2 {
+    font-weight: 700;
+    font-size: var(--fs-title);
+    color: var(--clr-grayblue-xdark);
+    line-height: var(--lh-title);
+    letter-spacing: var(--ls-title);
+  }
+}
+
+.info {
+  &__name {
+    font-weight: 700;
+    color: var(--clr-grayblue-xdark);
+  }
+  &__date {
+    color: var(--clr-grayblue);
+  }
+}
+
+.links {
+  .label {
+    color: var(--clr-grayblue);
+    text-transform: uppercase;
+    letter-spacing: 5px;
+  }
+}
+
+/* Structure */
+
+.component {
+  display: grid;
+  place-content: center;
+  flex: 1;
+  text-align: left;
+  padding: clamp(0.5rem, calc(-0.7273rem + 5.4545vw), 2rem) 0; 
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  min-width: 310px;
+  width: min(87vw, 450px);
+  margin-inline: auto;
+  position: relative;
+  box-shadow: 0 20px 50px hsl(207, 12%, 64%);
+  &__image {
+    // flex: 1 1 285px; 
+    img {
+      width: 100%;
+      height: clamp(12.5rem, calc(-0.0472rem + 52.8302vw), 16rem);
+      object-fit: cover;
+      object-position: 0 -1rem;
+      border-radius: 0.75rem 0.75rem 0 0;
+    }
+  }
+  &__body {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 100%;
+    background-color: var(--clr-white);
+    border-radius: 0 0 0.75rem 0.75rem;
+    .container {
+      padding-top: 2.2rem;
+      padding-bottom: 1.25rem;
+    }
+    .text {
+      h2 {
+        margin-bottom: 0.75rem;
+      }
+    }
+  }
+}
+
+.social {
+  width: 100%;
+  height: 64px;
+  display: flex;
+  justify-content: space-between;
+  border-radius: 0 0 0.75rem 0.75rem;
+
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 0.5rem;
+    padding-bottom: 1rem;
+  }
+  &__content {
+    width: 100%;
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+
+  }
+  &__cta {
+    display: grid;
+    place-content: center;  
+    width: 1.8rem;
+    height: 1.8rem;
+    cursor: pointer;
+    border-radius: 50%;
+    background-color: var(--clr-grayblue-light);
+    // margin-top: 0.25rem;
+    svg.icon-share path {
+      fill: var(--clr-grayblue-dark);
+    }
+    &:hover {
+      opacity: 0.95;
+    }
+  }
+}
+
+.social .creator {
+  display: flex;
+  align-items: flex-start;
+  &__avatar {
+    background-image: url("./images/avatar-michelle.jpg");
+    height: 2.5rem;
+    width: 2.5rem;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 50%;
+    margin-right: 1rem;
+  }
+}
+
+.social .links {
+  display: none;
+}
+
+/* social links / bubble active state */
+
+.toggle.social {
+  display: flex;
+
+  .container {
+    padding-top: 1.1rem;
+    padding-bottom: 1.1rem;
+    background-color: var(--clr-grayblue-xdark);
+    border-radius: 0 0 0.75rem 0.75rem;
+    align-items: center;
+  }
+  .creator {
+    display: none;
+  }
+  .links {
+    display: flex;
+    justify-content: space-between;
+    &__wrapper {
+      display: flex;
+      width: 100%;
+      align-items: center;
+      gap: 1.05rem;
+      
+      .icons {
+        display: flex;
+        column-gap: 1rem;
+      }
+    }
+  }
+  .social__cta {
+    background-color: var(--clr-blue-desatdark);
+    margin-top: 0;
+    svg.icon-share path {
+      fill: var(--clr-grayblue-light);
+    }
+  }
+}
+
+/* footer */
+
+footer {
+  flex: 0;
+  height: 2em;
+  display: grid;
+  place-content: center;
+  background-color: transparent;
+  width: 100%;
+  text-align: center;
+  color: black;
+  padding: 0.5rem;
+}
+
+.attribution {
+  background-color: transparent;
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  font-size: inherit;
+  color: black;
+}
+
+@media (min-width: 1200px) {
+  .container {
+    padding-inline: 2.5rem;
+  }
+  .card {
+    flex-direction: row;
+    width: clamp(26.5625rem, calc(6.7057rem + 63.5417vw), 45.625rem);
+    margin-bottom: 1em;
+    border-radius: 0.7em;
+    box-shadow: 0 20px 30px hsl(207, 53%, 93%);
+    &__image {
+      flex: 0 1 auto;
+      // height: 280px;
+      img {
+        width: 285px;
+        height: 100%;
+        object-fit: cover;
+        object-position: 0 0rem;
+        border-radius: 0.75rem 0 0 0.75rem;
+      }
+    }
+    &__body {
+      flex: 1 1 445px;
+      border-radius: 0 0.75rem 0.75rem 0;
+      .container {
+        padding-top: 2rem;
+      }
+    }
+  }
+
+  .social {
+    height: initial;
+    .container {
+      padding-top: 0.1rem;
+      padding-bottom: 1.9rem;
+      align-items: flex-end;
+    }
+    .creator {
+      align-items: flex-end;
+    }
+    &__cta {
+      width: 2rem;
+      height: 2rem;
+    }
+  }
+
+  .toggle.social {
+    .creator {
+      display: flex;
+    }
+    .container {
+      background-color: var(--clr-white);
+      padding-top: 0.1rem;
+      padding-bottom: 1.9rem;
+    }
+    .links {
+      position: absolute;
+      bottom: 6rem;
+      right: -4.2rem;
+      width: 248px;
+      background-color: var(--clr-grayblue-xdark);
+      border-radius: 0.6rem;
+      box-shadow: 0 10px 20px hsl(209, 34%, 88%);
+      &__wrapper {
+        position: relative;
+        height: 55px;
+        justify-content: center;
+        &::after {
+          position: absolute;
+          content: "";
+          width: 0px;
+          height: 0px;
+          border: 1em solid transparent;
+          left: 45%;
+          bottom: -1.5rem;
+          border-top: 0.8125rem solid var(--clr-grayblue-xdark);
+        }
+      }
+    }
+    .social__cta {
+      margin-top: 0.5rem;
+    }
+  }
+}
+
+
+// For responsiveness with flex wrap:
+
+// .card {
+//   flex-wrap: wrap;
+//   width: min(88%, 425px);
+//   &__image {
+//     flex: 1 1 285px;
+//   }
+//   &__body {
+//     flex: 1 1 445px;
+//   }
+// }
+
+      

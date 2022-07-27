@@ -25,42 +25,49 @@
   </head>
   <body>
     <header class="header">
-      <h1 class="sr-only">
+      <h1 class="visually-hidden">
         Frontend Mentor challenge: Article preview component
       </h1>
     </header>
     <main class="component">
-      <section class="card">
-        <div class="card__image"></div>
-        <div class="card__main">
-          <div class="main__content">
-            <div class="card-container main__content-container">
-              <h2 class="content__title">
-                Shift the overall look and feel by adding these wonderful
-                touches to furniture in your home
+      <article class="card">
+        <div class="card__image">
+          <img
+            src="./images/drawers.jpg"
+            alt="well decorated green bedside drawer with photo frames and a vase "
+          />
+        </div>
+        <div class="card__body">
+          <!-- <div class="main__content"> -->
+          <div class="text">
+            <div class="container">
+              <h2>
+                Shift the overall look and feel by adding these wonderful touches
+                to furniture in your home
               </h2>
-              <p class="content__body">
+              <p>
                 Ever been in a room and felt like something was missing? Perhaps
-                it felt slightly bare and uninviting. I’ve got some simple tips
-                to help you make any room feel complete.
+                it felt slightly bare and uninviting. I’ve got some simple tips to
+                help you make any room feel complete.
               </p>
             </div>
           </div>
-          <div id="socialEl" class="main__social">
-            <div class="card-container">
-              <div class="social__content">
-                <div class="social__profile">
-                  <div class="profile__photo"></div>
-                  <div class="profile__info">
+          <!-- </div> -->
+          <div class="social" id="socialEl" >
+            <div class="container">
+              <div class="content">
+                <div class="content__creator creator">
+                  <div class="creator__avatar" aria-hidden="true"></div>
+                  <div class="creator__info">
                     <p class="info__name">Michelle Appleton</p>
                     <p class="info__date">28 Jun 2020</p>
                   </div>
                 </div>
 
-                <div class="social__bubble">
-                  <div class="social__bubble-wrapper bubble-wrapper">
-                    <p class="bubble__label">share</p>
-                    <div class="bubble__icons">
+                <div class="content__links links">
+                  <div class="links__wrapper">
+                    <p class="label">share</p>
+                    <div class="icons">
                       <a href="https://www.facebook.com">
                         <svg
                           class="icon"
@@ -108,7 +115,7 @@
                 </div>
               </div>
 
-              <div class="bubble__share share-social" id="shareEl">
+              <a class="social__cta" id="shareEl" href="#" alt="click to toggle social links">
                 <svg
                   class="icon-share"
                   xmlns="http://www.w3.org/2000/svg"
@@ -120,11 +127,11 @@
                     d="M15 6.495L8.766.014V3.88H7.441C3.33 3.88 0 7.039 0 10.936v2.049l.589-.612C2.59 10.294 5.422 9.11 8.39 9.11h.375v3.867L15 6.495z"
                   />
                 </svg>
-              </div>
+              </a>
             </div>
           </div>
         </div>
-      </section>
+      </article>
     </main>
 
     <footer class="attribution">

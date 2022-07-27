@@ -54,6 +54,10 @@ This was easier than I expected; there weren't major issues I ran into, aside fr
 
 I did realize I left out a few things after uploading; I forgot about the box shadow and also, the image had a filter or overlay that I missed. I did try to add this afterwards; wish I had caught it earlier!
 
+Update: I ended up doing a major update to clean up the class names and code. Even though everything was functional, it was quite a mess to read, and I spent quite a bit of time renaming and restructuring everything; in this process I learned that even if your code works perfectly, if it's not readable it's still not good code because it's hard to work with for future development. 
+
+The other major thing I did was to use flexbox's flex-wrap to handle responsiveness, but I did end up reverting back to using flex direction just to make the code more understandable.
+
 ### Useful resources
 
 - [Triangle notch on callout](https://codepen.io/moniqueward/pen/yNGQBz) - This codepen helped me with adding the bottom triangle in the popout callout.
