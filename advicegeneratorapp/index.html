@@ -1,48 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  <link
-  href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;800&display=swap"
-  rel="stylesheet"
-/>
-  <link rel="stylesheet" href="./reset.css" class="stylesheet">
-  <link rel="stylesheet" href="./stylesheet.css" class="stylesheet">
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./reset.css" class="stylesheet" />
+    <link rel="stylesheet" href="./stylesheet.css" class="stylesheet" />
 
-  <title>Frontend Mentor | Advice generator app</title>
-
-
-</head>
-<body>
-  <main class="component card">
-    <h1 class="advice__title" id="numEl"></h1>
-    <p class="advice__quote"><span id="adviceEl"></span></p>
-    <div class="border__divider"></div>
-    <div class="advice__dice" id="diceEl">
-      <img class="advice__dice-img" src="./images/icon-dice.svg" alt="click here for random advice">
+    <title>Frontend Mentor | Advice generator app</title>
+  </head>
+  <body>
+    <div class="container">
+      <main class="component card">
+        <div class="loading" id="loadingEl">
+          <div class="ball"></div>
+          <div class="ball"></div>
+          <div class="ball"></div>
+        </div>
+        <div class="card__inner" id="compEl">
+          <h1 class="advice__title" id="numEl"></h1>
+          <p class="advice__quote"><span id="adviceEl"></span></p>
+          <div class="border__divider"></div>
+          <div class="advice__dice" id="diceEl">
+            <img
+              class="advice__dice-img"
+              src="./images/icon-dice.svg"
+              alt="click here for random advice"
+            />
+          </div>
+        </div>
+      </main>
     </div>
-  </main>
-  
-  <footer class="footer">
-    <div class="footer__attribution">
-      <p class="footer__attribution-content">
-        Challenge by
-        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
-          >Frontend Mentor</a
-        >. Coded by <a href="https://twitter.com/elaineclleung">Elaine</a>.
-        <span class="block-footer">
-          Other
-          <a href="https://elaineleung.github.io/frontendmentor/"
-            >Frontend Mentor Challenges</a
-          >
-          by Elaine
-        </span>
-      </p>
-    </div>
-  </footer>
-</body>
-<script src="index.js"></script>
+    <footer class="footer">
+      <div class="footer__attribution">
+        <p class="footer__attribution-content">
+          Challenge by
+          <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+            >Frontend Mentor</a
+          >. Coded by <a href="https://twitter.com/elaineclleung">Elaine</a>.
+          <span class="block-footer">
+            Other
+            <a href="https://elaineleung.github.io/frontendmentor/"
+              >Frontend Mentor Challenges</a
+            >
+            by Elaine
+          </span>
+        </p>
+      </div>
+    </footer>
+  </body>
+  <script src="index.js"></script>
 </html>
