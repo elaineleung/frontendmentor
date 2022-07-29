@@ -72,20 +72,14 @@ body {
   font-weight: 400;
 }
 
-.profile__name {
-  letter-spacing: 0.5px;
-}
-
 .profile__location {
   font-size: 14px;
   color: var(--clr-blue-darkgray);
-  margin-top: 0.25em;
 }
 
 .stat__label {
   font-size: 10px;
   letter-spacing: 1.5px;
-  margin-top: 0.4em;
   color: var(--clr-gray-dark);
 }
 
@@ -120,10 +114,12 @@ body {
 .main__wrapper::before {
   content: "";
   background-image: url("./images/bg-pattern-top.svg");
-  width: 1000px;
-  height: 1000px;
+  width: 978px;
+  height: 978px;
   bottom: 100px;
-  right: 100px;
+  right: 135px;
+  margin-right: 4rem;
+  margin-bottom: -1rem;
   position: absolute;
   z-index: -1;
   background-repeat: no-repeat;
@@ -132,10 +128,10 @@ body {
 .main__wrapper::after {
   content: "";
   background-image: url("./images/bg-pattern-bottom.svg");
-  width: 1000px;
-  height: 1000px;
-  top: 160px;
-  left: 100px;
+  width: 978px;
+  height: 978px;
+  top: 200px;
+  left: 150px;
   position: absolute;
   z-index: -1;
   background-repeat: no-repeat;
@@ -144,8 +140,7 @@ body {
 .card {
   display: flex;
   z-index: 20;
-  width: 100%;
-  width: 320px;
+  width: 350px;
   flex-direction: column;
   align-items: center;
   background-color: white;
@@ -198,8 +193,16 @@ body {
   flex-direction: column;
   justify-content: center;
   position: relative;
-  padding: 4.4em 0 1.2em;
+  padding: 4.45rem 0 1.15rem;
   border-bottom: 0.1px solid hsla(0, 0%, 88%, 0.74);
+}
+
+.profile__name {
+  margin-bottom: 0.5rem;
+}
+
+.profile__location {
+  margin-bottom: 0.4rem;
 }
 
 .profile__age {
@@ -207,7 +210,7 @@ body {
 }
 
 .card__stats {
-  padding: 1.6em 2.8em;
+  padding: 1.45rem 2.8rem 1.4rem;
   display: flex;
   justify-content: space-between;
 }
@@ -215,6 +218,11 @@ body {
 .stat {
   display: flex;
   flex-direction: column;
+  width: 4rem;
+}
+
+.stat__label {
+  margin-top: 0.4rem;
 }
 
 footer {
@@ -235,7 +243,7 @@ footer {
   color: inherit;
 }
 
-@media (min-width: 1150px) {
+/* @media (min-width: 1150px) {
   .main__wrapper::before {
     bottom: 90px;
     right: 140px;
@@ -244,4 +252,4 @@ footer {
     top: 170px;
     left: 170px;
   }
-}
+} */

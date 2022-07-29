@@ -144,6 +144,7 @@ input[type=search]::-webkit-search-decoration {
   }
 }
 body {
+  width: 100%;
   min-height: 100vh;
   font-family: var(--ff-primary);
   font-weight: 400;

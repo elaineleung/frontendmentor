@@ -59,8 +59,6 @@
     --fs-800: 3rem; // 40px
 
     --lh-body: 1.2;
-
-    // --pad-comp: 2rem;
   }
 }
 
@@ -295,20 +293,20 @@ body {
     &-amount {
       position: absolute;
       top: -2.7rem;
-      left: -50%;
-      margin-left: -0.2rem;
+      margin-left: attr(data-width px);
       width: fit-content;
       background-color: var(--clr-brown-dark);
       border-radius: 0.3rem;
       padding: 0.4rem 0.5rem;
       z-index: 10;
-      display: none;
+      opacity: 0;
+      transition: opacity 0.1s ease-in-out;
     }
     &-label {
       padding: 0.75rem 0 0.15rem;
     }
     &-bar:hover ~ &-amount {
-      display: block;
+      opacity: 1;
     }
   }
 }
@@ -400,7 +398,6 @@ body {
       }
       &-amount {
         top: -2.75rem;
-        margin-left: max(9pt, 0.5rem);
       }
       &-label {
         padding: 0.48rem 0 0.7rem;
