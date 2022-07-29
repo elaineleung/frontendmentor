@@ -163,6 +163,9 @@ body {
   background: var(--bkg-body);
   display: flex;
   flex-direction: column;
+  // * {
+  //   outline: var(--debug);
+  // }
 }
 
 .visually-hidden {
@@ -432,7 +435,7 @@ body {
 
   .hero {
     grid-area: hero;
-    height: 100%;
+    min-height: 100%;
     img {
       object-position: center;
     }
@@ -458,10 +461,9 @@ body {
     width: 100%;
   }
 
-  .attribution {
+  .footer {
     align-self: end;
     grid-area: footer;
-    display: block;
   }
 }
 

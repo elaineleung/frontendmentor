@@ -399,7 +399,7 @@ body {
   }
   .hero {
     grid-area: hero;
-    height: 100%;
+    min-height: 100%;
   }
   .hero img {
     -o-object-position: center;
@@ -421,10 +421,9 @@ body {
     padding: 0.625rem 1.875rem;
     width: 100%;
   }
-  .attribution {
+  .footer {
     align-self: end;
     grid-area: footer;
-    display: block;
   }
 }
 @media (min-width: 1150px) {
