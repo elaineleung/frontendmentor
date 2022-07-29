@@ -18,7 +18,7 @@
   --debug: 1px solid blue;
 
   --pad-header: 2rem;
-  --pad-main: clamp(1rem, calc(-13.3077rem + 73.8462vw), 4rem);
+  --pad-content: clamp(1rem, calc(-13.3077rem + 73.8462vw), 4rem);
 
   --ff-primary: "Josefin Sans", sans-serif;
   --bkg-body: linear-gradient(135deg, hsl(0, 0%, 100%), hsl(0, 100%, 98%));
@@ -30,7 +30,7 @@
   :root {
     --fs-body: 0.9375rem; 
     --pad-header: 2.5rem;
-    --pad-main: 4.375rem;
+    --pad-content: 1.5rem;
   }
 }
 
@@ -45,7 +45,7 @@
 
     --mar-span: 0.2625rem;
     --pad-header: 4.05rem;
-    --pad-main: 4.375rem;
+    --pad-content: 2rem;
   }
 }
 
@@ -301,11 +301,11 @@ input:-moz-placeholder {
 .main {
   display: flex;
   min-width: 320px;
-  padding: var(--pad-main) 0;
   flex-direction: column;
   align-items: center;
   background: transparent;
   &__content {
+    padding: var(--pad-content) 0;
     margin-bottom: 2rem;
     h2 {
       margin-bottom: 1rem;
@@ -371,7 +371,7 @@ input:-moz-placeholder {
   padding: 0.625rem 0;
   width: 225px;
   margin: 0 auto;
-  display: none;
+  visibility: hidden;
 }
 
 .footer {
@@ -395,7 +395,7 @@ input:-moz-placeholder {
     }
   }
   .notification {
-    display: block;
+    visibility: visible;
   }
 }
 
@@ -461,8 +461,6 @@ input:-moz-placeholder {
     }
   }
 
-
-
   .notification {
     padding: 0.625rem 1.875rem;
     width: 100%;
@@ -488,9 +486,9 @@ input:-moz-placeholder {
   .main {
     justify-content: center;
     &__content {
-      margin-bottom: 2.5rem;
+      margin-bottom: 0.5rem;
       h2 {
-        margin-bottom: 1.28rem;
+        margin-bottom: 1.3rem;
       }
     }
   }

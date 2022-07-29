@@ -23,7 +23,7 @@ inputEl.addEventListener("invalid", (event) => {
   }
 });
 
-inputEl.addEventListener("input", (event) => {
+inputEl.addEventListener("input", () => {
   ctaEl.classList.remove("error");
 });
 

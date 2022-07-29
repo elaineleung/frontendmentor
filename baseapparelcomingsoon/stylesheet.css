@@ -13,7 +13,7 @@
   --ls-input: -0.01rem;
   --debug: 1px solid blue;
   --pad-header: 2rem;
-  --pad-main: clamp(1rem, calc(-13.3077rem + 73.8462vw), 4rem);
+  --pad-content: clamp(1rem, calc(-13.3077rem + 73.8462vw), 4rem);
   --ff-primary: "Josefin Sans", sans-serif;
   --bkg-body: linear-gradient(135deg, hsl(0, 0%, 100%), hsl(0, 100%, 98%));
   --bkg-btn: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
@@ -24,7 +24,7 @@
   :root {
     --fs-body: 0.9375rem;
     --pad-header: 2.5rem;
-    --pad-main: 4.375rem;
+    --pad-content: 1.5rem;
   }
 }
 @media (min-width: 1150px) {
@@ -36,7 +36,7 @@
     --ls-input: -0.01rem;
     --mar-span: 0.2625rem;
     --pad-header: 4.05rem;
-    --pad-main: 4.375rem;
+    --pad-content: 2rem;
   }
 }
 *,
@@ -288,12 +288,12 @@ input:-moz-placeholder {
 .main {
   display: flex;
   min-width: 320px;
-  padding: var(--pad-main) 0;
   flex-direction: column;
   align-items: center;
   background: transparent;
 }
 .main__content {
+  padding: var(--pad-content) 0;
   margin-bottom: 2rem;
 }
 .main__content h2 {
@@ -356,7 +356,7 @@ input:-moz-placeholder {
   padding: 0.625rem 0;
   width: 225px;
   margin: 0 auto;
-  display: none;
+  visibility: hidden;
 }
 
 .footer {
@@ -376,7 +376,7 @@ input:-moz-placeholder {
   visibility: visible;
 }
 .error .notification {
-  display: block;
+  visibility: visible;
 }
 
 .focus .input {
@@ -454,10 +454,10 @@ input:-moz-placeholder {
     justify-content: center;
   }
   .main__content {
-    margin-bottom: 2.5rem;
+    margin-bottom: 0.5rem;
   }
   .main__content h2 {
-    margin-bottom: 1.28rem;
+    margin-bottom: 1.3rem;
   }
   .cta .signup .input {
     border-width: 0.13rem;
