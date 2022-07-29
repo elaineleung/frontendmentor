@@ -88,14 +88,13 @@ button:focus {
 }
 
 .loading {
-  flex: 1;
   display: flex;
   width: 12rem;
-  margin-top: 5rem;
+  transform: translateY(250%);
   margin-inline: auto;
   justify-content: space-between;
   opacity: 0.5;
-  transition: all 0.15s;
+  transition: all 0.4s;
   align-items: flex-end;
 }
 
@@ -109,12 +108,12 @@ button:focus {
 
 [aria-hidden=false].loading {
   opacity: 0;
-  margin-top: 0;
+  transform: translateY(-100%);
 }
 
 [aria-hidden=true].loading ~ .card__inner {
   opacity: 0;
-  transform: translateY(100%);
+  height: 125px;
 }
 
 .ball:nth-child(2) {
@@ -166,7 +165,7 @@ body {
   letter-spacing: var(--ls-h1);
   text-transform: uppercase;
 }
-.advice__quote {
+.advice__block {
   font-size: var(--fs-quote);
   line-height: var(--lh-quote);
   opacity: 1;
@@ -208,17 +207,16 @@ body {
 }
 
 .card__inner {
-  flex: 0;
+  min-height: 125px;
   opacity: 1;
-  transform: translateY(0%);
-  transition: opacity 0.8s, transform 0.5s;
+  transition: opacity 0.2s;
 }
 
 .advice__title {
   margin-bottom: 2.2em;
 }
-.advice__quote {
-  margin-bottom: 0.95em;
+.advice__block .quote {
+  margin-bottom: 0.95rem;
 }
 .advice__dice {
   background-color: var(--clr-green-neon);
@@ -258,6 +256,13 @@ body {
   margin: 0 auto;
 }
 
+.hidden {
+  visibility: hidden;
+  transition-delay: 1s;
+  transition-property: visibility;
+  transition-duration: 1s;
+}
+
 @media (min-width: 780px) {
   .component {
     width: 30em;
@@ -274,7 +279,6 @@ body {
     width: 3.55em;
     position: absolute;
     bottom: -1.75em;
-    transform: translateY(100%);
     left: 50%;
     margin-left: -1.85em;
     border-radius: 50%;

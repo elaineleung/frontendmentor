@@ -23,15 +23,17 @@
   <body>
     <div class="container">
       <main class="component card">
-        <div class="loading" id="loadingEl">
+        <div class="loading" id="loadingEl" aria-hidden=true>
           <div class="ball"></div>
           <div class="ball"></div>
           <div class="ball"></div>
         </div>
-        <div class="card__inner" id="compEl">
+        <div class="card__inner hidden" id="compEl">
           <h1 class="advice__title" id="numEl"></h1>
-          <p class="advice__quote"><span id="adviceEl"></span></p>
-          <div class="border__divider"></div>
+          <div class="advice__block">
+            <p class="quote"><span id="adviceEl"></span></p>
+            <div class="border__divider"></div>
+          </div>        
           <div class="advice__dice" id="diceEl">
             <img
               class="advice__dice-img"
