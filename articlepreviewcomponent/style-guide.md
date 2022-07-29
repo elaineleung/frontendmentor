@@ -7,7 +7,7 @@ The designs were created to the following widths:
 - Mobile: 375px
 - Desktop: 1440px
 
-## Colors
+## Colors 
 
 - Very Dark Grayish Blue: hsl(217, 19%, 35%)
     --clr-grayblue-xdark

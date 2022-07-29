@@ -1,4 +1,4 @@
-const signupEl = document.getElementById("signupEl");
+const ctaEl = document.getElementById("ctaEl");
 const inputEl = document.getElementById("inputEl");
 const messageEl = document.getElementById("messageEl");
 const formEl = document.getElementById("formEl");
@@ -7,7 +7,7 @@ const btnEl = document.getElementById("btnEl");
 inputEl.addEventListener("invalid", (event) => {
   event.preventDefault();
   if (!event.target.validity.valid) {
-    signupEl.classList.add("error");
+    ctaEl.classList.add("error");
     // inputEl.classList.add("invalid animated shake")
     if (event.target.validity.patternMismatch) {
       messageEl.textContent = "Please provide a valid email.";
@@ -24,12 +24,15 @@ inputEl.addEventListener("invalid", (event) => {
 });
 
 inputEl.addEventListener("input", (event) => {
-  signupEl.classList.remove("error");
+  ctaEl.classList.remove("error");
 });
 
 formEl.addEventListener("submit", () => {
-  signupEl.innerHTML = `
-        <p class="submit__message">Thank you for signing up! We hope to share our latest updates with you soon.</p>
+  ctaEl.innerHTML = `
+        <div class="submit__message">
+          <p>Thank you for signing up!</p>
+          <p>We hope to share our latest updates with you soon.</p>
+        </div>
     `;
 });
 

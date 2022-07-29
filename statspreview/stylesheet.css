@@ -60,9 +60,6 @@ body {
   flex-grow: 1;
   display: grid;
   place-content: center;
-  height: -webkit-fit-content;
-  height: -moz-fit-content;
-  height: fit-content;
   padding: min(15%, 4rem) 0;
 }
 
@@ -78,7 +75,7 @@ body {
 .card__image {
   display: block;
   position: relative;
-  height: clamp(16rem, 11.6522rem + 18.5507vw, 20rem);
+  max-height: clamp(16rem, 11.6522rem + 18.5507vw, 20rem);
   border-radius: 0.5em 0.5em 0 0;
   background-color: var(--clr-accent);
 }
@@ -165,11 +162,12 @@ body {
   .card {
     flex-direction: row;
     max-width: unset;
-    height: 29.8rem;
+    max-height: 29.8rem;
   }
   .card__image {
     flex: 1 1 525px;
     order: 2;
+    max-height: unset;
     height: 100%;
     border-radius: 0 0.5em 0.5em 0;
   }

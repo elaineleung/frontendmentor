@@ -24,89 +24,107 @@
     <link rel="stylesheet" href="stylesheet.css" />
   </head>
   <body>
-    <header class="header">
-      <h1 class="sr-only">
-        Frontend Mentor challenge: Base Apparel coming soon page
-      </h1>
-      <div class="container">
-        <div class="logo"></div>
-      </div>
-    </header>
-    <div class="hero"></div>
-    <main class="main">
-      <div class="container">
-        <div class="main__content">
-          <h2 class="content__title">We're <span>coming</span><span>soon</span></h2>
-          <p class="content__body">
-            Hello fellow shoppers! We're currently building our new fashion
-            store. Add your email below to stay up-to-date with announcements
-            and our launch deals.
+    <div class="wrapper">
+      <header class="header">
+        <h1 class="visually-hidden">
+          Frontend Mentor challenge: Base Apparel coming soon page
+        </h1>
+        <div class="container">
+          <div class="logo">
+            <img src="./images/logo.svg" alt="Base Apparel company logo" />
+          </div>
+        </div>
+      </header>
+      <picture class="hero">
+        <source media="(min-width: 376px)" srcset="./images/hero-desktop.jpg" />
+        <img
+          src="./images/hero-mobile.jpg"
+          alt="a female model posing in an orange button up shirt"
+        />
+      </picture>
+      <main class="main">
+        <div class="container">
+          <div class="main__content content">
+            <h2 class="content__title">
+              We're <span>coming</span><span>soon</span>
+            </h2>
+            <p class="content__body">
+              Hello fellow shoppers! We're currently building our new fashion
+              store. Add your email below to stay up-to-date with announcements
+              and our launch deals.
+            </p>
+          </div>
+          <div class="main__cta cta" id="ctaEl">
+            <form class="signup" id="formEl">
+              <div class="signup__input input">
+                <input
+                  type="email"
+                  name="email"
+                  id="inputEl"
+                  class="input__email"
+                  placeholder="Email Address"
+                  maxlength="50"
+                  minlength="8"
+                  pattern="^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$"
+                  required
+                />
+                <div class="input__error-icon">
+                  <svg
+                    class="icon-error"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                  >
+                    <g fill="none" fill-rule="evenodd">
+                      <circle cx="12" cy="12" r="12" fill="#F96464" />
+                      <path
+                        fill="#FFF"
+                        fill-rule="nonzero"
+                        d="M13.256 6v9.056h-2V6h2zm-.944 12.464c-.384 0-.699-.104-.944-.312a1.027 1.027 0 0 1-.368-.824c0-.33.125-.608.376-.832.25-.224.563-.336.936-.336.373 0 .68.112.92.336.24.224.36.501.36.832 0 .341-.117.616-.352.824-.235.208-.544.312-.928.312z"
+                      />
+                    </g>
+                  </svg>
+                </div>
+              </div>
+              <button
+                id="btnEl"
+                class="signup__submit submit"
+                name="submit"
+                type="submit"
+              >
+                <span class="visually-hidden">Submit</span>
+                <svg
+                  class="icon-submit"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="12"
+                  height="20"
+                >
+                  <path
+                    fill="none"
+                    stroke="#FFF"
+                    stroke-width="2"
+                    d="M1 1l8.836 8.836L1 18.671"
+                  />
+                </svg>
+              </button>
+            </form>
+            <div id="messageEl" class="notification"></div>
+          </div>
+        </div>
+      </main>
+  
+      <footer class="footer">
+        <div class="container">
+          <p class="footer__content">
+            Challenge by
+            <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+              >Frontend Mentor</a
+            >. Coded by <a href="https://twitter.com/elaineclleung">Elaine</a>.
           </p>
         </div>
-        <div class="main__signup" id="signupEl">
-          <form class="signup" id="formEl">
-            <div class="signup__input">
-              <input
-                type="email"
-                name="email"
-                id="inputEl"
-                class="input__email"
-                placeholder="Email Address"
-                maxlength="50"
-                minlength="8"
-                pattern="^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$"
-                required
-              />
-              <div class="input__error-icon">
-                <svg
-                  class="icon-error"
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="24"
-                  height="24"
-                >
-                  <g fill="none" fill-rule="evenodd">
-                    <circle cx="12" cy="12" r="12" fill="#F96464" />
-                    <path
-                      fill="#FFF"
-                      fill-rule="nonzero"
-                      d="M13.256 6v9.056h-2V6h2zm-.944 12.464c-.384 0-.699-.104-.944-.312a1.027 1.027 0 0 1-.368-.824c0-.33.125-.608.376-.832.25-.224.563-.336.936-.336.373 0 .68.112.92.336.24.224.36.501.36.832 0 .341-.117.616-.352.824-.235.208-.544.312-.928.312z"
-                    />
-                  </g>
-                </svg>
-              </div>
-            </div>
-            <button id="btnEl" class="signup__submit" name="submit" type="submit">
-              <span class="visually-hidden">Submit</span>
-              <svg
-                class="icon-submit"
-                xmlns="http://www.w3.org/2000/svg"
-                width="12"
-                height="20"
-              >
-                <path
-                  fill="none"
-                  stroke="#FFF"
-                  stroke-width="2"
-                  d="M1 1l8.836 8.836L1 18.671"
-                />
-              </svg>
-            </button>
-          </form>
-          <div id="messageEl" class="input__error-message"></div>
-        </div>
-      </div>
-    </main>
-
-    <footer class="attribution">
-      <div class="container">
-        <p class="attribution__content">Challenge by
-          <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
-          >Frontend Mentor</a
-        >. Coded by <a href="https://twitter.com/elaineclleung">Elaine</a>.
-        </p>
-        
-      </div>
-    </footer>
+      </footer>
+  
+    </div>
     <script src="script.js"></script>
   </body>
 </html>
