@@ -1,0 +1,42 @@
+:root {
+  --clr-white: hsl(0, 0%, 100%);
+  --clr-bg: hsl(220, 22%, 16%);
+  --clr-blue-grayish: hsl(217, 19%, 38%);
+  --clr-blue-darkgrayish: hsl(218, 20%, 24%);
+
+  --clr-cyan-light: hsl(193, 38%, 86%);
+  --clr-green-neon: hsl(150, 100%, 66%);
+
+  --fs-body: 18px;
+  --fs-p: 1rem;
+  --fs-h1: 0.6rem;
+  --fs-quote: 1.3rem;
+  --fs-xsmall: 0.5rem;
+
+  --lh-body: 1.5;
+  --lh-p: 1.5;
+  --lh-quote: 1.42;
+
+  --ls-body: 0px;
+  --ls-h1: 0.34em;
+
+  --ff-primary: Manrope, Arial, sans-serif;
+  --debug: 1px solid blue;
+}
+
+@media (min-width: 780px) {
+  :root {
+    --fs-body: 18px;
+    --fs-p: 1rem;
+    --fs-h1: 0.7rem;
+    --fs-quote: 1.52rem;
+    --fs-xsmall: 0.6rem;
+    
+    --lh-body: 1.5;
+    --lh-p: 1.5;
+    --lh-quote: 1.38;
+
+    --ls-body: 0px;
+    --ls-h1: 0.34em;    
+  }
+}

@@ -22,19 +22,19 @@
   </head>
   <body>
     <div class="container">
-      <main class="component card">
-        <div class="loading" id="loadingEl" aria-hidden=true>
+      <main class="component">
+        <div class="loading" id="loadingEl" aria-hidden="true">
           <div class="ball"></div>
           <div class="ball"></div>
           <div class="ball"></div>
         </div>
-        <div class="card__inner hidden" id="compEl">
+        <div class="card__inner" id="compEl">
           <h1 class="advice__title" id="numEl"></h1>
           <div class="advice__block">
             <p class="quote"><span id="adviceEl"></span></p>
             <div class="border__divider"></div>
-          </div>        
-          <div class="advice__dice" id="diceEl">
+          </div>
+          <div role="button" tabindex="0" class="advice__dice" id="diceEl">
             <img
               class="advice__dice-img"
               src="./images/icon-dice.svg"

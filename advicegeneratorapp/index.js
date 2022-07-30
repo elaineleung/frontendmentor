@@ -8,18 +8,17 @@ const url = "https://api.adviceslip.com/advice"
 const max = 224  // max number of quotes from endpoint
 
 
-// loadingEl.setAttribute("aria-hidden", true)
-
 diceEl.addEventListener("click", loadAdvice)
 
 window.addEventListener("load", ()=> {
-  componentEl.classList.remove("hidden")
   loadAdvice()
+  loadingEl.classList.remove("transition-none")
+  componentEl.classList.remove("hidden")
 })
 
 function loadAdvice() {
   const random = Math.floor(Math.random() * max)
-  loadingEl.setAttribute("aria-hidden", true)  
+  loadingEl.setAttribute("aria-hidden", true) 
   fetch(`${url}/${random}`)
     .then( response => response.json())
     .then( data => {
@@ -27,6 +26,7 @@ function loadAdvice() {
         
         setTimeout(()=> {
           loadingEl.setAttribute("aria-hidden", false)
+          loadingEl.classList.add("transition-none")
           numEl.textContent = `Advice #${data.slip.id}`
           adviceEl.textContent = `“${data.slip.advice}”`
         }, 1000)
