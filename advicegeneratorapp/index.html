@@ -15,7 +15,6 @@
       href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;800&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="./reset.css" class="stylesheet" />
     <link rel="stylesheet" href="./stylesheet.css" class="stylesheet" />
 
     <title>Frontend Mentor | Advice generator app</title>
@@ -24,24 +23,23 @@
     <div class="container">
       <main class="component">
         <div class="loading" id="loadingEl" aria-hidden="true">
-          <div class="ball"></div>
-          <div class="ball"></div>
-          <div class="ball"></div>
+          <div></div>
+          <div></div>
+          <div></div>
         </div>
-        <div class="card__inner" id="compEl">
-          <h1 class="advice__title" id="numEl"></h1>
-          <div class="advice__block">
-            <p class="quote"><span id="adviceEl"></span></p>
-            <div class="border__divider"></div>
-          </div>
-          <div role="button" tabindex="0" class="advice__dice" id="diceEl">
+        <article class="component__inner" id="compEl">
+          <h1 class="advice__number" id="numEl"></h1>
+          <div>
+            <p class="advice__text"><span id="adviceEl"></span></p>
+            <div class="divider"></div>
+          </div>    
+          <button class="dice" id="diceEl">
             <img
-              class="advice__dice-img"
               src="./images/icon-dice.svg"
               alt="click here for random advice"
             />
-          </div>
-        </div>
+          </button>
+        </article>
       </main>
     </div>
     <footer class="footer">

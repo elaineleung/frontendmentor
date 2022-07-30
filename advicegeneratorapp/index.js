@@ -2,18 +2,24 @@ const componentEl = document.getElementById("compEl")
 const numEl = document.getElementById("numEl")
 const adviceEl = document.getElementById("adviceEl")
 const diceEl = document.getElementById("diceEl")
+
 const loadingEl = document.getElementById("loadingEl")
 
 const url = "https://api.adviceslip.com/advice"
 const max = 224  // max number of quotes from endpoint
 
 
-diceEl.addEventListener("click", loadAdvice)
-
 window.addEventListener("load", ()=> {
   loadAdvice()
-  loadingEl.classList.remove("transition-none")
   componentEl.classList.remove("hidden")
+})
+
+diceEl.addEventListener("click", loadAdvice)
+diceEl.addEventListener("keydown", (event)=>{
+  if (event.key === " " || event.key === "Enter" || event.key === "Spacebar" ) {
+    event.preventDefault()
+    loadAdvice()
+  }
 })
 
 function loadAdvice() {
