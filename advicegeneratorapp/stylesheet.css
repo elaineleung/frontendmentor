@@ -255,7 +255,14 @@ body {
   box-shadow: 0 0 1rem var(--clr-blue-darkgrayish);
   transition: transform 0.1s ease-in-out;
 }
-.dice:hover, .dice:focus {
+.dice:hover {
+  box-shadow: 0 0 1.5rem var(--clr-green-neon);
+  transform: scale(1.05);
+}
+.dice:not(:hover) {
+  box-shadow: 0 0 1rem var(--clr-blue-darkgrayish);
+}
+.dice:focus {
   box-shadow: 0 0 1.5rem var(--clr-green-neon);
   transform: scale(1.05);
 }

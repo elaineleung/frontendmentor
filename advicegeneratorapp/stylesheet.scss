@@ -170,7 +170,13 @@ body {
   transform: scale(1);
   box-shadow: 0 0 1rem var(--clr-blue-darkgrayish);
   transition: transform 0.1s ease-in-out;
-  &:hover,
+  &:hover {
+    box-shadow: 0 0 1.5rem var(--clr-green-neon);
+    transform: scale(1.05);
+  }
+  &:not(:hover) {
+    box-shadow: 0 0 1rem var(--clr-blue-darkgrayish);
+  }
   &:focus {
     box-shadow: 0 0 1.5rem var(--clr-green-neon);
     transform: scale(1.05);
