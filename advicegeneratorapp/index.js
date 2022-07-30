@@ -22,25 +22,28 @@ diceEl.addEventListener("keydown", (event)=>{
   }
 })
 
-function loadAdvice() {
+async function loadAdvice() {
   const random = Math.floor(Math.random() * max)
   loadingEl.setAttribute("aria-hidden", true) 
-  fetch(`${url}/${random}`)
-    .then( response => response.json())
-    .then( data => {
-      if (data) {
-        
-        setTimeout(()=> {
-          loadingEl.setAttribute("aria-hidden", false)
-          loadingEl.classList.add("transition-none")
-          numEl.textContent = `Advice #${data.slip.id}`
-          adviceEl.textContent = `“${data.slip.advice}”`
-        }, 1000)
-      } 
-   })
+
+  try {
+    const response = await fetch(`${url}/${random}`)
+    const data = await response.json()
+   
+    if (data) {        
+      setTimeout(()=> {
+        loadingEl.setAttribute("aria-hidden", false)
+        loadingEl.classList.add("transition-none")
+        numEl.textContent = `Advice #${data.slip.id}`
+        adviceEl.textContent = `“${data.slip.advice}”`
+      }, 1000)
+    }
+  } catch(error) {
+    console.log("Error caught: ", err.message);
+  }
 }
 
-function reset() {  
-  numEl.textContent = ""
-  adviceEl.textContent = ""
-}
+// function reset() {  
+//   numEl.textContent = ""
+//   adviceEl.textContent = ""
+// }

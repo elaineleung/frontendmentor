@@ -75,6 +75,12 @@ body {
   position: relative;
 }
 
+.component__inner {
+  min-height: 125px;
+  opacity: 1;
+  transition: opacity 0.2s, height 0.5s;
+}
+
 // spinner
 
 .loading {
@@ -84,7 +90,7 @@ body {
   margin-inline: auto;
   justify-content: space-between;
   opacity: 0.5;
-  transition: all 0.4s;
+  transition: opacity 0.4s, transform 0.5s eases;
   align-items: flex-end;
   div {
     background-color: var(--clr-cyan-light);
@@ -103,7 +109,10 @@ body {
 
 [aria-hidden="true"].loading ~ .component__inner {
   opacity: 0;
-  height: 125px;
+}
+
+[aria-hidden="false"].loading ~ .component__inner > .advice {
+  height: 0%;
 }
 
 [aria-hidden="false"].loading {
@@ -120,14 +129,11 @@ body {
   }
 }
 
-.component__inner {
-  min-height: 125px;
-  opacity: 1;
-  transition: opacity 0.2s;
-}
+
 
 .advice {
   margin-inline: auto;
+  height: 100%;
   * {
     width: 100%;
     display: block;
@@ -160,7 +166,8 @@ body {
   padding: 1.05rem;
   cursor: pointer;
   transform: scale(1);
-  transition: transform 0.25 ease-in-out;
+  box-shadow: 0 0 1rem var(--clr-blue-darkgrayish);
+  transition: transform 0.1s ease-in-out;
   &:hover {
     box-shadow: 0 0 1.4rem var(--clr-green-neon);
     transform: scale(1.05);
