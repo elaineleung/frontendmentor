@@ -253,13 +253,13 @@ body {
   box-shadow: 0 0 1rem var(--clr-blue-darkgrayish);
   transition: transform 0.1s ease-in-out;
 }
-.dice:hover {
-  box-shadow: 0 0 1.4rem var(--clr-green-neon);
+.dice:hover, .dice:focus {
+  box-shadow: 0 0 1.5rem var(--clr-green-neon);
   transform: scale(1.05);
 }
-.dice:active, .dice:focus {
+.dice:active {
   border: 2px solid var(--clr-accent);
-  box-shadow: 0 0 1.4rem var(--clr-green-neon);
+  box-shadow: 0 0 1.5rem var(--clr-green-neon);
   transform: scale(1.05);
 }
 

@@ -129,8 +129,6 @@ body {
   }
 }
 
-
-
 .advice {
   margin-inline: auto;
   height: 100%;
@@ -168,14 +166,14 @@ body {
   transform: scale(1);
   box-shadow: 0 0 1rem var(--clr-blue-darkgrayish);
   transition: transform 0.1s ease-in-out;
-  &:hover {
-    box-shadow: 0 0 1.4rem var(--clr-green-neon);
+  &:hover,
+  &:focus {
+    box-shadow: 0 0 1.5rem var(--clr-green-neon);
     transform: scale(1.05);
   }
-  &:active,
-  &:focus {
+  &:active {
     border: 2px solid var(--clr-accent);
-    box-shadow: 0 0 1.4rem var(--clr-green-neon);
+    box-shadow: 0 0 1.5rem var(--clr-green-neon);
     transform: scale(1.05);
   }
 }
