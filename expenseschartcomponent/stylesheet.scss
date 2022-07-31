@@ -219,7 +219,7 @@ body {
 .container {
   max-width: 540px;
   min-width: 320px;
-  display: flex;
+  display: flex; 
   flex-wrap: wrap;
   gap: 1rem;
   > * {

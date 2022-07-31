@@ -10,7 +10,7 @@ window.addEventListener('resize', getData)
 function getData() {
   fetch("./data.json")
   .then(response => {
-     return response.json();
+     return response.json(); 
   })
   .then(data => {
     barsEl.textContent = ''

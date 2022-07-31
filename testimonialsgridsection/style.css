@@ -334,7 +334,7 @@ body {
 }
 @media (min-width: 840px) {
   .container {
-    grid-template: "daniel jeanette jonathan" "daniel  patrick patrick" "kira kira kira";
+    grid-template: "daniel jeanette jonathan" "daniel patrick patrick" "kira kira kira";
   }
 }
 @media (min-width: 1080px) {

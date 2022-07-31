@@ -1,13 +1,11 @@
 const componentEl = document.getElementById("compEl")
-const numEl = document.getElementById("numEl")
-const adviceEl = document.getElementById("adviceEl")
 const diceEl = document.getElementById("diceEl")
-
 const loadingEl = document.getElementById("loadingEl")
 
 const url = "https://api.adviceslip.com/advice"
 const max = 224  // max number of quotes from endpoint
 
+let previousActiveEl = null
 
 window.addEventListener("load", ()=> {
   loadAdvice()
@@ -21,7 +19,7 @@ diceEl.addEventListener("keydown", (event)=>{
     loadAdvice()
   }
 })
-
+ 
 async function loadAdvice() {
   const random = Math.floor(Math.random() * max)
   loadingEl.setAttribute("aria-hidden", true) 
@@ -29,13 +27,14 @@ async function loadAdvice() {
   try {
     const response = await fetch(`${url}/${random}`)
     const data = await response.json()
-   
     if (data) {        
       setTimeout(()=> {
+
         loadingEl.setAttribute("aria-hidden", false)
         loadingEl.classList.add("transition-none")
-        numEl.textContent = `Advice #${data.slip.id}`
-        adviceEl.textContent = `“${data.slip.advice}”`
+        componentEl.querySelector(".advice__number").textContent = `Advice #${data.slip.id}`
+        componentEl.querySelector(".advice__text").textContent = `“${data.slip.advice}”`
+        document.body.focus();
       }, 1000)
     }
   } catch(error) {
