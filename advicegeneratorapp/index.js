@@ -29,9 +29,7 @@ async function loadAdvice() {
     const data = await response.json()
     if (data) {        
       setTimeout(()=> {
-
         loadingEl.setAttribute("aria-hidden", false)
-        loadingEl.classList.add("transition-none")
         componentEl.querySelector(".advice__number").textContent = `Advice #${data.slip.id}`
         componentEl.querySelector(".advice__text").textContent = `“${data.slip.advice}”`
         document.body.focus();
