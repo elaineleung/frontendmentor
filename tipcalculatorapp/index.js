@@ -21,7 +21,7 @@ appEl.addEventListener("input", function(event) {
   values.bill = Number(document.getElementById("bill").value)
   values.people = Number(document.getElementById("people").value)
 
-  checkValidity()
+  checkEmptyValues()
 })
 
 function handleErrorMessage(value) {
@@ -39,7 +39,7 @@ function handleErrorMessage(value) {
   }
 }
 
-function checkValidity(){
+function checkEmptyValues(){
   Object.values(values).some( elem => elem === 0 || NaN) 
   ? clearDisplay() : calculateTip();
 }
@@ -85,7 +85,7 @@ function handleCustom(value) {
 
 function selectTip(value) {
   values.tip = Number(value)
-  checkValidity()
+  checkEmptyValues()
 }
 
 // activating custom tabindex
