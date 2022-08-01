@@ -91,9 +91,7 @@ function reset() {
 }
 
 function validityCheck(value, key) {
-  const { bill, tip, people } = values
-  if ((typeof value === "string" && value.trim().length === 0) || value == 0 ) 
-  {
+  if ((typeof value === "string" && value.trim().length === 0) || value == 0 ) {
     resetBtn.disabled = true;
     clearDisplay();
     values[key] = 0;
@@ -117,7 +115,6 @@ function calculateTip(bill, tip, people) {
   const tipPerPerson = (bill * (tip / 100)) / people;
   const totalPerPerson = (bill * (1 + tip / 100)) / people;
   if (tipPerPerson && totalPerPerson) {
-    console.log(bill, tip, people);
     amountEl.textContent =
       Number.isFinite(tipPerPerson) &&
       !Number.isNaN(tipPerPerson) &&
