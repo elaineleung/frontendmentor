@@ -104,7 +104,7 @@ function calculateTip() {
   resetBtn.disabled = false
 
   const tipPerPerson = (bill * (tip / 100)) / people;
-  const totalPerPerson = (bill * (1 + tip / 100)) / people;
+  const totalPerPerson = tipPerPerson + (bill / people);
 
   if (tipPerPerson && totalPerPerson) {
     amountEl.textContent =

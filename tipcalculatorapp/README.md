@@ -72,7 +72,9 @@ One of my personal projects (that I never got finish) actually has a layout some
 
 - [Pure CSS Custom Styled Radio Buttons](https://moderncss.dev/pure-css-custom-styled-radio-buttons/) - Stephanie's post here helped me figure out how to hide the radio button.
 
-- [Choice & Value Pair ](https://css-tricks.com/choice-value-pair/) - This was probably the only post I found that showed how to group a radio input with a text input.
+- [Choice & Value Pair](https://css-tricks.com/choice-value-pair/) - This was probably the only post I found that showed how to group a radio input with a text input.
+
+- [Reset button](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/reset) - I agree with MDN's stance that it's probably best to avoid using this in most use cases, but in this case the reset was especially handy
 
 ## Author
 
@@ -81,4 +83,4 @@ One of my personal projects (that I never got finish) actually has a layout some
 
 ## Acknowledgments
 
-Shoutout to CSS Tricks for having so many awesome articles!
+Shoutout to CSS Tricks for having so many awesome articles! Thank you also to sedcakmak for her solution, which was a great reference for me when refactoring.
