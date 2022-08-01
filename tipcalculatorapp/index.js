@@ -1,43 +1,99 @@
 const appEl = document.getElementById("appEl");
-const tipsEl = document.getElementById("tipsEl");
-const tipOptions = tipsEl.querySelectorAll("input[name='tip']");
 
+const tipOptions = document.querySelectorAll("input[name='tip']");
 const customEl = document.getElementById("customEl");
 const customRadio = customEl.querySelector("input[type='radio']");
 const customInput = customEl.querySelector("input[type='number']");
 
-const billEl = document.querySelector("input[name='bill']");
-const peopleEl = document.querySelector("input[name='people']");
 const totalEl = document.getElementById("totalEl");
 const amountEl = document.getElementById("amountEl");
+
 const resetBtn = document.getElementById("resetBtn");
-
 const messageEl = document.getElementById("invalidEl");
-
+ 
 const values = { bill: 0, tip: 0, people: 0 };
+
+// event listener for inputs
+
+appEl.addEventListener("input", function(event) {
+  const bill = document.getElementById("bill").value
+  const people = document.getElementById("people").value
+
+  if (event.target.id === "people") handleErrorMessage(event.data);
+  
+  values.bill = Number(bill)
+  values.people = Number(people)
+  
+  checkValidity()
+})
+
+function handleErrorMessage(value) {
+  switch (true) {
+    case Number(value) == 0:
+      messageEl.textContent = "Can't be zero";
+      break;
+    case Number(value) < 0 ||
+      !Number.isInteger(value) ||
+      typeof value != "number":
+      messageEl.textContent = "Wrong format";
+      break;
+    default:
+      null;
+  }
+}
+
+function checkValidity(){
+  Object.values(values).some( elem => elem === 0 || NaN) 
+  ? clearDisplay() : calculateTip();
+}
 
 // reset function and event handler
 
+window.addEventListener("load", reset);
 resetBtn.addEventListener("click", reset);
 
-customInput.addEventListener("input", (event) => {
-  const value = event.target.value || event.data;
+function reset() {
   tipOptions.forEach((btn) => (btn.checked = false));
-  handleCustom(value);
+  resetBtn.disabled = true;
+  appEl.querySelector("form").reset()
+  Object.keys(values).map( key => values[key] = 0 );
+  clearDisplay();
+  appEl.focus()
+}
+
+function clearDisplay() {
+  totalEl.textContent = "0.00";
+  amountEl.textContent = "0.00";
+  resetBtn.disabled = true
+}
+
+// radio btns and custom input and radio 
+
+tipOptions.forEach((btn) =>
+  btn.addEventListener("change", () => selectTip(btn.value))
+);
+
+customEl.addEventListener("input", (event) => {
+  tipOptions.forEach((btn) => btn.checked = false);
+  customRadio.value = event.target.value
+  handleCustom(event.target.value);
 });
 
 customEl.addEventListener("click", function () {
-  handleCustom(customInput.value);
+  handleCustom(customRadio.value);
 });
 
 function handleCustom(value) {
   customRadio.checked = true;
-  validityCheck(value, "tip");
+  selectTip(value)
 }
 
-billEl.addEventListener("input", (event) => {
-  validityCheck(event.target.value, "bill");
-});
+function selectTip(value) {
+  values.tip = Number(value)
+  checkValidity()
+}
+
+// activating custom tabindex
 
 document.addEventListener("keydown", (event) => {
   if (event.key === "Tab" && 
@@ -48,72 +104,14 @@ document.addEventListener("keydown", (event) => {
     }
 })
 
-peopleEl.addEventListener("input", function (event) {
-  const value = event.target.value || event.data;
-  peopleEl.required = peopleEl === document.activeElement && true;
+function calculateTip() {
+  const { bill, tip, people } = values
 
-  switch (true) {
-    case Number(value) == 0 || value === null:
-      messageEl.textContent = "Can't be zero";
-      clearDisplay()
-      break;
-    case Number(value) > 0:
-      validityCheck(value, "people");
-      break;
-    case Number(value) < 0 ||
-      !Number.isInteger(value) ||
-      typeof value != "number":
-      messageEl.textContent = "Wrong format";
-      break;
-    default:
-      null;
-  }
-});
-
-tipOptions.forEach((btn) =>
-  btn.addEventListener("change", () => {
-    console.log(btn.value)
-    validityCheck(Number(btn.value), "tip");
-  })
-);
-
-function reset() {
-  tipOptions.forEach((btn) => (btn.checked = false));
-  peopleEl.required = false
-  billEl.value = "";
-  customInput.value = "";
-  peopleEl.value = "";
-  values.bill = 0;
-  values.tip = 0;
-  values.people = 0;
-  clearDisplay();
-  appEl.focus()
-}
-
-function validityCheck(value, key) {
-  if ((typeof value === "string" && value.trim().length === 0) || value == 0 ) {
-    resetBtn.disabled = true;
-    clearDisplay();
-    values[key] = 0;
-  } else {
-    values[key] = Number(value);
-  }
-
-  Object.values(values).some( elem => elem === 0) ? 
-  clearDisplay()
-  : calculateTip(values.bill, values.tip, values.people);
-}
-
-function clearDisplay() {
-  totalEl.textContent = "0.00";
-  amountEl.textContent = "0.00";
-  resetBtn.disabled = true
-}
-
-function calculateTip(bill, tip, people) {
   resetBtn.disabled = false
+
   const tipPerPerson = (bill * (tip / 100)) / people;
   const totalPerPerson = (bill * (1 + tip / 100)) / people;
+
   if (tipPerPerson && totalPerPerson) {
     amountEl.textContent =
       Number.isFinite(tipPerPerson) &&
@@ -126,7 +124,7 @@ function calculateTip(bill, tip, people) {
   }
 }
 
-window.addEventListener("load", reset);
+
 
 // document.addEventListener("keydown", ()=> {
 //   console.log(document.activeElement)

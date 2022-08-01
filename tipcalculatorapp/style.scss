@@ -368,14 +368,7 @@ button:active,
   }
 }
 
-.reset button
-// .radiobtn [type="radio"]:checked + label
-{
-  background-color: var(--clr-cyan-400);
-  color: var(--clr-neutral-900);
-  outline: 0;
-  border: 0.2rem solid var(--clr-cyan-400);
-}
+
 
 [type="text"]::placeholder {
   color: var(--clr-neutral-700);
@@ -575,7 +568,11 @@ fieldset[data-tab="true"]:focus-within {
     font-size: var(--fs-value);
     letter-spacing: var(--ls-value);
   }
-  button.reset {
+  .reset {
+    background-color: var(--clr-cyan-400);
+    color: var(--clr-neutral-900);
+    outline: 0;
+    border: 0.2rem solid var(--clr-cyan-400);
     margin-top: 0.75rem;
     width: 100%;
     padding: 0.5rem 0 0.25rem;
@@ -673,7 +670,7 @@ fieldset[data-tab="true"]:focus-within {
     .title {
       padding-top: 0.3rem;
     }
-    button.reset {
+    .reset {
       margin-top: auto;
     }
   }

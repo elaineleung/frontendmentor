@@ -368,13 +368,6 @@ button:active,
   outline: 0.2rem solid var(--clr-cyan-300);
 }
 
-.reset button {
-  background-color: var(--clr-cyan-400);
-  color: var(--clr-neutral-900);
-  outline: 0;
-  border: 0.2rem solid var(--clr-cyan-400);
-}
-
 [type=text]::-moz-placeholder {
   color: var(--clr-neutral-700);
 }
@@ -588,7 +581,11 @@ fieldset[data-tab=true]:focus-within {
   font-size: var(--fs-value);
   letter-spacing: var(--ls-value);
 }
-.results button.reset {
+.results .reset {
+  background-color: var(--clr-cyan-400);
+  color: var(--clr-neutral-900);
+  outline: 0;
+  border: 0.2rem solid var(--clr-cyan-400);
   margin-top: 0.75rem;
   width: 100%;
   padding: 0.5rem 0 0.25rem;
@@ -599,11 +596,11 @@ fieldset[data-tab=true]:focus-within {
   border: 0.2rem solid var(--clr-cyan-300);
   color: var(--clr-neutral-900);
 }
-.results button.reset:active, .results button.reset:focus, .results button.reset:hover {
+.results .reset:active, .results .reset:focus, .results .reset:hover {
   outline: 0;
   border: 0.2rem solid var(--clr-cyan-400);
 }
-.results button.reset:disabled {
+.results .reset:disabled {
   background-color: var(--clr-cyan-900);
   border: 0.2rem solid var(--clr-cyan-900);
   outline: 0;
@@ -678,7 +675,7 @@ fieldset[data-tab=true]:focus-within {
   .results .title {
     padding-top: 0.3rem;
   }
-  .results button.reset {
+  .results .reset {
     margin-top: auto;
   }
 }/*# sourceMappingURL=style.css.map */

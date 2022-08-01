@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- displays site properly based on user's device -->
-  
+
     <link
       rel="icon"
       type="image/png"
@@ -32,84 +32,108 @@
         </div>
       </header>
       <main class="app / bg-white pad-app" tabindex="0" id="appEl">
-        <div class="app__container">
-          <article class="calculate">
-            <div class="bill calculate__bill / pad-calculate">
-              <h2 class="visually-hidden">Input bill amount</h2>
-              <!-- <img class="icon" src="./images/icon-dollar.svg" alt="" /> -->
-              <div class="input-area">
-                <label for="bill"><span class="title">Bill</span></label>
-                <input type="number" id="bill" name="bill"  step="0.01" placeholder="0" min="1" required/>
-              </div>
-  
-            </div>
-            <div id="tipsEl" class="tip calculate__tip  / pad-calculate" role="radiogroup" aria-labelledby="select_tip">
-              <h2 class="title" id="select_tip">Select Tip %</h2>          
-              
-              <div class="options">
-                <div class="radiobtn">
-                  <input type="radio" value="5" name="tip" id="five" />
-                  <label for="five">5%</label>
-                </div>
-                <div class="radiobtn">
-                  <input type="radio" value="10" name="tip" id="ten" />
-                  <label for="ten">10%</label>
-                </div>
-                <div class="radiobtn">
-                  <input type="radio" value="15" name="tip" id="fifteen" />
-                  <label for="fifteen">15%</label>
-                </div>
-                <div class="radiobtn">
-                  <input type="radio" value="25" name="tip" id="twentyfive" />
-                  <label for="twentyfive">25%</label>
-                </div>
-                <div class="radiobtn">
-                  <input type="radio" value="50" name="tip" id="fifty" />
-                  <label for="fifty">50%</label>
-                </div>
-                <div class="tip-custom" id="customEl">
-                  <input type="radio" value="" name="tip" id="custom-radio"/>
-                  <label for="custom-radio" class="visually-hidden">Custom input</label>
-                  <label for="custom-input">
-                    <span class="visually-hidden">Custom</span>
-                    <input type="number" placeholder="Custom" name="tip" id="custom-input" min="0" tabindex="-1"/>
-                  </label>
+        <form>
+          <div class="app__container">
+            <section class="calculate" id="calculateEl">
+              <div class="bill calculate__bill / pad-calculate">
+                <h2 class="visually-hidden">Input bill amount</h2>
+                <!-- <img class="icon" src="./images/icon-dollar.svg" alt="" /> -->
+                <div class="input-area">
+                  <label for="bill"><span class="title">Bill</span></label>
+                  <input
+                    type="number"
+                    id="bill"
+                    name="bill"
+                    placeholder="0"
+                    min="1"
+                  />
                 </div>
               </div>
-            </div>
-            <div class="people calculate__people / pad-calculate">
-              <h2 class="visually-hidden">Input number of people</h2>
-              <div class="input-area">
-                <label class="title" for="people">Number of People</label>
-                <input
-                type="number"
-                id="people"
-                name="people"
-                placeholder="0"
-                min="1"
-              />
-                <span id="invalidEl" class="message"></span>
+              <div
+                id="tipsEl"
+                class="tip calculate__tip / pad-calculate"
+                role="radiogroup"
+                aria-labelledby="select_tip"
+              >
+                <h2 class="title" id="select_tip">Select Tip %</h2>
+
+                <div class="options">
+                  <div class="radiobtn">
+                    <input type="radio" value="5" name="tip" id="five" />
+                    <label for="five">5%</label>
+                  </div>
+                  <div class="radiobtn">
+                    <input type="radio" value="10" name="tip" id="ten" />
+                    <label for="ten">10%</label>
+                  </div>
+                  <div class="radiobtn">
+                    <input type="radio" value="15" name="tip" id="fifteen" />
+                    <label for="fifteen">15%</label>
+                  </div>
+                  <div class="radiobtn">
+                    <input type="radio" value="25" name="tip" id="twentyfive" />
+                    <label for="twentyfive">25%</label>
+                  </div>
+                  <div class="radiobtn">
+                    <input type="radio" value="50" name="tip" id="fifty" />
+                    <label for="fifty">50%</label>
+                  </div>
+                  <div class="tip-custom" id="customEl">
+                    <input type="radio" value="" name="tip" id="custom-radio" />
+                    <label for="custom-radio" class="visually-hidden"
+                      >Custom input</label
+                    >
+                    <label for="custom-input">
+                      <!-- <span class="visually-hidden">Custom</span> -->
+                      <input
+                        type="number"
+                        placeholder="Custom"
+                        name="tip"
+                        id="custom-input"
+                        min="0"
+                        tabindex="-1"
+                      />
+                    </label>
+                  </div>
+                </div>
               </div>
-              <!-- <span id="invalidEl" class="message"></span> -->
-            </div>
-          </article>
-          <article class="results / bg-neutral-900 pad-results">
-            <h2 class="visually-hidden">Amount and total per person</h2>
-            <div class="results__container">
-              <div class="amount result">
-                <div class="title">Tip Amount <span>/ person</span></div>
-                <div class="value">$<span id="amountEl">0.00</span></div>
+              <div class="people calculate__people / pad-calculate">
+                <h2 class="visually-hidden">Input number of people</h2>
+                <div class="input-area">
+                  <label class="title" for="people">Number of People</label>
+                  <input
+                    type="number"
+                    id="people"
+                    name="people"
+                    placeholder="0"
+                    min="1"
+                  />
+                  <span id="invalidEl" class="message"></span>
+                </div>
+                <!-- <span id="invalidEl" class="message"></span> -->
               </div>
-              <div class="total result">
-                <div class="title">Total<span>/ person</span></div>
-                <div class="value">$<span id="totalEl">0.00</span></div>
+            </section>
+            <section class="results / bg-neutral-900 pad-results">
+              <h2 class="visually-hidden">Amount and total per person</h2>
+              <div class="results__container">
+                <div class="amount result">
+                  <div class="title">Tip Amount <span>/ person</span></div>
+                  <div class="value">$<span id="amountEl">0.00</span></div>
+                </div>
+                <div class="total result">
+                  <div class="title">Total<span>/ person</span></div>
+                  <div class="value">$<span id="totalEl">0.00</span></div>
+                </div>
+                <button
+                  type="reset"
+                  class="reset / fs-reset text-uppercase"
+                  id="resetBtn"
+                  disabled
+                >Reset</button>
               </div>
-              <button class="reset / fs-reset text-uppercase" id="resetBtn" disabled>
-                Reset
-              </button>
-            </div>
-          </section>
-        </div>
+            </section>
+          </div>
+        </form>
       </main>
     </div>
 
