@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- displays site properly based on user's device -->
-
+  
     <link
       rel="icon"
       type="image/png"
@@ -31,78 +31,67 @@
           </h1>
         </div>
       </header>
-      <main class="app / bg-white pad-app">
+      <main class="app / bg-white pad-app" tabindex="0" id="appEl">
         <div class="app__container">
-          <article class="calculate / pad-calculate">
-            <div class="bill calculate__bill">
+          <article class="calculate">
+            <div class="bill calculate__bill / pad-calculate">
               <h2 class="visually-hidden">Input bill amount</h2>
-              <img class="icon" src="./images/icon-dollar.svg" alt="" />
-              <label for="bill"><span class="title">Bill</span></label>
-              <input type="text" id="bill" name="bill" placeholder="0" />
+              <!-- <img class="icon" src="./images/icon-dollar.svg" alt="" /> -->
+              <div class="input-area">
+                <label for="bill"><span class="title">Bill</span></label>
+                <input type="number" id="bill" name="bill"  step="0.01" placeholder="0" min="1" required/>
+              </div>
+  
             </div>
-            <div
-              id="tipsEl"
-              class="tip calculate__tip"
-
-              >
-              <h2 class="title" id="select_tip">Select Tip %</h2>
-              <!-- <ul aria-labelledby="select_tip" role="radiogroup">
-                <li role="radio" area-checked="false" tabindex="-1" data-value="5">5%</li>
-                <li role="radio" area-checked="false" tabindex="-1" data-value="10">10%</li>
-                <li role="radio" area-checked="false" tabindex="-1" data-value="15">15%</li>
-                <li role="radio" area-checked="false" tabindex="-1" data-value="25">25%</li>
-                <li role="radio" area-checked="false" tabindex="-1" data-value="5">50%</li>
-                <li role="radio" area-checked="false" tabindex="-1" data-value="5">
-                  <input type="text" placeholder="Custom" name="tip" />
-                </li>
-              </ul> -->
-            <!-- </div>               -->
-
+            <fieldset id="tipsEl" class="tip calculate__tip  / pad-calculate" >
+              <h2 class="title" id="select_tip">
+                <legend>Select Tip %</legend>
+              </h2>
               <div class="options">
 
                 <div class="radiobtn">
-                  <input type="radio" value="5" name="tip" id="radio_btns" />
-                  <label for="5">5%</label>
+                  <input type="radio" value="5" name="tip" id="five" />
+                  <label for="five">5%</label>
                 </div>
                 <div class="radiobtn">
-                  <input type="radio" value="10" name="tip" id="radio_btns" />
-                  <label for="10">10%</label>
+                  <input type="radio" value="10" name="tip" id="ten" />
+                  <label for="ten">10%</label>
                 </div>
                 <div class="radiobtn">
-                  <input type="radio" value="15" name="tip" id="radio_btns" />
-                  <label for="15">15%</label>
+                  <input type="radio" value="15" name="tip" id="fifteen" />
+                  <label for="fifteen">15%</label>
                 </div>
                 <div class="radiobtn">
-                  <input type="radio" value="25" name="tip" id="radio_btns" />
-                  <label for="25">25%</label>
+                  <input type="radio" value="25" name="tip" id="twentyfive" />
+                  <label for="twentyfive">25%</label>
                 </div>
                 <div class="radiobtn">
-                  <input type="radio" value="50" name="tip" id="radio_btns" />
-                  <label for="50">50%</label>
+                  <input type="radio" value="50" name="tip" id="fifty" />
+                  <label for="fifty">50%</label>
                 </div>
-                <div class="radiobtn tip-custom" id="customEl">
+                <div class="tip-custom" id="customEl">
+                  <input type="radio" value="" name="tip" id="custom" />
                   <label for="custom">
                     <span class="visually-hidden">Custom</span>
-                    <input type="radio" name="custom" value="0" id="custom"/>
+                    <input type="number" id="custom" placeholder="Custom" name="tip" min="0" tabindex="-1"/>
                   </label>
-                  <input type="text" id="radio_btns" placeholder="Custom" name="tip" />
                 </div>
               </div>
-            </div>
-            <div class="people calculate__people">
+            </fieldset>
+            <div class="people calculate__people / pad-calculate">
               <h2 class="visually-hidden">Input number of people</h2>
-              <img class="icon" src="./images/icon-person.svg" alt="" />
-              <div>
+              <div class="input-area">
                 <label class="title" for="people">Number of People</label>
-              </div>
-              <input
-                type="text"
+                <input
+                type="number"
                 id="people"
                 name="people"
                 placeholder="0"
-                pattern="^[1-9][0-9]*$"
+                min="1"
               />
-              <span id="invalidEl" class="message"></span>
+                <span id="invalidEl" class="message"></span>
+              </div>
+              <!-- <span id="invalidEl" class="message"></span> -->
             </div>
           </article>
           <article class="results / bg-neutral-900 pad-results">
@@ -116,11 +105,9 @@
                 <div class="title">Total<span>/ person</span></div>
                 <div class="value">$<span id="totalEl">0.00</span></div>
               </div>
-              <div class="reset">
-                <button class="fs-reset text-uppercase" id="resetBtn">
-                  Reset
-                </button>
-              </div>
+              <button class="reset / fs-reset text-uppercase" id="resetBtn" disabled>
+                Reset
+              </button>
             </div>
           </section>
         </div>

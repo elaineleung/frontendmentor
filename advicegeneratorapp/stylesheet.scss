@@ -14,7 +14,6 @@ body {
   background: var(--clr-bg);
   display: flex;
   flex-direction: column;
-  align-items: center;
   text-align: center;
 }
 
@@ -58,7 +57,7 @@ body {
 /* Structure */
 
 .container {
-  width: min(91.5%, 80rem);
+  width: min(91.5%, 33.75rem);
   margin-inline: auto;
   display: grid;
   place-content: center;
@@ -67,9 +66,9 @@ body {
 }
 
 .component {
+  min-width: 260px;
   background-color: var(--clr-blue-darkgrayish);
   padding: 2.2em 0.9em 3.55em;
-  width: clamp(18.75rem, calc(13.75rem + 26.6667vw), 33.75rem);
   margin-inline: auto;
   border-radius: 0.6em;
   position: relative;
@@ -79,11 +78,10 @@ body {
   }
 }
 
-.component__inner {
+.advice {
   min-height: 125px;
   opacity: 1;
   transition: opacity 0.2s ease-in-out;
-
 }
 
 // spinner
@@ -113,11 +111,11 @@ body {
   }
 }
 
-[aria-hidden="true"].loading ~ .component__inner {
+[aria-hidden="true"].loading ~ .advice {
   opacity: 0;
 }
 
-[aria-hidden="true"].loading ~ .component__inner > .advice {
+[aria-hidden="true"].loading ~ .advice > .advice__inner {
   height: 0;
 }
 
@@ -136,17 +134,19 @@ body {
 }
 
 .advice {
+  &__inner {
   margin-inline: auto;
   height: 100%;
   transition-duration: 0.1s;
   transition-property: height;
   transition-timing-function: ease-in-out;
+  }
   * {
     width: 100%;
     display: block;
   }
   &__number {
-    margin-bottom: 2.2em;
+    margin-bottom: 2.2rem;
   }
   &__text {
     margin-bottom: 0.95rem;
@@ -164,15 +164,18 @@ body {
 
 .dice {
   background-color: var(--clr-green-neon);
-  width: 3.5em;
+  width: 3.5rem;
+  height: 3.5rem;
   position: absolute;
   bottom: -1.65rem;
   left: 50%;
-  margin-left: -1.75rem;
+  margin-left: -1.65rem;
   border-radius: 50%;
   border: none;
   padding: 1.05rem;
   cursor: pointer;
+  display: grid;
+  place-content: center;
   box-shadow: 0 0 1rem var(--clr-blue-darkgrayish);
     &:hover {
     box-shadow: 0 0 1.5rem var(--clr-green-neon);
@@ -229,8 +232,9 @@ body {
 
 // media queries
 
-@media (min-width: 780px) {
+@media (min-width: 456px) {
   .component {
+    // width: clamp(26.25rem, calc(23.1618rem + 11.7647vw), 33.75rem);
     padding: 2.2em 2em 3.55em;
   }
   .advice {
@@ -244,13 +248,15 @@ body {
 
   .dice {
     background-color: var(--clr-green-neon);
-    width: 3.55em;
+    width: 4rem;
+    height: 4rem;
+    // height: 3.6rem;
     position: absolute;
     bottom: -1.75em;
     left: 50%;
     margin-left: -1.75em;
     border-radius: 50%;
-    padding: 1.12em;
+    padding: 1.15rem;
     cursor: pointer;
     &:hover {
       box-shadow: 0em 0em 1.4em var(--clr-green-neon);
@@ -263,5 +269,13 @@ body {
 
   .block-footer {
     display: inline-block;
+  }
+}
+
+@media screen and (pointer: none) {
+  .dice {
+    &:hover {
+      box-shadow: none;
+    }
   }
 }

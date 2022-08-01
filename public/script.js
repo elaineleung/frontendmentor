@@ -15,30 +15,29 @@ function getData() {
     .then((response) => response.json())
     .then((data) => {
       data.challenges.map((item) => {
-        const div = document.createElement("div");
+        const cardDiv = document.createElement("div");
         const url = item.internalhost === true ? `./${item.name}` : item.url;
-        const repo = item.internalhost === true 
-        ? `https://github.com/elaineleung/frontendmentor/tree/main/${item.name}`
-        : item.repo
+        const repo =
+          item.internalhost === true
+            ? `https://github.com/elaineleung/frontendmentor/tree/main/${item.name}`
+            : item.repo;
 
-        div.innerHTML = `
-        <div class="card">
-          <a href="${url}">
-            <div class="card__image">
-              <img src="./${item.name}/design/desktop.png" />
+        cardDiv.innerHTML = `
+          <li class="card">
+            <div class="image">
+              <img src="./${item.name}/design/desktop.png" alt=""/>
             </div>
-          </a>
-          <div class="card__content">
-            <a href="${url}">
-              <h2 class="card__title">${item.title}</h2>
-            </a>
-            <a class="card__text" href="${repo}">
-              Github repo here
-            </a>
-          </div>
-        </div>
+            <div class="text">            
+              <h2>
+                <a href="${url}">${item.title}</a>
+              </h2>          
+              <small>
+                <a href="${repo}">Github repo</a>
+              </small>  
+            </div>
+          </li>
         `;
-        gridEl.appendChild(div);
+        gridEl.appendChild(cardDiv);
       });
     });
 }
