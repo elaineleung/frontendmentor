@@ -76,9 +76,7 @@ customEl.addEventListener("input", (event) => {
   handleCustom(event.target.value);
 });
 
-customEl.addEventListener("click", function () {
-  handleCustom(customRadio.value);
-});
+customEl.addEventListener("click", () => handleCustom(customRadio.value));
 
 function handleCustom(value) {
   customRadio.checked = true;
