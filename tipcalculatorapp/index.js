@@ -47,13 +47,6 @@ document.addEventListener("keydown", (event) => {
       customInput.tabIndex = -1
     }
 })
-// peopleEl.addEventListener("focus", function(event){
-//   console.log(event)
-//   peopleEl.required = true
-//   console.log(peopleEl.required)
-// })
-// function activateRequired(element){
-// }
 
 peopleEl.addEventListener("input", function (event) {
   const value = event.target.value || event.data;
@@ -84,7 +77,6 @@ tipOptions.forEach((btn) =>
   })
 );
 
-
 function reset() {
   tipOptions.forEach((btn) => (btn.checked = false));
   peopleEl.required = false
@@ -98,21 +90,17 @@ function reset() {
   appEl.focus()
 }
 
-
 function validityCheck(value, key) {
-  const { bill, tip, people } = values;
-  console.log(value)
-  console.log(Object.values(values))
+  const { bill, tip, people } = values
   if ((typeof value === "string" && value.trim().length === 0) || value == 0 ) 
   {
-    console.log(bill, tip, people);
     resetBtn.disabled = true;
-    values[key] = 0;
     clearDisplay();
+    values[key] = 0;
   } else {
     values[key] = Number(value);
   }
-  
+
   Object.values(values).some( elem => elem === 0) ? 
   clearDisplay()
   : calculateTip(values.bill, values.tip, values.people);
