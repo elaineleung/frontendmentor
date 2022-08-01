@@ -53,7 +53,6 @@ function reset() {
   appEl.querySelector("form").reset()
   // tipOptions.forEach((btn) => (btn.checked = false));
   Object.keys(values).map( key => values[key] = 0 );
-  resetBtn.disabled = true;
   clearDisplay();
   appEl.focus()
 }
