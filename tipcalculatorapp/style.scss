@@ -456,6 +456,8 @@ fieldset[data-tab="true"]:focus-within {
   margin-inline: auto;
   min-width: 360px;
   border-radius: 1.5rem 1.5rem 0 0;
+  outline: 0;
+  border: 0;
 
   &__container {
     display: grid;
@@ -529,6 +531,7 @@ fieldset[data-tab="true"]:focus-within {
         order: 3;
         flex: 1 0 100%;
         margin-top: 0.4rem;
+        margin-bottom: 0.05rem;
         &:invalid {
           border: 0.2rem solid var(--clr-red);
           & ~ span.message {
@@ -648,7 +651,7 @@ fieldset[data-tab="true"]:focus-within {
     }
   }
   .calculate {
-    gap: 0.8rem;
+    gap: 0.75rem;
     .options {
       grid-template-columns: repeat(auto-fill, minmax(7.31rem, 1fr));
       gap: 1rem 0.9rem;

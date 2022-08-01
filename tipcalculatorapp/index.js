@@ -1,3 +1,4 @@
+const appEl = document.getElementById("appEl");
 const tipsEl = document.getElementById("tipsEl");
 const tipOptions = tipsEl.querySelectorAll("input[name='tip']");
 
@@ -94,8 +95,9 @@ function reset() {
   values.tip = 0;
   values.people = 0;
   clearDisplay();
-  billEl.focus()
+  appEl.focus()
 }
+
 
 function validityCheck(value, key) {
   const { bill, tip, people } = values;
