@@ -16,14 +16,11 @@ const values = { bill: 0, tip: 0, people: 0 };
 // event listener for inputs
 
 appEl.addEventListener("input", function(event) {
-  const bill = document.getElementById("bill").value
-  const people = document.getElementById("people").value
-
   if (event.target.id === "people") handleErrorMessage(event.data);
   
-  values.bill = Number(bill)
-  values.people = Number(people)
-  
+  values.bill = Number(document.getElementById("bill").value)
+  values.people = Number(document.getElementById("people").value)
+
   checkValidity()
 })
 
