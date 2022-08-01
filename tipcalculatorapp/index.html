@@ -43,12 +43,10 @@
               </div>
   
             </div>
-            <fieldset id="tipsEl" class="tip calculate__tip  / pad-calculate" >
-              <h2 class="title" id="select_tip">
-                <legend>Select Tip %</legend>
-              </h2>
+            <div id="tipsEl" class="tip calculate__tip  / pad-calculate" role="radiogroup" aria-labelledby="select_tip">
+              <h2 class="title" id="select_tip">Select Tip %</h2>          
+              
               <div class="options">
-
                 <div class="radiobtn">
                   <input type="radio" value="5" name="tip" id="five" />
                   <label for="five">5%</label>
@@ -73,11 +71,11 @@
                   <input type="radio" value="" name="tip" id="custom" />
                   <label for="custom">
                     <span class="visually-hidden">Custom</span>
-                    <input type="number" id="custom" placeholder="Custom" name="tip" min="0" tabindex="-1"/>
+                    <input type="number" placeholder="Custom" name="tip" min="0" tabindex="-1"/>
                   </label>
                 </div>
               </div>
-            </fieldset>
+            </div>
             <div class="people calculate__people / pad-calculate">
               <h2 class="visually-hidden">Input number of people</h2>
               <div class="input-area">
