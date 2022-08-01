@@ -121,7 +121,6 @@ body {
 
 [aria-hidden="false"].loading {
   opacity: 0;
-  // transform: translateY(0%);
 }
 
 @keyframes load {
@@ -181,7 +180,6 @@ body {
     box-shadow: 0 0 1.5rem var(--clr-green-neon);
   }
   &:focus {
-    // box-shadow: 0 0 1.5rem var(--clr-green-neon);
     outline: 2px solid var(--clr-accent);
   } 
   &:active {
@@ -234,7 +232,6 @@ body {
 
 @media (min-width: 456px) {
   .component {
-    // width: clamp(26.25rem, calc(23.1618rem + 11.7647vw), 33.75rem);
     padding: 2.2em 2em 3.55em;
   }
   .advice {
@@ -250,7 +247,6 @@ body {
     background-color: var(--clr-green-neon);
     width: 4rem;
     height: 4rem;
-    // height: 3.6rem;
     position: absolute;
     bottom: -1.75em;
     left: 50%;
