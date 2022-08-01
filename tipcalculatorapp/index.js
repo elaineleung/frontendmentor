@@ -53,10 +53,10 @@ window.addEventListener("load", reset);
 resetBtn.addEventListener("click", reset);
 
 function reset() {
-  tipOptions.forEach((btn) => (btn.checked = false));
-  resetBtn.disabled = true;
   appEl.querySelector("form").reset()
+  tipOptions.forEach((btn) => (btn.checked = false));
   Object.keys(values).map( key => values[key] = 0 );
+  resetBtn.disabled = true;
   clearDisplay();
   appEl.focus()
 }
