@@ -134,8 +134,9 @@ body {
 
 /* Structure */
 .container {
+  flex: 1 0 auto;
   width: 100%;
-  height: 100%;
+  min-height: 100%;
   display: grid;
   place-content: center;
 }
@@ -144,7 +145,7 @@ body {
   width: min(91.45vw, 33.75rem);
   background-color: var(--clr-blue-darkgrayish);
   padding: 2.2em 0.9em 3.55em;
-  margin: 2rem 1rem;
+  margin: 2rem 1rem 3rem;
   border-radius: 0.6em;
   position: relative;
 }

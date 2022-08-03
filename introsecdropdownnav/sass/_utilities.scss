@@ -1,5 +1,6 @@
+// @use "./sass/config";
 // utility classes (styling)
-
+ 
 .font-primary {
   font-family: var(--ff-primary);
 }
@@ -105,10 +106,12 @@
 .wrapper {
   margin-inline: auto;
 }
+
 .radius,
 .button {
   border-radius: 2.5rem;
 }
+
 .visually-hidden {
   border: 0;
   clip: rect(0 0 0 0);

@@ -1,15 +1,70 @@
-.container {
+@use "./sass/config";
+@use "./sass/reset";
+@use "./sass/utilities";
+
+body {
+  display: flex;
   flex-direction: column;
   justify-content: flex-start;
+  text-align: center;
+  line-height: var(--lh-body);
+  font-size: var(--fs-body);
+}
+
+button {
+  background: inherit;
+  border: 0;
+  color: inherit;
+}
+
+a {
+  text-decoration: none;
+}
+
+.link {
+  color: var(--clr-link);
+  a {
+    color: var(--clr-link);
+    &:hover,
+    &:active {
+      color: var(--clr-black);
+    }
+  }
+}
+
+.cta {
+  display: inline-block;
+  background-color: var(--clr-black);
+  color: var(--clr-white);
+  letter-spacing: var(--ls-cta);
+  padding: 0.7rem 1.25rem 0.6rem 1.45rem ;
+  border-radius: 0.85rem;
+  cursor: pointer;
+  z-index: 1;
+  border: 1px solid var(--clr-black);
+  &:hover {
+    background-color: var(--clr-white);
+    color: var(--clr-black);
+  }
+}
+
+// @use "./sass/config";
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
   flex: 1;
-  min-height: calc(100vh - 59.6px);
+  min-height: 100vh;
 }
 
 .logo {
   width: 6rem;
 }
-
+ 
 .header {
+  width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
@@ -164,7 +219,7 @@
   background-repeat: no-repeat;
   background-position: center;
   width: 100%;
-  max-width: 600px;
+  max-width: 480px;
   margin-inline: auto;
   img {
     object-fit: cover;
@@ -329,6 +384,7 @@
     }
   }
   .main {
+    flex: 1;
     flex-direction: row;
     justify-content: space-between;
     gap: clamp(1.8rem, calc(-2.6000rem + 7.3333vw), 4rem);
@@ -341,8 +397,8 @@
     margin-inline: 2rem 1.3rem;
     margin-bottom: 0.5rem;
     padding-inline: 0;
-    max-width: 30rem;
-    flex: 2;
+    width: clamp(18.75rem, calc(-3.7500rem + 37.5000vw), 30rem);
+    // flex: 2;
     img {
       margin-inline-start: auto;
     }
@@ -358,7 +414,7 @@
     padding-inline: 0;
     margin-bottom: clamp(3rem, calc(-4.5000rem + 12.5000vw), 6.75rem);
     h1 {
-      margin-bottom: 3rem;
+      margin-bottom: clamp(1rem, calc(-3.0000rem + 6.6667vw), 3rem);
       letter-spacing: var(--ls-h1);
     }
     p {

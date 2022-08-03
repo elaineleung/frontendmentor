@@ -21,11 +21,10 @@ diceEl.addEventListener("keydown", (event)=>{
 })
  
 async function loadAdvice() {
-  const random = Math.floor(Math.random() * max)
   loadingEl.setAttribute("aria-hidden", true) 
 
   try {
-    const response = await fetch(`${url}/${random}`)
+    const response = await fetch(`${url}`, { cache: 'no-cache' })
     const data = await response.json()
     if (data) {        
       setTimeout(()=> {

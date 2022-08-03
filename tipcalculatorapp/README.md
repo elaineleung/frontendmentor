@@ -74,6 +74,8 @@ One of my personal projects (that I never got finish) actually has a layout some
 
 - [Choice & Value Pair](https://css-tricks.com/choice-value-pair/) - This was probably the only post I found that showed how to group a radio input with a text input.
 
+- [Radio Group Example Using Roving tabindex](https://w3c.github.io/aria-practices/examples/radio/radio.html) - This helped with styling the CSS, especially with the use of `fieldset` and `aria-labelledby`
+
 - [Reset button](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/reset) - I agree with MDN's stance that it's probably best to avoid using this in most use cases, but in this case the reset was especially handy
 
 ## Author
