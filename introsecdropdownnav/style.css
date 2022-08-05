@@ -271,7 +271,7 @@ button {
 }
 
 .mobile-toggle {
-  position: fixed;
+  position: absolute;
   top: 1rem;
   right: 1rem;
   width: 2rem;
