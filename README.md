@@ -29,7 +29,8 @@ GitHub landing page: [https://elaineleung.github.io/frontendmentor/](https://ela
 | 17  | [Advice generator app](https://elaineleung.github.io/frontendmentor/advicegeneratorapp/)| [Link to GitHub repo](https://github.com/elaineleung/frontendmentor/tree/main/advicegeneratorapp/) |
 | 18  | [Sunnyside agency landing page](https://elaineleung.github.io/frontendmentor/sunnysideagencylandingpage/)| [Link to GitHub repo](https://github.com/elaineleung/frontendmentor/tree/main/sunnysideagencylandingpage/) |
 | 19  | [Product preview card component](https://elaineleung.github.io/frontendmentor/productpreviewcardcomponent/)| [Link to GitHub repo](https://github.com/elaineleung/frontendmentor/tree/main/productpreviewcardcomponent/) |
-| 20  | [Intro section with dropdown navigation](https://github.com/elaineleung/fem-introsecdropdownnav) | [Link to GitHub repo](https://github.com/elaineleung/fem-introsecdropdownnav) |
+| 20  | [Intro section with dropdown nav (React)](https://github.com/elaineleung/fem-introsecdropdownnav) | [Link to GitHub repo](https://github.com/elaineleung/fem-introsecdropdownnav) |
 | 21  | [NFT preview card component](https://elaineleung.github.io/frontendmentor/nftpreviewcard/)| [Link to GitHub repo](https://github.com/elaineleung/frontendmentor/tree/main/nftpreviewcard/) |
 | 22  | [Tip calculator app](https://elaineleung.github.io/frontendmentor/tipcalculatorapp/)| [Link to GitHub repo](https://github.com/elaineleung/frontendmentor/tree/main/tipcalculatorapp/) |
 | 23  | [Testimonials grid section](https://elaineleung.github.io/frontendmentor/testimonialsgridsection/)| [Link to GitHub repo](https://github.com/elaineleung/frontendmentor/tree/main/testimonialsgridsection/) |
+| 24  | [Intro section with dropdown nav (plain JS)](https://elaineleung.github.io/frontendmentor/introsecdropdownnav/)| [Link to GitHub repo](https://github.com/elaineleung/frontendmentor/tree/main/introsecdropdownnav/) |

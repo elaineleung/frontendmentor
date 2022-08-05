@@ -135,7 +135,7 @@
     },
     {
       "name": "introsecdropdownnav",
-      "title": "Intro section with dropdown navigation",
+      "title": "Intro section with dropdown nav (React)",
       "level": "Junior",
       "internalhost": false,
       "id": 20,
@@ -162,6 +162,13 @@
       "level": "Junior",
       "internalhost": true,
       "id": 23
+    },
+    {
+      "name": "introsecdropdownnav",
+      "title": "Intro section with dropdown nav (plain JS)",
+      "level": "Junior",
+      "internalhost": true,
+      "id": 24
     }
   ]
 }
