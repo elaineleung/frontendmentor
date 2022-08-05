@@ -48,7 +48,13 @@ Users should be able to:
 
 ### What I learned
 
-I built [another version of this challenge with React](fem-introsecdropdownnav.vercel.app/) where I was trying to brush up on my React skills while testing out CUBE CSS. While I got everything working with room for improvement, I know was pretty bloated due to all the components I decided to pin in, and I also didn't take the time to refactor my JS and clean up the CSS. When I saw a lot of people submitting this challenge, I decided to try this challenge again but with just JS. I started by building out a small version on CodePen, and then I started the project with the existing HTML and some of the Sass from the React project. It took me quite a while mainly due to trying to put in new code while cleaning up my old code at the same time; this ended up being quite a good exercise in seeing what to do when you need to work with existing code and how to add new things without breaking it. I also ended up putting in all the features I had wanted to add in my React project, and I'm pretty pleased with how things turn out just using plain JS. I also wanted to add more accessiblity features, and I think that was a good try also.
+I built [another version of this challenge with React](https://fem-introsecdropdownnav.vercel.app/) where I was trying to brush up on my React skills while testing out CUBE CSS. While I got everything working with room for improvement, I know was pretty bloated due to all the components I decided to pin in, and I also didn't take the time to refactor my JS and clean up the CSS. When I saw a lot of people submitting this challenge, I decided to try this challenge again but with just JS. I started by building out [a small version on CodePen](https://codepen.io/elaineleung/pen/poLpzge), and then I started the project with the existing HTML and some of the Sass from the React project. It took me quite a while mainly due to trying to put in new code while cleaning up my old code at the same time; this ended up being quite a good exercise in seeing what to do when you need to work with existing code and how to add new things without breaking it. I also ended up putting in all the features I had wanted to add in my React project, and I'm pretty pleased with how things turn out just using plain JS. I also wanted to add more accessiblity features, and I think that was a good try also.
+
+Here's what short list of features I added in this project (that I had wanted to add in the other one but didn't):
+- Added `:focus` with outline to highlight links for users (Accessibility feature)
+- Reworked dropnavs using a different structure and using `aria-expanded` (Accessibility feature)
+- Added `setTimeout()` and JS logic to close navigation to simulate loading effect after clicking links
+- Added dropdown nav and mobile nav animation/transitions
 
 Here's a short list of things I relearned/newly learned:
 - CSS transitions
