@@ -14,6 +14,7 @@ This is a solution to the [Intro section with dropdown navigation challenge on F
   - [Continued development](#continued-development)
   - [Useful resources](#useful-resources)
 - [Author](#author)
+- [Acknowledgments](#acknowledgments)
 
 ## Overview
 
@@ -75,3 +76,7 @@ I might want to transform this again to another React but hopefully a cleaner on
 
 - Frontend Mentor - [@elaineleung](https://www.frontendmentor.io/profile/elaineleung)
 - Twitter - [@elaineclleung](https://twitter.com/elaineclleung)
+
+## Acknowledgments
+
+Credit goes to Kevin Powell for this new video series on building out an FEM challenge!
