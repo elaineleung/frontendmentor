@@ -34,6 +34,7 @@
   --lh-intro: 1.61;
   --lh-headings: 1.2;
   --lh-footer: 1.15;
+  --max-header: 87.3rem;
 }
 
 @media (min-width: 960px) {
