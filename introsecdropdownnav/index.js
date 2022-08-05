@@ -1,28 +1,37 @@
-const toggleEl = document.getElementById("toggle");
+const toggleEl = document.querySelector(".mobile-toggle");
 const navEl = document.getElementById("navEl");
-const overlayEl = document.getElementById("overlayEl");
+const overlayEl = document.querySelector(".mobile-overlay");
 const dropDownBtns = document.querySelectorAll("nav button");
 const linkEls = document.querySelectorAll(".link");
 
-let pressed = false;
+let pressed;
 let windowWidth;
 
 // get clientWidth for media query
 
-window.addEventListener("load", (event) => {
+window.addEventListener("load", () => {
   checkWindowWidth();
-  document.body.classList.add("loaded")
 });
 
-window.addEventListener("resize", (event) => {
+// Resize window to check width and to set mobile nav to closed
+
+window.addEventListener("resize", () => {
   checkWindowWidth();
-  windowWidth < 960 && dropDownBtns.forEach(btn => checkDropDownOpen(btn))
+  if (windowWidth < 960) {
+    dropDownBtns.forEach(btn => {
+      checkDropDownOpen(btn)
+    })
+  } else {
+    toggleEl.getAttribute("aria-pressed") === "true" &&
+    handleNavToggle(true);
+  }
 });
 
 function checkWindowWidth() {
   return (windowWidth = document.body.clientWidth);
 }
-// toggling using aria pressed
+
+// Toggling nav button and overlay using aria-pressed
 
 toggleEl.addEventListener("click", () => {
   handleNavToggle();
@@ -32,9 +41,20 @@ overlayEl.addEventListener("click", () => {
   handleNavToggle();
 });
 
-function handleNavToggle() {
-  pressed = toggleEl.getAttribute("aria-pressed") === "false";
-  toggleEl.setAttribute("aria-pressed", pressed ? "true" : "false");
+function handleNavToggle(opened) {
+  pressed = opened === undefined 
+    ? toggleEl.getAttribute("aria-pressed") === "true"
+    : opened
+  if (pressed) {
+    // check if any dropdown navs are opened
+    dropDownBtns.forEach(btn => {
+      checkDropDownOpen(btn)
+    })
+    toggleEl.setAttribute("aria-pressed", "false");
+
+  } else {
+    toggleEl.setAttribute("aria-pressed", "true");
+  }  
 }
 
 dropDownBtns.forEach((btn) => {
@@ -43,11 +63,11 @@ dropDownBtns.forEach((btn) => {
       const otherDropDowns = [...dropDownBtns].filter(
         (target) => target != btn
       );
-      otherDropDowns.forEach((other) => checkDropDownOpen(other));
+      otherDropDowns.forEach((other) => {
+        checkDropDownOpen(other)
+      });
     }
-    const expanded = btn.getAttribute("aria-expanded") === "true" || false;
-    btn.setAttribute("aria-expanded", !expanded);
-    toggleDropDown(btn);
+    toggleDropDown(btn, false);
   });
 });
 
@@ -56,30 +76,27 @@ linkEls.forEach((link) => {
     if (windowWidth < 960) {
       setTimeout(() => handleNavToggle(), 300);
     } else {
-      dropDownBtns.forEach((btn) => {
-        if (btn.getAttribute("aria-expanded") === "true") {
-          btn.setAttribute("aria-expanded", "false");
-          setTimeout(() => toggleDropDown(btn), 300);
-        }
-      });
+      dropDownBtns.forEach((btn) => checkDropDownOpen(btn, 300));
     }
   });
 });
 
-function toggleDropDown(btn) {
+function toggleDropDown(btn, opened, timeout = 0) {
+  const expanded = opened === false 
+    ? btn.getAttribute("aria-expanded") === "true" || false
+    : opened
+
+  btn.setAttribute("aria-expanded", !expanded);
   const dropdown = btn.nextElementSibling;
-  dropdown.classList.toggle("reveal");
-  setTimeout(() => dropdown.classList.toggle("shift"), 200);
+  setTimeout(() => {
+    dropdown.classList.toggle("reveal") 
+    setTimeout(() => 
+    dropdown.classList.toggle("shift"), 200);
+  }, timeout)
 }
 
-function checkDropDownOpen(btn) {
-  const expanded = btn.getAttribute("aria-expanded");
-  if (expanded === "true") {
-    btn.setAttribute("aria-expanded", "false");
-    toggleDropDown(btn);
-  }
+function checkDropDownOpen(btn, timeout = 0) {
+  btn.getAttribute("aria-expanded") === "true" &&
+  toggleDropDown(btn, true, timeout)  
 }
-// const openEls = [toggleEl, navEl, overlayEl];
-// toggleEl.addEventListener("click", () => {
-//   openEls.forEach((el) => el.classList.toggle("open"));
-// });
+

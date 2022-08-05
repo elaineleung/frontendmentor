@@ -1,6 +1,4 @@
-(Main repo is [located here](https://github.com/elaineleung/fem-introsecdropdownnav); this current repo is just for record keeping and may not have latest updates)
-
-# Frontend Mentor - Intro section with dropdown navigation solution
+# Frontend Mentor - Intro section with dropdown navigation solution (with plain JS)
 
 This is a solution to the [Intro section with dropdown navigation challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/intro-section-with-dropdown-navigation-ryaPetHE5). Frontend Mentor challenges help you improve your coding skills by building realistic projects. 
 
@@ -31,14 +29,11 @@ Users should be able to:
 
 ![Mobile view of solution](./design/mobile.png)
 
-![Mobile menu](./design/mobile-menu-expanded.png)
-
 ![Desktop view of solution](./design/desktop.png)
 ### Links
 
-- Solution URL: [Link to GitHub repo](https://github.com/elaineleung/fem-introsecdropdownnav)
-- Live Site URL: [Link to live site](https://fem-introsecdropdownnav.vercel.app/)
-- Main Frontend Mentor repository: [Link to FEM repo](https://github.com/elaineleung/frontendmentor)
+- Solution URL: [Link to GitHub repo](https://github.com/elaineleung/frontendmentor/tree/main/introsecdropdownnav/)
+- Live Site URL: [Link to live site](https://elaineleung.github.io/frontendmentor/introsecdropdownnav/)
 
 ## My process
 
@@ -49,35 +44,26 @@ Users should be able to:
 - Flexbox
 - CSS Grid
 - Mobile-first workflow
-- ViteJS
 - SCSS
-- React
 
 ### What I learned
 
-I decided to use this project to brush up on React, which I haven't used in a while since I started using Next JS, and even though Next Js takes React as its core, there are a number of things that are done somewhat differently (as in prescriptively). Thankfully, I actually started in React when I first started learning web development, which was quite a dive into the deep end for a newbie, but thankfully I made it out alive and I think a lot of the skills I learned then helped me out a lot in learning JS as well.
-
-In the beginning I actually started building this with just HTML, SCSS, and JS, but very quickly I realized that I might want to try using React, as I anticipated I might need some advanced state handling, plus I might want to develop this more later. I also ended up checking out Vite since I had seen someone else use it and had wanted to learn more about it, and true to its name, it is a very fast tool to use. For quickly putting a React project together, Vite definitely is a great choice, and I will for sure be using it more in the future.
-
-I'm using CUBE CSS with this project as well, and even though I'm still quite reliant on BEM, I find myself slowly adopting CUBE CSS practices, such as the use of utilities. I also tried to make sure that there's optimal viewing no matter the size of the client. There was an instance or two of `clamp()`, and `max-width` also came in handy; it just took some to experiment since I don't know the sizes beforehand (which to me is part of the challenge). 
+I built [another version of this challenge with React](fem-introsecdropdownnav.vercel.app/) where I was trying to brush up on my React skills while testing out CUBE CSS. While I got everything working with room for improvement, I know was pretty bloated due to all the components I decided to pin in, and I also didn't take the time to refactor my JS and clean up the CSS. When I saw a lot of people submitting this challenge, I decided to try this challenge again but with just JS. I started by building out a small version on CodePen, and then I started the project with the existing HTML and some of the Sass from the React project. It took me quite a while mainly due to trying to put in new code while cleaning up my old code at the same time; this ended up being quite a good exercise in seeing what to do when you need to work with existing code and how to add new things without breaking it. I also ended up putting in all the features I had wanted to add in my React project, and I'm pretty pleased with how things turn out just using plain JS. I also wanted to add more accessiblity features, and I think that was a good try also.
 
 Here's a short list of things I relearned/newly learned:
-- How to detect window width in React
-- Handling SVGs in React
-- Dropdown navbars 
-- Overlay with slide-in mobile menu
-- Using `srcset` in `<img>`. I used this in a `<picture>` element in another project, but this time I decided try something a bit different, and it worked quite well
-- Making sure footer is stretched to the bottom. I usually use flexbox on my plain JS projects, and I forgot that React needs something different.
+- CSS transitions
+- Using default parameters in JS
+- Using `aria-expanded` for dropdown navs and `aria-pressed` for toggling
+- Building an accessible dropdown menu.
 
 ### Continued development
 
-I'd want to add React Router later when I have time so that this can be a somewhat functional app.
+I might want to transform this again to another React but hopefully a cleaner one!
 
 ### Useful resources
 
-- [Responsive switching](https://developer.mozilla.org/en-US/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images) - How to use `srcset` and `sizes` in images. 
-- [How to build an accessiible toggle button](https://joshcollinsworth.com/blog/accessible-toggle-buttons) - I was looking at this when I wanted to see how to build a button to open the menu.
-- [How to import SVGs in React and Vite](https://www.freecodecamp.org/news/how-to-import-svgs-in-react-and-vite/) - This helped me when I needed to find a way to change properties on my SVGs (such as color change on hover)
+- [Inclusive Menus & Menu Buttons](https://inclusive-components.design/menus-menu-buttons/) - Heydon Pickering's site was an excellent resource for me when I was trying explore how to make the site more accessible.
+
 
 ## Author
 
