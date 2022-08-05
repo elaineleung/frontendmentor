@@ -351,6 +351,7 @@ button {
   flex-direction: column;
   gap: 2.9rem;
   margin-bottom: 2rem;
+  flex: 1;
 }
 
 .hero {
@@ -379,6 +380,7 @@ button {
     p {
       line-height: var(--lh-intro);
       margin-bottom: 1.55rem;
+      color: hsl(var(--clr-neutral-500));
     }
     .cta {
       &:hover {

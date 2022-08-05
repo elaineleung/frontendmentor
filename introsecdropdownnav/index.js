@@ -4,7 +4,6 @@ const overlayEl = document.querySelector(".mobile-overlay");
 const dropDownBtns = document.querySelectorAll("nav button");
 const linkEls = document.querySelectorAll(".link");
 
-let pressed;
 let windowWidth;
 
 // get clientWidth for media query
@@ -42,7 +41,7 @@ overlayEl.addEventListener("click", () => {
 });
 
 function handleNavToggle(opened) {
-  pressed = opened === undefined 
+  const pressed = opened === undefined 
     ? toggleEl.getAttribute("aria-pressed") === "true"
     : opened
   if (pressed) {
