@@ -1,33 +1,43 @@
 const toggleEl = document.querySelector(".mobile-toggle");
-const navEl = document.getElementById("navEl");
+const navEl = document.querySelector(".nav-group");
 const overlayEl = document.querySelector(".mobile-overlay");
 const dropDownBtns = document.querySelectorAll("nav button");
 const linkEls = document.querySelectorAll(".link");
 
 let windowWidth;
+let contentHeight;
 
 // get clientWidth for media query
 
 window.addEventListener("load", () => {
-  checkWindowWidth();
+  checkDimensions();
+  windowWidth < 960 ? setHeight(`${contentHeight}px`) : setHeight("unset")
 });
 
 // Resize window to check width and to set mobile nav to closed
 
 window.addEventListener("resize", () => {
-  checkWindowWidth();
+  checkDimensions();
+
   if (windowWidth < 960) {
+    setHeight(`${contentHeight}px`) 
     dropDownBtns.forEach(btn => {
       checkDropDownOpen(btn)
     })
   } else {
+    setHeight("unset") 
     toggleEl.getAttribute("aria-pressed") === "true" &&
     handleNavToggle(true);
   }
 });
 
-function checkWindowWidth() {
-  return (windowWidth = document.body.clientWidth);
+function checkDimensions() {
+  windowWidth = document.body.clientWidth;
+  contentHeight = document.body.scrollHeight;
+}
+
+function setHeight(height) {
+  navEl.style.height = height
 }
 
 // Toggling nav button and overlay using aria-pressed
