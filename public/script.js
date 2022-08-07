@@ -39,7 +39,8 @@ function getData() {
         `;
         gridEl.appendChild(cardDiv);
       });
-    });
+    })
+    .catch( error => console.log(error))
 }
 
 // function getData() {

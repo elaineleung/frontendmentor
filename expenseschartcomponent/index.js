@@ -42,7 +42,8 @@ function getData() {
       amountDiv.setAttribute('data-width', `-${margin}`)  
      
     })
-  });
+  })
+  .catch( error => console.log(error))
 }
 
 function getBarWidth(idx, width) {
