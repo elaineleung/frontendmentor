@@ -23,42 +23,47 @@
     <title>Frontend Mentor | Interactive rating component</title>
   </head>
   <body>
-    <main id="cardEl" class="card component">
-      <section id="ratingEl" class="rating">
-        <div class="header rating__header">
-          <div class="rating__logo">
+    <main class="container">
+      <section id="cardEl" class="card">
+        <div class="header">
+          <div class="header__logo">
             <img
-              class="logo__star"
               src="./images/icon-star.svg"
               alt="orange star shaped icon"
             />
           </div>
-          <h1 class="rating__title">How did we do?</h1>
+          <h1 class="header__title">How did we do?</h1>
         </div>
   
-        <div class="rating__content">
-          <div class="rating__body">
+        <div class="content">
+          <p class="textbody">
             Please let us know how we did with your support request. All feedback
             is appreciated to help us improve our offering!
-          </div>
+          
+          </p>
   
-          <form id="formEl" class="rating__form">
-            <div id="scoreEl" class="rating__buttons">
-              <input type="button" class="rating__btn" value="1" />
-              <input type="button" class="rating__btn" value="2" />
-              <input type="button" class="rating__btn" value="3" />
-              <input type="button" class="rating__btn" value="4" />
-              <input type="button" class="rating__btn" value="5" />
+          <form id="formEl" class="form">
+            <div id="scoreEl" class="buttons" role="radiogroup">
+              <input type="radio" value="1" id="one" name="score"/>
+              <label for="one">1</label>
+              <input type="radio" value="2" id="two" name="score"/>
+              <label for="two">2</label>
+              <input type="radio" value="3" id="three" name="score"/>
+              <label for="three">3</label>
+              <input type="radio" value="4" id="four" name="score"/>
+              <label for="four">4</label>
+              <input type="radio" value="5" id="five" name="score"/>
+              <label for="five">5</label>
             </div>
             <div>
-              <button id="submitEl" class="rating__submit">Submit</button>
+              <button id="submitEl" class="submit">Submit</button>
             </div>
           </form>
         </div>
       </section>
     </main>
 
-    <footer class="footer footer__content">
+    <footer class="footer">
       <div class="footer__attribution">
         <p>
           Challenge by

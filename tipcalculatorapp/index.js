@@ -12,7 +12,7 @@ const resetBtn = document.getElementById("resetBtn");
 const messageEl = document.getElementById("invalidEl");
  
 const values = { bill: 0, tip: 0, people: 0 };
-
+ 
 // event listener for inputs
 
 appEl.addEventListener("input", function(event) {

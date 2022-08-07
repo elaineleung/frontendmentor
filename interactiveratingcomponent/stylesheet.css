@@ -77,7 +77,8 @@ body {
 }
 
 img {
-  width: 100%;
+  max-width: 100%;
+  display: block;
 }
 
 button {
@@ -92,7 +93,6 @@ button:focus {
 
 body {
   width: 100%;
-  height: 100%;
   min-height: 100vh;
   position: relative;
   font-family: var(--ff-primary);
@@ -106,7 +106,7 @@ body {
 }
 
 /* Typography */
-h1.rating__title {
+.header__title {
   font-weight: 700;
   color: var(--clr-white);
   font-size: var(--fs-title-rating);
@@ -114,30 +114,12 @@ h1.rating__title {
   letter-spacing: var(--ls-title);
 }
 
-h1.thankyou__title {
-  font-weight: 700;
-  color: var(--clr-white);
-  font-size: var(--fs-title-ty);
-  line-height: var(--lh-title);
-  letter-spacing: var(--ls-title);
-}
-
-.rating__body {
+.textbody {
   line-height: var(--lh-body);
   letter-spacing: var(--ls-body-rating);
 }
 
-.rating__btn {
-  color: var(--clr-grey-medium);
-  font-size: var(--fs-score);
-  font-weight: 700;
-}
-
-.rating__btn:hover, .btn__is-selected {
-  color: var(--clr-white);
-}
-
-.rating__submit {
+.submit {
   font-size: var(--fs-cta);
   color: var(--clr-white);
   letter-spacing: var(--ls-cta);
@@ -145,18 +127,23 @@ h1.thankyou__title {
   font-weight: 400;
   text-transform: uppercase;
 }
-
-.rating__submit:hover {
+.submit:hover {
   color: var(--clr-orange);
   letter-spacing: var(--ls-cta);
   font-weight: 700;
 }
 
+.thankyou__title {
+  font-weight: 700;
+  color: var(--clr-white);
+  font-size: var(--fs-title-ty);
+  line-height: var(--lh-title);
+  letter-spacing: var(--ls-title);
+}
 .thankyou__score {
   font-size: var(--fs-score);
   color: var(--clr-orange);
 }
-
 .thankyou__body {
   letter-spacing: var(--ls-body-ty);
 }
@@ -174,23 +161,26 @@ h1.thankyou__title {
 }
 
 /* Structure */
+.container {
+  flex: 1;
+  width: min(91.45vw, 412px);
+  display: grid;
+  place-content: center;
+}
+
 .card {
-  width: 327px;
   background: linear-gradient(to bottom, var(--clr-blue-meddark), var(--clr-blue-dark));
   padding: var(--pad-hor);
-  margin-top: 154px;
   border-radius: 0.8em;
 }
 
-.rating__header {
-  width: 100%;
+.header {
   text-align: left;
   display: flex;
   flex-direction: column;
   align-items: left;
 }
-
-.rating__logo {
+.header__logo {
   background-color: var(--clr-blue-medium);
   width: 40px;
   height: 40px;
@@ -199,30 +189,41 @@ h1.thankyou__title {
   border-radius: 50%;
   margin-bottom: 14px;
 }
-
-.logo__star {
+.header__logo img {
   width: 14px;
   height: 14px;
   margin: 0 auto;
 }
-
-h1.rating__title {
+.header__title {
   margin-bottom: 6px;
 }
 
-.rating__body {
+.content .textbody {
   margin-bottom: 27px;
 }
-
-.rating__buttons {
-  margin: 0 auto;
-  width: 100.4%;
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 24px;
+.content * {
+  margin-inline: auto;
 }
 
-.rating__btn {
+[type=radio] {
+  -moz-appearance: none;
+       appearance: none;
+  -webkit-appearance: none;
+  background-color: inherit;
+  background-size: contain;
+  display: none;
+  border: 0;
+  padding: 0;
+  margin: 0;
+  outline: 0;
+}
+
+[type=radio] + label {
+  display: inline-block;
+  margin: 0;
+  color: var(--clr-grey-medium);
+  font-size: var(--fs-score);
+  font-weight: 700;
   background-color: var(--clr-blue-medlight);
   border: 0;
   width: 42px;
@@ -232,26 +233,37 @@ h1.rating__title {
   place-content: center;
   border-radius: 50%;
   cursor: pointer;
+  transition: background-color 0.25s;
 }
 
-.rating__btn:hover {
+.buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 24px;
+}
+.buttons [type=radio]:hover + label {
   background-color: var(--clr-orange);
+  color: var(--clr-white);
 }
-
-.btn__is-selected {
+.buttons [type=radio]:checked + label {
   background-color: var(--clr-grey-light);
+  color: var(--clr-white);
+}
+.buttons [type=radio]:checked:hover + label {
+  color: var(--clr-white);
 }
 
-.rating__submit {
+.submit {
   background-color: var(--clr-orange);
   width: 100%;
   border-radius: 24px;
   padding: 16.5px 0 12.5px;
   margin-bottom: 8px;
   cursor: pointer;
+  transition: background-color 0.25s;
 }
 
-.rating__submit:hover {
+.submit:hover {
   background-color: var(--clr-white);
 }
 
@@ -259,12 +271,11 @@ h1.rating__title {
   text-align: center;
   padding: 10px 0 15px;
 }
-
-.thankyou__img {
+.thankyou img {
   width: 145px;
   margin-bottom: 18px;
+  margin-inline: auto;
 }
-
 .thankyou__score {
   background-color: var(--clr-blue-medium);
   width: -webkit-fit-content;
@@ -274,58 +285,51 @@ h1.rating__title {
   padding: 10px 12px 6px;
   border-radius: 15px;
 }
-
-h1.thankyou__title {
+.thankyou__title {
   margin-bottom: 6px;
 }
 
 .footer {
   padding: 20px 0;
-}
-
-.footer__content {
-  display: flex;
-  flex: 1;
+  flex: 0;
 }
 
 .footer__attribution {
   align-self: flex-end;
 }
 
-@media (min-width: 980px) {
+@media (min-width: 640px) {
   .card {
-    width: 412px;
-    margin-top: 195px;
-    border-radius: 30px;
+    border-radius: 2rem;
   }
-  .rating__logo {
+  .header__logo {
     width: 48px;
     height: 48px;
     margin-bottom: 27px;
   }
-  .logo__star {
+  .header__logo img {
     width: 16px;
     height: 16px;
-    margin: 0 auto;
+    margin-inline: auto;
   }
-  h1.rating__title {
+  .header__title {
     margin-bottom: 5px;
   }
-  .rating__form {
+  .form {
     width: 97.5%;
   }
-  .rating__body {
+  .textbody {
     margin-bottom: 26px;
   }
-  .rating__buttons {
+  .buttons {
     margin-bottom: 32px;
   }
-  .rating__btn {
+  [type=radio] + label {
     width: 51px;
     height: 51px;
     padding-top: 5px;
   }
-  .rating__submit {
+  .submit {
     width: 100.5%;
     padding: 16px 0 13px;
     margin-bottom: 0;
@@ -334,17 +338,17 @@ h1.thankyou__title {
     text-align: center;
     padding: 13px 0 15px;
   }
-  .thankyou__img {
+  .thankyou img {
     width: 162px;
     margin-bottom: 27px;
-    margin-right: 8px;
+    margin-inline: auto;
   }
   .thankyou__score {
     margin: 0 auto 29px;
     padding: 9px 18px 6px;
     border-radius: 15px;
   }
-  h1.thankyou__title {
+  .thankyou__title {
     margin-bottom: 4px;
   }
   .thankyou__body {

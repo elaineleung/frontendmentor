@@ -358,6 +358,7 @@ button {
     transition: opacity 0.3s ease-out, visibility 0.1s ease-in-out 0.5s, z-index 0.5s;
   }
   .nav-group {
+    position: absolute;
     min-height: 100vh;
     background-color: hsl(var(--clr-white));
     padding: 5.125rem 2rem;

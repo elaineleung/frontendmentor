@@ -82,7 +82,7 @@ button {
   .cta {
     padding: 0.8rem 1.75rem 0.75rem 1.875rem;
   }
-}
+} 
 
 // blocks begin here
 
@@ -171,6 +171,7 @@ button {
   // nav and login links
 
   .nav-group {
+    position: absolute;
     min-height: 100vh;
     background-color: hsl(var(--clr-white));
     padding: 5.125rem 2rem;
