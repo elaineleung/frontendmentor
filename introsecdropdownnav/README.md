@@ -71,6 +71,10 @@ I might want to transform this again to another React but hopefully a cleaner on
 
 - [Inclusive Menus & Menu Buttons](https://inclusive-components.design/menus-menu-buttons/) - Heydon Pickering's site was an excellent resource for me when I was trying explore how to make the site more accessible.
 
+- [The mistake developers make when coding a hamburger menu](https://dev.to/tongrhj/the-mistake-developers-make-when-coding-a-hamburger-menu-1deg?signin=true) - This helped when I was fixing my mobile nav in my refactoring stage, and what Jared mentioned regarding the content in the background still being scrollable makes a lot of sense.
+
+- [Stretching body to full viewport height: the missing way ](https://dev.to/fenok/stretching-body-to-full-viewport-height-the-missing-way-2ghd) - Still need to fully test out whether this works or not, but it's a good resource for trying to fix hidden footers on mobile devices.
+
 
 ## Author
 
