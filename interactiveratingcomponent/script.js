@@ -6,11 +6,13 @@ let selected;
 
 window.addEventListener("load", () => {
   formEl.reset();
+  document.getElementById("scoreEl").focus()
 });
 
 scoreBtns.forEach((btn) => {
   btn.addEventListener("click", () => {
     selected = btn.value;
+    btn.focus()
     console.log(selected);
   });
 });

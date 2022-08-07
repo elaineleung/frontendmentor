@@ -84,12 +84,12 @@ img {
 
 button {
   font-family: inherit;
-}
-
-button,
-button:focus {
   border: 0;
   outline: 0;
+}
+
+a:focus {
+  outline: var(--clr-orange) 0.2rem solid;
 }
 
 body {
@@ -226,28 +226,30 @@ body {
 // rating buttons
 
 [type="radio"] {
-  appearance: none;
   -webkit-appearance: none;
+  appearance: none;
+  display: inline-block;
   background-color: inherit;
-  background-size: contain;
-  display: none;
   border: 0;
-  padding: 0;
+  border: 0;
   margin: 0;
   outline: 0;
+  position: absolute;
 }
 
 [type="radio"] + label {
   display: inline-block;
+  width: 100%;
   margin: 0;
   color: var(--clr-grey-medium);
   font-size: var(--fs-score);
   font-weight: 700;
   background-color: var(--clr-blue-medlight);
   border: 0;
+  outline: 0;
   width: 42px;
   height: 42px;
-  padding-top: 5.5px;
+  // padding-top: 5.5px;paddin
   display: grid;
   place-content: center;
   border-radius: 50%;
@@ -256,6 +258,7 @@ body {
 }
 
 .buttons {
+  position: relative;
   display: flex;
   justify-content: space-between;
   margin-bottom: 24px;
@@ -270,6 +273,10 @@ body {
     }
     &:checked:hover + label {
       color: var(--clr-white);
+    }
+    &:focus + label {
+      outline: var(--clr-orange) 0.25rem solid;
+      // color: var(--clr-white);
     }
   }
 }
@@ -288,6 +295,9 @@ body {
   background-color: var(--clr-white);
 }
 
+.submit:focus {
+  box-shadow: 0 0 0 0.2rem var(--clr-white);  
+}
 // thank you state
 
 .thankyou {
@@ -367,7 +377,7 @@ body {
       width: 162px;
       margin-bottom: 27px;
       margin-inline: auto;
-      
+
     }
     &__score {
       margin: 0 auto 29px;

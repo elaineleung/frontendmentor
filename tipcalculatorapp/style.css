@@ -348,7 +348,7 @@ button:active,
   width: 100%;
   cursor: pointer;
   background-color: var(--clr-neutral-900);
-  padding: 0.2rem 1rem;
+  padding: 0.15rem 1rem;
   border-radius: 0.3rem;
   color: var(--clr-neutral-100);
   border: 0.2rem solid var(--clr-neutral-900);
