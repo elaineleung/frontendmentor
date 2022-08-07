@@ -44,60 +44,6 @@ function checkEmptyValues(){
   ? clearDisplay() : calculateTip();
 }
 
-// reset function and event handler
-
-window.addEventListener("load", reset);
-resetBtn.addEventListener("click", reset);
-
-function reset() {
-  appEl.querySelector("form").reset()
-  // tipOptions.forEach((btn) => (btn.checked = false));
-  Object.keys(values).map( key => values[key] = 0 );
-  clearDisplay();
-  appEl.focus()
-}
-
-function clearDisplay() {
-  totalEl.textContent = "0.00";
-  amountEl.textContent = "0.00";
-  resetBtn.disabled = true
-}
-
-// radio btns and custom input and radio 
-
-tipOptions.forEach((btn) =>
-  btn.addEventListener("change", () => selectTip(btn.value))
-);
-
-customEl.addEventListener("input", (event) => {
-  tipOptions.forEach((btn) => btn.checked = false);
-  customRadio.value = event.target.value
-  handleCustom(event.target.value);
-});
-
-customEl.addEventListener("click", () => handleCustom(customRadio.value));
-
-function handleCustom(value) {
-  customRadio.checked = true;
-  selectTip(value)
-}
-
-function selectTip(value) {
-  values.tip = Number(value)
-  checkEmptyValues()
-}
-
-// activating custom tabindex
-
-document.addEventListener("keydown", (event) => {
-  if (event.key === "Tab" && 
-    (document.activeElement === customRadio)) {
-      customInput.tabIndex = 0
-    }  else {
-      customInput.tabIndex = -1
-    }
-})
-
 function calculateTip() {
   const { bill, tip, people } = values
 
@@ -117,6 +63,70 @@ function calculateTip() {
       totalPerPerson.toFixed(2);
   }
 }
+
+
+// reset function and event handler
+
+window.addEventListener("load", reset);
+resetBtn.addEventListener("click", reset);
+
+
+
+function reset() {
+  appEl.querySelector("form").reset()
+  Object.keys(values).map( key => values[key] = 0 );
+  clearDisplay();
+  appEl.focus()
+}
+
+function clearDisplay() {
+  totalEl.textContent = "0.00";
+  amountEl.textContent = "0.00";
+  resetBtn.disabled = true
+}
+
+// radio btns and custom input and radio 
+
+tipOptions.forEach((btn) =>
+  btn.addEventListener("change", () => selectTip(btn.value))
+);
+
+customEl.addEventListener("input", (event) => {
+  event.preventDefault();
+  tipOptions.forEach((btn) => btn.checked = false);
+  customRadio.value = event.target.value
+  handleCustom(event.target.value);
+});
+
+customEl.addEventListener("click", () => handleCustom(customRadio.value));
+
+function handleCustom(value) {
+  customRadio.checked = true;
+  selectTip(value)
+}
+
+function selectTip(value) {
+  values.tip = Number(value)
+  checkEmptyValues()
+}
+
+function preventScroll(e){
+  e.preventDefault();
+  e.stopPropagation();
+
+  return false;
+}
+// activating custom tabindex
+
+// document.addEventListener("keydown", (event) => {
+//   if (event.key === "Tab" && 
+//     (document.activeElement === customRadio)) {
+//       customInput.tabIndex = 0
+//     }  else {
+//       customInput.tabIndex = -1
+//     }
+// })
+
 
 
 
