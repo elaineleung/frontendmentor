@@ -118,14 +118,14 @@ function preventScroll(e){
 }
 // activating custom tabindex
 
-// document.addEventListener("keydown", (event) => {
-//   if (event.key === "Tab" && 
-//     (document.activeElement === customRadio)) {
-//       customInput.tabIndex = 0
-//     }  else {
-//       customInput.tabIndex = -1
-//     }
-// })
+document.addEventListener("keydown", (event) => {
+  if (event.key === "Tab" && 
+    (document.activeElement === customRadio)) {
+      customInput.tabIndex = 0
+    }  else {
+      customInput.tabIndex = -1
+    }
+})
 
 
 
