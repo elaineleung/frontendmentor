@@ -78,6 +78,8 @@ One of my personal projects (that I never got finish) actually has a layout some
 
 - [Reset button](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/reset) - I agree with MDN's stance that it's probably best to avoid using this in most use cases, but in this case the reset was especially handy
 
+- [Prevent radio button from scrolling back up](https://stackoverflow.com/questions/24299567/radio-button-causes-browser-to-jump-to-the-top/49452792#49452792) 
+
 ## Author
 
 - Frontend Mentor - [@elaineleung](https://www.frontendmentor.io/profile/elaineleung)

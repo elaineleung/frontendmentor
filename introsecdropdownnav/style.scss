@@ -18,7 +18,7 @@ body {
   min-height: -webkit-fill-available;
   height: fill-available;
 }
-
+ 
 a {
   text-decoration: none;
   color: hsl(var(--clr-neutral-500));
@@ -130,13 +130,14 @@ button {
     position: absolute;
     top: 1.25rem;
     right: 1.25rem;
-    z-index: 5;
+    z-index: 10;
     .open-menu {
       display: none;
     }
   }
   [aria-expanded="false"].mobile-toggle {
     position: absolute;
+    z-index: 10;
     top: 1.55rem;
     right: 1.1rem;
     .close-menu {
@@ -171,8 +172,9 @@ button {
   // nav and login links
 
   .nav-group {
-    position: absolute;
+    position: relative;
     min-height: 100vh;
+    width: 100%;
     background-color: hsl(var(--clr-white));
     padding: 5.125rem 2rem;
     text-align: left;
@@ -181,7 +183,7 @@ button {
     opacity: 1;
     box-shadow: -1rem 0rem 3rem hsla(var(--clr-black), 0.5);
     transition: transform 0.25s ease-in, opacity 0.25s ease-in-out 0.1s;
-    z-index: 10;
+    z-index: 5;
   }
 
   [aria-expanded="false"].mobile-toggle ~ .nav-group {
