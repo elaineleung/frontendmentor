@@ -12,6 +12,13 @@ const areasMap = {
   "self-care": "Self Care"
 }
 
+const timeFrameMap = {
+  "daily": "Yesterday",
+  "weekly": "Last Week",
+  "monthly": "Last Month"
+}
+
+
 fetch("./data.json")
   .then( response => response.json())
   .then( data => {
@@ -30,6 +37,7 @@ fetch("./data.json")
       })
     })
   })
+  .catch( error => console.log(error))
 
 function updateValues(data) {
   cardsEls.forEach( card => {
@@ -44,6 +52,6 @@ function updateValues(data) {
       return `${num}${num === 1 ? "hr" : "hrs"}`
     }
     statsNow.textContent = displayHour(current);
-    statsPrev.textContent = `Last Week - ${displayHour(previous)}`;
+    statsPrev.textContent = `${timeFrameMap[selected]} - ${displayHour(previous)}`;
   })
 }
