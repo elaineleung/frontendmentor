@@ -20,17 +20,19 @@
     <title>Frontend Mentor | Intro section with dropdown navigation</title>
   </head>
   <body class="fs-body">
-    <header class="header wrapper max-header">
-      <div class="logo">
-        <a href="#">
-          <img src="./images/logo.svg" alt="Snap company logo" />
-        </a>
-      </div>
+    <header class="header wrapper">
+      <a href="#" class="logo">
+        <img src="./images/logo.svg" alt="Snap company logo" />
+      </a>
       <div id="navEl" class="nav-container / fs-nav">
+
         <!-- mobile toggle here  -->
-        <button aria-pressed="false" class="mobile-toggle">
+        <button aria-expanded="false" class="mobile-toggle">
+          <img src="./images/icon-close-menu.svg" class="close-menu" />
+          <img src="./images/icon-menu.svg" class="open-menu" />
           <span class="visually-hidden">Click for menu</span>
         </button>
+        <!-- overlay here  -->
         <div class="mobile-overlay"></div>
         <!-- nav and login links here  -->
         <div class="nav-group">
@@ -191,8 +193,11 @@
       <div class="content">
         <span>
           Challenge by
-          <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>. Coded by
-          <a href="https://twitter.com/elaineclleung">Elaine</a>.&nbsp;</span>        <span class="block">
+          <a href="https://www.frontendmentor.io?ref=challenge">
+            Frontend Mentor</a>. Coded by
+          <a href="https://twitter.com/elaineclleung">Elaine</a>.&nbsp;
+        </span>
+        <span class="block">
           Other
           <a href="https://elaineleung.github.io/frontendmentor/">
             Frontend Mentor Challenges

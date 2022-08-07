@@ -45,7 +45,9 @@
   --lh-headings: 1.2;
   --lh-footer: 1.15;
 
-  --max-header: 87.3rem;
+  --pad-100: 1rem;
+
+  --max-header: min(92.5%, 80rem);
 }
 
 @media (min-width: 960px) {
@@ -58,5 +60,6 @@
     --lh-h1: 1;
 
     --ls-intro: 0.05px;
+    --max-header: 87.3rem;
   }
 }

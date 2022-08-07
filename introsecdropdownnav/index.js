@@ -1,17 +1,16 @@
 const toggleEl = document.querySelector(".mobile-toggle");
-const navEl = document.querySelector(".nav-group");
+const navEl = document.querySelector("#navEl");
 const overlayEl = document.querySelector(".mobile-overlay");
 const dropDownBtns = document.querySelectorAll("nav button");
 const linkEls = document.querySelectorAll(".link");
 
-let windowWidth;
-let contentHeight;
+const navClickables = [toggleEl, overlayEl];
 
+let windowWidth;
 // get clientWidth for media query
 
 window.addEventListener("load", () => {
   checkDimensions();
-  windowWidth < 960 ? setHeight(`${contentHeight}px`) : setHeight("unset")
 });
 
 // Resize window to check width and to set mobile nav to closed
@@ -20,92 +19,92 @@ window.addEventListener("resize", () => {
   checkDimensions();
 
   if (windowWidth < 960) {
-    setHeight(`${contentHeight}px`) 
-    dropDownBtns.forEach(btn => {
-      checkDropDownOpen(btn)
-    })
+    dropDownBtns.forEach((btn) => {
+      toggleElement(btn, true, handleDropDown);
+    });
   } else {
-    setHeight("unset") 
-    toggleEl.getAttribute("aria-pressed") === "true" &&
-    handleNavToggle(true);
+    // close nav if it is opened
+    handleNav(true);
   }
 });
 
 function checkDimensions() {
   windowWidth = document.body.clientWidth;
-  contentHeight = document.body.scrollHeight;
 }
 
-function setHeight(height) {
-  navEl.style.height = height
-}
+// Toggling nav button and overlay using aria-expanded
 
-// Toggling nav button and overlay using aria-pressed
-
-toggleEl.addEventListener("click", () => {
-  handleNavToggle();
+navClickables.forEach((el) => {
+  el.addEventListener("click", (event) => {
+    event.preventDefault();
+    handleNav();
+  });
 });
 
-overlayEl.addEventListener("click", () => {
-  handleNavToggle();
-});
-
-function handleNavToggle(opened) {
-  const pressed = opened === undefined 
-    ? toggleEl.getAttribute("aria-pressed") === "true"
-    : opened
-  if (pressed) {
-    // check if any dropdown navs are opened
-    dropDownBtns.forEach(btn => {
-      checkDropDownOpen(btn)
-    })
-    toggleEl.setAttribute("aria-pressed", "false");
-
-  } else {
-    toggleEl.setAttribute("aria-pressed", "true");
-  }  
+function handleNav(checkState) {
+  // checking if mobile nav is opened, then close dropdowns
+  if (ariaIsTrue(toggleEl) === true) {
+    dropDownBtns.forEach((btn) => {
+      toggleElement(btn, true, handleDropDown);
+    });
+  }
+  toggleElement(toggleEl, checkState)
+  document.querySelector("html").classList.toggle("open");
 }
 
 dropDownBtns.forEach((btn) => {
   btn.addEventListener("click", () => {
+    // desktop view, keeping only 1 dropdown open at a time
     if (windowWidth >= 960) {
       const otherDropDowns = [...dropDownBtns].filter(
         (target) => target != btn
       );
       otherDropDowns.forEach((other) => {
-        checkDropDownOpen(other)
+        toggleElement(other, true, handleDropDown);
       });
     }
-    toggleDropDown(btn, false);
+    toggleElement(btn, null, handleDropDown);
   });
 });
 
 linkEls.forEach((link) => {
   link.addEventListener("click", () => {
     if (windowWidth < 960) {
-      setTimeout(() => handleNavToggle(), 300);
+      setTimeout(() => handleNav(), 300);
     } else {
-      dropDownBtns.forEach((btn) => checkDropDownOpen(btn, 300));
+      dropDownBtns.forEach((btn) => toggleElement(btn, true, handleDropDown, 300));
     }
   });
 });
 
-function toggleDropDown(btn, opened, timeout = 0) {
-  const expanded = opened === false 
-    ? btn.getAttribute("aria-expanded") === "true" || false
-    : opened
+// functions
 
-  btn.setAttribute("aria-expanded", !expanded);
-  const dropdown = btn.nextElementSibling;
+function toggleElement(element, checkState, callback) {
+  let expanded;
+
+  switch(true) {
+    case (checkState === null || checkState === undefined):
+      expanded = ariaIsTrue(element);
+      callback && callback(element);
+      break;
+    case (checkState === ariaIsTrue(element)):
+      expanded = checkState;
+      callback && callback(element);
+      break;
+    default:
+      return
+  }
+  element.setAttribute("aria-expanded", !expanded);
+}
+
+function ariaIsTrue(element) {
+  return element.getAttribute("aria-expanded") == "true" ? true : false;
+}
+
+function handleDropDown(element, timeout = 0) {
+  const dropdown = element.nextElementSibling;
   setTimeout(() => {
-    dropdown.classList.toggle("reveal") 
-    setTimeout(() => 
-    dropdown.classList.toggle("shift"), 200);
-  }, timeout)
+    dropdown.classList.toggle("reveal");
+    setTimeout(() => dropdown.classList.toggle("shift"), 200);
+  }, timeout);
 }
-
-function checkDropDownOpen(btn, timeout = 0) {
-  btn.getAttribute("aria-expanded") === "true" &&
-  toggleDropDown(btn, true, timeout)  
-}
-
