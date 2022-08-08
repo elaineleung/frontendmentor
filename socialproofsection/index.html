@@ -21,60 +21,59 @@
     <link rel="stylesheet" href="stylesheet.css" />
   </head>
   <body>
-    <main class="container">
-      <section class="section">
-        <div class="description">
+    <div class="container">
+      <main class="content">
+        <section class="description">
           <div class="description__intro">
-            <h1 class="intro__title">10,000+ of our users love our products.</h1>
-            <p class="intro__text">
+            <h1 class="title">10,000+ of our users love our products.</h1>
+            <p class="bodytext">
               We only provide great products combined with excellent customer
               service. See what our satisfied customers are saying about our
-              services.</p>
+              services.
+            </p>
           </div>
           <div class="description__ratings">
             <div class="rating">
-              <div class="rating__stars">
+              <div class="stars" aria-hidden="true">
                 <div class="star"></div>
                 <div class="star"></div>
                 <div class="star"></div>
                 <div class="star"></div>
                 <div class="star"></div>
               </div>
-              <p class="rating__text">Rated 5 Stars in Reviews</p>
+              <p class="text">Rated 5 Stars <span>in Reviews</span></p>
             </div>
             <div class="rating">
-              <div class="rating__stars">
+              <div class="stars" aria-hidden="true">
                 <div class="star"></div>
                 <div class="star"></div>
                 <div class="star"></div>
                 <div class="star"></div>
                 <div class="star"></div>
               </div>
-              <p class="rating__text">Rated 5 Stars in Report Guru</p>
+              <p class="text">Rated 5 Stars <span>in Report Guru</span></p>
             </div>
             <div class="rating">
-              <div class="rating__stars">
+              <div class="stars" aria-hidden="true">
                 <div class="star"></div>
                 <div class="star"></div>
                 <div class="star"></div>
                 <div class="star"></div>
                 <div class="star"></div>
               </div>
-              <p class="rating__text">Rated 5 Stars in BestTech</p>
+              <p class="text">Rated 5 Stars <span>in BestTech</span></p>
             </div>
           </div>
-        </div>
-        <div class="cards">
+        </section>
+        <section class="cards">
           <div class="card">
             <div class="card__profile">
-              <img
-                src="./images/image-colton.jpg"
-                alt="Profile image of Colton"
-              />
-            </div>
-            <div class="card__identity">
-              <h2 class="identity__name">Colton Smith</h2>
-              <p class="identity__label">Verified Buyer</p>
+              <img class="avatar" src="./images/image-colton.jpg" alt="" />
+
+              <div class="identity">
+                <h2 class="name">Colton Smith</h2>
+                <p class="label">Verified Buyer</p>
+              </div>
             </div>
             <p class="card__review">
               " We needed the same printed design as the one we had ordered a
@@ -85,13 +84,15 @@
           <div class="card">
             <div class="card__profile">
               <img
+                class="avatar"
                 src="./images/image-irene.jpg"
                 alt="Profile image of Irene"
               />
-            </div>
-            <div class="card__identity">
-              <h2 class="identity__name">Irene Roberts</h2>
-              <p class="identity__label">Verified Buyer</p>
+
+              <div class="identity">
+                <h2 class="name">Irene Roberts</h2>
+                <p class="label">Verified Buyer</p>
+              </div>
             </div>
             <p class="card__review">
               " Customer service is always excellent and very quick turn around.
@@ -101,11 +102,16 @@
           </div>
           <div class="card">
             <div class="card__profile">
-              <img src="./images/image-anne.jpg" alt="Profile image of Anne" />
-            </div>
-            <div class="card__identity">
-              <h2 class="identity__name">Anne Wallace</h2>
-              <p class="identity__label">Verified Buyer</p>
+              <img
+                class="avatar"
+                src="./images/image-anne.jpg"
+                alt="Profile image of Anne"
+              />
+
+              <div class="identity">
+                <h2 class="name">Anne Wallace</h2>
+                <p class="label">Verified Buyer</p>
+              </div>
             </div>
             <p class="card__review">
               " Put an order with this company and can only praise them for the
@@ -113,14 +119,17 @@
               them to everyone! "
             </p>
           </div>
-        </div>
-      </section>
-    </main>
-    <footer class="attribution">
-      Challenge by
-      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
-        >Frontend Mentor</a
-      >. Coded by <a href="https://twitter.com/elaineclleung">Elaine</a>.
-    </footer>
+        </section>
+      </main>
+      <footer class="attribution">
+        Challenge by
+        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">
+          Frontend Mentor
+        </a>
+        . Coded by
+        <a href="https://twitter.com/elaineclleung">Elaine</a>
+        .
+      </footer>
+    </div>
   </body>
 </html>

@@ -49,7 +49,9 @@ function handleNav(checkState) {
     });
   }
   toggleElement(toggleEl, checkState)
-  document.querySelector("html").classList.toggle("open");
+  setTimeout( () => {
+    document.querySelector("html").classList.toggle("open")
+  }, 200);
 }
 
 dropDownBtns.forEach((btn) => {

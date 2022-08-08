@@ -11,19 +11,9 @@ window.addEventListener("load", () => {
 scoreBtns.forEach((btn) => {
   btn.addEventListener("click", () => {
     selected = btn.value;
-    btn.focus()
     console.log(selected);
   });
 });
-
-// function selectScore(selected) {
-//   scoreBtns.forEach((btn) => {
-//     btn.classList.remove("btn__is-selected");
-//     if (btn.getAttribute("value") === selected) {
-//       btn.classList.add("btn__is-selected");
-//     }
-//   });
-// }
 
 formEl.addEventListener("submit", (event) => {
   event.preventDefault();
@@ -38,7 +28,7 @@ formEl.addEventListener("submit", (event) => {
           <div class="thankyou__score">You selected ${selected} out of 5</div>
         </div>
         <div>
-          <h2 class="thankyou__title">Thank you!</h1>
+          <h2 class="thankyou__title">Thank you!</h2>
           <p class="thankyou__body">We appreciate you taking the time to give a rating.
             If you ever need more support, don't hesitate to get in touch!</p>
         </div>

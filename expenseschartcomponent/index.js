@@ -13,6 +13,7 @@ function getData() {
      return response.json(); 
   })
   .then(data => {
+    console.log(data);
     barsEl.textContent = ''
     data.forEach( (info, idx) => {
       const dayDiv = document.createElement("div")
@@ -27,9 +28,16 @@ function getData() {
   
       barDiv.classList.add('bars__day-bar')
   
-      idx + 1 === currentDay && barDiv.classList.add('highlight')
+      console.log("idx", idx)
+      console.log("currentDay", currentDay)
+      console.log(idx + 1 === currentDay)
+      idx !== 6 
+      ? idx + 1 === currentDay && barDiv.classList.add('highlight')
+      : currentDay === 0 && barDiv.classList.add('highlight')
+
       barDiv.style.height = `${info.amount * 0.179}rem`
   
+      // console.log(barDiv)
       labelDiv.classList.add('bars__day-label')  
       labelDiv.textContent = info.day
 
@@ -50,3 +58,4 @@ function getBarWidth(idx, width) {
   const gap = window.innerWidth >= 980 ? 18.4 : 12.48
   barWidth = idx === 0 && ((width - ((6 - idx) * gap)) / (7 - idx))
 }
+

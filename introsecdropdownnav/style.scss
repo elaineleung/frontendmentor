@@ -121,11 +121,15 @@ button {
     right: 0;
     top: 0;
     bottom: 0;
-    height: 100vh;
     overflow-y: auto;
     overflow: -moz-scrollbars-none;
-    width: 15rem;
+    width: 4rem;
   }
+  .open .nav-container {
+    height: 100vh;
+    width: fit-content;
+  }
+
   .mobile-toggle {
     position: absolute;
     top: 1.25rem;
@@ -153,7 +157,7 @@ button {
     visibility: visible;
     top: 0;
     right: 0;
-    z-index: 0;
+    z-index: 1;
     height: 100vh;
     width: 100vw;
     opacity: 1;
@@ -174,7 +178,7 @@ button {
   .nav-group {
     position: relative;
     min-height: 100vh;
-    width: 100%;
+    width: 15rem;
     background-color: hsl(var(--clr-white));
     padding: 5.125rem 2rem;
     text-align: left;

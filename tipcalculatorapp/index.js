@@ -70,8 +70,6 @@ function calculateTip() {
 window.addEventListener("load", reset);
 resetBtn.addEventListener("click", reset);
 
-
-
 function reset() {
   appEl.querySelector("form").reset()
   Object.keys(values).map( key => values[key] = 0 );
@@ -110,12 +108,6 @@ function selectTip(value) {
   checkEmptyValues()
 }
 
-function preventScroll(e){
-  e.preventDefault();
-  e.stopPropagation();
-
-  return false;
-}
 // activating custom tabindex
 
 document.addEventListener("keydown", (event) => {
