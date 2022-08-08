@@ -25,7 +25,6 @@
         <img src="./images/logo.svg" alt="Snap company logo" />
       </a>
       <div id="navEl" class="nav-container / fs-nav">
-
         <!-- mobile toggle here  -->
         <button aria-expanded="false" class="mobile-toggle">
           <img src="./images/icon-close-menu.svg" class="close-menu" />
@@ -35,114 +34,116 @@
         <!-- overlay here  -->
         <div class="mobile-overlay"></div>
         <!-- nav and login links here  -->
-        <div class="nav-group">
-          <nav class="nav">
-            <ul>
-              <li class="dropdown">
-                <button class="dropdown-btn" aria-expanded="false">
-                  <span class="dropdown-title">features</span>
-                  <span aria-hidden="true" class="arrow">
-                    <svg
-                      width="10"
-                      height="6"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        stroke="#686868"
-                        stroke-width="1.5"
-                        fill="none"
-                        d="m1 1 4 4 4-4"
-                      ></path>
-                    </svg>
-                  </span>
-                </button>
-                <ul class="dropdown-items features">
-                  <li>
-                    <a class="link todo" href="#">
-                      <span class="link-icon todo" aria-hidden="true">
-                        <span></span>
-                      </span>
-                      <span class="link-name">Todo List</span>
-                    </a>
-                  </li>
-                  <li>
-                    <a class="link calendar" href="#">
-                      <span class="link-icon calendar" aria-hidden="true">
-                        <span></span>
-                      </span>
-                      <span class="link-name">Calendar</span>
-                    </a>
-                  </li>
-                  <li>
-                    <a class="link reminders" href="#">
-                      <span class="link-icon reminders" aria-hidden="true">
-                        <span></span>
-                      </span>
-                      <span class="link-name">Reminders</span>
-                    </a>
-                  </li>
-                  <li>
-                    <a class="link planning" href="#">
-                      <span class="link-icon planning" aria-hidden="true">
-                        <span></span>
-                      </span>
-                      <span class="link-name">Planning</span>
-                    </a>
-                  </li>
-                </ul>
-              </li>
-              <li class="dropdown">
-                <button class="dropdown-btn" aria-expanded="false">
-                  <span class="dropdown-title">company</span>
-                  <span aria-hidden="true" class="arrow">
-                    <svg
-                      width="10"
-                      height="6"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        stroke="#686868"
-                        stroke-width="1.5"
-                        fill="none"
-                        d="m1 1 4 4 4-4"
-                      ></path>
-                    </svg>
-                  </span>
-                </button>
-                <ul class="dropdown-items company">
-                  <li>
-                    <a class="link" href="#">
-                      <span class="link-name">History</span>
-                    </a>
-                  </li>
-                  <li>
-                    <a class="link" href="#">
-                      <span class="link-name">Our Team</span>
-                    </a>
-                  </li>
-                  <li>
-                    <a class="link" href="#">
-                      <span class="link-name">Blog</span>
-                    </a>
-                  </li>
-                </ul>
-              </li>
+        <div class="nav-inner">
+          <div class="nav-group">
+            <nav class="nav">
+              <ul>
+                <li class="dropdown">
+                  <button class="dropdown-btn" aria-expanded="false">
+                    <span class="dropdown-title">features</span>
+                    <span aria-hidden="true" class="arrow">
+                      <svg
+                        width="10"
+                        height="6"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          stroke="#686868"
+                          stroke-width="1.5"
+                          fill="none"
+                          d="m1 1 4 4 4-4"
+                        ></path>
+                      </svg>
+                    </span>
+                  </button>
+                  <ul class="dropdown-items features">
+                    <li>
+                      <a class="link todo" href="#">
+                        <span class="link-icon todo" aria-hidden="true">
+                          <span></span>
+                        </span>
+                        <span class="link-name">Todo List</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a class="link calendar" href="#">
+                        <span class="link-icon calendar" aria-hidden="true">
+                          <span></span>
+                        </span>
+                        <span class="link-name">Calendar</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a class="link reminders" href="#">
+                        <span class="link-icon reminders" aria-hidden="true">
+                          <span></span>
+                        </span>
+                        <span class="link-name">Reminders</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a class="link planning" href="#">
+                        <span class="link-icon planning" aria-hidden="true">
+                          <span></span>
+                        </span>
+                        <span class="link-name">Planning</span>
+                      </a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="dropdown">
+                  <button class="dropdown-btn" aria-expanded="false">
+                    <span class="dropdown-title">company</span>
+                    <span aria-hidden="true" class="arrow">
+                      <svg
+                        width="10"
+                        height="6"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          stroke="#686868"
+                          stroke-width="1.5"
+                          fill="none"
+                          d="m1 1 4 4 4-4"
+                        ></path>
+                      </svg>
+                    </span>
+                  </button>
+                  <ul class="dropdown-items company">
+                    <li>
+                      <a class="link" href="#">
+                        <span class="link-name">History</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a class="link" href="#">
+                        <span class="link-name">Our Team</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a class="link" href="#">
+                        <span class="link-name">Blog</span>
+                      </a>
+                    </li>
+                  </ul>
+                </li>
 
-              <li>
-                <a href="#" class="link link-name">careers</a>
-              </li>
-              <li>
-                <a href="#" class="link link-name">about</a>
-              </li>
-            </ul>
-          </nav>
-          <div class="login / fs-login">
-            <ul>
-              <li><a class="link" href="#">Login</a></li>
-              <li class="link">
-                <a class="cta" data-type="inverted" href="#">Register</a>
-              </li>
-            </ul>
+                <li>
+                  <a href="#" class="link link-name">careers</a>
+                </li>
+                <li>
+                  <a href="#" class="link link-name">about</a>
+                </li>
+              </ul>
+            </nav>
+            <div class="login / fs-login">
+              <ul>
+                <li><a class="link" href="#">Login</a></li>
+                <li class="link">
+                  <a class="cta" data-type="inverted" href="#">Register</a>
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
       </div>
@@ -194,8 +195,11 @@
         <span>
           Challenge by
           <a href="https://www.frontendmentor.io?ref=challenge">
-            Frontend Mentor</a>. Coded by
-          <a href="https://twitter.com/elaineclleung">Elaine</a>.&nbsp;
+            Frontend Mentor
+          </a>
+          . Coded by
+          <a href="https://twitter.com/elaineclleung">Elaine</a>
+          .&nbsp;
         </span>
         <span class="block">
           Other
