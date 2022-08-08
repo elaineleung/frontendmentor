@@ -108,6 +108,7 @@ body {
   font-size: var(--fs-body);
   font-family: var(--ff-primary);
   color: var(--clr-neutral-200);
+  width: 100%;
 }
 
 p {
@@ -126,7 +127,7 @@ p {
   width: 374px;
   height: 232px;
   top: 0;
-  left: 0;
+  right: 0;
   position: absolute;
   z-index: -1;
   background-repeat: no-repeat;
@@ -139,7 +140,7 @@ p {
   width: 375px;
   height: 503px;
   bottom: 0;
-  left: 0;
+  right: 0;
   position: absolute;
   background-repeat: no-repeat;
   z-index: -1;
@@ -166,7 +167,6 @@ p {
     height: 673px;
     bottom: 0;
     right: 0;
-    left: unset;
   }
 }
 .content {
