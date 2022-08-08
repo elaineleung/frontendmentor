@@ -123,6 +123,10 @@ body {
   font-family: var(--ff-primary);
   color: var(--clr-neutral-200);
   width: 100%;
+  background-image: url("./images/bg-pattern-top-mobile.svg"),
+    url("./images/bg-pattern-bottom-mobile.svg");
+  background-position: top left, bottom right;
+  background-repeat: no-repeat;
   // * {
   //   outline: var(--debug);
   // }
@@ -140,44 +144,50 @@ p {
   margin-inline: auto;
 }
 
-.description::before {
-  content: "";
-  background-image: url("./images/bg-pattern-top-mobile.svg");
-  width: 374px;
-  height: 232px;
-  top: 0rem;
-  left: 0rem;
-  position: fixed;
-  z-index: -1;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
+// .description::before {
+//   content: "";
+//   background-image: url("./images/bg-pattern-top-mobile.svg");
+//   width: 374px;
+//   height: 232px;
+//   top: 0rem;
+//   left: 0rem;
+//   position: fixed;
+//   z-index: -1;
+//   background-repeat: no-repeat;
+//   background-size: cover;
+// }
 
-.container::after {
-  content: "";
-  background-image: url("./images/bg-pattern-bottom-mobile.svg");
-  width: 375px;
-  height: 503px;
-  bottom: 0;
-  right: 0;
-  position: fixed;
-  background-repeat: no-repeat;
-  z-index: -1;
-}
+// .container::after {
+//   content: "";
+//   background-image: url("./images/bg-pattern-bottom-mobile.svg");
+//   width: 375px;
+//   height: 503px;
+//   bottom: 0;
+//   right: 0;
+//   position: fixed;
+//   background-repeat: no-repeat;
+//   z-index: -1;
+// }
 
 @media (min-width: 376px) {
-  .description::before {
-    background-image: url("./images/bg-pattern-top-desktop.svg");
-    width: 584px;
-    height: 362px;
+  body {
+    background-image: url("./images/bg-pattern-top-desktop.svg"),
+      url("./images/bg-pattern-bottom-desktop.svg");
+    background-repeat: no-repeat;
+    // background-position: top left, bo;
   }
+  // .description::before {
+  //   background-image: url("./images/bg-pattern-top-desktop.svg");
+  //   width: 584px;
+  //   height: 362px;
+  // }
 
-  .container::after {
-    content: "";
-    background-image: url("./images/bg-pattern-bottom-desktop.svg");
-    width: 1085px;
-    height: 673px;
-  }
+  // .container::after {
+  //   content: "";
+  //   background-image: url("./images/bg-pattern-bottom-desktop.svg");
+  //   width: 1085px;
+  //   height: 673px;
+  // }
 }
 
 // Main structure starts here
