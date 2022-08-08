@@ -65,7 +65,8 @@ Here's a short list of things I relearned/newly learned:
 
 ### Continued development
 
-I might want to transform this again to another React but hopefully a cleaner one!
+List of updates:
+- Aug 7, 2020: Fixed mobile nav bar issue
 
 ### Useful resources
 
