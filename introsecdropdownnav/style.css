@@ -235,7 +235,8 @@ a:hover, a:active {
 }
 
 a:focus,
-.dropdown-btn:focus {
+.dropdown-btn:focus,
+.mobile-toggle:focus {
   outline: 0.2rem dotted hsla(var(--clr-black), 0.9);
 }
 
@@ -311,9 +312,10 @@ button {
   }
   .mobile-toggle {
     position: absolute;
-    top: 1.25rem;
-    right: 1.25rem;
+    top: 1rem;
+    right: 1.4rem;
     z-index: 10;
+    padding: 0.2rem 0.2rem 0.1rem;
   }
   .mobile-toggle .open-menu {
     display: none;
@@ -321,8 +323,8 @@ button {
   [aria-expanded=false].mobile-toggle {
     position: absolute;
     z-index: 10;
-    top: 1.55rem;
-    right: 1.1rem;
+    top: 1.25rem;
+    right: 1.25rem;
   }
   [aria-expanded=false].mobile-toggle .close-menu {
     display: none;
@@ -349,7 +351,7 @@ button {
     transition: opacity 0.3s ease-out, visibility 0.1s ease-in-out 0.5s, z-index 0.5s;
   }
   .nav-inner {
-    position: absolute;
+    position: fixed;
     right: 0;
     top: 0;
     bottom: 0;
