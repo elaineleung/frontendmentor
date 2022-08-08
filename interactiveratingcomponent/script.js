@@ -11,10 +11,9 @@ window.addEventListener("load", () => {
 scoreBtns.forEach((btn) => {
   btn.addEventListener("click", () => {
     selected = btn.value;
-    console.log(selected);
   });
 });
-
+ 
 formEl.addEventListener("submit", (event) => {
   event.preventDefault();
   if (selected != null) {
