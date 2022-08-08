@@ -25,7 +25,7 @@
   --fs-p-prev: 0.85rem;
 
   --fs-small: 14px;
-  --fs-xsmall: 9px;
+  --fs-xsmall: 12px;
   --lh-body: 1.5;
   --lh-p: 1.5;
   --lh-h1-title: 1.7;
@@ -37,9 +37,9 @@
   --ls-label: 0.2px;
   --ls-p-prev: 0.1px;
   // --pad-hor: 0.9em;
-  --pad-hor: 0.5em;
-  --pad-top: 4.55em;
-  --pad-bottom: 5px;
+  // --pad-hor: 0.5em;
+  // --pad-top: 4.55em;
+  // --pad-bottom: 5px;
   --ff-primary: Rubik, Arial, sans-serif;
 }
 
@@ -52,8 +52,6 @@
     --fs-p-now: 3.1rem;
     --fs-p-prev: 0.85rem;
   
-    --fs-small: 14px;
-    --fs-xsmall: 9px;
     --lh-body: 1.5;
     --lh-p: 1.5;
     --lh-h1-title: 1.1;
@@ -106,8 +104,6 @@ button:focus {
 }
 
 body {
-  width: 100%;
-  height: 100%;
   min-height: 100vh;
   position: relative;
   font-family: var(--ff-primary);
@@ -118,8 +114,12 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   // text-align: center;
-  padding: var(--pad-top) var(--pad-hor) var(--pad-bottom);
+  // padding: var(--pad-top) var(--pad-hor) var(--pad-bottom);
+  // * {
+  //   outline: 1px pink solid;
+  // }
 }
 
 /* Typography */
@@ -224,8 +224,20 @@ body {
 
 /* Structure */
 
+.container {
+  flex: 1;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  justify-self: flex-end;
+  width: min(91.5%, 80em);
+  margin: 0rem auto;
+}
+
 .component {
-  min-width: 18.2em;
+  padding: 2rem 0;
+  // min-width: 18.2em;
   display: flex;
   flex-direction: column;
   gap: 1.3em;
@@ -343,15 +355,14 @@ body {
 .footer {
   display: flex;
   width: 100%;
-  flex: 1;
-  padding: 2.25em 0 0.5em;
+  padding: 0.5rem 0;
   &__attribution {
     align-self: flex-end;
     text-align: center;
     width: 100%;
     height: 100%;
-    &-content {
-      margin: 0 auto;
+    span {
+      display: inline-block;
     }
   }
 }
@@ -440,18 +451,6 @@ button span.visually-hidden {
       &-option {
         background: none;
         padding: 0.11em 0 0;
-      }
-    }
-  }
-
-  .footer {
-    &__social {
-      width: 152px;
-      margin: 1px 7px 0 auto;
-      margin-bottom: 0px;
-      &-icon {
-        width: 40px;
-        height: 40px;
       }
     }
   }

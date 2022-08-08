@@ -21,7 +21,7 @@
   --fs-p-now: 1.75rem;
   --fs-p-prev: 0.85rem;
   --fs-small: 14px;
-  --fs-xsmall: 9px;
+  --fs-xsmall: 12px;
   --lh-body: 1.5;
   --lh-p: 1.5;
   --lh-h1-title: 1.7;
@@ -31,9 +31,6 @@
   --ls-body: 0px;
   --ls-label: 0.2px;
   --ls-p-prev: 0.1px;
-  --pad-hor: 0.5em;
-  --pad-top: 4.55em;
-  --pad-bottom: 5px;
   --ff-primary: Rubik, Arial, sans-serif;
 }
 
@@ -45,8 +42,6 @@
     --fs-label: 1rem;
     --fs-p-now: 3.1rem;
     --fs-p-prev: 0.85rem;
-    --fs-small: 14px;
-    --fs-xsmall: 9px;
     --lh-body: 1.5;
     --lh-p: 1.5;
     --lh-h1-title: 1.1;
@@ -95,8 +90,6 @@ button:focus {
 }
 
 body {
-  width: 100%;
-  height: 100%;
   min-height: 100vh;
   position: relative;
   font-family: var(--ff-primary);
@@ -107,7 +100,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: var(--pad-top) var(--pad-hor) var(--pad-bottom);
+  justify-content: center;
 }
 
 /* Typography */
@@ -172,8 +165,19 @@ body {
 }
 
 /* Structure */
+.container {
+  flex: 1;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  justify-self: flex-end;
+  width: min(91.5%, 80em);
+  margin: 0rem auto;
+}
+
 .component {
-  min-width: 18.2em;
+  padding: 2rem 0;
   display: flex;
   flex-direction: column;
   gap: 1.3em;
@@ -289,8 +293,7 @@ body {
 .footer {
   display: flex;
   width: 100%;
-  flex: 1;
-  padding: 2.25em 0 0.5em;
+  padding: 0.5rem 0;
 }
 .footer__attribution {
   align-self: flex-end;
@@ -298,8 +301,8 @@ body {
   width: 100%;
   height: 100%;
 }
-.footer__attribution-content {
-  margin: 0 auto;
+.footer__attribution span {
+  display: inline-block;
 }
 
 .block-footer {
@@ -379,14 +382,5 @@ button span.visually-hidden {
   .card__header-option {
     background: none;
     padding: 0.11em 0 0;
-  }
-  .footer__social {
-    width: 152px;
-    margin: 1px 7px 0 auto;
-    margin-bottom: 0px;
-  }
-  .footer__social-icon {
-    width: 40px;
-    height: 40px;
   }
 }/*# sourceMappingURL=stylesheet.css.map */
