@@ -121,14 +121,14 @@ p {
   margin-inline: auto;
 }
 
-.container::before {
+.description::before {
   content: "";
   background-image: url("./images/bg-pattern-top-mobile.svg");
   width: 374px;
   height: 232px;
-  top: 0;
-  right: 0;
-  position: absolute;
+  top: 0rem;
+  left: 0rem;
+  position: fixed;
   z-index: -1;
   background-repeat: no-repeat;
   background-size: cover;
@@ -141,13 +141,13 @@ p {
   height: 503px;
   bottom: 0;
   right: 0;
-  position: absolute;
+  position: fixed;
   background-repeat: no-repeat;
   z-index: -1;
 }
 
 @media (min-width: 376px) {
-  .container::before {
+  .description::before {
     background-image: url("./images/bg-pattern-top-desktop.svg");
     width: 584px;
     height: 362px;
@@ -157,16 +157,6 @@ p {
     background-image: url("./images/bg-pattern-bottom-desktop.svg");
     width: 1085px;
     height: 673px;
-  }
-}
-@media (min-width: 70em) {
-  .container::after {
-    content: "";
-    background-image: url("./images/bg-pattern-bottom-desktop.svg");
-    width: 1085px;
-    height: 673px;
-    bottom: 0;
-    right: 0;
   }
 }
 .content {
