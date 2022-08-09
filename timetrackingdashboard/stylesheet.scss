@@ -95,22 +95,20 @@ button {
   outline: 0;
 }
 
-ul, li {
+ul,
+li {
   list-style: none;
   padding: 0;
   margin: 0;
 }
 
-// General styling 
+// General styling
 
 *:focus {
   outline: solid var(--clr-white) 0.2rem;
 }
 
 .radiobtns {
-  display: flex;
-  flex-direction: column;
-
   [type="radio"] + label {
     display: inline-block;
     cursor: pointer;
@@ -121,8 +119,6 @@ ul, li {
     letter-spacing: var(--ls-label);
     font-weight: 300;
     font-family: inherit;
-    padding: 0.1rem 0.2rem;
-    line-height: 1;
     &:hover {
       color: var(--clr-white);
     }
@@ -150,6 +146,17 @@ ul, li {
   }
 }
 
+[type="radio"] + label,
+.card__header .title a:focus,
+.card__header .option:focus {
+  padding: 0.1rem 0.2rem;
+  margin-left: -0.2rem;
+}
+
+.card__header .option:focus {
+  padding: 0.1rem 0.2rem;
+  margin-right: -0.2rem;
+}
 
 // Utils
 
@@ -177,7 +184,6 @@ ul, li {
   width: 1px;
 }
 
-
 /* Typography */
 
 .profile {
@@ -198,8 +204,12 @@ ul, li {
 }
 
 .card {
+  a {
+    text-decoration: none;
+  }
   &__header {
-    &-title {
+    .title a {
+      color: var(--clr-white);
       font-size: var(--fs-h2-card);
       line-height: var(--lh-h2-card);
       font-weight: 500;
@@ -259,7 +269,7 @@ body {
 }
 
 .component .card {
-  border-radius: 1rem 1rem 1.1rem 1.1rem;
+  border-radius: 1rem 1rem 1.18rem 1.18rem;
 }
 
 .component .profile,
@@ -268,6 +278,8 @@ body {
 .component .card > div {
   border-radius: 1rem;
 }
+
+// Profile section
 
 .profile {
   background-color: var(--clr-blue-dark);
@@ -299,6 +311,8 @@ body {
   }
 }
 
+// Cards section
+
 .cards {
   display: flex;
   flex-flow: column nowrap;
@@ -306,6 +320,7 @@ body {
 }
 
 .card {
+  position: relative;
   background-repeat: no-repeat;
   background-position: top -11px right 16px;
   padding-top: 2.15em;
@@ -324,13 +339,16 @@ body {
     align-items: center;
   }
   &__header {
-    &-title {
+    .title {
       margin-bottom: 0.1em;
+      a {
+        display: inline-block;
+      }
     }
-    &-option {
+    .option {
       background: none;
       padding: 0.11em 0 0;
-      align-self: flex-start;
+      position: relative;
       cursor: pointer;
       svg {
         fill: #bbc0ff;
@@ -340,6 +358,11 @@ body {
       }
     }
   }
+}
+
+// styling for each card
+
+.card {
   &-work {
     background-color: var(--clr-work);
     background-image: url("./images/icon-work.svg");
@@ -368,10 +391,28 @@ body {
   }
 }
 
+// styling for interacting with card
+
+.card a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 0.5rem;
+}
+
+.card:focus-within {
+  outline: solid var(--clr-white) 0.2rem;
+}
+
+// footer
+
 .footer {
   display: flex;
   width: 100%;
-  padding: 0.5rem 0;
+  padding: 0.5rem;
   &__attribution {
     align-self: flex-end;
     text-align: center;
@@ -387,68 +428,66 @@ body {
 
 @media (min-width: 780px) {
   .component {
-    min-width: 30em;
+    min-width: 30rem;
     max-width: 1110px;
     width: 100%;
-    gap: 1.65em;
+    gap: 1.65rem;
     flex-direction: row;
   }
 
   .profile {
     min-width: 255px;
-    // flex-shrink: 1;
     & > div {
       flex-direction: column;
     }
     &__user {
-      padding: 1.9em 1.78em;
+      padding: 1.95rem 1.8rem;
       .avatar {
         width: 84px;
-        margin-bottom: 2em;
+        margin-bottom: 2rem;
         img {
           border-radius: 50%;
-          border: 0.2em solid var(--clr-white);
+          border: 0.2rem solid var(--clr-white);
         }
       }
       .title {
-        margin: 0 0 3.1em;
+        margin: 0 0 2.45rem;
       }
       .name {
-        margin-top: 0.07em;
+        margin-top: 0.2rem;
         display: block;
       }
     }
     &__duration {
-      gap: 1.12em;
-      padding: 1.45em 1.85em 1.5em;
+      gap: 0.95rem;
+      padding: 1.35rem 1.85rem 1.65rem;
       align-items: flex-start;
     }
   }
 
   .cards {
-    // flex: 1 0 auto;
     display: grid;
     width: 100%;
     grid-template-columns: repeat(auto-fit, minmax(12em, 1fr));
-    column-gap: 1.65em;
-    row-gap: 1.65em;
+    column-gap: 1.65rem;
+    row-gap: 1.65rem;
   }
 
   .card {
     flex: 1 0 auto;
-    padding-top: 2.5em;
+    padding-top: 2.5rem;
     &__stats {
       flex-direction: column;
       align-items: flex-start;
     }
     &__container {
-      padding: 1.65em 1.68em 1.6em;
+      padding: 1.15rem 1.68rem 1.7rem;
     }
     &__header {
-      &-title {
-        margin-bottom: 0.9em;
+      .title {
+        margin-bottom: 0.8rem;
       }
-      &-option {
+      .option {
         background: none;
         padding: 0.11em 0 0;
       }

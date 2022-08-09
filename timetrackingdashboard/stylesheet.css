@@ -84,7 +84,8 @@ button {
   outline: 0;
 }
 
-ul, li {
+ul,
+li {
   list-style: none;
   padding: 0;
   margin: 0;
@@ -94,10 +95,6 @@ ul, li {
   outline: solid var(--clr-white) 0.2rem;
 }
 
-.radiobtns {
-  display: flex;
-  flex-direction: column;
-}
 .radiobtns [type=radio] + label {
   display: inline-block;
   cursor: pointer;
@@ -108,8 +105,6 @@ ul, li {
   letter-spacing: var(--ls-label);
   font-weight: 300;
   font-family: inherit;
-  padding: 0.1rem 0.2rem;
-  line-height: 1;
 }
 .radiobtns [type=radio] + label:hover {
   color: var(--clr-white);
@@ -134,6 +129,18 @@ ul, li {
 }
 .radiobtns [type=radio]:focus + label {
   outline: solid var(--clr-white) 0.2rem;
+}
+
+[type=radio] + label,
+.card__header .title a:focus,
+.card__header .option:focus {
+  padding: 0.1rem 0.2rem;
+  margin-left: -0.2rem;
+}
+
+.card__header .option:focus {
+  padding: 0.1rem 0.2rem;
+  margin-right: -0.2rem;
 }
 
 .container {
@@ -175,7 +182,11 @@ ul, li {
   font-weight: 300;
 }
 
-.card__header-title {
+.card a {
+  text-decoration: none;
+}
+.card__header .title a {
+  color: var(--clr-white);
   font-size: var(--fs-h2-card);
   line-height: var(--lh-h2-card);
   font-weight: 500;
@@ -231,7 +242,7 @@ body {
 }
 
 .component .card {
-  border-radius: 1rem 1rem 1.1rem 1.1rem;
+  border-radius: 1rem 1rem 1.18rem 1.18rem;
 }
 
 .component .profile,
@@ -278,6 +289,7 @@ body {
 }
 
 .card {
+  position: relative;
   background-repeat: no-repeat;
   background-position: top -11px right 16px;
   padding-top: 2.15em;
@@ -295,21 +307,25 @@ body {
   justify-content: space-between;
   align-items: center;
 }
-.card__header-title {
+.card__header .title {
   margin-bottom: 0.1em;
 }
-.card__header-option {
+.card__header .title a {
+  display: inline-block;
+}
+.card__header .option {
   background: none;
   padding: 0.11em 0 0;
-  align-self: flex-start;
+  position: relative;
   cursor: pointer;
 }
-.card__header-option svg {
+.card__header .option svg {
   fill: #bbc0ff;
 }
-.card__header-option:hover svg {
+.card__header .option:hover svg {
   fill: var(--clr-white);
 }
+
 .card-work {
   background-color: var(--clr-work);
   background-image: url("./images/icon-work.svg");
@@ -337,10 +353,24 @@ body {
   background-image: url("./images/icon-self-care.svg");
 }
 
+.card a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 0.5rem;
+}
+
+.card:focus-within {
+  outline: solid var(--clr-white) 0.2rem;
+}
+
 .footer {
   display: flex;
   width: 100%;
-  padding: 0.5rem 0;
+  padding: 0.5rem;
 }
 .footer__attribution {
   align-self: flex-end;
@@ -354,10 +384,10 @@ body {
 
 @media (min-width: 780px) {
   .component {
-    min-width: 30em;
+    min-width: 30rem;
     max-width: 1110px;
     width: 100%;
-    gap: 1.65em;
+    gap: 1.65rem;
     flex-direction: row;
   }
   .profile {
@@ -367,51 +397,51 @@ body {
     flex-direction: column;
   }
   .profile__user {
-    padding: 1.9em 1.78em;
+    padding: 1.95rem 1.8rem;
   }
   .profile__user .avatar {
     width: 84px;
-    margin-bottom: 2em;
+    margin-bottom: 2rem;
   }
   .profile__user .avatar img {
     border-radius: 50%;
-    border: 0.2em solid var(--clr-white);
+    border: 0.2rem solid var(--clr-white);
   }
   .profile__user .title {
-    margin: 0 0 3.1em;
+    margin: 0 0 2.45rem;
   }
   .profile__user .name {
-    margin-top: 0.07em;
+    margin-top: 0.2rem;
     display: block;
   }
   .profile__duration {
-    gap: 1.12em;
-    padding: 1.45em 1.85em 1.5em;
+    gap: 0.95rem;
+    padding: 1.35rem 1.85rem 1.65rem;
     align-items: flex-start;
   }
   .cards {
     display: grid;
     width: 100%;
     grid-template-columns: repeat(auto-fit, minmax(12em, 1fr));
-    -moz-column-gap: 1.65em;
-         column-gap: 1.65em;
-    row-gap: 1.65em;
+    -moz-column-gap: 1.65rem;
+         column-gap: 1.65rem;
+    row-gap: 1.65rem;
   }
   .card {
     flex: 1 0 auto;
-    padding-top: 2.5em;
+    padding-top: 2.5rem;
   }
   .card__stats {
     flex-direction: column;
     align-items: flex-start;
   }
   .card__container {
-    padding: 1.65em 1.68em 1.6em;
+    padding: 1.15rem 1.68rem 1.7rem;
   }
-  .card__header-title {
-    margin-bottom: 0.9em;
+  .card__header .title {
+    margin-bottom: 0.8rem;
   }
-  .card__header-option {
+  .card__header .option {
     background: none;
     padding: 0.11em 0 0;
   }
