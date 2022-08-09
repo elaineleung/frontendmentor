@@ -79,10 +79,15 @@ img {
   width: 100%;
 }
 
-button,
-button:focus {
+button {
   border: 0;
   outline: 0;
+}
+
+ul, li {
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
 *:focus {
@@ -226,11 +231,12 @@ body {
 }
 
 .component .card {
-  border-radius: 1rem 1rem 2rem 2rem;
+  border-radius: 1rem 1rem 1.1rem 1.1rem;
 }
 
 .component .profile,
 .component .profile > div,
+.component .cards,
 .component .card > div {
   border-radius: 1rem;
 }
