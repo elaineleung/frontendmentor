@@ -26,6 +26,6 @@ input.addEventListener("invalid", (event) => {
   }
 });
 
-input.removeEventListener("valid", (event) => {
+input.removeEventListener("valid", () => {
   input.classList.remove("is-invalid");
 });

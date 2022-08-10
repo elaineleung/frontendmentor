@@ -110,14 +110,6 @@ body {
   }
 }
 
-[aria-hidden="true"].loading ~ .advice {
-  opacity: 0;
-}
-
-[aria-hidden="true"].loading ~ .advice > .advice__inner {
-  height: 0;
-}
-
 [aria-hidden="false"].loading {
   opacity: 0;
 }
@@ -135,9 +127,9 @@ body {
   &__inner {
   margin-inline: auto;
   height: 100%;
-  transition-duration: 0.1s;
-  transition-property: height;
-  transition-timing-function: ease-in-out;
+  opacity: 1;
+  transform: translateY(0%);
+  transition: height 0.1s ease-in-out, transform 0.2s 0.15s, opacity 0.3s 0.2s;
   }
   * {
     width: 100%;
@@ -151,6 +143,17 @@ body {
   }
 
 }
+
+[aria-hidden="true"].loading ~ .advice {
+  opacity: 0;
+}
+
+[aria-hidden="true"].loading ~ .advice > .advice__inner {
+  height: 0;
+  opacity: 0;
+  transform: translateY(-100%);
+}
+
 
 .divider {
   width: 100%;

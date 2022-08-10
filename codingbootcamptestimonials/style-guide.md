@@ -8,7 +8,7 @@ The designs were created to the following widths:
 - Desktop: 1440px
 
 ## Colors
-
+ 
 ### Primary
 
 - Dark Blue: hsl(240, 38%, 20%)

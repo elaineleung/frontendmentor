@@ -6,7 +6,6 @@
   --clr-link: hsl(var(--clr-neutral-500));
   --clr-link-hov: hsl(var(--clr-black));
   --bs-dropdown: 0px 0px 30px hsla(0, 0%, 8%, 0.15);
-  --debug: 1px magenta solid;
   --fs-100: 0.75rem;
   --fs-200: 0.875rem;
   --fs-300: 0.9375rem;

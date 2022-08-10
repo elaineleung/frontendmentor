@@ -35,7 +35,6 @@ fetch("./data.json")
 
 timeframeEls.forEach((timeframe) => {
   timeframe.addEventListener("click", (event) => {
-    timeframe.checked = true
     selected = event.target.value;
     updateValues(userData);
   });

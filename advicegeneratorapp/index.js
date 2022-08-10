@@ -35,10 +35,10 @@ async function loadAdvice() {
       }, 1000)
     }
   } catch(error) {
-    console.log("Error caught: ", err.message);
+    console.log("Error caught: ", error);
   }
 }
-
+ 
 // function reset() {  
 //   numEl.textContent = ""
 //   adviceEl.textContent = ""
