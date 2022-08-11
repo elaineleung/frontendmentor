@@ -1,4 +1,5 @@
 const sliderEl = document.querySelector("#imagesEl");
+const textEl = document.querySelector("#textEl");
 const prevBtn = document.querySelector(".prev-arrow");
 const nextBtn = document.querySelector(".next-arrow");
 
@@ -20,8 +21,8 @@ const testimonials = [
 ];
 
 let sliderArray = []
-let idx = 0;
-let testimonial = testimonials[idx];
+let current = 0;
+let testimonial = testimonials[current];
 
 window.addEventListener("load", showImage())
 
@@ -34,15 +35,44 @@ function showImage() {
     sliderEl.appendChild(listEl);
     listEl.appendChild(imgEl)
     sliderArray.push(listEl);
+    showText()
   })
 }
 
-console.log(sliderArray)
-
 nextBtn.addEventListener("click", () => {
-  sliderEl.style.transform = "translateX(-100%)";
+  slideImage("next")
+  showText()
 })
 prevBtn.addEventListener("click", () => {
-  sliderEl.style.transform = "translateX(0%)";
+  slideImage("previous")
+  showText()
 })
 
+function slideImage(direction) {
+  let translateProp;
+
+  switch(true) {
+    case (direction === "next" && current === 0):
+      translateProp = "translateX(-100%)";
+      current = 1
+      break;
+    case (direction === "previous" && current === 1):
+      translateProp = "translateX(0%)";
+      current = 0
+      break;
+    default:
+      null
+  }
+  sliderEl.style.transform = translateProp;
+}
+
+function showText() {
+  const name = document.createElement("h2"); 
+  const title = document.createElement("p");
+  textEl.textContent = `“ ${testimonials[current].quote} ”`
+  name.textContent = testimonials[current].name
+  title.textContent = testimonials[current].title
+  name.classList.add("text-name")
+  title.classList.add("text-title")
+  textEl.append(name, title)
+}

@@ -3,9 +3,8 @@
   --clr-neutral-400: 240, 18%, 77%;
   --clr-neutral-700: 240, 38%, 20%;
 
-
   --fs-100: 0.75rem; // 12pt
-  --fs-200: 0.875rem; // 14pt 
+  --fs-200: 0.875rem; // 14pt
   --fs-300: 0.9375rem; // 15pt
   --fs-400: 1rem; // 16pt
   --fs-500: 1.125rem; // 18pt
@@ -13,7 +12,7 @@
   --fs-700: 1.5rem; // 24pt
   --fs-800: 1.75rem; // 28pt
   --fs-900: 2rem; // 32pt
-  --ff-primary: 'Inter', 'Segoe UI', Tahoma, Geneva;
+  --ff-primary: "Inter", "Segoe UI", Tahoma, Geneva;
   --fs-body: var(--fs-400);
   --fs-content: var(--fs-500);
   --fs-profile: var(--fs-300);
@@ -23,11 +22,20 @@
   --fw-med: 500;
   --fw-bold: 700;
 
+  --lh-content: 1.32;
+
+  --w-image: min(100%, 32rem);
+  --w-image-max: 32rem;
   --debug: 1px magenta solid;
-
-
 }
 
+
+@media (min-width: 1080px) {
+  :root {
+    --w-image: var(--w-image-max);
+    --fs-content: var(--fs-900);
+  }
+}
 // / CSS reset
 
 /* Remove default margin */
@@ -48,8 +56,9 @@
 
 /* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
 
-ul[role="list"],
-ol[role="list"] {
+ul,
+ol,
+li {
   list-style: none;
 }
 
@@ -74,6 +83,7 @@ html {
 body {
   text-rendering: optimizeSpeed;
   line-height: var(--lh-body);
+  overflow: hidden;
 }
 
 /* A elements that don't have a class get default styles */
@@ -104,7 +114,6 @@ h6 {
   overflow-wrap: break-word;
 }
 
-
 /* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
 @media (prefers-reduced-motion: reduce) {
   html:focus-within {
@@ -121,14 +130,13 @@ h6 {
   }
 }
 
-// other resets 
+// other resets
 
 button {
   background: inherit;
   border: 0;
   color: inherit;
 }
-
 
 // utility classes
 
@@ -166,13 +174,11 @@ button {
   white-space: nowrap;
 }
 
-
 // general styling
 
 button {
   cursor: pointer;
 }
-
 
 // structure blocks
 
@@ -183,18 +189,50 @@ body {
   display: flex;
   flex-direction: column;
   background-color: transparent;
-  background-image: url("./images/pattern-bg.svg");
+  position: relative;
+
+}
+
+body::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  bottom: 0;
+  left: 0rem;
+  width: 300px;
+  height: 77px;
+  background-image: url("./images/pattern-curve.svg");
   background-repeat: no-repeat;
   background-size: contain;
-  background-position: top 1.5rem right 0;
+  background-position: center;
 }
 
 .container {
-  width: min(91.5%, 60em);
+  width: min(88%, 70em);
   // margin-inline: auto;
   flex: 1;
   margin: 1.5rem auto;
+  position: relative;
+  background-image: url("./images/pattern-bg.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: top 0rem right 0;
 }
+
+// .container::after {
+//   content: "";
+//   position: absolute;
+//   z-index: -1;
+//   top: 0;
+//   left: 50%;
+//   margin-left: -46%;
+//   width: min(95%, 40rem);
+//   height: min(95%, 40rem);
+//   background-image: url("./images/pattern-bg.svg");
+//   background-repeat: no-repeat;
+//   background-size: contain;
+//   background-position: top 0rem right 0;
+// }
 
 .component {
   margin: 2rem auto;
@@ -207,6 +245,10 @@ body {
 
 .slider-group {
   position: relative;
+  width: min(76%, 32rem);
+  > * {
+    margin-inline: auto;
+  }
   // box-shadow: 1em 1em 4em hsla(var(--clr-neutral-400), 0.5);
 }
 
@@ -215,16 +257,16 @@ body {
 //   // box-shadow: 0em 4em 4em hsla(var(--clr-neutral-400), 0.6);
 // }
 
-
 .slider-container {
-  width: 67.5vw;
+  position: relative;
+  width: var(--w-image);
   display: grid;
-  grid-template-columns: 67.5vw;
-  grid-template-rows: 67.5vw;
+  grid-template-columns: var(--w-image);
+  grid-template-rows: var(--w-image);
   place-content: center;
   // width: ;
   // height: min(67.5vw, 30rem);
-  box-shadow: 0em 2rem 3rem hsla(var(--clr-neutral-400), 0.7);
+  box-shadow: 0em 1.5rem 2rem hsla(var(--clr-neutral-700), 0.2);
   background-color: transparent;
 }
 
@@ -242,7 +284,11 @@ body {
   z-index: 10;
   // box-shadow: 1em 1em 4em hsla(var(--clr-neutral-400), 0.8);
   button {
-    padding: 0.9rem 0.8rem;
+    padding: 0.65rem 0.8rem;
+    border: 0.2rem solid hsl(var(--clr-neutral-100));
+    &:hover .arrow {
+      opacity: 0.7;
+    }
   }
 }
 
@@ -254,31 +300,96 @@ body {
   border-radius: 0 100vmax 100vmax 0;
 }
 
-.slider-arrows span.arrow svg {
-  display: block;
-  height: 0.75rem;
-  // height: 0.65rem
-  path {
-    stroke-width: 4.5;
+.slider-arrows {
+  // position: relative;
+  span.arrow svg {
+    display: block;
+    height: 0.75rem;
+    // height: 0.65rem
+    path {
+      stroke-width: 4.5;
+    }
   }
 }
-
 
 .slider-container .wrapper {
   overflow: hidden;
   width: 100%;
+  border-radius: 0.25rem;
 }
 
 .slider-container .images {
   transform-style: preserve-3d;
   display: grid;
-  grid-template-columns: repeat(2, 67.5vw);
+  grid-template-columns: repeat(2, var(--w-image));
   transform: translateX(0);
   transition: transform 0.35s ease-in-out;
 }
 
 .slider-container img {
   object-fit: cover;
-  width: 67.5vw;
-  height: 67.5vw;
+  width: var(--w-image);
+  height: var(--w-image);
+}
+
+.text-group::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: -1.5rem;
+  opacity: 0.8;
+  left: 50%;
+  margin-left: -30px;
+  width: 60px;
+  height: 50px;
+  background-image: url("./images/pattern-quotes.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: top 0rem right 0;
+}
+
+.text-group {
+  position: relative;
+  font-size: var(--fs-content);
+  font-weight: var(--fw-light);
+  line-height: var(--lh-content);
+  text-align: center;
+  margin: 5.25rem 0 0;
+
+  .wrapper {
+    width: 90%;
+    margin-inline: auto;
+    * {
+      font-size: var(--fs-profile);
+    }
+  }
+  .text {
+    &-name {
+      margin-top: 1.2rem;
+      font-weight: var(--fw-bold);
+    }
+    &-title {
+      color: hsl(var(--clr-neutral-400));
+      font-weight: var(--fw-med);
+    }
+  }
+}
+
+
+@media (min-width: 1080px) {
+  .component {
+    display: flex;
+  }
+  .text-group {
+    order: -1;
+    text-align: left;
+    margin: 5rem 0 0;
+    flex: 1 1 60%;
+    .text {
+      position: absolute;
+      width: 40rem;
+      z-index: 10;
+    }
+  }
+
 }

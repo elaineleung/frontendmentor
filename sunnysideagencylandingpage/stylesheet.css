@@ -420,10 +420,28 @@ nav a:hover {
   background: hsla(51deg, 100%, 49%, 0.7);
 }
 
+@media (min-width: 750px) {
+  .button {
+    background: var(--clr-white);
+    padding: 1.25rem 1.9rem;
+    font-weight: var(--fw-700);
+    letter-spacing: var(--ls-button-primary);
+    font-size: var(--fs-button-secondary);
+  }
+  .button:focus {
+    outline-offset: -0.4rem;
+    outline: 1px solid;
+  }
+  .button:hover {
+    background: hsla(0deg, 0%, 100%, 0.3);
+    color: var(--clr-white);
+  }
+}
 .button[data-variant=secondary] {
   border-color: currentColor;
   background: transparent;
   font-weight: var(--fw-900);
+  color: var(--clr-neutral-700);
   padding: 0;
   position: relative;
   letter-spacing: var(--ls-button-secondary);
@@ -454,22 +472,8 @@ nav a:hover {
 }
 
 @media (min-width: 750px) {
-  .button {
-    background: var(--clr-white);
-    padding: 1.25rem 1.9rem;
-    font-weight: var(--fw-700);
-    letter-spacing: var(--ls-button-primary);
-    font-size: var(--fs-button-secondary);
-  }
-  .button:focus {
-    outline-offset: -0.4rem;
-    outline: 1px solid;
-  }
-  .button:hover {
-    background: hsla(0deg, 0%, 100%, 0.3);
-    color: var(--clr-white);
-  }
   .button[data-variant=secondary] {
+    background: transparent;
     margin-left: 0.5rem;
   }
 }

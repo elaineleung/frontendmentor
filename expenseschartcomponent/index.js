@@ -1,5 +1,4 @@
-
-const barsEl = document.getElementById("barsEl")
+const daysEl = document.querySelectorAll(".bars__day")
 
 const currentDay = new Date().getDay()
 let barWidth;
@@ -13,39 +12,32 @@ function getData() {
      return response.json(); 
   })
   .then(data => {
-    console.log(data);
-    barsEl.textContent = ''
     data.forEach( (info, idx) => {
-      const dayDiv = document.createElement("div")
+      const dayEl = Array.from(daysEl)[idx]
       const amountDiv = document.createElement("div")
       const barDiv = document.createElement("div")
       const labelDiv = document.createElement("p")
-      
-      dayDiv.classList.add('bars__day')
   
+      dayEl.textContent = ""
+
+      // styling for price pop up
       amountDiv.classList.add('bars__day-amount')
       amountDiv.textContent = `$${info.amount}`
-  
+      // styling for bar column
       barDiv.classList.add('bars__day-bar')
-  
-      console.log("idx", idx)
-      console.log("currentDay", currentDay)
-      console.log(idx + 1 === currentDay)
-      idx !== 6 
-      ? idx + 1 === currentDay && barDiv.classList.add('highlight')
-      : currentDay === 0 && barDiv.classList.add('highlight')
-
       barDiv.style.height = `${info.amount * 0.179}rem`
-  
-      // console.log(barDiv)
+      if (idx !== 6) {
+        idx + 1 === currentDay && barDiv.classList.add('highlight')
+      } else {
+        currentDay === 0 && barDiv.classList.add('highlight')
+      }
+      // styling for chart x-axis label             
       labelDiv.classList.add('bars__day-label')  
       labelDiv.textContent = info.day
 
-      barsEl.appendChild(dayDiv)
-      dayDiv.append(barDiv, amountDiv, labelDiv)  
+      dayEl.append(barDiv, amountDiv, labelDiv)  
   
-      !barWidth && getBarWidth(idx, barDiv.clientWidth)
-  
+      !barWidth && getBarWidth(idx, barDiv.clientWidth)  
       const margin = ((amountDiv.clientWidth - barWidth) / 2)
       amountDiv.setAttribute('data-width', `-${margin}`)  
      

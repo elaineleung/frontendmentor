@@ -49,6 +49,7 @@ function handleNav(checkState) {
     });
   }
   toggleElement(toggleEl, checkState)
+  // keep background html fixed when nav is open
   setTimeout( () => {
     document.querySelector("html").classList.toggle("open")
   }, 200);

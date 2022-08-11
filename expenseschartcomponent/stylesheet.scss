@@ -38,11 +38,6 @@
   --lh-footer: 1.4;
 
   --pad-comp: clamp(1rem, calc(-2.8071rem + 16.2437vw), 3rem);
-  // --mar-cont: clamp(1rem, calc(-3.5455rem + 19.3939vw), 3rem);
-
-  // --pad-hor: 1rem;
-  // --pad-top: 3rem;
-  // --pad-bottom: 0rem;
 
   --ff-primary: "DM Sans", Arial, sans-serif;
 }
@@ -246,7 +241,6 @@ body {
 }
 
 .spending {
-  // width: fit-content;
   flex-direction: column;
   order: 2;
   background-color: var(--clr-orange-vpale);
@@ -344,7 +338,6 @@ body {
   &__attribution {
     flex: 1;
     display: flex;
-    // align-self: flex-end;
     width: 100%;
     height: 100%;
     &-content {

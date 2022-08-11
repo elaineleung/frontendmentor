@@ -259,6 +259,7 @@ p {
     font-size: 13px;
     font-weight: 700;
     color: var(--clr-primary-700);
+    margin-top: 0.3rem;
   }
 }
 
@@ -382,8 +383,11 @@ footer {
       }
       .rating {
         > * {
-          display: inline-flex;
+          // display: inline-flex;
           flex-wrap: nowrap;
+        }
+        span {
+          display: inline;
         }
         width: initial;
         padding: 1.2rem 1.75rem 1.25rem 2rem;

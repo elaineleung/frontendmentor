@@ -16,9 +16,10 @@ const values = { bill: 0, tip: 0, people: 0 };
 // event listener for inputs
 
 appEl.addEventListener("input", function(event) {
+  const billVal = Number(document.getElementById("bill").value)
   if (event.target.id === "people") handleErrorMessage(event.data);
   
-  values.bill = Number(document.getElementById("bill").value)
+  values.bill = billVal < 100000000000000000n && billVal
   values.people = Number(document.getElementById("people").value)
 
   checkEmptyValues()
@@ -56,15 +57,30 @@ function calculateTip() {
     amountEl.textContent =
       Number.isFinite(tipPerPerson) &&
       !Number.isNaN(tipPerPerson) &&
-      tipPerPerson.toFixed(2);
+      `$${tipPerPerson.toFixed(2)}`;
     totalEl.textContent =
       Number.isFinite(totalPerPerson) &&
       !Number.isNaN(totalPerPerson) &&
-      totalPerPerson.toFixed(2);
+      `$${totalPerPerson.toFixed(2)}`;
   }
+  
+  [totalEl, amountEl].forEach( el => {
+    el.style.fontSize = getFontSize(amountEl.textContent.length);
+  })
 }
 
+function getFontSize (textLength) {
+  const varFontSize = getComputedStyle(document.documentElement)
+  .getPropertyValue('--fs-value')
+  const baseSize = varFontSize === "2rem" ? 2 : 3
+  const maxSize = 
+    document.querySelector(".results__container").offsetWidth * 0.8
 
+  const fontSize = baseSize * (maxSize / (textLength * 8.5 * baseSize)) 
+  
+  return (textLength * baseSize * 9 ) > maxSize 
+    ? `${fontSize}rem` : `${baseSize}rem`
+}
 // reset function and event handler
 
 window.addEventListener("load", reset);
@@ -78,8 +94,8 @@ function reset() {
 }
 
 function clearDisplay() {
-  totalEl.textContent = "0.00";
-  amountEl.textContent = "0.00";
+  totalEl.textContent = "$0.00";
+  amountEl.textContent = "$0.00";
   resetBtn.disabled = true
 }
 

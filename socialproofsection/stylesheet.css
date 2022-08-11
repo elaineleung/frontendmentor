@@ -196,6 +196,7 @@ p {
   font-size: 13px;
   font-weight: 700;
   color: var(--clr-primary-700);
+  margin-top: 0.3rem;
 }
 
 .cards {
@@ -324,8 +325,10 @@ footer {
     gap: 2rem;
   }
   .description__ratings .rating > * {
-    display: inline-flex;
     flex-wrap: nowrap;
+  }
+  .description__ratings .rating span {
+    display: inline;
   }
   .description__ratings .rating .stars {
     margin-bottom: 0;
