@@ -172,7 +172,6 @@ button {
     z-index: 5;
     width: 15rem;
     height: 100vh;
-    width: fit-content;
     opacity: 1;
     transform: translateX(0%);
     box-shadow: -1rem 0rem 3rem hsla(var(--clr-black), 0.5);
@@ -191,7 +190,7 @@ button {
   .nav-group {
     position: relative;
     min-height: 100vh;
-    width: 15rem;
+    width: 100%;
     background-color: hsl(var(--clr-white));
     padding: 5.125rem 2rem;
     text-align: left;
@@ -347,7 +346,7 @@ button {
   ul {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    // align-items: center;
     text-align: center;
     gap: 1rem;
   }

@@ -112,6 +112,9 @@ body {
   background-image: url("./images/bg-pattern-top-mobile.svg"), url("./images/bg-pattern-bottom-mobile.svg");
   background-position: top left, bottom right;
   background-repeat: no-repeat;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 p {
@@ -119,9 +122,12 @@ p {
 }
 
 .container {
+  flex: 1;
   position: relative;
   width: min(87%, 79.5em);
   margin-inline: auto;
+  display: grid;
+  place-content: center;
 }
 
 @media (min-width: 376px) {
@@ -132,9 +138,6 @@ p {
 }
 .content {
   --pad: 5rem 0 1rem;
-  gap: 3rem;
-  display: grid;
-  place-content: center;
   padding: var(--pad);
 }
 
@@ -143,6 +146,7 @@ p {
   background: transparent;
   margin-inline: auto;
   position: relative;
+  margin-bottom: 3rem;
 }
 .description__intro {
   color: var(--clr-neutral-300);
@@ -281,8 +285,6 @@ footer {
 @media (min-width: 51em) {
   .content {
     --pad: 3.9rem 0 2rem;
-    min-height: 100vh;
-    gap: 4.4rem;
   }
   .content > * {
     width: min(100%, 69.4rem);
@@ -295,6 +297,7 @@ footer {
     grid-template-columns: min(38%, 28rem) 1fr;
     justify-content: space-between;
     gap: 2rem;
+    margin-bottom: 4.4rem;
   }
   .description__intro {
     margin-bottom: 0;
