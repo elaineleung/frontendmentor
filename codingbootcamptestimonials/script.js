@@ -3,7 +3,7 @@ const textEl = document.querySelector("#textEl");
 const prevBtn = document.querySelector(".prev-arrow");
 const nextBtn = document.querySelector(".next-arrow");
 
-const testimonials = [
+const data = [
   {
     name: "Tanya Sinclair",
     title: "UX Engineer",
@@ -22,37 +22,40 @@ const testimonials = [
 
 let sliderArray = []
 let current = 0;
-let testimonial = testimonials[current];
+let testimonial = data[current];
 
-window.addEventListener("load", showImage())
+window.addEventListener("load", showContent())
 
-function showImage() {
-  testimonials.forEach( item => {
-    const listEl = document.createElement("li"); 
-    const imgEl = document.createElement("img");
-    imgEl.src = `${item.src}`
-    imgEl.alt = "";
-    sliderEl.appendChild(listEl);
-    listEl.appendChild(imgEl)
-    sliderArray.push(listEl);
-    showText()
+function showContent() {
+  data.forEach( item => {
+    showImages(item)
+    showText(item)
   })
 }
 
 nextBtn.addEventListener("click", () => {
-  slideImage("next")
-  showText()
+  slideContent("next")
 })
 prevBtn.addEventListener("click", () => {
-  slideImage("previous")
-  showText()
+  slideContent("previous")
 })
 
-function slideImage(direction) {
+window.addEventListener("keydown", (event) => {
+  if (event.key === "ArrowRight") {
+    slideContent("next")
+    nextBtn.focus()
+  } else if (event.key === "ArrowLeft") {
+    slideContent("previous")
+    prevBtn.focus()
+  } else null
+})
+
+function slideContent(direction) {
   let translateProp;
+  // const idx = direction === "next" ? current + 1 : current - 1;
 
   switch(true) {
-    case (direction === "next" && current === 0):
+    case (direction === "next" && current === data.length - 2):
       translateProp = "translateX(-100%)";
       current = 1
       break;
@@ -64,15 +67,32 @@ function slideImage(direction) {
       null
   }
   sliderEl.style.transform = translateProp;
+  textEl.style.transform = translateProp;
 }
 
-function showText() {
+function showText(item) {
+  const listEl = document.createElement("li"); 
   const name = document.createElement("h2"); 
   const title = document.createElement("p");
-  textEl.textContent = `“ ${testimonials[current].quote} ”`
-  name.textContent = testimonials[current].name
-  title.textContent = testimonials[current].title
+  const textbody = document.createElement("blockquote");
+
+  textbody.textContent = `“ ${item.quote} ”`
+  name.textContent = item.name
+  title.textContent = item.title
+
+  textEl.appendChild(listEl);
+  listEl.append(textbody, name, title)
+  textbody.classList.add("text-textbody")
   name.classList.add("text-name")
   title.classList.add("text-title")
-  textEl.append(name, title)
+}
+
+function showImages(item) {
+  const listEl = document.createElement("li"); 
+  const imgEl = document.createElement("img");
+  imgEl.src = `${item.src}`
+  imgEl.alt = "";
+  sliderEl.appendChild(listEl);
+  listEl.appendChild(imgEl)
+  sliderArray.push(listEl);
 }

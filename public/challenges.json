@@ -169,6 +169,13 @@
       "level": "Junior",
       "internalhost": true,
       "id": 24
+    },
+    {
+      "name": "codingbootcamptestimonials",
+      "title": "Coding bootcamp testimonials slider",
+      "level": "Junior",
+      "internalhost": true,
+      "id": 25
     }
   ]
 }

@@ -35,6 +35,7 @@
   --lh-footer: 1.15;
   --pad-100: 1rem;
   --max-header: min(92.5%, 80rem);
+  --debug: 1px solid pink;
 }
 
 @media (min-width: 960px) {
@@ -502,6 +503,7 @@ button {
 .login ul {
   display: flex;
   flex-direction: column;
+  align-items: center;
   text-align: center;
   gap: 1rem;
 }

@@ -29,60 +29,77 @@
         <div class="slider-group">
           <div class="slider-container">
             <!-- <div class="slider"> -->
-              <div class="wrapper">
+              <div class="slider-frame">
                 <ul class="images" id="imagesEl"></ul>
+                <div class="slider-arrows">
+                  <button id="previous" class="prev-arrow">
+                    <span class="visually-hidden">previous testimonial</span>
+                    <span class="arrow">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 12 18"
+                        width="12"
+                        height="18"
+                      >
+                        <path
+                          fill="none"
+                          stroke="#8585AC"
+                          stroke-width="3"
+                          d="M11 1L3 9l8 8"
+                        />
+                      </svg>
+                    </span>
+                  </button>
+                  <button id="next" class="next-arrow">
+                    <span class="visually-hidden">next testimonial</span>
+                    <span class="arrow">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 13 18"
+                        width="13"
+                        height="18"
+                      >
+                        <path
+                          fill="none"
+                          stroke="#8585AC"
+                          stroke-width="3"
+                          d="M2 1l8 8-8 8"
+                        />
+                      </svg>
+                    </span>
+                  </button>
+                </div>
               </div>
             <!-- </div> -->
           </div>
-          <div class="slider-arrows">
-            <button id="previous" class="prev-arrow">
-              <span class="visually-hidden">previous testimonial</span>
-              <span class="arrow">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 12 18"
-                  width="12"
-                  height="18"
-                >
-                  <path
-                    fill="none"
-                    stroke="#8585AC"
-                    stroke-width="3"
-                    d="M11 1L3 9l8 8"
-                  />
-                </svg>
-              </span>
-            </button>
-            <button id="next" class="next-arrow">
-              <span class="visually-hidden">next testimonial</span>
-              <span class="arrow">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 13 18"
-                  width="13"
-                  height="18"
-                >
-                  <path
-                    fill="none"
-                    stroke="#8585AC"
-                    stroke-width="3"
-                    d="M2 1l8 8-8 8"
-                  />
-                </svg>
-              </span>
-            </button>
-          </div>
+
         </div>
 
-        <div class="text-group">
-          <div class="text wrapper" id="textEl">
+        <div class="text-group wrapper">
+          <div class="text-container">
+            <div class="text-frame">
+              <div class="text wrapper" id="textEl">
+            </div>
+          </div>
+
 
           </div>
         </div>
       </div>
     </main>
 
-    <footer></footer>
+    <footer class="footer">
+      <div class="footer__attribution">
+        <span>
+          Challenge by
+          <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">
+            Frontend Mentor</a>. Coded by <a href="https://twitter.com/elaineclleung">Elaine</a>.</span>
+
+        <span class="block-footer">Other <a href="https://elaineleung.github.io/frontendmentor/">Frontend Mentor Challenges</a>
+          by Elaine
+        </span>
+      </div>
+    </footer>
   </body>
   <script src="script.js"></script>
 </html>

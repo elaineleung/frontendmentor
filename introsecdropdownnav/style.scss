@@ -103,6 +103,9 @@ button {
   li {
     list-style: none;
   }
+  // * {
+  //   outline: var(--debug)
+  // }
 }
 
 // mobile components for nav
@@ -118,6 +121,7 @@ button {
     height: 100vh;
     overflow: hidden;
   }
+
 
   .mobile-toggle {
     position: absolute;
@@ -346,7 +350,7 @@ button {
   ul {
     display: flex;
     flex-direction: column;
-    // align-items: center;
+    align-items: center;
     text-align: center;
     gap: 1rem;
   }
