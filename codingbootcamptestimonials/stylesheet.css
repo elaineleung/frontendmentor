@@ -407,7 +407,7 @@ body {
   .slider-arrows {
     width: 7rem;
     padding: 0;
-    left: 6.05rem;
+    left: 6.3rem;
     bottom: -1.8rem;
     box-shadow: 1rem 0.75rem 1.5rem hsla(var(--clr-neutral-700), 0.15);
   }
