@@ -71,7 +71,7 @@ function slideContent(direction) {
 }
 
 function showText(item) {
-  const listEl = document.createElement("li"); 
+  const listEl = document.createElement("div"); 
   const name = document.createElement("h3"); 
   const title = document.createElement("p");
   const textbody = document.createElement("blockquote");
@@ -88,7 +88,7 @@ function showText(item) {
 }
 
 function showImages(item) {
-  const listEl = document.createElement("li"); 
+  const listEl = document.createElement("div"); 
   const imgEl = document.createElement("img");
   imgEl.src = `${item.src}`
   imgEl.alt = "";
