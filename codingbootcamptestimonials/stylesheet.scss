@@ -26,8 +26,8 @@
   --lh-content: 1.35;
 
   --pad-wide: 4rem;
-  --w-image: min(100%, 33.5rem);
-  --w-text: min(100%, 33.5rem);
+  --w-image: min(100%, 33.75rem);
+  --w-text: min(100%, 33.75rem);
   --debug: 1px magenta solid;
 }
 
@@ -253,7 +253,7 @@ body {
   padding: 0;
   position: absolute;
   left: 50%;
-  bottom: -1rem;
+  bottom: -1.25rem;
   margin-inline-start: -2.5rem;
   background-color: hsl(var(--clr-neutral-100));
   border-radius: 100vmax;
@@ -291,6 +291,7 @@ body {
 
 .text-group {
   width: min(86%, var(--w-text));
+  min-height: var(--w-text);
   position: relative;
 }
 
@@ -298,6 +299,7 @@ body {
   display: grid;
   grid-template-columns: var(--w-text);
   width: min(100%, var(--w-text));
+  
 }
 
 .text-frame {
@@ -315,7 +317,7 @@ body {
   font-weight: var(--fw-light);
   line-height: var(--lh-content);
   text-align: center;
-  min-height: max-content;
+  z-index: 10;
   transition: transform 0.35s ease-in-out 0.1s;
 
   &-name,
@@ -377,16 +379,16 @@ body {
   background-size: contain;
 }
 
-.text-group::after {
+.text-container::before {
   content: "";
   position: absolute;
-  z-index: -1;
   top: -1.5rem;
   left: 50%;
   margin-left: -30px;
-  width: 60px;
-  height: 50px;
+  width: calc(100px / 1.7);
+  height: calc(120px / 1.7);
   opacity: 0.8;
+  z-index: 1;
   background-image: url("./images/pattern-quotes.svg");
   background-repeat: no-repeat;
   background-size: contain;
@@ -400,6 +402,8 @@ body {
   min-height: 100vh;
   bottom: 0;
   left: 0;
+  // z-index: 10;
+
   background-color: transparent;
   background-image: url("./images/pattern-curve.svg");
   background-repeat: no-repeat;
@@ -416,13 +420,13 @@ body {
     margin-left: -50%;
     background-position: left 0 bottom -2rem;
   }
-  .text-group::after {
+  .text-container::before {
     content: "";
-    top: -10.3125rem;
-    left: 13.6rem;
+    top: 0;
+    left: 13.5rem;
     width: 120px;
     height: 100px;
-    background-position: top 0rem right 0;
+    background-position: top 0rem left 0;
   }
   .footer::after {
     background-position: left 0 bottom 0rem;
@@ -447,9 +451,9 @@ body {
   }
 
   .slider-container {
-    width: min(80%, var(--w-image));
-    margin-block: 4.25rem;
-    margin-inline: 2.5rem auto;
+    width: min(82%, var(--w-image));
+    margin-block: 4rem 3.5rem;
+    margin-inline: clamp(2rem, calc(-2.0000rem + 6.6667vw), 4rem) 5.5rem;
     box-shadow: 0rem 1rem 1rem hsla(var(--clr-neutral-700), 0.15);
   }
   .slider-arrows {
@@ -478,22 +482,27 @@ body {
   }
 
   .text-group {
+    align-self: flex-end;
     position: relative;
-    padding-inline: 2rem 0;
+    padding-inline: clamp(0.5rem, calc(-2.5000rem + 5.0000vw), 2rem) 0;
     order: -1;
     margin: 0;
+    flex: 1 1 var(--w-text);
+    max-width: 37.5rem;
+    height: min(80%, 31rem);
+    min-height: unset;
   }
 
   .text-frame {
     width: 100%;
     overflow: hidden;
     position: absolute;
-    top: -6.3125rem;
+    bottom: 8.9rem;
     width: clamp(28rem, calc(4.6rem + 39vw), 39.7rem);
     z-index: 10;
   }
 
-  .text-container .text {
+  .text {
     text-align: left;
     letter-spacing: var(--ls-content);
     * {
@@ -502,9 +511,8 @@ body {
     &-name {
       margin-inline-end: 0.5rem;
     }
-
     &-textbody {
-      margin-bottom: 1.5rem;
+      margin-bottom: 1.45rem;
     }
   }
 
