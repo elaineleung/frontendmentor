@@ -429,7 +429,7 @@ body {
   .text-group {
     align-self: flex-end;
     position: relative;
-    padding-inline: clamp(0.5rem, -2.5rem + 5vw, 2rem) 0;
+    padding-inline: clamp(0.5rem, -3.1rem + 6vw, 2.3rem) 0;
     order: -1;
     margin: 0;
     flex: 1 1 var(--w-text);
