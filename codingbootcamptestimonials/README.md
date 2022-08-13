@@ -59,6 +59,12 @@ One thing I'd like to continue working on is the animation of the text when tran
 
 [Key values for keyboard events](https://developer.mozilla.org/en-US/docs/Web/API/UI_Events/Keyboard_event_key_values) - This is a good reference for keyboard events.
 
+[How to build a more accessible carousel or slider](https://dev.to/jasonwebb/how-to-build-a-more-accessible-carousel-or-slider-35lp) - A good guideline/discussion on the key elements of an accessible carousel, the challenges in building one, and also dos and don'ts.
+
+[If you must use a carousel, make it accessible](https://lsnrae.medium.com/if-you-must-use-a-carousel-make-it-accessible-977afd0173f4) - An explanation by Alison Walden on why how screen reader users use a carousel and the challenges they face in using one
+
+
+
 ## Author
 
 - Frontend Mentor - [@elaineleung](https://www.frontendmentor.io/profile/elaineleung)
