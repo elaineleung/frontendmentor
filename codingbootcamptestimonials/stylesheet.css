@@ -402,7 +402,7 @@ body {
   .slider-container {
     width: min(80%, var(--w-image));
     margin-block: 4.25rem;
-    margin-inline: min(10%, 4rem);
+    margin-inline: 2.5rem auto;
     box-shadow: 0rem 1rem 1rem hsla(var(--clr-neutral-700), 0.15);
   }
   .slider-arrows {
@@ -429,7 +429,7 @@ body {
   }
   .text-group {
     position: relative;
-    padding-inline: 5.8rem;
+    padding-inline: 2rem 0;
     order: -1;
     margin: 0;
   }
