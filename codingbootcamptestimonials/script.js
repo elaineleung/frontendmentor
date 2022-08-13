@@ -72,7 +72,7 @@ function slideContent(direction) {
 
 function showText(item) {
   const listEl = document.createElement("li"); 
-  const name = document.createElement("h2"); 
+  const name = document.createElement("h3"); 
   const title = document.createElement("p");
   const textbody = document.createElement("blockquote");
 
