@@ -470,7 +470,7 @@ h1.title {
     height: -webkit-fit-content;
     height: -moz-fit-content;
     height: fit-content;
-    padding: 2.25rem 1.5rem 1.95rem;
+    padding: 2.25rem 2rem 1.95rem;
   }
   .plan-details .pricing-container {
     padding-block: 1.75rem 2rem;
@@ -479,7 +479,7 @@ h1.title {
     border-radius: var(--br-plan) 0 0 var(--br-plan);
   }
   .plan.professional {
-    padding: 3.7rem 1.5rem 3.4rem;
+    padding: 3.7rem 2rem 3.4rem;
   }
   .plan.professional .pricing-container {
     padding-block: 1.75rem 1.95rem;
