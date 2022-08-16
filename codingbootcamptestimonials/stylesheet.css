@@ -286,7 +286,6 @@ body {
   display: grid;
   grid-template-columns: repeat(2, var(--w-text));
   transform: translateX(0);
-  transition: transform 0.35s ease-in-out;
   font-size: var(--fs-content);
   font-weight: var(--fw-light);
   line-height: var(--lh-content);
@@ -364,12 +363,6 @@ body {
 }
 
 @media (min-width: 60em) {
-  body::after {
-    content: "";
-    width: 50%;
-    margin-left: -50%;
-    background-position: left 0 bottom -2rem;
-  }
   .text-container::before {
     content: "";
     top: 0;

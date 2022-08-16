@@ -1,48 +1,45 @@
 const gridEl = document.getElementById("gridEl");
 
 function getData() {
-  // const options = {
-  //   method: "GET",
-  //   headers: {
-  //     "Content-Type": "application/json",
-  //   },
-  // };
-  // const URL = window.document.URL === "http://127.0.0.1:5500/"
-  //   ? "./challenges.json"
-  //   : "./public/challenges.json"
-
   fetch("./public/challenges.json")
     .then((response) => response.json())
     .then((data) => {
       data.challenges.map((item) => {
-        const cardDiv = document.createElement("div");
-        const url = item.internalhost === true ? `./${item.name}` : item.url;
-        const repo =
-          item.internalhost === true
-            ? `https://github.com/elaineleung/frontendmentor/tree/main/${item.name}`
-            : item.repo;
-
-        cardDiv.innerHTML = `
-          <li class="card">
-            <div class="image">
-              <img src="./${item.name}/design/desktop.png" alt=""/>
-            </div>
-            <div class="text">            
-              <h2>
-                <a href="${url}">${item.title}</a>
-              </h2>          
-              <small>
-                <a href="${repo}">Github repo</a>
-              </small>  
-            </div>
-          </li>
-        `;
-        gridEl.appendChild(cardDiv);
+        createCard(item)
       });
     })
     .catch( error => console.log(error))
 }
 
+function createCard(item) {
+  const url = item.internalhost === true ? `./${item.name}` : item.url;
+  const image = `./${item.name}/design/desktop.png`
+  const repo =
+    item.internalhost === true
+      ? `https://github.com/elaineleung/frontendmentor/tree/main/${item.name}`
+      : item.repo;
+
+  const cardHTML = `
+    <li class="card">
+      <div class="image">
+        <img src=${image} alt=""/>
+      </div>
+      <div class="text">            
+        <h2>
+          <a href="${url}">${item.title}</a>
+        </h2>          
+        <small>
+          <a href="${repo}">Github repo</a>
+        </small>  
+      </div>
+    </li>
+  `;
+
+  const cardFragment = document.createRange().createContextualFragment(cardHTML)
+  gridEl.appendChild(cardFragment);
+}
+
+getData();
 // function getData() {
 //   const options = {
 //     method: "GET",
@@ -71,4 +68,16 @@ function getData() {
 //     });
 // }
 
-getData();
+
+
+
+
+  // const options = {
+  //   method: "GET",
+  //   headers: {
+  //     "Content-Type": "application/json",
+  //   },
+  // };
+  // const URL = window.document.URL === "http://127.0.0.1:5500/"
+  //   ? "./challenges.json"
+  //   : "./public/challenges.json"

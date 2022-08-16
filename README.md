@@ -35,3 +35,4 @@ GitHub landing page: [https://elaineleung.github.io/frontendmentor/](https://ela
 | 23  | [Testimonials grid section](https://elaineleung.github.io/frontendmentor/testimonialsgridsection/)| [Link to GitHub repo](https://github.com/elaineleung/frontendmentor/tree/main/testimonialsgridsection/) |
 | 24  | [Intro section with dropdown nav (plain JS)](https://elaineleung.github.io/frontendmentor/introsecdropdownnav/)| [Link to GitHub repo](https://github.com/elaineleung/frontendmentor/tree/main/introsecdropdownnav/) |
 | 25  | [Coding bootcamp testimonials slider](https://elaineleung.github.io/frontendmentor/codingbootcamptestimonials/)| [Link to GitHub repo](https://github.com/elaineleung/frontendmentor/tree/main/codingbootcamptestimonials/) |
+| 26  | [Pricing component with toggle](https://elaineleung.github.io/frontendmentor/pricingcomponentwithtoggle/)| [Link to GitHub repo](https://github.com/elaineleung/frontendmentor/tree/main/pricingcomponentwithtoggle/) |

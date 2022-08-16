@@ -128,11 +128,6 @@ body {
   line-height: var(--lh-cta);
   font-weight: 400;
   text-transform: uppercase;
-  &:hover {
-    color: var(--clr-orange);
-    letter-spacing: var(--ls-cta);
-    font-weight: 700;
-  }
 }
 
 .thankyou {
@@ -227,16 +222,18 @@ body {
 
 [type="radio"] {
   -webkit-appearance: none;
+  -moz-appearance: none;
   appearance: none;
-  display: inline-block;
-  background-color: inherit;
-  border: 0;
-  border: 0;
-  margin: 0;
-  outline: 0;
+  clip: rect(0 0 0 0); 
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap; 
+  width: 1px;
   // position: absolute;
 } 
-
+ 
 [type="radio"] + label {
   display: inline-block;
   width: 100%;
@@ -245,8 +242,6 @@ body {
   font-size: var(--fs-score);
   font-weight: 700;
   background-color: var(--clr-blue-medlight);
-  border: 0;
-  outline: 0;
   width: 42px;
   height: 42px;
   // padding-top: 5.5px;paddin
@@ -291,13 +286,21 @@ body {
   transition: background-color 0.25s;
 }
 
-.submit:hover {
+.submit:disabled {
+  opacity: 0.6;
+}
+
+.submit:hover:not(:disabled) {
   background-color: var(--clr-white);
+  color: var(--clr-orange);
+  letter-spacing: var(--ls-cta);
+  font-weight: 700;
 }
 
 .submit:focus {
   box-shadow: 0 0 0 0.2rem var(--clr-white);  
 }
+
 // thank you state
 
 .thankyou {

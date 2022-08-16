@@ -1,52 +1,137 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | [Challenge Name Here]</title>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
+    <title>Frontend Mentor | Pricing plan with toggle</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="stylesheet.css" />
+  </head>
+  <body>
+    <main class="container / fs-textbody">
+      <!-- <section class="selection"> -->
+      <h1 class="title / fs-title clr-neutral-400">Our Pricing</h1>
+      <div
+        class="toggle-container"
+        aria-label="select subscription price"
+        role="radiogroup"
+      >
+        <label for="annually">
+          <span class="clr-neutral-300">Annually</span>
+        </label>
 
-  Our Pricing
-  Annually
-  Monthly
+        <input type="radio" name="subscription" id="annually" />
+        <input type="radio" name="subscription" id="monthly" checked />
 
-  Basic
-  &dollar;19.99
-  &dollar;199.99
-  500 GB Storage
-  2 Users Allowed
-  Send up to 3 GB
-  Learn More
+        <!-- <span class="toggle-wrapper"> -->
+        <span aria-hidden="true" class="toggle-background">
+          <span aria-hidden="true" class="toggle-switcher"></span>
+          <!-- </span> -->
+        </span>
+        <label for="monthly">
+          <span class="clr-neutral-300">Monthly</span>
+        </label>
+        <!-- </div> -->
+        <!-- </section> -->
+        <div class="plans-grid">
+          <article class="basic plan">
+            <h2 class="plan-title / fs-plan-title">Basic</h2>
+            <ul class="plan-details">
+              <li class="pricing / fs-plan-pricing">
+                <div class="pricing-container">
+                  <div class="price annual" data-price="annual">
+                    <span class="dollar / fs-dollar">&dollar;</span>
+                    <span class="cost">199.99</span>
+                  </div>
+                  <div class="price monthly" data-price="monthly">
+                    <span class="dollar / fs-dollar">&dollar;</span>
+                    <span class="cost">19.99</span>
+                  </div>
+                </div>
+              </li>
+              <li class="storage">500 GB Storage</li>
+              <li class="users">2 Users Allowed</li>
+              <li class="limit">Send up to 3 GB</li>
+            </ul>
+            <a href="#0" class="plan-cta cta">Learn More</a>
+          </article>
+          <article class="professional plan" data-type="inverted">
+            <h2 class="plan-title / fs-plan-title">Professional</h2>
+            <ul class="plan-details">
+              <li class="pricing / fs-plan-pricing">
+                <div class="pricing-container">
+                  <span class="price annual" data-price="annual">
+                    <span class="dollar / fs-dollar">&dollar;</span>
+                    <span class="cost">249.99</span>
+                  </span>
+                  <span class="price monthly" data-price="monthly">
+                    <span class="dollar / fs-dollar">&dollar;</span>
+                    <span class="cost">24.99</span>
+                  </span>
+                </div>
 
-  Professional
-  &dollar;24.99
-  &dollar;249.99
-  1 TB Storage
-  5 Users Allowed
-  Send up to 10 GB
-  Learn More
 
-  Master
-  &dollar;39.99
-  &dollar;399.99
-  2 TB Storage
-  10 Users Allowed
-  Send up to 20 GB
-  Learn More
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
-</body>
+              </li>
+              <li class="storage">1 TB Storage</li>
+              <li class="users">5 Users Allowed</li>
+              <li class="limit">Send up to 10 GB</li>
+            </ul>
+            <a href="#0" class="plan-cta cta" data-type="inverted">
+              Learn More
+            </a>
+          </article>
+          <article class="master plan">
+            <h2 class="plan-title / fs-plan-title">Master</h2>
+            <ul class="plan-details">
+              <li class="pricing / fs-plan-pricing">
+                <div class="pricing-container">
+                  <span class="price annual" data-price="annual">
+                    <span class="dollar / fs-dollar">&dollar;</span>
+                    <span class="cost">399.99</span>
+                  </span>
+                  <span class="price monthly" data-price="monthly">
+                    <span class="dollar / fs-dollar">&dollar;</span>
+                    <span class="cost">39.99</span>
+                  </span>
+                </div>
+              </li>
+              <li class="storage">2 TB Storage</li>
+              <li class="users">10 Users Allowed</li>
+              <li class="limit">Send up to 20 GB</li>
+            </ul>
+            <a href="#0" class="plan-cta cta">Learn More</a>
+          </article>
+        </div>
+      </div>
+    </main>
+
+    <footer class="footer / fs-small">
+      <div class="footer__attribution">
+        <span>
+          Challenge by
+          <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">
+            Frontend Mentor</a>.
+            Coded by <a href="https://twitter.com/elaineclleung">Elaine</a>.</span>
+
+        <span class="block-footer">
+          Other <a href="https://elaineleung.github.io/frontendmentor/">Frontend Mentor Challenges</a>
+          by Elaine
+        </span>
+      </div>
+    </footer>
+  </body>
 </html>

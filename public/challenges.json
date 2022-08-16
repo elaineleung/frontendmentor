@@ -176,6 +176,13 @@
       "level": "Junior",
       "internalhost": true,
       "id": 25
+    },
+    {
+      "name": "pricingcomponentwithtoggle",
+      "title": "Pricing component with toggle",
+      "level": "Junior",
+      "internalhost": true,
+      "id": 26
     }
   ]
 }

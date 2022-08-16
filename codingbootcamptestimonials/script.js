@@ -20,9 +20,7 @@ const data = [
   },
 ];
 
-let sliderArray = []
 let current = 0;
-let testimonial = data[current];
 
 window.addEventListener("load", showContent())
 
@@ -94,5 +92,5 @@ function showImages(item) {
   imgEl.alt = "";
   sliderEl.appendChild(listEl);
   listEl.appendChild(imgEl)
-  sliderArray.push(listEl);
+  // sliderArray.push(listEl);
 }

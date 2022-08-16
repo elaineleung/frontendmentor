@@ -20,10 +20,9 @@ function getData() {
   
       dayEl.textContent = ""
 
-      // styling for price pop up
       amountDiv.classList.add('bars__day-amount')
       amountDiv.textContent = `$${info.amount}`
-      // styling for bar column
+
       barDiv.classList.add('bars__day-bar')
       barDiv.style.height = `${info.amount * 0.179}rem`
       if (idx !== 6) {
@@ -31,13 +30,14 @@ function getData() {
       } else {
         currentDay === 0 && barDiv.classList.add('highlight')
       }
-      // styling for chart x-axis label             
+
       labelDiv.classList.add('bars__day-label')  
       labelDiv.textContent = info.day
 
       dayEl.append(barDiv, amountDiv, labelDiv)  
   
       !barWidth && getBarWidth(idx, barDiv.clientWidth)  
+      console.log(barDiv.clientWidth)
       const margin = ((amountDiv.clientWidth - barWidth) / 2)
       amountDiv.setAttribute('data-width', `-${margin}`)  
      

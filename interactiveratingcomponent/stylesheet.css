@@ -127,11 +127,6 @@ body {
   font-weight: 400;
   text-transform: uppercase;
 }
-.submit:hover {
-  color: var(--clr-orange);
-  letter-spacing: var(--ls-cta);
-  font-weight: 700;
-}
 
 .thankyou__title {
   font-weight: 700;
@@ -208,13 +203,15 @@ body {
 [type=radio] {
   -webkit-appearance: none;
   -moz-appearance: none;
-       appearance: none;
-  display: inline-block;
-  background-color: inherit;
-  border: 0;
-  border: 0;
-  margin: 0;
-  outline: 0;
+  appearance: none;
+  clip: rect(0 0 0 0);
+  -webkit-clip-path: inset(50%);
+          clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
 }
 
 [type=radio] + label {
@@ -225,8 +222,6 @@ body {
   font-size: var(--fs-score);
   font-weight: 700;
   background-color: var(--clr-blue-medlight);
-  border: 0;
-  outline: 0;
   width: 42px;
   height: 42px;
   display: grid;
@@ -267,8 +262,15 @@ body {
   transition: background-color 0.25s;
 }
 
-.submit:hover {
+.submit:disabled {
+  opacity: 0.6;
+}
+
+.submit:hover:not(:disabled) {
   background-color: var(--clr-white);
+  color: var(--clr-orange);
+  letter-spacing: var(--ls-cta);
+  font-weight: 700;
 }
 
 .submit:focus {
