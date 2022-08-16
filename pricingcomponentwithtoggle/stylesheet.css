@@ -453,7 +453,7 @@ h1.title {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding-block: 3.4rem 1.55rem;
+    padding-block: 0;
     width: min(100% - 4rem, 70em);
   }
   .plans-grid {
