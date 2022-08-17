@@ -1,17 +1,15 @@
-const gridEl = document.getElementById("gridEl");
+import { challenges } from './challenges.js'
 
-function getData() {
-  fetch("./public/challenges.json")
-    .then((response) => response.json())
-    .then((data) => {
-      data.challenges.map((item) => {
-        createCard(item)
-      });
-    })
-    .catch( error => console.log(error))
+loadData()
+
+function loadData() {
+ challenges.forEach( item => {
+  createCard(item)
+ })
 }
 
 function createCard(item) {
+  const gridEl = document.getElementById("gridEl");
   const url = item.internalhost === true ? `./${item.name}` : item.url;
   const image = `./${item.name}/design/desktop.png`
   const repo =
@@ -35,11 +33,9 @@ function createCard(item) {
     </li>
   `;
 
-  const cardFragment = document.createRange().createContextualFragment(cardHTML)
-  gridEl.appendChild(cardFragment);
+  gridEl.insertAdjacentHTML("beforeend", cardHTML);
 }
 
-getData();
 // function getData() {
 //   const options = {
 //     method: "GET",

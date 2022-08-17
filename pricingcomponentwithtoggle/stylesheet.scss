@@ -280,7 +280,7 @@ body {
     hsl(var(--clr-primary-100)),
     hsl(var(--clr-primary-400))
   );
-  transition: opacity 0.15s ease-in-out;
+  // transition: opacity 0.2s ease-in-out;
 }
 
 .toggle-switcher {
@@ -296,7 +296,7 @@ body {
   border-radius: 50%;
   background-color: hsl(var(--clr-neutral-100));
   z-index: 10;
-  transition: all 0.1s ease-out;
+  transition: all 0.15s ease-out;
 }
 
 label {
@@ -409,7 +409,7 @@ h1.title {
   grid-template-columns: var(--w-text);
   width: min(100%, var(--w-text));
   margin-inline: auto;
-  box-shadow: 0 1rem 2rem hsla(var(--clr-neutral-300), 0.5);
+  box-shadow: 5px 5px 15px 5px hsla(var(--clr-primary-100), 0.2);
   padding: 2.25rem 1.5rem 2rem;
   line-height: 1;
   border-radius: var(--br-plan);
@@ -463,7 +463,7 @@ h1.title {
     justify-content: center;
     opacity: 0;
     visibility: hidden;
-    transition: opacity 0.2s ease-out;
+    transition: opacity 0.3s ease-in-out 0.05s;
     > * {
       display: inline-block;
     }
@@ -498,7 +498,7 @@ h1.title {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding-block: 0;
+    padding-block: 3rem;
     width: min(100% - 4rem, 70em);
   }
   .plans-grid {

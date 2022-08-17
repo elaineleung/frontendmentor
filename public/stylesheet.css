@@ -174,7 +174,7 @@ body {
 .card:focus-within .image img,
 .card:hover .image img {
   transform: scale(1.15);
-  filter: brightness(0.85);
+  filter: brightness(0.9) opacity(0.9);
 }
 
 .card .text {

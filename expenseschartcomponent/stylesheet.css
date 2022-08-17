@@ -255,10 +255,6 @@ body {
 .bars__day-amount {
   position: absolute;
   top: -2.7rem;
-  margin-left: attr(data-width px);
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
   background-color: var(--clr-brown-dark);
   border-radius: 0.3rem;
   padding: 0.4rem 0.5rem;

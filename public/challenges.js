@@ -1,5 +1,4 @@
-{
-  "challenges": [
+export const challenges = [
     {
       "name": "ordersummary",
       "title": "Order summary card component",
@@ -185,4 +184,4 @@
       "id": 26
     }
   ]
-}
+

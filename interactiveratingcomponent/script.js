@@ -36,8 +36,7 @@ formEl.addEventListener("submit", (event) => {
       </div>
     `;
 
-    const cardFragment = document.createRange().createContextualFragment(thankyouHTML)
     cardEl.textContent = ""
-    cardEl.appendChild(cardFragment)
+    cardEl.insertAdjacentHTML("afterbegin", thankyouHTML)
   }
 });

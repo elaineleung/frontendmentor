@@ -149,6 +149,10 @@ button {
   outline: none;
 }
 
+a {
+  color: hsl(var(--clr-neutral-700));
+}
+
 a:hover {
   opacity: 0.8;
 }
@@ -214,7 +218,7 @@ body {
   display: grid;
   grid-template-columns: repeat(2, var(--w-image));
   transform: translateX(0);
-  transition: transform 0.35s ease-in-out;
+  transition: transform 0.4s ease-in-out;
 }
 
 .slider-container img {
@@ -291,7 +295,7 @@ body {
   line-height: var(--lh-content);
   text-align: center;
   z-index: 10;
-  transition: transform 0.35s ease-in-out 0.1s;
+  transition: transform 0.5s ease-in-out 0.1s;
 }
 .text-name, .text-title {
   font-size: var(--fs-profile);
@@ -323,6 +327,27 @@ body {
 }
 .footer__attribution span {
   display: inline-block;
+}
+
+.animate .images {
+  transform: translateX(-100%);
+}
+
+.text li:last-child {
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.animate .text {
+  transform: translateX(-100%);
+}
+.animate .text li:first-child {
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+.animate .text li:last-child {
+  opacity: 1;
+  transition: opacity 0.3s ease-in-out;
 }
 
 .slider-group {
