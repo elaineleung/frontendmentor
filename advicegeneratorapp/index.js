@@ -3,7 +3,6 @@ const diceEl = document.getElementById("diceEl")
 const loadingEl = document.getElementById("loadingEl")
 
 const url = "https://api.adviceslip.com/advice"
-const max = 224  // max number of quotes from endpoint
 
 let previousActiveEl = null
 

@@ -25,7 +25,7 @@ fetch("./data.json")
   .then((response) => response.json())
   .then((data) => {
     userData = data;
-    updateValues(data);
+    updateValues(userData);
     const selectedEl = [...timeframeEls].find( el => el.value === selected)
     selectedEl.checked = true;
   })

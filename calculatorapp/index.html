@@ -1,26 +1,124 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Calculator app</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="stylesheet.css" />
+    <script src="./theme-toggle.js"></script>
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  </head>
+  <body>
+    <div class="component">
+      <div class="container">
+        <header class="header">
+          <h1>
+            <span class="visually-hidden">Calculator app</span>
+            <span>calc</span>
+          </h1>
+          <div class="theme-switcher / fs-small">
+            <!-- <div> -->
+            <div role="radiogroup" aria-label="select theme" class="theme-radios">
+              <h2>Theme</h2>
+              <div class="labels-wrapper">
+                <label for="theme-dark">1</label>
+                <label for="theme-light">2</label>
+                <label for="theme-purple">3</label>
+              </div>
+              <div class="switch-wrapper">
+                <span class="switch">
+                  <div class="switch-radios">
+                    <input
+                      type="radio"
+                      id="theme-dark"
+                      value="dark"
+                      name="theme"
+                      checked
+                    />
+                    <input
+                      type="radio"
+                      id="theme-light"
+                      value="light"
+                      name="theme"
+                    />
+                    <input
+                      type="radio"
+                      id="theme-purple"
+                      value="purple"
+                      name="theme"
+                    />
+                  </div>
   
-  <title>Frontend Mentor | Calculator app</title>
+                  <span aria-hidden="true" class="switch-background / bg-toggle">
+                    <span
+                      aria-hidden="true"
+                      class="switch-switcher / bg-accent"
+                    ></span>
+                  </span>
+                </span>
+              </div>
+            </div>
+            <!-- </div> -->
+          </div>
+        </header>
+        <main class="calculator">
+          <div class="display / bg-screen calc-container">
+            <!-- <div class="calc-container"> -->
+              <span class="output / bg-screen clr-text-primary">0</span>
+              <!-- <label for="calc-display" class="visually-hidden">Calculator display</label> -->
+            <!-- </div> -->
+          </div>
+          <div class="keys / bg-keypad fs-keys clr-text-secondary calc-container">
+            <button value="1" data-number>1</button>
+            <button value="2" data-number>2</button>
+            <button value="3" data-number>3</button>
+            <button value="4" data-number>4</button>
+            <button value="5" data-number>5</button>
+            <button value="6" data-number>6</button>
+            <button value="7" data-number>7</button>
+            <button value="8" data-number>8</button>
+            <button value="9" data-number>9</button>
+            <button value="0" data-number>0</button>
+            <button value="." data-number>.</button>
+            <button value="+" data-action="add" data-operator>+</button>
+            <button value="-" data-action="subtract" data-operator>&#8722;</button>
+            <button value="*" data-action="multiply" data-operator>&times;</button>
+            <button value="/" data-action="divide" data-operator>&divide;</button>
+            <button value="Escape" data-action="reset" data-function>Reset</button>
+            <button value="Delete" data-action="delete" data-function>Del</button>
+            <button value="Enter" data-action="equals" data-function>=</button>
+          </div>
+        </main>
+      </div>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
+    </div>
 
-
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
-</body>
+    <footer class="footer / fs-small">
+      <div class="footer__attribution container">
+        <span>
+          Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"> Frontend Mentor</a>. Coded by <a href="https://twitter.com/elaineclleung">Elaine</a>.</span>
+        <span class="block-footer">
+          Other
+          <a href="https://elaineleung.github.io/frontendmentor/">
+            Frontend Mentor Challenges</a> by Elaine
+        </span>
+      </div>
+    </footer>
+  </body>
+  <script src="index.js"></script>
 </html>

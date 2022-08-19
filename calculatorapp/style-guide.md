@@ -55,7 +55,7 @@ The designs were created to the following widths:
 #### Text
 
 - Very dark grayish yellow: hsl(60, 10%, 19%)
-- White (text): hsl(0, 0, 100%)
+- White (text): hsl(0, 0%, 100%)
 
 ### Theme 3
 
@@ -79,7 +79,7 @@ The designs were created to the following widths:
 
 - Light yellow: hsl(52, 100%, 62%)
 - Very dark blue: hsl(198, 20%, 13%)
-- White (text): hsl(0, 0, 100%)
+- White (text): hsl(0, 0%, 100%)
 
 ## Typography
 
