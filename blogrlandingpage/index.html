@@ -1,97 +1,362 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | [Blogr]</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Overpass:wght@300;600&family=Ubuntu:wght@400;500;700&display=swap" rel="stylesheet"> 
-  <link rel="stylesheet" href="stylesheet.css">
-</head>
-<body>
-  Product
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
 
-  Overview
-  Pricing
-  Marketplace
-  Features
-  Integrations
+    <title>Frontend Mentor | Blogr Landing Page</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Overpass:wght@300;500;600&family=Ubuntu:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="stylesheet.css" />
+  </head>
+  <body>
+    <header class="header / fs-header">
+      <div class="container">
+        <div class="header-top">
+          <a href="#" class="logo">
+            <img src="./images/logo.svg" alt="Blogr company logo" />
+          </a>
+          <button
+            class="mobile-nav-toggle"
+            aria-controls="navigation-primary"
+            aria-expanded="false"
+          >
+            <img
+              class="icon-hamburger"
+              src="./images/icon-hamburger.svg"
+              alt=""
+              aria-hidden="true"
+            />
+            <img
+              class="icon-close"
+              src="./images/icon-close.svg"
+              alt=""
+              aria-hidden="true"
+            />
+            <span class="visually-hidden">Navigation</span>
+          </button>
+          <div class="nav-wrapper">
+            <nav class="nav-primary / font-nav" aria-label="navigation-primary">
+              <ul aria-label="Primary Navigation" class="nav-list">
+                <li class="dropdown">
+                  <button class="dropdown-btn" aria-expanded="false">
+                    <span class="dropdown-title">Product</span>
+                    <span aria-hidden="false" class="arrow">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        
+                        width="10"
+                        height="7"
+                      >
+                        <path
+                          fill="none"
+                          stroke="#FF7B86"
+                          stroke-width="2"
+                          d="M1 1l4 4 4-4"
+                        />
+                      </svg>
+                    </span>
+                  </button>
+                  <ul class="dropdown-items features">
+                    <li>
+                      <a class="link" href="#">
+                        <span class="link-name">Overview</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a class="link" href="#">
+                        <span class="link-name">Pricing</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a class="link" href="#">
+                        <span class="link-name">Marketplace</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a class="link" href="#">
+                        <span class="link-name">Features</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a class="link" href="#">
+                        <span class="link-name">Integrations</span>
+                      </a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="dropdown">
+                  <button class="dropdown-btn" aria-expanded="false">
+                    <span class="dropdown-title">Company</span>
+                    <span aria-hidden="true" class="arrow">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="10"
+                        height="7"
+                      >
+                        <path
+                          fill="none"
+                          stroke="#FF7B86"
+                          stroke-width="2"
+                          d="M1 1l4 4 4-4"
+                        />
+                      </svg>
+                    </span>
+                  </button>
+                  <ul class="dropdown-items">
+                    <li>
+                      <a class="link" href="#">
+                        <span class="link-name">About</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a class="link" href="#">
+                        <span class="link-name">Team</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a class="link" href="#">
+                        <span class="link-name">Blog</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a class="link" href="#">
+                        <span class="link-name">Careers</span>
+                      </a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="dropdown">
+                  <button class="dropdown-btn" aria-expanded="false">
+                    <span class="dropdown-title">Connect</span>
+                    <span aria-hidden="true" class="arrow">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="10"
+                        height="7"
+                      >
+                        <path
+                          fill="none"
+                          stroke="#FF7B86"
+                          stroke-width="2"
+                          d="M1 1l4 4 4-4"
+                        />
+                      </svg>
+                    </span>
+                  </button>
+                  <ul class="dropdown-items">
+                    <li>
+                      <a class="link" href="#">
+                        <span class="link-name">Contact</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a class="link" href="#">
+                        <span class="link-name">Newsletter</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a class="link" href="#">
+                        <span class="link-name">LinkedIn</span>
+                      </a>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+              <ul aria-label="Login" class="login">
+                <li><a class="link" href="#">Login</a></li>
+                <li class="link">
+                  <a class="cta" data-type="inverted" href="#">Sign Up</a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
 
-  Company
+        <section class="header-hero clr-neutral-100">
+          <div class="hero-container">
+            <h1 class="fw-medium">A modern publishing platform</h1>
+            <p>Grow your audience and build your online brand</p>
+            <div class="ctas wrapper">
+              <a href="#0" class="cta">Start for Free</a>
+              <a href="#0" class="cta" data-info="inverted">Learn More</a>
+            </div>
+          </div>
+        </section>
+      </div>
+    </header>
+    <main class="main">
+      <section class="intro">
+        <div class="container">
+          <h2 class="h2-intro clr-blue-900 fw-medium">
+            Designed for the future
+          </h2>
+          <div class="intro-text">
+            <div class="textgroup">
+              <h3 class="heading-sub clr-blue-900 fw-medium">
+                Introducing an extensible editor
+              </h3>
+              <p>
+                Blogr features an exceedingly intuitive interface which lets you
+                focus on one thing: creating content. The editor supports
+                management of multiple blogs and allows easy manipulation of
+                embeds such as images, videos, and Markdown. Extensibility with
+                plugins and themes provide easy ways to add functionality or
+                change the looks of a blog.
+              </p>
+            </div>
+            <div class="textgroup">
+              <h3 class="heading-sub clr-blue-900 fw-medium">
+                Robust content management
+              </h3>
+              <p>
+                Flexible content management enables users to easily move through
+                posts. Increase the usability of your blog by adding customized
+                categories, sections, format, or flow. With this functionality,
+                you’re in full control.
+              </p>
+            </div>
+          </div>
+          <div class="intro-image">
+            <img
+              srcset="
+                ./images/illustration-editor-mobile.svg 406w,
+                ./images/illustration-editor-desktop.svg 882w
+              "
+              sizes="(min-width: 50em) 882px, 406px"
+              src="./images/illustration-editor-mobile.svg"
+              alt=""
+              class="editor interface illustration"
+            />
+          </div>
+        </div>
+      </section>
+      <section class="infrastructure">
+        <div class="infrastructure-sata">
+          <div class="container">
+            <div class="image">
+              <img
+                src="./images/illustration-phones.svg"
+                alt=""
+                class="two mobile phones illustration"
+              />
+            </div>
+            <div class="textgroup clr-neutral-100">
+              <h2 class="h2-sata fw-medium">State of the Art Infrastructure</h2>
+              <p>
+                With reliability and speed in mind, worldwide data centers
+                provide the backbone for ultra-fast connectivity. This ensures
+                your site will load instantly, no matter where your readers are,
+                keeping your site competitive.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="infrastructure-features">
+          <div class="container col-2">
+            <div class="textbody">
+              <div class="textgroup">
+                <h3 class="heading-sub clr-blue-900 fw-medium">Free, open, simple</h3>
+                <p>
+                  Blogr is a free and open source application backed by a large
+                  community of helpful developers. It supports features such as
+                  code syntax highlighting, RSS feeds, social media integration,
+                  third-party commenting tools, and works seamlessly with Google
+                  Analytics. The architecture is clean and is relatively easy to
+                  learn.
+                </p>
+              </div>
+              <div class="textgroup">
+                <h3 class="heading-sub clr-blue-900 fw-medium">Powerful tooling</h3>
+                <p>
+                  Batteries included. We built a simple and straightforward CLI
+                  tool that makes customization and deployment a breeze, but
+                  capable of producing even the most complicated sites.
+                </p>
+              </div>
+            </div>
+            
+            <div class="image">
+              <img
+                srcset="
+                  ./images/illustration-laptop-mobile.svg  498w,
+                  ./images/illustration-laptop-desktop.svg 974w
+                "
+                sizes="(min-width: 80em) 974px, 498px"
+                src="./images/illustration-laptop-mobile.svg"
+                alt=""
+                class="editor interface illustration"
+              />
+            </div>
+          </div>
 
-  About
-  Team
-  Blog
-  Careers
+        </div>
+      </section>
 
-  Connect
+      <footer class="footer / fs-footer">
+        <div class="container">
+          <a href="#" class="logo">
+            <img src="./images/logo.svg" alt="Blogr company logo" />
+          </a>
+          <nav>
+            <ul>
+              <li>
+                <h4 class="clr-neutral-100 fw-medium">Product</h4>
+                <ul>
+                  <li><a href="#0">Overview</a></li>
+                  <li><a href="#0">Pricing</a></li>
+                  <li><a href="#0">Marketplace</a></li>
+                  <li><a href="#0">Features</a></li>
+                  <li><a href="#0">Integrations</a></li>
+                </ul>
+              </li>
+              <li>
+                <h4 class="clr-neutral-100 fw-medium">Company</h4>
+                <ul>
+                  <li><a href="#0">About</a></li>
+                  <li><a href="#0">Team</a></li>
+                  <li><a href="#0">Blog</a></li>
+                  <li><a href="#0">Careers</a></li>
+                </ul>
+              </li>
+              <li>
+                <h4 class="clr-neutral-100 fw-medium">Connect</h4>
+                <ul>
+                  <li><a href="#0">Contact</a></li>
+                  <li><a href="#0">Newsletter</a></li>
+                  <li><a href="#0">LinkedIn</a></li>
+                </ul>
+              </li>
+              <li></li>
+              <li></li>
+            </ul>
+          </nav>
+          <div class="attribution">
+            Challenge by
+            <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">
+              Frontend Mentor
+            </a>
+            . Coded by
+            <a href="#">Your Name Here</a>
+            .
+          </div>
+        </div>
+        
+      </footer>
+    </main>
 
-  Contact
-  Newsletter
-  LinkedIn
-  
-  Login
-  Sign Up
 
-  A modern publishing platform
-  Grow your audience and build your online brand
-
-  Start for Free
-  Learn More
-
-  Designed for the future
-
-  Introducing an extensible editor
-  Blogr features an exceedingly intuitive interface which lets you focus on one thing: creating content. 
-  The editor supports management of multiple blogs and allows easy manipulation of embeds such as images, 
-  videos, and Markdown. Extensibility with plugins and themes provide easy ways to add functionality or 
-  change the looks of a blog.
-
-  Robust content management
-  Flexible content management enables users to easily move through posts. Increase the usability of your blog 
-  by adding customized categories, sections, format, or flow. With this functionality, you’re in full control.
-
-  State of the Art Infrastructure
-  With reliability and speed in mind, worldwide data centers provide the backbone for ultra-fast connectivity. 
-  This ensures your site will load instantly, no matter where your readers are, keeping your site competitive.
-
-  Free, open, simple
-  Blogr is a free and open source application backed by a large community of helpful developers. It supports 
-  features such as code syntax highlighting, RSS feeds, social media integration, third-party commenting tools, 
-  and works seamlessly with Google Analytics. The architecture is clean and is relatively easy to learn.
-
-  Powerful tooling
-  Batteries included. We built a simple and straightforward CLI tool that makes customization and deployment a breeze, but
-  capable of producing even the most complicated sites.
-
-  Product
-
-  Overview
-  Pricing
-  Marketplace
-  Features
-  Integrations
-
-  Company
-
-  About
-  Team
-  Blog
-  Careers
-
-  Connect
-  
-  Contact
-  Newsletter
-  LinkedIn
-
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
-</body>
+  </body>
 </html>
