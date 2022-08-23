@@ -173,14 +173,19 @@ button {
   color: inherit;
 }
 
+a {
+  color: var(--clr-text-primary);
+}
+
 button:hover,
 .switch-switcher:hover {
   filter: brightness(125%);
   box-shadow: inset 0 0 100px 100px rgba(255, 255, 255, 0.15);
 }
 
-a {
-  color: var(--clr-text-primary);
+a:focus,
+button:focus {
+  outline: 0.2rem solid var(--clr-text-primary);
 }
 
 body {
@@ -357,9 +362,6 @@ body {
 .keys button {
   border-radius: var(--br-keys);
   padding-top: 0.5rem;
-}
-.keys button:focus {
-  outline: 0.25rem solid var(--clr-text-primary);
 }
 .keys .num-style {
   background-color: var(--clr-num-bg);
