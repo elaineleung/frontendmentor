@@ -182,6 +182,13 @@ export const challenges = [
       "level": "Junior",
       "internalhost": true,
       "id": 26
+    },
+    {
+      "name": "calculatorapp",
+      "title": "Calculator app",
+      "level": "Intermediate",
+      "internalhost": true,
+      "id": 27
     }
   ]
 

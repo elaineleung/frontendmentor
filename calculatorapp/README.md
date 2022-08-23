@@ -36,7 +36,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Link to live site](https://elaineleung.github.io/frontendmentor/introsecdropdownnav/)
+- Live Site URL: [Link to live site](https://elaineleung.github.io/frontendmentor/calculatorapp/)
 
 
 ## My process
