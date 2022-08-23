@@ -33,7 +33,11 @@
           </h1>
           <div class="theme-switcher / fs-small">
             <!-- <div> -->
-            <div role="radiogroup" aria-label="select theme" class="theme-radios">
+            <div
+              role="radiogroup"
+              aria-label="select theme"
+              class="theme-radios"
+            >
               <h2>Theme</h2>
               <div class="labels-wrapper">
                 <label for="theme-dark">1</label>
@@ -63,8 +67,11 @@
                       name="theme"
                     />
                   </div>
-  
-                  <span aria-hidden="true" class="switch-background / bg-toggle">
+
+                  <span
+                    aria-hidden="true"
+                    class="switch-background / bg-toggle"
+                  >
                     <span
                       aria-hidden="true"
                       class="switch-switcher / bg-accent"
@@ -78,44 +85,47 @@
         </header>
         <main class="calculator">
           <div class="display / bg-screen calc-container">
-            <!-- <div class="calc-container"> -->
-              <span class="output / bg-screen clr-text-primary">0</span>
-              <!-- <label for="calc-display" class="visually-hidden">Calculator display</label> -->
-            <!-- </div> -->
+            <span class="output / bg-screen clr-text-primary" data-output>
+              0
+            </span>
           </div>
-          <div class="keys / bg-keypad fs-keys clr-text-secondary calc-container">
-            <button value="1" data-number>1</button>
-            <button value="2" data-number>2</button>
-            <button value="3" data-number>3</button>
-            <button value="4" data-number>4</button>
-            <button value="5" data-number>5</button>
-            <button value="6" data-number>6</button>
-            <button value="7" data-number>7</button>
-            <button value="8" data-number>8</button>
-            <button value="9" data-number>9</button>
-            <button value="0" data-number>0</button>
-            <button value="." data-number>.</button>
-            <button value="+" data-action="add" data-operator>+</button>
-            <button value="-" data-action="subtract" data-operator>&#8722;</button>
-            <button value="*" data-action="multiply" data-operator>&times;</button>
-            <button value="/" data-action="divide" data-operator>&divide;</button>
-            <button value="Escape" data-action="reset" data-function>Reset</button>
-            <button value="Delete" data-action="delete" data-function>Del</button>
-            <button value="Enter" data-action="equals" data-function>=</button>
+          <div
+            class="keys / bg-keypad fs-keys clr-text-secondary calc-container"
+          >
+            <button class="num-style" value="1" data-number>1</button>
+            <button class="num-style" value="2" data-number>2</button>
+            <button class="num-style" value="3" data-number>3</button>
+            <button class="num-style" value="4" data-number>4</button>
+            <button class="num-style" value="5" data-number>5</button>
+            <button class="num-style" value="6" data-number>6</button>
+            <button class="num-style" value="7" data-number>7</button>
+            <button class="num-style" value="8" data-number>8</button>
+            <button class="num-style" value="9" data-number>9</button>
+            <button class="num-style" value="0" data-number>0</button>
+            <button class="num-style" value="." data-number>.</button>
+            <button class="num-style" value="+" data-operator>+</button>
+            <button class="num-style" value="-" data-operator>&#8722;</button>
+            <button class="num-style" value="*" data-operator>&times;</button>
+            <button class="num-style" value="/" data-operator>&divide;</button>
+            <button class="func-style" value="Escape" data-function>
+              Reset
+            </button>
+            <button class="func-style" value="Delete" data-function>Del</button>
+            <button class="equals-style" value="Enter" data-function>=</button>
           </div>
         </main>
       </div>
-
     </div>
 
     <footer class="footer / fs-small">
       <div class="footer__attribution container">
         <span>
-          Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"> Frontend Mentor</a>. Coded by <a href="https://twitter.com/elaineclleung">Elaine</a>.</span>
-        <span class="block-footer">
-          Other
-          <a href="https://elaineleung.github.io/frontendmentor/">
-            Frontend Mentor Challenges</a> by Elaine
+          Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. Coded by
+          <a href="https://twitter.com/elaineclleung">Elaine</a>.
+        </span>
+        <span class="block-footer">Other 
+          <a href="https://elaineleung.github.io/frontendmentor/">Frontend Mentor Challenges</a>
+          by Elaine
         </span>
       </div>
     </footer>

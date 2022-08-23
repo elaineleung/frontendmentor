@@ -112,53 +112,6 @@
 }
 
 
-// Utility classes
-
-.wrapper {
-  margin-inline: auto;
-}
-
-.visually-hidden {
-  border: 0;
-  clip: rect(0 0 0 0);
-  height: auto;
-  margin: 0;
-  overflow: hidden;
-  padding: 0;
-  position: absolute;
-  width: 1px;
-  white-space: nowrap;
-}
-
-// Utility classes
-
-.bg-keypad {
-  background-color: var(--clr-keypad-bg);
-}
-.bg-screen {
-  background-color: var(--clr-screen-bg);
-}
-.bg-toggle {
-  background-color: var(--clr-toggle-bg);
-}
-.bg-accent {
-  background-color: var(--clr-acc-bg);
-}
-.clr-text-primary {
-  color: var(--clr-text-primary);
-}
-.clr-text-secondary {
-  color: var(--clr-text-secondary);
-}
-.clr-text-tertiary {
-  color: var(--clr-text-tertiary);
-}
-.fs-small {
-  font-size: var(--fs-small);
-}
-.fs-keys {
-  font-size: var(--fs-keys);
-}
 // General styling 
 
 button {
@@ -168,15 +121,15 @@ button {
   color: inherit;
 }
 
+button:hover,
+.switch-switcher:hover {
+  filter: brightness(125%);
+  box-shadow: inset 0 0 100px 100px rgba(255, 255, 255, 0.15);
+}
+
 a {
   color: var(--clr-text-primary);
 }
-
-// [data-theme="dark"] {
-//   --clr-
-// }
-
-
 
 body {
   min-height: 100vh; 
@@ -216,9 +169,6 @@ body {
   }
 }
 
-
-
-
 .header {
   display: flex;
   justify-content: space-between;
@@ -226,7 +176,6 @@ body {
   margin-block: 0 1.85rem;
   
   h1 {
-    // display: inline-block;
     font-size: var(--fs-h1);
     margin-inline-start: 0.5rem;
   }
@@ -234,10 +183,7 @@ body {
 
 .header .theme-radios {
   display: grid;
-  // flex-direction: column;
-  // justify-content: space-between;
   align-items: center;
-  // place-items: end stretch;
   grid-template-columns: 1fr 4.5rem;
   grid-template-areas: 
     ". labels"
@@ -285,7 +231,7 @@ body {
   input[type="radio"] {
     display: inline-block;
     opacity: 0;
-    width: 30%;
+    width: 33%;
     height: 100%;
     z-index: 1;
     cursor: pointer;
@@ -303,15 +249,8 @@ body {
  }
  &-switcher {
   display: block;
-  // margin-block: auto;
-  // position: absolute;
   height: 95%;
   width: 1rem;
-  // top: 0;
-  // bottom: 0;
-  // margin-block: auto;
-  // margin-inline: 0 auto;
-	// left: 0;
   transform: translateX(0);
   border-radius: 50%;
   transition: transform 0.1s ease-out;
@@ -320,11 +259,9 @@ body {
 }
 
 [data-theme="light"] .switch-switcher {
-  // margin-inline: auto;
   transform: translateX(1.45rem);
 }
 [data-theme="purple"] .switch-switcher {
-  // margin-inline: auto 0;
   transform: translateX(2.9rem);
 }
 
@@ -350,8 +287,10 @@ body {
   padding-block: 1.25rem;
   border-radius: 0.7rem;
   margin-bottom: 1.5rem;
+  // height: 5.5rem;
   .output {
     width: 100%;
+    height:max-content;
     text-align: right;
     border: none;
     font-size: var(--fs-output);
@@ -363,6 +302,7 @@ body {
   display: grid;
   grid-auto-flow: row;
   grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(5, minmax(3rem, 1fr));
   padding-block: 1.5rem;
   gap: 0.8rem;
   border-radius: 0.7rem;
@@ -379,21 +319,13 @@ body {
     &:focus {
       outline: 0.25rem solid var(--clr-text-primary);
     }
-    &:hover {
-      filter: brightness(125%);
-      box-shadow: inset 0 0 100px 100px rgba(255, 255, 255, 0.15);
-    }
-
   }
-  // button ::after {
-  //   position: absolute;
-  // }
-  button[data-number],
-  button[data-operator] {
+
+  .num-style {
     background-color: var(--clr-num-bg);
     border-bottom: 0.25rem solid var(--clr-num-sh);
   }
-  button[data-function] {
+  .func-style {
     font-size: var(--fs-keys-func);
     text-transform: uppercase;
     color: var(--clr-text-tertiary);
@@ -433,25 +365,25 @@ body {
   button[value="."] {
     grid-area: point;
   }
-  button[data-action="add"] {
+  button[value="+"] {
     grid-area: add;
   }
-  button[data-action="subtract"] {
+  button[value="-"] {
     grid-area: subtract;
   }
-  button[data-action="multiply"] {
+  button[value="*"] {
     grid-area: multiply;
   }
-  button[data-action="divide"] {
+  button[value="/"] {
     grid-area: divide;
   }
-  button[data-action="reset"] {
+  button[value="Escape"] {
     grid-area: reset;
   }
-  button[data-action="delete"] {
+  button[value="Delete"] {
     grid-area: delete;
   }
-  button[data-action="equals"] {
+  button[value="Enter"] {
     grid-area: equals;
     background-color: var(--clr-acc-bg);
     color: var(--clr-text-tertiary);
@@ -499,11 +431,10 @@ body {
   --clr-text-primary: var(--clr-theme3-text-yellow);
   --clr-text-secondary: var(--clr-theme3-text-white);
   --clr-text-tertiary: var(--clr-theme3-text-blue);
-  button[data-number],
-  button[data-operator] {
+  .num-style {
     color: var(--clr-text-primary);
   }
-  button[data-function] {
+  .func-style {
     color: var(--clr-text-secondary);
   }
 }
@@ -533,8 +464,6 @@ body {
     max-height: 39.5rem;
     .display {
       padding-block: 2rem 1.8rem;
-      // border-radius: 0.7rem;
-      // margin-bottom: 1.5rem;
       input {
         width: 100%;
         text-align: right;
@@ -545,6 +474,7 @@ body {
     .keys {
       gap: 1.5rem;
       padding-block: 2rem;
+      grid-template-rows: repeat(5, 4rem);
       button[data-action="equals"] {
         padding-block: 0.7rem;
       }
@@ -559,4 +489,53 @@ body {
       display: inline;
     }
   }
+}
+
+
+
+// Utility classes
+
+.wrapper {
+  margin-inline: auto;
+}
+
+.bg-keypad {
+  background-color: var(--clr-keypad-bg);
+}
+.bg-screen {
+  background-color: var(--clr-screen-bg);
+}
+.bg-toggle {
+  background-color: var(--clr-toggle-bg);
+}
+.bg-accent {
+  background-color: var(--clr-acc-bg);
+}
+.clr-text-primary {
+  color: var(--clr-text-primary);
+}
+.clr-text-secondary {
+  color: var(--clr-text-secondary);
+}
+.clr-text-tertiary {
+  color: var(--clr-text-tertiary);
+}
+.fs-small {
+  font-size: var(--fs-small);
+}
+.fs-keys {
+  font-size: var(--fs-keys);
+}
+
+
+.visually-hidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: auto;
+  margin: 0;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+  white-space: nowrap;
 }

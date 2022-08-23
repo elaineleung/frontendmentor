@@ -166,63 +166,17 @@ h6 {
     --br-keys: 0.6rem;
   }
 }
-.wrapper {
-  margin-inline: auto;
-}
-
-.visually-hidden {
-  border: 0;
-  clip: rect(0 0 0 0);
-  height: auto;
-  margin: 0;
-  overflow: hidden;
-  padding: 0;
-  position: absolute;
-  width: 1px;
-  white-space: nowrap;
-}
-
-.bg-keypad {
-  background-color: var(--clr-keypad-bg);
-}
-
-.bg-screen {
-  background-color: var(--clr-screen-bg);
-}
-
-.bg-toggle {
-  background-color: var(--clr-toggle-bg);
-}
-
-.bg-accent {
-  background-color: var(--clr-acc-bg);
-}
-
-.clr-text-primary {
-  color: var(--clr-text-primary);
-}
-
-.clr-text-secondary {
-  color: var(--clr-text-secondary);
-}
-
-.clr-text-tertiary {
-  color: var(--clr-text-tertiary);
-}
-
-.fs-small {
-  font-size: var(--fs-small);
-}
-
-.fs-keys {
-  font-size: var(--fs-keys);
-}
-
 button {
   cursor: pointer;
   border: none;
   font-family: inherit;
   color: inherit;
+}
+
+button:hover,
+.switch-switcher:hover {
+  filter: brightness(125%);
+  box-shadow: inset 0 0 100px 100px rgba(255, 255, 255, 0.15);
 }
 
 a {
@@ -324,7 +278,7 @@ body {
 .header .switch-radios input[type=radio] {
   display: inline-block;
   opacity: 0;
-  width: 30%;
+  width: 33%;
   height: 100%;
   z-index: 1;
   cursor: pointer;
@@ -381,6 +335,9 @@ body {
 }
 .display .output {
   width: 100%;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
   text-align: right;
   border: none;
   font-size: var(--fs-output);
@@ -391,6 +348,7 @@ body {
   display: grid;
   grid-auto-flow: row;
   grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(5, minmax(3rem, 1fr));
   padding-block: 1.5rem;
   gap: 0.8rem;
   border-radius: 0.7rem;
@@ -403,16 +361,11 @@ body {
 .keys button:focus {
   outline: 0.25rem solid var(--clr-text-primary);
 }
-.keys button:hover {
-  filter: brightness(125%);
-  box-shadow: inset 0 0 100px 100px rgba(255, 255, 255, 0.15);
-}
-.keys button[data-number],
-.keys button[data-operator] {
+.keys .num-style {
   background-color: var(--clr-num-bg);
   border-bottom: 0.25rem solid var(--clr-num-sh);
 }
-.keys button[data-function] {
+.keys .func-style {
   font-size: var(--fs-keys-func);
   text-transform: uppercase;
   color: var(--clr-text-tertiary);
@@ -452,25 +405,25 @@ body {
 .keys button[value="."] {
   grid-area: point;
 }
-.keys button[data-action=add] {
+.keys button[value="+"] {
   grid-area: add;
 }
-.keys button[data-action=subtract] {
+.keys button[value="-"] {
   grid-area: subtract;
 }
-.keys button[data-action=multiply] {
+.keys button[value="*"] {
   grid-area: multiply;
 }
-.keys button[data-action=divide] {
+.keys button[value="/"] {
   grid-area: divide;
 }
-.keys button[data-action=reset] {
+.keys button[value=Escape] {
   grid-area: reset;
 }
-.keys button[data-action=delete] {
+.keys button[value=Delete] {
   grid-area: delete;
 }
-.keys button[data-action=equals] {
+.keys button[value=Enter] {
   grid-area: equals;
   background-color: var(--clr-acc-bg);
   color: var(--clr-text-tertiary);
@@ -516,11 +469,10 @@ body {
   --clr-text-secondary: var(--clr-theme3-text-white);
   --clr-text-tertiary: var(--clr-theme3-text-blue);
 }
-[data-theme=purple] button[data-number],
-[data-theme=purple] button[data-operator] {
+[data-theme=purple] .num-style {
   color: var(--clr-text-primary);
 }
-[data-theme=purple] button[data-function] {
+[data-theme=purple] .func-style {
   color: var(--clr-text-secondary);
 }
 
@@ -559,6 +511,7 @@ body {
   .calculator .keys {
     gap: 1.5rem;
     padding-block: 2rem;
+    grid-template-rows: repeat(5, 4rem);
   }
   .calculator .keys button[data-action=equals] {
     padding-block: 0.7rem;
@@ -572,4 +525,55 @@ body {
   .footer .block-footer {
     display: inline;
   }
+}
+.wrapper {
+  margin-inline: auto;
+}
+
+.bg-keypad {
+  background-color: var(--clr-keypad-bg);
+}
+
+.bg-screen {
+  background-color: var(--clr-screen-bg);
+}
+
+.bg-toggle {
+  background-color: var(--clr-toggle-bg);
+}
+
+.bg-accent {
+  background-color: var(--clr-acc-bg);
+}
+
+.clr-text-primary {
+  color: var(--clr-text-primary);
+}
+
+.clr-text-secondary {
+  color: var(--clr-text-secondary);
+}
+
+.clr-text-tertiary {
+  color: var(--clr-text-tertiary);
+}
+
+.fs-small {
+  font-size: var(--fs-small);
+}
+
+.fs-keys {
+  font-size: var(--fs-keys);
+}
+
+.visually-hidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: auto;
+  margin: 0;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+  white-space: nowrap;
 }/*# sourceMappingURL=stylesheet.css.map */

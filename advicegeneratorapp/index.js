@@ -4,8 +4,6 @@ const loadingEl = document.getElementById("loadingEl")
 
 const url = "https://api.adviceslip.com/advice"
 
-let previousActiveEl = null
-
 window.addEventListener("load", ()=> {
   loadAdvice()
   componentEl.classList.remove("hidden")
