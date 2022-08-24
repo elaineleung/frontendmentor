@@ -29,7 +29,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Link to GitHub repo](https://github.com/elaineleung/frontendmentor/tree/main/socialproofsection)
+- Solution URL: [Link to solution URL](https://www.frontendmentor.io/solutions/mobilefirst-social-proof-section-9YtPL58Ph)
 - Live Site URL: [Link to live site](https://elaineleung.github.io/frontendmentor/socialproofsection/)
 
 ## My process

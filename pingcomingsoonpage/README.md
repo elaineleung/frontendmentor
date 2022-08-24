@@ -35,7 +35,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Link to GitHub repo](https://github.com/elaineleung/frontendmentor/tree/main/pingcomingsoonpage)
+- Solution URL: [Link to solution URL](https://www.frontendmentor.io/solutions/responsive-coming-soon-page-VVPC2c1CM)
 - Live Site URL: [Link to live site](https://elaineleung.github.io/frontendmentor/pingcomingsoonpage/)
 
 ## My process

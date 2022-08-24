@@ -37,7 +37,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Link to GitHub repo](https://github.com/elaineleung/frontendmentor/tree/main/expenseschartcomponent/)
+- Solution URL: [Link to solution URL](https://www.frontendmentor.io/solutions/responsive-bar-chart-component-with-json-data-fetching-b2LJ5eTGIX)
 - Live Site URL: [Link to live site](https://elaineleung.github.io/frontendmentor/expenseschartcomponent/)
 
 ## My process

@@ -33,7 +33,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Link to GitHub repo](https://github.com/elaineleung/frontendmentor/tree/main/codingbootcamptestimonials/)
+- Solution URL: [Link to solution URL](https://www.frontendmentor.io/solutions/responsive-image-slidercarousel-built-with-scss-and-plain-js-aTsBq6SGAo)
 - Live Site URL: [Link to live site](https://elaineleung.github.io/frontendmentor/codingbootcamptestimonials/)
 ## My process
 

@@ -31,7 +31,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Link to GitHub repo](https://github.com/elaineleung/frontendmentor/tree/main/statspreview)
+- Solution URL: [Link to solution URL](https://www.frontendmentor.io/solutions/mobilefirst-stats-preview-card-7goJJjaXN)
 - Live Site URL: [Link to live site](https://elaineleung.github.io/frontendmentor/statspreview/)
 
 ## My process

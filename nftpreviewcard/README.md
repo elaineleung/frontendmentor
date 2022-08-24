@@ -31,7 +31,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Link to GitHub repo](https://github.com/elaineleung/frontendmentor/tree/main/nftpreviewcard/)
+- Solution URL: [Link to solution URL](https://www.frontendmentor.io/solutions/reponsive-nft-preview-component-W2gWx-dAyA)
 - Live Site URL: [Link to live site](https://elaineleung.github.io/frontendmentor/nftpreviewcard/)
 
 ## My process

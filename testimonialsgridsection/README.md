@@ -33,7 +33,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Link to GitHub repo](https://github.com/elaineleung/frontendmentor/tree/main/testimonialsgridsection/)
+- Solution URL: [Link to solution URL](https://www.frontendmentor.io/solutions/responsive-testimonials-grid-section-using-grid-and-cube-css-iMrODUunpc)
 - Live Site URL: [Link to live site](https://elaineleung.github.io/frontendmentor/testimonialsgridsection/)
 
 ## My process

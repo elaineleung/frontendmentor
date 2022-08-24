@@ -37,7 +37,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Link to GitHub repo](https://github.com/elaineleung/frontendmentor/tree/main/tipcalculatorapp/)
+- Solution URL: [Link to solution URL](https://www.frontendmentor.io/solutions/responsive-tip-calculator-app-with-plain-js-Nj1Gtzub_V)
 - Live Site URL: [Link to live site](https://elaineleung.github.io/frontendmentor/tipcalculatorapp/)
 
 ## My process

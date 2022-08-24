@@ -35,7 +35,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Link to GitHub repo](https://github.com/elaineleung/frontendmentor/tree/main/sunnysideagencylandingpage/)
+- Solution URL: [Link to solution URL](https://www.frontendmentor.io/solutions/responsive-landing-page-with-cube-css-zJrpzUIQqd)
 - Live Site URL: [Link to live site](https://elaineleung.github.io/frontendmentor/sunnysideagencylandingpage/)
 
 ## My process

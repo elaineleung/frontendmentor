@@ -29,7 +29,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Link to GitHub repo](https://github.com/elaineleung/frontendmentor/tree/main/fourcardfeaturesection)
+- Solution URL: [Link to solution URL](https://www.frontendmentor.io/solutions/responsive-four-card-feature-section-vBKFGtCk3)
 - Live Site URL: [Link to live site](https://elaineleung.github.io/frontendmentor/fourcardfeaturesection/)
 
 ## My process

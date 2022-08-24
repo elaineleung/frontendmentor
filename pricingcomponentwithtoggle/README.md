@@ -34,7 +34,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Link to GitHub repo](https://github.com/elaineleung/frontendmentor/tree/main/pricingcomponentwithtoggle/)
+- Solution URL: [Link to solution URL](https://www.frontendmentor.io/solutions/responsive-toggle-component-with-only-css-and-html-QvlVxD2YK3)
 - Live Site URL: [Link to live site](https://elaineleung.github.io/frontendmentor/pricingcomponentwithtoggle/)
 
 ## My process

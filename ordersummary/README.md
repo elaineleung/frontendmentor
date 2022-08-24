@@ -34,7 +34,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Link to GitHub repo](https://github.com/elaineleung/frontendmentor/tree/main/ordersummary)
+- Solution URL: [Link to solution URL here](https://www.frontendmentor.io/solutions/order-summary-component-using-html-and-css-WINlybQA1)
 - Live Site URL: [Link to live site](https://elaineleung.github.io/frontendmentor/ordersummary/)
 
 ## My process

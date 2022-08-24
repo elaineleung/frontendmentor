@@ -39,7 +39,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Link to GitHub repo](https://github.com/elaineleung/frontendmentor/tree/main/interactiveratingcomponent)
+- Solution URL: [Link to solution URL](https://www.frontendmentor.io/solutions/responsive-interactive-rating-component-SeBo-aR4gB)
 - Live Site URL: [Link to live site](https://elaineleung.github.io/frontendmentor/interactiveratingcomponent/)
 
 ## My process

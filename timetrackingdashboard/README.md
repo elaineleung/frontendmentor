@@ -35,7 +35,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Link to GitHub repo](https://github.com/elaineleung/frontendmentor/tree/main/timetrackingdashboard/)
+- Solution URL: [Link to solution URL](https://www.frontendmentor.io/solutions/responsive-dashboard-using-scss-and-vanilla-javascipt-with-json--HVkNhdtJT)
 - Live Site URL: [Link to live site](https://elaineleung.github.io/frontendmentor/timetrackingdashboard/)
 
 ## My process

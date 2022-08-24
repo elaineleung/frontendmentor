@@ -34,7 +34,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Link to GitHub repo](https://github.com/elaineleung/frontendmentor/tree/main/accordioncard)
+- Solution URL: [Link to solution URL](https://www.frontendmentor.io/solutions/responsive-accordion-faq-component-W8IX1jNU_)
 - Live Site URL: [Link to live site](https://elaineleung.github.io/frontendmentor/accordioncard/)
 
 ## My process

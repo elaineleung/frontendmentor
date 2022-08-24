@@ -33,7 +33,7 @@ Users should be able to:
 ![Desktop view of solution](./design/desktop.png)
 ### Links
 
-- Solution URL: [Link to GitHub repo](https://github.com/elaineleung/frontendmentor/tree/main/introsecdropdownnav/)
+- Solution URL: [Link to solution URL](https://www.frontendmentor.io/solutions/landing-page-with-dropdown-nav-using-plain-js-9xR9e4TRV3)
 - Live Site URL: [Link to live site](https://elaineleung.github.io/frontendmentor/introsecdropdownnav/)
 
 ## My process

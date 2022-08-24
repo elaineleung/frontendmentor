@@ -37,7 +37,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Link to GitHub repo](https://github.com/elaineleung/frontendmentor/tree/main/baseapparelcomingsoon)
+- Solution URL: [Link to solution URL](https://www.frontendmentor.io/solutions/responsive-landing-page-using-flexbox-and-css-grid-to0RksRRE)
 - Live Site URL: [Link to live site](https://elaineleung.github.io/frontendmentor/baseapparelcomingsoon/)
 
 ## My process

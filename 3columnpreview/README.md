@@ -32,7 +32,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Link to GitHub repo](https://github.com/elaineleung/frontendmentor/tree/main/3columnpreview)
+- Solution URL: [Link to solution URL](https://www.frontendmentor.io/solutions/mobilefirst-threecolumn-preview-card-t5FYsnZYI)
 - Live Site URL: [Link to live site](https://elaineleung.github.io/frontendmentor/3columnpreview/)
 
 ## My process

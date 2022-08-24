@@ -31,7 +31,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Link to GitHub repo](https://github.com/elaineleung/frontendmentor/tree/main/productpreviewcardcomponent/)
+- Solution URL: [Link to solution URL](https://www.frontendmentor.io/solutions/card-component-using-cube-css-tNaBY0y_Nx)
 - Live Site URL: [Link to live site](https://elaineleung.github.io/frontendmentor/productpreviewcardcomponent/)
 
 ## My process

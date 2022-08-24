@@ -35,7 +35,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
+- Solution URL: [Link to solution URL here](https://www.frontendmentor.io/solutions/responsive-calculator-built-with-vanilla-js-w9UinqToJQ)
 - Live Site URL: [Link to live site](https://elaineleung.github.io/frontendmentor/calculatorapp/)
 
 

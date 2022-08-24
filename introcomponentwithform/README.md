@@ -39,7 +39,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Link to GitHub repo](https://github.com/elaineleung/frontendmentor/tree/main/introcomponentwithform)
+- Solution URL: [Link to solution URL](https://www.frontendmentor.io/solutions/responsive-sign-up-page-using-form-validation-and-scss-8X9BC5NUd)
 - Live Site URL: [Link to live site](https://elaineleung.github.io/frontendmentor/introcomponentwithform/)
 
 ## My process

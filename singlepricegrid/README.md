@@ -30,7 +30,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Link to GitHub repo](https://github.com/elaineleung/frontendmentor/tree/main/singlepricegrid)
+- Solution URL: [Link to solution URL](https://www.frontendmentor.io/solutions/mobile-first-single-price-grid-component-0cfs1sTWs)
 - Live Site URL: [Link to live site](https://elaineleung.github.io/frontendmentor/singlepricegrid/)
 
 ## My process

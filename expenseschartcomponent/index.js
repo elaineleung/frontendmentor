@@ -11,7 +11,7 @@ function getData() {
     })
     .catch((error) => console.log(error));
 }
-
+ 
 function renderData(data) {
   const daysEl = document.querySelectorAll(".bars__day");
 
@@ -25,16 +25,14 @@ function renderData(data) {
       <div class="bars__day-amount">$${info.amount}</div>
       <div class="bars__day-label">${info.day}</div>
     `
-    const barFragment = document.createRange().createContextualFragment(barHTML)
-   
-    const barDiv = barFragment.querySelector(".bars__day-bar")
+    dayEl.insertAdjacentHTML("afterbegin", barHTML)
 
+    const barDiv = dayEl.querySelector(".bars__day-bar")
+    
     if (idx !== 6) {
       idx + 1 === currentDay && barDiv.classList.add("highlight");
     } else {
       currentDay === 0 && barDiv.classList.add("highlight");
     }
-
-    dayEl.appendChild(barFragment)
   });
 }
