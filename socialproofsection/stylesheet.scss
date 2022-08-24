@@ -138,9 +138,9 @@ body {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  * {
-    outline: var(--debug);
-  }
+  // * {
+  //   outline: var(--debug);
+  // }
 }
 
 p {

@@ -121,9 +121,6 @@ body {
   display: flex;
   flex-direction: column;
 }
-body * {
-  outline: var(--debug);
-}
 
 p {
   font-size: var(--fs-p);
