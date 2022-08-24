@@ -387,13 +387,12 @@ body {
     color: var(--clr-text-tertiary);
     border-bottom: 0.25rem solid var(--clr-acc-sh);
     padding-block: 0.6rem;
-    font-size: calc(var(--fs-600) * 0.9);
+    font-size: calc(var(--fs-600) * 0.95);
   }
 }
 
 .footer {
   width: 100%;
-  // padding-block: 0 0.5rem;
   .block-footer {
     display: none;
   }
@@ -439,7 +438,7 @@ body {
 
 @media (min-width: 40em) {
   .component {
-    padding-block: 2.3rem 1rem;
+    padding-block: 2.5rem 1rem;
     .container {
       justify-content: center;
     }

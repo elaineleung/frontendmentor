@@ -6,28 +6,33 @@
   --clr-neutral-300: hsl(303, 10%, 53%);
   --fs-100: 0.8125rem;
   --fs-200: 0.875rem;
-  --fs-300: 0.9375rem;
-  --fs-400: 1rem;
+  --fs-300: 1rem;
+  --fs-400: 1.0625;
   --fs-500: 1.125rem;
   --fs-600: 1.25rem;
   --fs-700: 1.5rem;
-  --fs-800: 2rem;
-  --fs-900: 2.25rem;
-  --fs-body: var(--fs-400);
-  --fs-p: var(--fs-300);
+  --fs-800: 2.5rem;
+  --fs-900: 3.5rem;
+  --fs-body: var(--fs-300);
+  --fs-p: var(--fs-500);
   --fs-heading: var(--fs-800);
-  --fs-card: var(--fs-100);
-  --lh-body: 1.7;
-  --lh-heading: 1;
-  --ff-primary: Spartan, sans-serif;
+  --fs-card: var(--fs-400);
+  --fs-rating: var(--fs-400);
+  --ls-heading: -0.085rem;
+  --ls-rating: 0.03rem;
+  --ls-review: 0.02rem;
+  --lh-body: 1.4;
+  --lh-heading: 0.8;
+  --ff-primary: "League Spartan", sans-serif;
   --debug: solid 1px pink;
 }
 
 @media (min-width: 1150px) {
   :root {
-    --fs-heading: 3rem;
+    --fs-heading: var(--fs-900);
     --ls-heading: -1.75px;
     --ls-textbody: -0.5px;
+    --lh-heading: 0.85;
   }
 }
 *,
@@ -116,6 +121,9 @@ body {
   display: flex;
   flex-direction: column;
 }
+body * {
+  outline: var(--debug);
+}
 
 p {
   font-size: var(--fs-p);
@@ -137,7 +145,7 @@ p {
   }
 }
 .content {
-  --pad: 5rem 0 1rem;
+  --pad: 5.15rem 0 1rem;
   padding: var(--pad);
 }
 
@@ -155,14 +163,16 @@ p {
 }
 .description__intro .title {
   margin-inline: auto;
-  max-width: 25rem;
+  width: min(90%, 25rem);
   font-size: var(--fs-heading);
   color: var(--clr-primary-700);
   font-weight: 700;
   line-height: var(--lh-heading);
-  margin-bottom: 1.5rem;
+  letter-spacing: var(--ls-heading);
+  margin-bottom: 1.4rem;
 }
 .description__intro .bodytext {
+  margin-inline: auto;
   max-width: 28rem;
   line-height: var(--lh-body);
   font-weight: 500;
@@ -197,8 +207,9 @@ p {
 }
 .rating .text {
   margin: 0;
-  font-size: 13px;
+  font-size: var(--fs-rating);
   font-weight: 700;
+  letter-spacing: var(--ls-rating);
   color: var(--clr-primary-700);
   margin-top: 0.3rem;
 }
@@ -212,11 +223,11 @@ p {
 }
 
 .card {
-  --lh-profile: 1.55;
-  --lh-review: 1.7;
+  --lh-profile: 1.25;
+  --lh-review: 1.4;
   background: var(--clr-primary-700);
   color: var(--clr-neutral-200);
-  padding: 2.5rem 1.9rem 1.9rem;
+  padding: 2.6rem 1.9rem 1.8rem;
   max-width: 30rem;
   border-radius: 0.5rem;
   text-align: left;
@@ -249,7 +260,7 @@ p {
 }
 .card__review {
   line-height: var(--lh-review);
-  letter-spacing: -0.2px;
+  letter-spacing: var(--ls-review);
 }
 
 footer {
@@ -284,7 +295,7 @@ footer {
 }
 @media (min-width: 51em) {
   .content {
-    --pad: 3.9rem 0 2rem;
+    --pad: 5rem 0 1.5rem;
   }
   .content > * {
     width: min(100%, 69.4rem);
@@ -306,21 +317,21 @@ footer {
     margin-inline: 0;
     max-width: 25rem;
     letter-spacing: var(--ls-heading);
-    margin-bottom: 0.8rem;
+    margin-bottom: 1.7rem;
   }
   .description__intro .bodytext {
     letter-spacing: var(--ls-textbody);
   }
   .description__ratings {
     display: block;
-    padding-top: 1rem;
+    padding-top: 1.75rem;
   }
   .description__ratings > * + * {
-    margin-top: 1rem;
+    margin-top: 1.1rem;
   }
   .description__ratings .rating {
     width: initial;
-    padding: 1.2rem 1.75rem 1.25rem 2rem;
+    padding: 0.95rem 1.75rem 0.95rem 2rem;
     margin-inline: auto 0;
     max-width: 27.75rem;
     display: flex;
@@ -352,7 +363,7 @@ footer {
     gap: 1.9rem;
   }
   .card {
-    padding: 2.5rem 2rem 2.5rem;
+    padding: 2.6rem 2rem 2.4rem;
     height: -webkit-fit-content;
     height: -moz-fit-content;
     height: fit-content;
