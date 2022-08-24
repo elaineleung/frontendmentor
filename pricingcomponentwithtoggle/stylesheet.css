@@ -370,7 +370,7 @@ h1.title {
   grid-template-columns: var(--w-text);
   width: min(100%, var(--w-text));
   margin-inline: auto;
-  box-shadow: 5px 5px 15px 5px hsla(var(--clr-primary-100), 0.2);
+  box-shadow: 0.5rem 0.5rem 2.5rem 0.5rem hsla(var(--clr-primary-100), 0.2);
   padding: 2.25rem 1.5rem 2rem;
   line-height: 1;
   border-radius: var(--br-plan);

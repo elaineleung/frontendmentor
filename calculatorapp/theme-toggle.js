@@ -23,11 +23,9 @@ function reflectPreference() {
 reflectPreference()
 
 window.onload = () => {
-  // reflectPreference()
+  reflectPreference()
   document.querySelector(".switch").addEventListener("change", (event) => {
     theme.value = event.target.value
     setPreference()
   })
-  theme.value = "dark"
-  setPreference()
 }

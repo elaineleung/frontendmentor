@@ -8,14 +8,15 @@ class Calculator {
   constructor(outputEl) {
     this.displayEl = outputEl;
     this.resetCalc();
-    this.init()
+    // this.init()
+    // this.initial = "399981"
   }
 
-  init() {
-    Array.from(this.initial).forEach( digit => {
-      this.appendNum(digit);
-    })
-  }
+  // init() {
+  //   Array.from(this.initial).forEach( digit => {
+  //     this.appendNum(digit);
+  //   })
+  // }
 
   resetCalc() {
     this.previousOperand = "";
@@ -24,7 +25,6 @@ class Calculator {
     this.equalsPressed = false;
     this.display = "0";
     this.displayCalc();
-    this.initial = "399981"
   }
 
   appendNum(number) {
