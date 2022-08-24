@@ -7,7 +7,15 @@ const faqs = document.querySelectorAll(".faq")
 
 faqs.forEach( faqEl => {
     const questionEl = faqEl.querySelector('.question')
-    questionEl.addEventListener("click", () => {
-        faqEl.classList.toggle("active")
+    questionEl.addEventListener("toggle", () => {
+        if (faqEl.open === false) {
+            faqEl.open = true
+        } else {
+            faqEl.open = false
+        }
+
+        // let open = faqEl.open
+        // faqEl.open = !open
+        console.log(faqEl.open)
     })
 })
