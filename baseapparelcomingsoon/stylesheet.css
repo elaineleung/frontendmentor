@@ -404,7 +404,7 @@ input:-moz-placeholder {
   border-color: hsl(var(--clr-primary-300));
 }
 
-@media (min-width: 770px) {
+@media (min-width: 50em) {
   .wrapper {
     display: grid;
     grid-template-columns: 5fr 3.67fr;
@@ -449,7 +449,7 @@ input:-moz-placeholder {
   }
   .main, .main__content {
     align-items: flex-start;
-    justify-content: flex-start;
+    justify-content: center;
   }
   .main__cta {
     margin-inline: 0 auto;

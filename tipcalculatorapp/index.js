@@ -17,6 +17,7 @@ const values = { bill: 0, tip: 0, people: 0 };
 
 appEl.addEventListener("input", function(event) {
   const billVal = Number(document.getElementById("bill").value)
+
   if (event.target.id === "people") handleErrorMessage(event.data);
   
   values.bill = billVal < 100000000000000000n && billVal

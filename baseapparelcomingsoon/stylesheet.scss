@@ -421,7 +421,7 @@ input:-moz-placeholder {
   }
 }
 
-@media (min-width: 770px) {
+@media (min-width: 50em) {
   .wrapper {
     display: grid;
     grid-template-columns: 5fr 3.67fr;
@@ -470,7 +470,7 @@ input:-moz-placeholder {
     &,
     &__content {
       align-items: flex-start;
-      justify-content: flex-start;
+      justify-content: center;
     }
     &__cta {
       margin-inline: 0 auto;
