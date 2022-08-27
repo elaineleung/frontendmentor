@@ -856,13 +856,18 @@ body {
   .footer .container {
     display: grid;
     grid-template-columns: 25.5% auto;
+    margin-top: 4.85rem;
   }
   .footer .container .logo {
     grid-row: 1/2;
+    align-self: start;
+    margin: 0;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
   }
   .footer .container .navigation-secondary {
     grid-column: 2/5;
-    margin-top: 4.85rem;
     text-align: left;
   }
   .footer .container .navigation-secondary > ul {

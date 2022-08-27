@@ -893,12 +893,15 @@ body {
     .container {
       display: grid;
       grid-template-columns: 25.5% auto;
+      margin-top: 4.85rem;
       .logo {
         grid-row: 1 / 2;
+        align-self: start;
+        margin: 0;
+        width: fit-content;
       }
       .navigation-secondary {
         grid-column: 2 / 5;
-        margin-top: 4.85rem;
         text-align: left;
         > ul {
           width: 100%;
