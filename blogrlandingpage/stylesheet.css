@@ -15,19 +15,19 @@
   --fs-300: 1rem;
   --fs-400: 1.125rem;
   --fs-500: 1.1875rem;
-  --fs-600: 1.75rem;
-  --fs-700: 2.25rem;
-  --fs-800: 2.5rem;
-  --fs-900: 2.75rem;
+  --fs-600: 1.6875rem;
+  --fs-700: 1.75rem;
+  --fs-800: 2.25rem;
+  --fs-900: 2.5rem;
   --fs-body: var(--fs-300);
   --fs-cta: var(--fs-300);
-  --fs-h1: clamp(var(--fs-700), calc(1.6338rem + 2.6291vw), 4rem);
+  --fs-h1: clamp(var(--fs-800), calc(1.6338rem + 2.6291vw), 4rem);
   --fs-nav: var(--fs-400);
   --fs-dropdown: var(--fs-300);
   --fs-header: var(--fs-500);
-  --fs-heading-intro: clamp(var(--fs-600), calc(1.4859rem + 1.1268vw), 2.5rem);
-  --fs-heading-sata: var(--fs-800);
-  --fs-heading-sub: var(--fs-600);
+  --fs-heading-intro: clamp(var(--fs-700), calc(1.4859rem + 1.1268vw), 2.5rem);
+  --fs-heading-sata: var(--fs-900);
+  --fs-heading-sub: var(--fs-700);
   --fs-footer: var(--fs-400);
   --fs-small: var(--fs-200);
   --ls-h1: -0.078rem;
@@ -57,6 +57,7 @@
     --ls-h2: -0.08rem;
     --ls-para: 0.03rem;
     --fs-nav: calc(var(--fs-400) * 15/16);
+    --fs-heading-sub: var(--fs-600);
     --lh-para: 1.76;
     --fs-footer: var(--fs-300);
   }
@@ -769,7 +770,11 @@ body {
   .infrastructure-sata .textgroup {
     width: min(100%, 33rem);
     align-self: center;
-    margin-inline: 3rem 1rem;
+    margin-inline: 3rem 0.5rem;
+    margin-top: 0.75rem;
+  }
+  .infrastructure-sata .textgroup h2 {
+    margin-bottom: 1.25rem;
   }
   .infrastructure-features {
     padding-block: clamp(5rem, -3.75rem + 17.5vw, 12rem) clamp(5rem, -5.625rem + 21.25vw, 13.5rem);
@@ -784,7 +789,7 @@ body {
   .infrastructure-features .textbody {
     grid-column: 2/3;
     margin-top: 3.1rem;
-    margin-inline: 0.5rem 1rem;
+    margin-inline: 0.6rem 1rem;
   }
   .infrastructure-features .textbody > * + * {
     margin-top: 2rem;
