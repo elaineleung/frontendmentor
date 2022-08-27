@@ -661,7 +661,7 @@ body {
     -webkit-margin-start: 8rem;
             margin-inline-start: 8rem;
     width: clamp(40rem, 4rem + 60vw, 58rem);
-    margin-block: 3.7rem;
+    margin-block: 2.5rem 5rem;
     margin-inline: 0 -31.25rem;
   }
   .intro-text {
