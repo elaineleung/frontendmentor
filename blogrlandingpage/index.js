@@ -63,7 +63,7 @@ function handleLinkAction(windowWidth) {
   if (windowWidth < 880) {
     setTimeout(() => toggleMobileNav(windowWidth), 100);
   } else {
-    setTimeout(() => closeActiveDropDown(), 100);
+    closeActiveDropDown();
   }
 }
 
@@ -90,8 +90,6 @@ function setDropDownState(btn) {
   function ariaIsTrue(element) {
     return element.getAttribute("aria-expanded") == "true" ? true : false;
   }
-  setTimeout(() => {
-    btn.setAttribute("aria-expanded", !expanded);
-    btn.toggleAttribute("data-visible");
-  }, 100)
+  btn.setAttribute("aria-expanded", !expanded);
+  btn.toggleAttribute("data-visible");
 }
