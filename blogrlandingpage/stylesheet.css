@@ -692,6 +692,9 @@ body {
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   margin-block: 4rem;
   padding-block: 14.2rem 7.2rem;
   border-radius: 0 var(--br-section) 0 var(--br-section);
@@ -702,7 +705,7 @@ body {
   left: 0;
   right: 0;
   margin-inline: auto;
-  max-width: 380px;
+  width: min(100%, 380px);
 }
 .infrastructure-sata .image img {
   width: 100%;
@@ -733,7 +736,7 @@ body {
 }
 .infrastructure-features .image {
   order: -1;
-  width: min(100% + 12.2rem, 35em);
+  width: 120%;
   margin-inline: -6.1rem;
 }
 .infrastructure-features .image img {

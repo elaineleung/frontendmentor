@@ -723,6 +723,9 @@ body {
   margin-inline: auto;
   position: relative;
   height: fit-content;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   margin-block: 4rem;
   padding-block: 14.2rem 7.2rem;
   border-radius: 0 var(--br-section) 0 var(--br-section);
@@ -732,7 +735,7 @@ body {
     left: 0;
     right: 0;
     margin-inline: auto;
-    max-width: 380px;
+    width: min(100%, 380px);
     img {
       width: 100%;
       object-fit: cover;
@@ -764,7 +767,7 @@ body {
   }
   .image {
     order: -1;
-    width: min(calc(100% + 12.2rem), 35em);
+    width: 120%;
     margin-inline: -6.1rem;
     img {
       width: 100%;
