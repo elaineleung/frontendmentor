@@ -61,9 +61,9 @@ function toggleMobileNav(windowWidth) {
 
 function handleLinkAction(windowWidth) {
   if (windowWidth < 880) {
-    setTimeout(() => toggleMobileNav(windowWidth), 250);
+    setTimeout(() => toggleMobileNav(windowWidth), 100);
   } else {
-    setTimeout(() => closeActiveDropDown(), 250);
+    setTimeout(() => closeActiveDropDown(), 100);
   }
 }
 
@@ -93,5 +93,5 @@ function setDropDownState(btn) {
   setTimeout(() => {
     btn.setAttribute("aria-expanded", !expanded);
     btn.toggleAttribute("data-visible");
-  }, 200)
+  }, 100)
 }
