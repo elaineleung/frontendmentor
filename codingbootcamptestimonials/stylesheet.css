@@ -456,7 +456,6 @@ body {
     min-height: unset;
   }
   .text-frame {
-    width: 100%;
     overflow: hidden;
     position: absolute;
     bottom: 8.9rem;

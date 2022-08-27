@@ -37,3 +37,4 @@ GitHub landing page: [https://elaineleung.github.io/frontendmentor/](https://ela
 | 25  | [Coding bootcamp testimonials slider](https://elaineleung.github.io/frontendmentor/codingbootcamptestimonials/)| [Link to GitHub repo](https://github.com/elaineleung/frontendmentor/tree/main/codingbootcamptestimonials/) |
 | 26  | [Pricing component with toggle](https://elaineleung.github.io/frontendmentor/pricingcomponentwithtoggle/)| [Link to GitHub repo](https://github.com/elaineleung/frontendmentor/tree/main/pricingcomponentwithtoggle/) |
 | 27  | [Calculator app](https://elaineleung.github.io/frontendmentor/calculatorapp/)| [Link to GitHub repo](https://github.com/elaineleung/frontendmentor/tree/main/calculatorapp/) |
+| 28  | [Blogr landing page](https://elaineleung.github.io/frontendmentor/blogrlandingpage/)| [Link to GitHub repo](https://github.com/elaineleung/frontendmentor/tree/main/blogrlandingpage/) |

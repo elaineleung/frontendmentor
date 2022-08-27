@@ -189,6 +189,13 @@ export const challenges = [
       "level": "Intermediate",
       "internalhost": true,
       "id": 27
+    },
+    {
+      "name": "blogrlandingpage",
+      "title": "Blogr landing page",
+      "level": "Junior",
+      "internalhost": true,
+      "id": 28
     }
   ]
 
