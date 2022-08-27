@@ -407,13 +407,13 @@ body {
     width: 7.5rem;
   }
   .header-hero {
-    padding-block: 8rem 7.65rem;
+    padding-block: 8rem 7.2rem;
   }
   .header-hero h1 {
-    margin-bottom: 0.65rem;
+    margin-bottom: 0.8rem;
   }
   .header-hero p {
-    margin-bottom: 2.7rem;
+    margin-bottom: 3rem;
   }
 }
 /*** Navigation ***/
