@@ -34,7 +34,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
+- Solution URL: [Link to solution URL here](https://www.frontendmentor.io/solutions/responsive-landing-page-with-mobile-nav-and-dropdown-nav-VfVgqdT8Xe)
 - Live Site URL: [Link to live site](https://elaineleung.github.io/frontendmentor/blogrlandingpage/)
 
 ## My process
@@ -60,8 +60,8 @@ Probably none!
 
 ### Useful resources
 
-- [Kevin Powell's FEM tutorial series](https://youtube.com/playlist?list=PL4-IK0AVhVjNDRHoXGort7sDWcna8cGPA) - This helped me in building my mobile nav
-- [Alexander Morse's PayAPI solution repo](https://github.com/Sakeran/fem-payapi-mpa) - I came across Alexander's solution and really liked what he did with his page
+- [Kevin Powell's FEM tutorial series](https://youtube.com/playlist?list=PL4-IK0AVhVjNDRHoXGort7sDWcna8cGPA) - This helped me in structuring my code, using CUBE CSS, and also building my mobile nav
+- [Alexander Morse's PayAPI solution repo](https://github.com/Sakeran/fem-payapi-mpa) - I came across Alexander's solution on FEM and really liked what he did with his page
 
 ## Author
 
@@ -71,4 +71,4 @@ Probably none!
 
 ## Acknowledgments
 
-Great thanks to Alexander Morse and Kevin Powell!
+Got a lot of help from studying the mobile nav built by [@Sakeran](https://github.com/Sakeran). Thanks also to [@crsimpson5](https://github.com/crsimpson5) for spotting things that I needed to fix!
