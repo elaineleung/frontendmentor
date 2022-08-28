@@ -23,7 +23,11 @@ function handleEventListeners() {
 
   window.addEventListener("resize", () => {
     checkDimensions();
-    if (windowWidth >= 880) closeActiveDropDown();
+    if (windowWidth >= 880) {
+      closeActiveDropDown()
+      navToggleEl.setAttribute("aria-expanded", false);
+      primaryNavEl.toggleAttribute("data-visible", false);
+    };
   });
 
   window.addEventListener("click", (event) => {
