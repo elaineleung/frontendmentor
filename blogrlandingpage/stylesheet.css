@@ -895,7 +895,7 @@ body {
 }
 .footer .attribution {
   flex: 1;
-  line-height: var(--lh-body);
+  line-height: var(--lh-para);
   display: flex;
   flex-direction: column;
   padding-inline: 1rem;
