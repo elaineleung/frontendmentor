@@ -235,12 +235,23 @@ button {
 a:not(.cta),
 button {
   color: currentColor;
-  padding: 0.1rem 0.2rem;
   text-decoration: none;
+  padding: 0.1rem 0.2rem;
 }
 a:not(.cta):focus,
 button:focus {
   padding: 0.1rem 0.2rem;
+}
+
+.attribution a {
+  padding: 0;
+  text-decoration: underline;
+}
+.attribution a:focus {
+  padding: 0;
+}
+.attribution a:hover {
+  opacity: 0.8;
 }
 
 a:focus,
@@ -855,12 +866,12 @@ body {
   font-family: var(--ff-secondary);
   border-radius: 0 var(--br-section) 0 0;
   font-size: var(--fs-footer);
-  line-height: 1;
 }
 .footer .container {
   display: flex;
   flex-direction: column;
   align-items: center;
+  line-height: 1;
 }
 .footer .container .logo {
   margin-block: 4.75rem;
@@ -884,10 +895,11 @@ body {
 }
 .footer .attribution {
   flex: 1;
+  line-height: var(--lh-body);
   display: flex;
   flex-direction: column;
   padding-inline: 1rem;
-  padding-block: 1rem;
+  padding-block: 1.5rem;
 }
 .footer .attribution-content {
   margin-top: auto;
