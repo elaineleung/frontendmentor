@@ -265,7 +265,7 @@ button {
 
 a:focus,
 button:focus {
- --clr-outline: currentColor;
+  --clr-outline: currentColor;
   outline: 0.2rem var(--clr-outline) dotted;
 }
 
@@ -290,7 +290,6 @@ h2 {
 p {
   line-height: var(--lh-para);
 }
-
 
 /* hover action underline  */
 .main a,
@@ -519,10 +518,6 @@ body {
       padding: 1rem 2.45rem;
     }
   }
-
-  [aria-expanded="false"] + ul {
-    display: none;
-  }
 }
 
 .dropdown {
@@ -539,13 +534,13 @@ body {
     display: flex;
     align-items: center;
     gap: 0.5rem;
-    .arrow {
-      display: inline-block;
-      transform: rotate(0deg);
-      svg {
-        path {
-          stroke: var(--clr-arrow);
-        }
+  }
+  &-arrow {
+    display: inline-block;
+    transform: rotate(0deg);
+    svg {
+      path {
+        stroke: var(--clr-arrow);
       }
     }
   }
@@ -576,22 +571,32 @@ body {
 
 /* Navigation and dropdown actions  */
 
-.dropdown-items {
-  visibility: hidden;
-  opacity: 0;
-  transition: visibility 0.2s, opacity 0.25s ease-in-out;
+.navigation-primary {
+  &[aria-expanded="false"] + ul {
+    display: none;
+  }
 }
 
 .dropdown {
+  &-items {
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0.2s, opacity 0.25s ease-in-out;
+  }
 
-  &-btn[data-visible] {
-    & + .dropdown-items {
-      visibility: visible;
-      opacity: 1;
-      transition: visibility 0.2s, opacity 0.25s ease-in-out;
+  &-btn {
+    &[aria-expanded="false"] + ul {
+      display: none;
     }
-    .arrow {
-      transform: rotate(180deg);
+    &[data-visible] {
+      + .dropdown-items {
+        visibility: visible;
+        opacity: 1;
+        transition: visibility 0.2s, opacity 0.25s ease-in-out;
+      }
+      .dropdown-arrow {
+        transform: rotate(180deg);
+      }
     }
   }
 }

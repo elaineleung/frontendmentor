@@ -1,5 +1,5 @@
 const navToggleEl = document.querySelector(".mobile-nav-toggle");
-const dropdownEls = document.querySelectorAll(".dropdown");
+const dropdownBtns = document.querySelectorAll(".dropdown-btn");
 const primaryNavEl = document.querySelector(".navigation-primary");
 
 function handleEventListeners() {
@@ -12,29 +12,29 @@ function handleEventListeners() {
     link.addEventListener("click", () => handleLinkAction(windowWidth));
   });
 
-  dropdownEls.forEach((dropdown) => {
-    const dropdownBtn = dropdown.querySelector("button");
-    dropdownBtn.addEventListener("click", () => toggleDropDown(dropdownBtn, windowWidth));
+  dropdownBtns.forEach((btn) => {
+    btn.addEventListener("click", (event) => {
+      event.stopPropagation()
+      toggleDropDown(btn, windowWidth)
+    });
   });
 
   window.addEventListener("load", checkDimensions);
 
   window.addEventListener("resize", () => {
-    checkDimensions()
-    if (windowWidth >= 880) closeActiveDropDown()
-
+    checkDimensions();
+    if (windowWidth >= 880) closeActiveDropDown();
   });
 
   window.addEventListener("click", (event) => {
-    const el = event.target
+    const el = event.target;
     if (!el.classList.contains("dropdown-title")) {
       if (!el.classList.contains("dropdown-items")) {
-        dropdownEls.forEach( dropdown => {
-          const dropdownBtn = dropdown.querySelector("button");
-          if (dropdownBtn.hasAttribute("data-visible")) {
-            closeActiveDropDown()
+        dropdownBtns.forEach((btn) => {
+          if (btn.hasAttribute("data-visible")) {
+            closeActiveDropDown();
           }
-        })
+        });
       }
     }
   });
@@ -48,16 +48,14 @@ handleEventListeners();
 function toggleMobileNav(windowWidth) {
   if (primaryNavEl.hasAttribute("data-visible")) {
     navToggleEl.setAttribute("aria-expanded", false);
-    dropdownEls.forEach((dropdown) => {
-      const dropdownBtn = dropdown.querySelector("button");
-      dropdownBtn.hasAttribute("data-visible") && toggleDropDown(dropdownBtn, windowWidth);
+    dropdownBtns.forEach((btn) => {
+      btn.hasAttribute("data-visible") && toggleDropDown(btn, windowWidth);
     });
   } else {
     navToggleEl.setAttribute("aria-expanded", true);
   }
   primaryNavEl.toggleAttribute("data-visible");
 }
-
 
 function handleLinkAction(windowWidth) {
   if (windowWidth < 880) {
@@ -68,29 +66,29 @@ function handleLinkAction(windowWidth) {
 }
 
 function toggleDropDown(btn, windowWidth) {
-  console.log(windowWidth)
-  if (windowWidth >= 880) {  
-    closeActiveDropDown(btn)
+  if (windowWidth >= 880) {
+    closeActiveDropDown(btn);
+  } else {
+    setDropDownState(btn);
   }
-  setDropDownState(btn)
 }
 
-
-function closeActiveDropDown(btn) {
-  dropdownEls.forEach((dropdown) => { 
-    const dropdownBtn = dropdown.querySelector("button");
-    if (dropdownBtn.hasAttribute("data-visible")) {
-      if (dropdownBtn !== btn)
-      setDropDownState(dropdownBtn)
-    } 
-  });
+function closeActiveDropDown(activeBtn) {
+  if (activeBtn !== undefined) {
+    setDropDownState(activeBtn);
+    const otherDropDowns = [...dropdownBtns].filter((target) => target != activeBtn);
+    otherDropDowns.forEach((btn) => {
+      btn.hasAttribute("data-visible") && setDropDownState(btn)
+    });
+  } else {
+    dropdownBtns.forEach(btn => {
+      btn.hasAttribute("data-visible") && setDropDownState(btn)
+    })
+  }
 }
-
 
 function setDropDownState(btn) {
   let expanded = ariaIsTrue(btn);
-  console.log(expanded)
-
   function ariaIsTrue(element) {
     return element.getAttribute("aria-expanded") === "true" ? true : false;
   }
