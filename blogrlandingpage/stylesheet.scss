@@ -384,10 +384,6 @@ body {
   font-size: var(--fs-body);
   font-weight: var(--fw-light);
   text-align: center;
-
-  // * {
-  //   outline: var(--debug);
-  // }
 }
 
 .container {
@@ -400,7 +396,8 @@ body {
   margin-inline: auto;
 }
 
-/* Header section */
+/****** <<< Header section >>> ******/
+
 
 .header {
   --fs-h1: clamp(var(--fs-800), calc(1.6338rem + 2.6291vw), 4rem);
@@ -477,7 +474,7 @@ body {
   }
 }
 
-/*** Navigation ***/
+/****** Navigation ******/
 
 .navigation-primary {
   --fs-nav: var(--fs-300);
@@ -569,7 +566,7 @@ body {
   }
 }
 
-/* Navigation and dropdown actions  */
+/****** Navigation and dropdown actions ******/
 
 .navigation-primary {
   &[aria-expanded="false"] + ul {
@@ -635,13 +632,6 @@ body {
     .login a:not(.cta) {
       --clr-nav: var(--clr-blue-900);
     }
-
-    // .dropdown-btn,
-    // a {
-    //   &:focus {
-    //     outline: 0.2rem var(--clr-focus) dotted;
-    //   }
-
     > * + * {
       margin-top: 1.7rem;
     }
@@ -709,18 +699,9 @@ body {
       }
     }
   }
-  // .navigation-secondary a,
-  // .dropdown-title,
-  // a:not([data-cta]) {
-  //   &::after {
-  //     --bb-dropdown: var(--clr-blue-900);
-  //   }
-  // }
 }
 
-// toggle dropdown effect
-
-/* Main section */
+/****** <<< Main section >>> ******/
 
 .main {
   --ls-main: 0.03rem;
@@ -789,7 +770,7 @@ body {
       top: 0;
       bottom: 0;
       right: 14rem;
-      margin-inline-start: 8rem;
+      // margin-inline-start: 8rem;
       width: clamp(40rem, calc(4rem + 60vw), 58rem);
       margin-block: 2.5rem 5rem;
       margin-inline: 0 -31.25rem;
@@ -809,6 +790,17 @@ body {
     }
   }
 }
+
+@media (min-width: 90em) {
+  .intro {
+    &-image {
+      right: auto;
+      margin-inline: 60rem -10rem;
+    }
+  }  
+}
+
+
 
 .infrastructure {
   margin-block: 12.4rem 4.5rem;
@@ -937,11 +929,18 @@ body {
       top: 0;
       bottom: 0;
       left: -11rem;
-      // margin-inline-start: 8rem;
       width: clamp(40rem, calc(-1rem + 68.3333vw), 60.5rem);
-      // margin-inline: -6.1rem;
     }
   }
+}
+
+@media (min-width: 90em) {
+  .infrastructure-features {
+    .image {
+      left: auto;
+      margin-inline: 0 60rem;
+    }
+  }  
 }
 
 .footer {

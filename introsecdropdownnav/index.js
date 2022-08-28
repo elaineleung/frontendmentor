@@ -5,7 +5,7 @@ const dropDownBtns = document.querySelectorAll("nav button");
 const linkEls = document.querySelectorAll(".link");
 
 const navClickables = [toggleEl, overlayEl];
-
+ 
 let windowWidth;
 // get clientWidth for media query
 
