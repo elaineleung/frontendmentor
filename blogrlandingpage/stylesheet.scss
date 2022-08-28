@@ -582,8 +582,9 @@ body {
   transition: visibility 0.2s, opacity 0.25s ease-in-out;
 }
 
-.dropdown-btn {
-  &[data-visible] {
+.dropdown {
+
+  &-btn[data-visible] {
     & + .dropdown-items {
       visibility: visible;
       opacity: 1;

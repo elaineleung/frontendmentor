@@ -68,27 +68,31 @@ function handleLinkAction(windowWidth) {
 }
 
 function toggleDropDown(btn, windowWidth) {
-  if (windowWidth >= 880) {
-    closeActiveDropDown()
+  console.log(windowWidth)
+  if (windowWidth >= 880) {  
+    closeActiveDropDown(btn)
   }
   setDropDownState(btn)
 }
 
 
-function closeActiveDropDown() {
+function closeActiveDropDown(btn) {
   dropdownEls.forEach((dropdown) => { 
     const dropdownBtn = dropdown.querySelector("button");
     if (dropdownBtn.hasAttribute("data-visible")) {
+      if (dropdownBtn !== btn)
       setDropDownState(dropdownBtn)
-    }
+    } 
   });
 }
 
 
 function setDropDownState(btn) {
   let expanded = ariaIsTrue(btn);
+  console.log(expanded)
+
   function ariaIsTrue(element) {
-    return element.getAttribute("aria-expanded") == "true" ? true : false;
+    return element.getAttribute("aria-expanded") === "true" ? true : false;
   }
   btn.setAttribute("aria-expanded", !expanded);
   btn.toggleAttribute("data-visible");
