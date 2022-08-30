@@ -95,7 +95,13 @@ class Calculator {
   }
 
   selectOperator(operator) {
-    if ((this.currentOperand === "" || this.currentOperand === "0")) return;
+    if ((this.currentOperand === "" || this.currentOperand === "0")) {
+      if (this.previousOperand != "") {
+        this.operator = operator;
+        this.displayCalc();
+        return
+      } else return
+    }
     if (this.previousOperand != "") {
       this.compute();
     }
@@ -119,7 +125,6 @@ class Calculator {
     const current = parseFloat(this.currentOperand)
 
     if (
-        // this.equalsPressed === true || 
         this.previousOperand === '' || 
         this.currentOperand === '') 
         return;
@@ -167,6 +172,7 @@ window.addEventListener("keydown", (event) => {
   const key = event.key;
 
   if (allKeys.includes(key) || key === "Enter" || key === "Escape" || key === "Delete") {
+    console.log(event)
     const keyPressed = document.querySelector(`button[value="${key}"]`);
     keyPressed.focus();
     handleActions(keyPressed)
