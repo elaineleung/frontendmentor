@@ -71,13 +71,18 @@ class Calculator {
     return `${integerNum}.${decimalNum}`
   }
 
-  displayCalc() {
+  isMaxSafeInteger () {
     if (this.currentOperand > Number.MAX_SAFE_INTEGER) {
       this.currentOperandEl.textContent = "Too big!"
       this.currentOperand = ""
       this.previousOperand = ""
-      return
-    }
+      this.operator = undefined
+      return true
+   } else return false
+  }
+
+  displayCalc() {
+    if (this.isMaxSafeInteger() === true) return
     this.currentOperandEl.textContent = this.getDisplayNumber(this.currentOperandDisplay);
     this.previousOperandEl.textContent = this.operator != undefined 
     ? `${this.getDisplayNumber(this.previousOperand)} ${this.displayOperator(this.operator)}`
@@ -107,6 +112,7 @@ class Calculator {
         return
       } else return
     }
+    // if (this.isMaxSafeInteger() === true) return
     if (this.previousOperand != "") {
       this.compute();
     }
