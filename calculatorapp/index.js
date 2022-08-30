@@ -72,11 +72,16 @@ class Calculator {
   }
 
   displayCalc() {
+    if (this.currentOperand > Number.MAX_SAFE_INTEGER) {
+      this.currentOperandEl.textContent = "Too big!"
+      this.currentOperand = ""
+      this.previousOperand = ""
+      return
+    }
     this.currentOperandEl.textContent = this.getDisplayNumber(this.currentOperandDisplay);
     this.previousOperandEl.textContent = this.operator != undefined 
     ? `${this.getDisplayNumber(this.previousOperand)} ${this.displayOperator(this.operator)}`
     : ""
-
   }
 
   displayOperator(operator) {
@@ -172,7 +177,6 @@ window.addEventListener("keydown", (event) => {
   const key = event.key;
 
   if (allKeys.includes(key) || key === "Enter" || key === "Escape" || key === "Delete") {
-    console.log(event)
     const keyPressed = document.querySelector(`button[value="${key}"]`);
     keyPressed.focus();
     handleActions(keyPressed)
