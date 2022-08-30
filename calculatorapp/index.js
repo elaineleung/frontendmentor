@@ -1,119 +1,156 @@
 const calcEl = document.querySelector(".calculator");
-const outputEl = document.querySelector("[data-output]");
+const currentOperandEl = document.querySelector("[data-current]");
+const previousOperandEl = document.querySelector("[data-previous]");
 
 // Calculator and its functions
 
-
 class Calculator {
-  constructor(outputEl) {
-    this.displayEl = outputEl;
+  constructor(currentOperandEl, previousOperandEl) {
+    this.currentOperandEl = currentOperandEl;
+    this.previousOperandEl = previousOperandEl;
+    this.limit = 14;
     this.resetCalc();
-    // this.init()
-    // this.initial = "399981"
   }
-
-  // init() {
-  //   Array.from(this.initial).forEach( digit => {
-  //     this.appendNum(digit);
-  //   })
-  // }
 
   resetCalc() {
     this.previousOperand = "";
-    this.currentOperand = "0";
+    this.currentOperand = "";
+    this.currentOperandDisplay = "0";
     this.operator = undefined;
-    this.equalsPressed = false;
-    this.display = "0";
     this.displayCalc();
   }
 
   appendNum(number) {
     // prevent extra decimals
-    if ((number === "." && this.currentOperand.toString().includes(".")) || this.currentOperand.length > 14) return;
+    if (number === ".") {
+      if (this.currentOperand.toString().includes(".")) return
+      if (this.currentOperand.toString() === "") {
+        this.currentOperand = "0"
+      }
+    } 
 
-    if (this.currentOperand === "0" || this.display === "0") {
-      if (number === ".") this.currentOperand.toString() + number.toString();
-    }
-    // allows for new operand to be input and override zero after equals operation
-    if (this.equalsPressed === true || (this.currentOperand === "0" && number != ".")) {
-      this.currentOperand = "";
-      this.equalsPressed = false;
-    }
-    this.currentOperand = this.currentOperand.length <= 12
-      ? this.currentOperand.toString() + number.toString()
-      : this.currentOperand.toString()
-    this.display = this.currentOperand;
+    this.currentOperand = this.currentOperand.toString() + number.toString()
+    this.currentOperandDisplay = this.currentOperand
     this.displayCalc();
   }
   
   getDisplayNumber(number) {
-    const stringNumber = number.toString()
-    const integerDigits = parseFloat(stringNumber.split(".")[0])
-    const decimalDigits = stringNumber.split(".")[1]
+    let stringNumber = number.toString()
+    let integerDigits = parseFloat(stringNumber.split(".")[0])
+    let integerString = stringNumber.split(".")[0]
+    let decimalString = stringNumber.split(".")[1]
     let integerDisplay
     let finalDisplay
+
     if (isNaN(integerDigits)) {
-      integerDisplay = '0'
+      integerDisplay = ''
     } else {
+      if (integerString.length >= this.limit) {
+        integerDigits = integerDigits.toExponential(5)
+      }
       integerDisplay = integerDigits.toLocaleString('en', {maximumFractionDigits: 0})
     }
-    if (decimalDigits != null) {
-      finalDisplay = `${integerDisplay}.${decimalDigits}`
-      finalDisplay = finalDisplay.length > 16 ? finalDisplay.slice(0, 15) : finalDisplay
+    if (decimalString != null) {
+      if (integerString.length < this.limit){
+        let intLength = this.limit - integerString.length
+        if (intLength < decimalString.length) {
+          decimalString = decimalString.slice(0, intLength - 1)     
+        }
+      }
+      finalDisplay = this.displayComputedString(integerDisplay, decimalString)
+      finalDisplay = finalDisplay.charAt(this.limit - 1) === "." 
+      ? finalDisplay.slice(0, -1) : finalDisplay
+
     } else {
       finalDisplay = integerDisplay
     }
-    return finalDisplay.length > 17 ? "Number too big" : finalDisplay
+    return finalDisplay
+  }
+
+  displayComputedString(integerNum, decimalNum) {
+    return `${integerNum}.${decimalNum}`
   }
 
   displayCalc() {
-    this.displayEl.textContent = this.getDisplayNumber(this.display);
+    this.currentOperandEl.textContent = this.getDisplayNumber(this.currentOperandDisplay);
+    this.previousOperandEl.textContent = this.operator != undefined 
+    ? `${this.getDisplayNumber(this.previousOperand)} ${this.displayOperator(this.operator)}`
+    : ""
+
+  }
+
+  displayOperator(operator) {
+    switch (operator) {
+      case "+":
+        return "+"
+      case "-":
+        return "−"
+      case "*":
+        return "×"
+      case "/":
+        return "÷"
+      default:
+        return
+    }
   }
 
   selectOperator(operator) {
-    this.equalsPressed === false;
-
-    if (this.currentOperand === "") return;
+    if ((this.currentOperand === "" || this.currentOperand === "0")) return;
     if (this.previousOperand != "") {
       this.compute();
     }
     this.operator = operator;
+
     this.previousOperand = this.currentOperand;
     this.currentOperand = "";
+    this.currentOperandDisplay = this.currentOperand
     this.displayCalc();
   }
   
   deleteNum() {
     this.currentOperand = this.currentOperand.toString().slice(0, -1)
-    this.display = this.currentOperand
+    this.currentOperandDisplay = this.currentOperand
     this.displayCalc();
   }
   
   compute() {
-    if (this.equalsPressed === true || 
+    let computation
+    const previous = parseFloat(this.previousOperand)
+    const current = parseFloat(this.currentOperand)
+
+    if (
+        // this.equalsPressed === true || 
         this.previousOperand === '' || 
         this.currentOperand === '') 
         return;
+    if (isNaN(previous) || isNaN(current)) return
 
-    this.currentOperand = eval(
-      `${this.previousOperand} 
-       ${this.operator} 
-       ${this.currentOperand}`
-    );
-
-    this.display = this.currentOperand;
+    switch (this.operator) {
+      case "+":
+        computation = previous + current
+        break;
+      case "-":
+        computation = previous - current
+        break;
+      case "*":
+        computation = previous * current
+        break;
+      case "/":
+        computation = previous / current
+        break;
+      default:
+        return
+     }
+  
+    this.currentOperand = Number.parseFloat(computation.toFixed(this.limit))
     this.previousOperand = "";
     this.operator = undefined;
-    this.equalsPressed = true;
+    this.currentOperandDisplay = this.currentOperand
     this.displayCalc();
   }
 }
 
-const calculator = new Calculator(outputEl);
-
-// window.addEventListener("load", () => {
-//   calculator.appendNum();
-// })
+const calculator = new Calculator(currentOperandEl, previousOperandEl);
 
 // Click and keypress event listeners
 

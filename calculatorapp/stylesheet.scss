@@ -80,17 +80,17 @@
   --fs-h1: var(--fs-600);
   --fs-small: var(--fs-100);
   --fs-footer: var(--fs-100);
+
+  --fs-display-current: var(--fs-800);
+  --fs-display-previous: var(--fs-500);
+
   --fs-keys: var(--fs-600);
   --fs-keys-func: var(--fs-500);
-  --fs-output: var(--fs-800);
 
   --lh-body: 1.2;
-
   --ls-theme: 1px;
 
   --ff-primary: "League Spartan", sans-serif;
-
-  --br-keys: 0.3rem;
 
   --debug: 1px solid pink;
 }
@@ -99,13 +99,13 @@
   :root {
     --fs-600: 1.75rem;
     --fs-h1: var(--fs-700);
-    --fs-output: var(--fs-900);
     --fs-keys: var(--fs-800);
     --fs-keys-func: var(--fs-600);
+    
     --fs-footer: var(--fs-300);
-    --br-keys: 0.6rem;
 
-    --ls-output: -0.05rem;
+    --fs-display-current: var(--fs-900);
+    --ls-display-current: -0.05rem;
   }
 }
 
@@ -145,6 +145,7 @@ body {
   font-size: var(--fs-body);
   font-family: var(--ff-primary);
   transition: background-color 0.35s ease-in-out;
+  font-weight: 700;
   // * {
   // outline: var(--debug);
   // }
@@ -283,22 +284,33 @@ body {
 
 .display {
   display: flex;
-  align-items: center;
-  padding-block: 1.2rem;
+  flex-direction: column;
+  align-items: flex-end; 
+  justify-content: center;
+  gap: 0.2rem;
+  padding-block: 0.6rem;
   border-radius: 0.7rem;
   margin-bottom: 1.5rem;
-  // height: 5.5rem;
-  .output {
+  text-align: right;
+  .display-current {
     width: 100%;
-    height: max-content;
+    height: 2.5rem;
+    line-height: 1;
+    font-size: var(--fs-display-current);
+    letter-spacing: var(--ls-display-current);
+  }
+  .display-previous {
+    width: 100%;
+    height: 1.5rem;
     text-align: right;
-    border: none;
-    font-size: var(--fs-output);
-    letter-spacing: var(--ls-output);
+    line-height: 1;
+    font-size: var(--fs-display-previous);
   }
 }
 
 .keys {
+  --br-keys: 0.3rem;
+
   flex: 1;
   display: grid;
   grid-auto-flow: row;
@@ -391,8 +403,43 @@ body {
   }
 }
 
+@media (min-width: 40em) {
+  .calc-container {
+    padding-inline: 2.05rem;
+  }
+  .calculator {
+    max-height: 39.5rem;
+    .display {
+      padding-block: 1.3rem 1.3rem;
+      .display-current {
+        height: 3rem;
+      }
+      input {
+        width: 100%;
+        text-align: right;
+        border: none;
+        font-size: var(--fs-display-current);
+      }
+    }
+    .keys {
+
+      --br-keys: 0.6rem;
+
+      gap: 1.5rem;
+      padding-block: 2rem;
+      grid-template-rows: repeat(5, 4rem);
+      button[data-action="equals"] {
+        padding-block: 0.7rem;
+      }
+    }
+  }
+}
+
+
+
 .footer {
   width: 100%;
+  font-weight: 400;
   .block-footer {
     display: none;
   }
@@ -454,29 +501,7 @@ body {
       margin-bottom: 0.25rem;
     }
   }
-  .calc-container {
-    padding-inline: 2.05rem;
-  }
-  .calculator {
-    max-height: 39.5rem;
-    .display {
-      padding-block: 2rem 1.8rem;
-      input {
-        width: 100%;
-        text-align: right;
-        border: none;
-        font-size: var(--fs-output);
-      }
-    }
-    .keys {
-      gap: 1.5rem;
-      padding-block: 2rem;
-      grid-template-rows: repeat(5, 4rem);
-      button[data-action="equals"] {
-        padding-block: 0.7rem;
-      }
-    }
-  }
+
   .footer {
     .container {
       width: 100%;
