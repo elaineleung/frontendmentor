@@ -1,0 +1,71 @@
+@use "./reset";
+
+:root {
+  --clr-blue-100: hsl(243, 100%, 93%);
+  --clr-blue-200: hsl(229, 7%, 55%);
+  --clr-blue-700: hsl(228, 56%, 26%);
+  --clr-blue-900: hsl(229, 57%, 11%);
+
+  --fs-100: 0.75rem; // 12pt
+  --fs-200: 0.875rem; // 14pt 
+  --fs-300: 0.9375rem; // 15pt
+  --fs-400: 1rem; // 16pt
+  --fs-500: 1.125rem; // 18pt
+  --fs-600: 1.25rem; // 20pt
+  --fs-700: 1.5rem; // 24pt
+  --fs-800: 2rem; // 32pt
+  --fs-900: 2.25rem; // 36pt
+
+  --fs-body: var(--fs-400);
+
+  --ff-primary: "Raleway", sans-serif;
+}
+
+
+
+.visually-hidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: auto;
+  margin: 0;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+  white-space: nowrap;
+}
+
+
+body {
+  font-family: var(--ff-primary);
+  font-size: var(--fs-body);
+  color: var(--clr-blue-100);
+  background-color: var(--clr-blue-900);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  background-image: url("./images/bg-mobile.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+
+footer {
+  position: relative;
+}
+
+@media (min-width: 80em) {
+  body {
+    background-image: none;
+  }
+  footer::after {
+    background-image: url("./images/bg-desktop.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: absolute;
+    height:20rem;
+
+  }
+}
+

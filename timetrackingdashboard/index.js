@@ -4,15 +4,13 @@ let selected = "weekly";
 
 // first fetch data
 function initialize(){
-  let userData;
   const timeframeEls = document.querySelectorAll("[type='radio']");
   
   fetch("./data.json")
   .then((response) => response.json())
   .then((data) => {
-    userData = data;
-    updateValues(userData);
-    handleTimeframes(timeframeEls, userData)
+    updateValues(data);
+    handleTimeframes(timeframeEls, data)
     const selectedEl = [...timeframeEls].find( el => el.value === selected)
     selectedEl.checked = true;
   })
@@ -34,10 +32,11 @@ function handleTimeframes(timeframes, data){
 function updateValues(data) {
   const cardsEls = document.querySelectorAll(".card");
 
-  cardsEls.forEach((card) => {
+  cardsEls.forEach((card, idx) => {
     // find the dataset that matches the card's life area
-    const stats = data.find((item) => item.title === areasMap[card.id]);
-    const { current, previous } = stats.timeframes[selected];
+    const cardStats = data[idx]
+    // const stats = data.find((item) => item.title === areasMap[card.id]);
+    const { current, previous } = cardStats.timeframes[selected];
     // find the elements within the card
     const statsNow = card.querySelector(".card__stats-now");
     const statsPrev = card.querySelector(".card__stats-prev");
