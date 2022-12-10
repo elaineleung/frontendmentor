@@ -173,17 +173,18 @@ body {
 /* Structure */
 .main {
   flex: 1;
+  width: min(100% - 3rem, 33.8rem);
+  padding-block: 1.5rem;
 }
 
 .wrapper {
   display: grid;
   align-items: center;
   align-content: center;
-  width: min(100% - 3rem, 33.8rem);
   margin-inline: auto;
 }
 
-.container {
+.wrapper > * {
   min-width: 320px;
 }
 
@@ -298,7 +299,8 @@ body {
 
 .footer {
   display: flex;
-  padding: 0.75rem;
+  width: min(100% - 3rem, 42rem);
+  padding-block: 0 1rem;
   flex: 0;
 }
 .footer__attribution {
