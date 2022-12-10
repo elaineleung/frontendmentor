@@ -6,7 +6,7 @@
   --clr-brown-med: hsl(28, 10%, 53%);
   --clr-cream: hsl(27, 66%, 92%);
   --clr-orange-vpale: hsl(33, 100%, 98%);
-
+ 
   --fs-100: 0.75rem; // 12px
   --fs-200: 0.8125rem; // 13px
   --fs-300: 0.875rem; // 14px
@@ -37,7 +37,7 @@
   --lh-body: 1.2;
   --lh-footer: 1.4;
 
-  --pad-comp: clamp(1rem, calc(-2.8071rem + 16.2437vw), 3rem);
+  // --pad-comp: clamp(1rem, calc(-2.8071rem + 16.2437vw), 3rem);
 
   --ff-primary: "DM Sans", Arial, sans-serif;
 }
@@ -77,11 +77,6 @@ span {
 
 p {
   line-height: var(--lh-body);
-}
-
-html,
-body {
-  font-size: var(--fs-body);
 }
 
 img {
@@ -203,15 +198,19 @@ body {
 
 /* Structure */
 
-.component {
+.main {
+  flex: 1;
+}
+
+.wrapper {
   display: grid;
   align-items: center;
-  flex: 1;
-  padding: var(--pad-comp);
+  align-content: center;
+  width: min(100% - 3rem, 33.8rem);
+  margin-inline: auto;
 }
 
 .container {
-  width: min(91.45vw, 33.75rem);
   min-width: 320px;
 }
 

@@ -22,46 +22,44 @@
     <title>Frontend Mentor | Expenses chart component</title>
   </head>
   <body>
-    <main class="component">
-      <div class="container">
-        <section class="balance">
-          <div class="balance__stats">
-            <h2 class="balance__stats-title">My balance</h2>
-            <p class="balance__stats-val">$921.48</p>
-          </div>
-          <img
-            src="./images/logo.svg"
-            alt="two overlapping circles logo"
-            class="balance__img"
-          />
-        </section>
-        <section class="spending">
-          <h1 class="spending__title">Spending - Last 7 days</h1>
-          <div id="barsEl" class="spending__bars bars">
-            <div class="bars__day"></div>
-            <div class="bars__day"></div>
-            <div class="bars__day"></div>
-            <div class="bars__day"></div>
-            <div class="bars__day"></div>
-            <div class="bars__day"></div>
-            <div class="bars__day"></div>
-          </div>
-          
-          <div class="spending__stats stats">
-            <h2 class="stats__subtitle">Total this month</h2>
-            <div class="stats__container">
-              <p class="stats__total">$478.33</p>
-              <div class="stats__change">
-                <p class="stats__change-val">+2.4%</p>
-                <p class="stats__change-text">from last month</p>
-              </div>
+    <main class="main wrapper">
+      <section class="balance container">
+        <div class="balance__stats">
+          <h2 class="balance__stats-title">My balance</h2>
+          <p class="balance__stats-val">$921.48</p>
+        </div>
+        <img
+          src="./images/logo.svg"
+          alt="two overlapping circles logo"
+          class="balance__img"
+        />
+      </section>
+      <section class="spending container">
+        <h1 class="spending__title">Spending - Last 7 days</h1>
+        <div id="barsEl" class="spending__bars bars">
+          <div class="bars__day"></div>
+          <div class="bars__day"></div>
+          <div class="bars__day"></div>
+          <div class="bars__day"></div>
+          <div class="bars__day"></div>
+          <div class="bars__day"></div>
+          <div class="bars__day"></div>
+        </div>
+
+        <div class="spending__stats stats">
+          <h2 class="stats__subtitle">Total this month</h2>
+          <div class="stats__container">
+            <p class="stats__total">$478.33</p>
+            <div class="stats__change">
+              <p class="stats__change-val">+2.4%</p>
+              <p class="stats__change-text">from last month</p>
             </div>
           </div>
-        </section>
-      </div>
+        </div>
+      </section>
     </main>
-    <footer class="footer">
-      <div class="footer__attribution">
+    <footer class="footer wrapper">
+      <div class="footer__attribution container">
         <p class="footer__attribution-content">
           Challenge by
           <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
