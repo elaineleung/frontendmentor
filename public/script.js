@@ -16,20 +16,20 @@ function createCard(item) {
     item.internalhost === true
       ? `https://github.com/elaineleung/frontendmentor/tree/main/${item.name}`
       : item.repo;
-
+ 
   const cardHTML = `
     <li class="card">
-      <div class="image">
+      <picture class="image">
         <img src=${image} alt=""/>
-      </div>
-      <div class="text">            
+      </picture>
+      <article class="text">            
         <h2>
           <a href="${url}">${item.title}</a>
         </h2>          
         <small>
           <a href="${repo}">Github repo</a>
         </small>  
-      </div>
+      </article>
     </li>
   `;
 

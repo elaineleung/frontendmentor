@@ -1,17 +1,19 @@
 :root {
-  --primary-100: 192, 100%, 96%;
-  --primary-200: 191, 23%, 77%;
-  --primary-700: 184, 100%, 22%;
-  --primary-900: 179, 100%, 13%;
-  --neutral-100: 0, 0%, 98%;
+  --clr-accent-100: 0, 11%, 76%;
+  --clr-primary-100: 183, 28%, 87%;
+  --clr-primary-200: 180, 59%, 85%;
+  --clr-primary-400: 180, 39%, 40%;
+  --clr-primary-700: 180, 16%, 8%;
+  --clr-primary-900: 180, 5%, 4%;
+  --clr-neutral-100: 0, 0%, 97%;
+  --clr-neutral-200: 0, 0%, 85%;
   
   --bs-aqua: hsl;
   --fs-body: 1rem;
   --fs-p: 1.125rem;
-  --pad-ver: 10vh;
   --pad-hor: 14vw;
-  --ff-primary: "Lexend Deca", sans-serif;
-  --ff-secondary: "Big Shoulders Display", sans-serif;
+  --ff-primary: "Inter", sans-serif;
+  --ff-secondary: "Work Sans", sans-serif;
 }
 
 /* @media (min-width: 1150px) {
@@ -45,32 +47,35 @@ li {
   padding: 0;
 }
  
-html,
-body {
-  font-size: var(--fs-body);
-}
-
 img {
   width: 100%;
 }
 
 a {
   text-decoration: none;
-  color: inherit;
+  color: hsl(var(--clr-primary-200));
+}
+
+a:hover,
+a:focus {
+  text-decoration: underline;
 }
 
 body {
-  width: 100%;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  position: relative;
-  background-color: hsl(var(--primary-100));
+  background-color: hsl(var(--clr-primary-700));
   font-family: var(--ff-primary);
+  color: hsl(var(--clr-primary-100));
 }
 
+/* body * {
+  outline: 1px pink solid;
+} */
+
 .container {
-  width: min(90%, 80rem);
+  width: min(calc(100% - clamp(3rem, 15vw, 8rem)), 65rem);
   margin-inline: auto;
 }
 
@@ -78,33 +83,44 @@ body {
   width: min(50vw, 250px);
 }
 
-.header {
-  padding: var(--pad-ver) 0;
+header {
+  padding-block: 6rem 3rem;
 }
 
-.main {
+main {
   display: flex;
   flex-direction: column;
-  font-size: var(--fs-p);
+  font-size: clamp(1rem, 7vw, 1.3175rem);
 }
 
-
 .title {
-  font-size: clamp(1.5rem, calc(0.9718rem + 2.2535vw), 3rem);
+  font-size: clamp(3rem, 12vw, 5rem);
+  font-family: var(--ff-secondary);
   margin-bottom: 0.8em;
+  line-height: 1.05;
+  font-weight: 800;
+  overflow-wrap: normal;
+  color:hsl(var(--clr-primary-200));
+  /* text-transform: uppercase; */
+  letter-spacing: 0.1rem;
+  text-shadow: -0.25rem 0.2rem 0 hsl(var(--clr-primary-900)), -0.45rem 0.25rem 0 hsl(var(--clr-neutral-200));
+}
+
+.title .highlight {
+  color: hsl(var(--clr-accent-100));
 }
 
 .intro {
-  margin-bottom: 2em;
+  margin-block: 0 5rem;
 }
 
 .grid {
   /* border: 1px solid magenta; */
   display: grid;
   width: 100%;
-  grid-template-columns: repeat(auto-fill, minmax(18rem, 1fr));
-  column-gap: 1.7rem;
-  row-gap: 1.5rem;
+  grid-template-columns: repeat(auto-fill, minmax(min(80%, 16rem), 1fr));
+  column-gap: 2rem;
+  row-gap: 1.8rem;
   margin-bottom: 5rem;
 }
 
@@ -114,10 +130,15 @@ body {
   flex-direction: column;
   width: 100%;
   height: 100%;
-  background: hsl(var(--neutral-100));
+  background: hsl(var(--clr-neutral-100));
   padding: 0;
   border-radius: 0.5rem;
-  box-shadow: 0.2rem 0.2rem 0.5rem hsla(var(--primary-200), 0.9);
+  color: hsl(var(--clr-primary-700));
+  /* box-shadow: 0.2rem 0.2rem 0.5rem hsla(var(--primary-200), 0.9); */
+}
+
+.card a {
+  color: inherit;
 }
 
 .card a::after {
@@ -131,11 +152,11 @@ body {
 }
 
 .card:hover h2 a::after {
-  box-shadow: 0 0 0 0.25rem hsl(var(--primary-700));
+  box-shadow: 0 0 0 0.25rem hsl(var(--clr-primary-400));
 }
 
 .card:hover h2 {
-  color: hsl(var(--primary-700));
+  color: hsl(var(--clr-primary-400));
 }
 
 .card a:focus {
@@ -143,12 +164,12 @@ body {
 }
 
 .card:focus-within {
-  box-shadow: 0 0 0 0.25rem hsl(var(--primary-700));
+  box-shadow: 0 0 0 0.25rem hsl(var(--clr-primary-400));
 }
 
 .card:focus-within h2 a:focus {
-  color: hsl(var(--primary-700));
-  text-decoration: none;
+  color: hsl(var(--clr-primary-400));
+  text-decoration: underline;
   outline: none;
 }
 
@@ -174,7 +195,7 @@ body {
 .card:focus-within .image img,
 .card:hover .image img {
   transform: scale(1.15);
-  filter: brightness(0.9) opacity(0.9);
+  filter: brightness(1.02) opacity(0.9);
 }
 
 .card .text {
@@ -201,12 +222,12 @@ body {
 }
 
 .card small a:hover {
-  color: hsl(var(--primary-900));
+  color: hsl(var(--clr-primary-900));
   text-decoration: underline;
 }
 
 .card small a:focus-within {
   text-decoration: underline;
   outline: none;
-  color: hsl(var(--primary-900));
+  color: hsl(var(--clr-primary-900));
 }

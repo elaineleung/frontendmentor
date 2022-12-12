@@ -2,13 +2,12 @@
   --clr-violet: hsl(257, 40%, 49%);
   --clr-magenta-soft: hsl(300, 69%, 71%);
   --clr-white: hsl(0, 0%, 100%);
-  --fs-body: 16px;
-  --fs-para: 16px;
-  --fs-title: 24px;
-  --fs-score: 13.5px;
-  --fs-cta: 12px;
-  --fs-small: 14px;
-  --fs-xsmall: 9px;
+  --fs-body: 1rem;
+  --fs-para: clamp(0.9375rem, 4.25vw, 1.125rem);
+  --fs-title: clamp(1.5rem, 6vw, 2.5rem);
+  --fs-cta: clamp(0.75rem, 4vw, 1.125rem);
+  --fs-small: clamp(0.75rem, 4vw, 0.875rem);
+  --fs-xsmall: clamp(0.625rem, 4vw, 0.75rem);
   --lh-body: 1.5;
   --lh-para: 1.5;
   --lh-title: 1.5;
@@ -16,33 +15,18 @@
   --ls-title: 0px;
   --ls-body: 0px;
   --ls-cta: 0px;
-  --pad-hor: 37px;
-  --pad-top: 32px;
-  --pad-bottom: 5px;
   --ff-secondary: "Poppins", Arial, sans-serif;
   --ff-primary: "Open Sans", Arial, sans-serif;
 }
 
 @media (min-width: 980px) {
   :root {
-    --fs-para: 18px;
-    --fs-title: 40px;
-    --fs-subtitle: 20px;
-    --fs-input: 16px;
-    --fs-cta: 18px;
-    --fs-small: 12px;
-    --fs-xsmall: 10px;
-    --fs-score: 15px;
     --lh-body: 1.6;
     --lh-para: 1.5;
     --ls-body: 0px;
     --ls-title: -0.2px;
-    --ls-input: 0px;
     --ls-message: 0.2px;
     --ls-cta: 0px;
-    --pad-hor: 73px;
-    --pad-top: 52px;
-    --pad-bottom: 5px;
   }
 }
 *,
@@ -87,10 +71,7 @@ button:focus {
 }
 
 body {
-  width: 100%;
-  height: 100%;
   min-height: 100vh;
-  position: relative;
   font-family: var(--ff-primary);
   font-weight: 400;
   color: var(--clr-white);
@@ -100,9 +81,8 @@ body {
   background-size: contain;
   display: flex;
   flex-direction: column;
-  align-items: center;
   text-align: center;
-  padding: 0;
+  position: relative;
 }
 
 /* Typography */
@@ -146,46 +126,46 @@ body {
 }
 
 /* Structure */
-.component {
-  width: 100%;
-  padding: var(--pad-top) var(--pad-hor) var(--pad-bottom);
+.container {
+  width: min(100% - clamp(4.5rem, 18vw, 8rem), 81rem);
+  margin-inline: auto;
+  display: grid;
+  align-items: center;
+  align-content: center;
+  margin-inline: auto;
 }
 
 .header {
-  width: 100%;
+  padding-block: 2rem 1rem;
   align-self: left;
   text-align: left;
 }
 .header__logo {
   width: 129px;
-  margin-left: -3px;
+  margin-left: -0.1875rem;
 }
 
 .main {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  margin: 14px 0 64px;
+  flex: 1;
+  padding-block: 0 4rem;
 }
 
 .hero {
   display: flex;
-  max-width: 400px;
-  margin: 0 auto;
+  width: min(100%, 30rem);
+  margin-inline: auto;
 }
 .hero__img {
-  padding: 41px 0 55px;
+  padding: 2.5625rem 0 3.4375rem;
 }
 
-.intro {
-  display: flex;
-  flex-direction: column;
-}
 .intro__title {
-  margin-bottom: 13px;
+  margin-bottom: 0.8125rem;
+  width: min(100%, 30rem);
+  margin-inline: auto;
 }
 .intro__body {
-  margin-bottom: 24px;
+  margin-bottom: 1.5rem;
 }
 .intro__cta {
   width: 100%;
@@ -199,15 +179,14 @@ body {
   width: -moz-fit-content;
   width: fit-content;
   background-color: var(--clr-white);
-  padding: 14px 76px 12px;
-  border-radius: 20px;
+  padding: 0.875rem 4.75rem 0.75rem;
+  border-radius: 1.25rem;
   box-shadow: 2px 2px 5px hsl(257deg, 37%, 33%);
 }
 
 .footer {
   display: flex;
   flex-direction: column;
-  width: 100%;
   flex: 1;
 }
 .footer__social {
@@ -237,6 +216,7 @@ body {
   text-align: center;
   width: 100%;
   height: 100%;
+  padding: 1rem;
 }
 .footer__attribution-content {
   align-self: flex-end;
@@ -281,34 +261,36 @@ span.instagram {
   }
 }
 @media (min-width: 980px) {
+  .header {
+    padding-block: 3.25rem 1.1rem;
+  }
   .header__logo {
     width: 216px;
-    margin-bottom: 14px;
-    margin-left: -4px;
+    margin-left: -0.25rem;
   }
   .main {
-    margin: 68px 0 15px;
-    flex-direction: row;
+    display: flex;
+    align-items: flex-start;
+    padding-block: 4rem 0.9375rem;
     justify-content: space-between;
-    gap: 2rem;
+    gap: 3rem;
   }
   .hero {
-    flex-direction: column;
-    justify-content: center;
-    margin: 0;
-    width: 54.8%;
-    max-width: 800px;
+    width: min(75%, 44.3rem);
+    margin-inline: 0 auto;
     text-align: left;
   }
   .hero__img {
     padding: 0;
   }
   .intro {
-    max-width: 524px;
+    width: min(100%, 33.25rem);
+    padding-block: clamp(0rem, -5.8587rem + 9.5652vw, 2.75rem) 0;
+    padding-inline: 0 0.5rem;
     text-align: left;
-    margin: 43px 8px 0 0;
   }
   .intro__title {
+    margin-inline: 0 auto;
     margin-bottom: 19px;
   }
   .intro__body {
