@@ -13,7 +13,7 @@
   --ls-input: -0.01rem;
   --debug: 1px solid blue;
   --pad-header: 2rem;
-  --pad-content: clamp(1rem, calc(-13.3077rem + 73.8462vw), 4rem);
+  --pad-content: clamp(2rem, calc(-13.3077rem + 73.8462vw), 4rem);
   --ff-primary: "Josefin Sans", sans-serif;
   --bkg-body: linear-gradient(135deg, hsl(0, 0%, 100%), hsl(0, 100%, 98%));
   --bkg-btn: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
@@ -255,15 +255,13 @@ input:-moz-placeholder {
   height: 100%;
 }
 
-.header,
-.hero,
-.main,
-.footer {
-  width: 100%;
+.main > *,
+.footer > * {
+  min-width: 20rem;
 }
 
 .container {
-  width: min(85%, 500px);
+  width: min(85%, 550px);
   margin-inline: auto;
   text-align: center;
 }
@@ -299,12 +297,10 @@ input:-moz-placeholder {
 }
 
 .main {
-  min-width: 20em;
   background: transparent;
 }
 .main__content {
   padding: var(--pad-content) 0;
-  margin-bottom: 2rem;
 }
 .main__content h2 {
   margin-bottom: 1rem;
@@ -377,7 +373,6 @@ input:-moz-placeholder {
 
 .footer {
   padding: 1em 0;
-  width: 100%;
   background: transparent;
 }
 
@@ -448,6 +443,7 @@ input:-moz-placeholder {
     grid-area: main;
   }
   .main, .main__content {
+    margin-bottom: 2rem;
     align-items: flex-start;
     justify-content: center;
   }

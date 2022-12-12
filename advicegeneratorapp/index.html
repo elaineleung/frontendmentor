@@ -20,33 +20,32 @@
     <title>Frontend Mentor | Advice generator app</title>
   </head>
   <body tabindex="0">
-    <div class="container">
-      <header>
-        <h1 class="visually-hidden">Advice generator</h1>
-      </header>
-      <main class="component" id="compEl" tabindex="0">
-        <div class="loading" id="loadingEl" aria-hidden="true">
-          <div aria-hidden="true"></div>
-          <div aria-hidden="true"></div>
-          <div aria-hidden="true"></div>
+    <header>
+      <h1 class="visually-hidden">Advice generator</h1>
+    </header>
+    <main class="main container">
+      <div class="loading" id="loadingEl" aria-hidden="true">
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+      <article class="advice" id="compEl" tabindex="0">
+        <h2 class="visually-hidden">Advice area: click on dice for advice</h2>
+        <div class="advice__inner">
+          <span class="advice__number"></span>
+          <p class="advice__text"></p>
         </div>
-        <article class="advice">
-          <h2 class="visually-hidden">Advice area: click on dice for advice</h2>
-          <div class="advice__inner">
-            <span class="advice__number"></span>
-            <p class="advice__text"></p>
-          </div>    
-          <div class="divider"></div>
-          <button class="dice" id="diceEl">
-            <img
-              src="./images/icon-dice.svg"
-              alt="click here for random advice"
-            />
-          </button>
-        </article>
-      </main>
-    </div>
-    <footer class="footer">
+        <div class="advice__divider"></div>
+        <button class="dice" id="diceEl">
+          <img
+            src="./images/icon-dice.svg"
+            alt="click here for random advice"
+          />
+        </button>
+      </article>
+    </main>
+    <!-- </div> -->
+    <footer class="footer container">
       <div class="footer__attribution">
         <p class="footer__attribution-content">
           Challenge by

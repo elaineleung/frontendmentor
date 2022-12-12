@@ -4,7 +4,6 @@
 // blocks
 
 body {
-  width: 100%;
   min-height: 100vh;
   position: relative;
   font-family: var(--ff-primary);
@@ -56,20 +55,40 @@ body {
 
 /* Structure */
 
-.container {
-  flex: 1 0 auto;
-  width: 100%;
-  min-height: 100%;
-  display: grid;
-  place-content: center;
+.main > *:not(.loading),
+.footer > * {
+  min-width: 300px;
 }
 
-.component {
-  width: min(91.45vw, 33.75rem);
+.container {
+  margin-inline: auto;
+  width: min(100vw - 4rem, var(--width));
+}
+
+.main.container {
+  --width: 33.75rem;
+  margin-block: 1rem;
+}
+
+.footer.container {
+  --width: 40rem;
+  margin-block: 2rem 1rem;
+}
+
+.main {
+  flex: 1;
+  display: grid;
+  align-content: center;
+  position: relative;
+}
+
+.advice {
   background-color: var(--clr-blue-darkgrayish);
   padding: 2.2em 0.9em 3.55em;
-  margin: 2rem 1rem 3rem;
   border-radius: 0.6em;
+  min-height: 125px;
+  opacity: 1;
+  transition: opacity 0.2s ease-in-out;
   position: relative;
   &:active,
   &:focus {
@@ -77,28 +96,29 @@ body {
   }
 }
 
-.advice {
-  min-height: 125px;
-  opacity: 1;
-  transition: opacity 0.2s ease-in-out;
-}
-
 // spinner
 
 .loading {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
   display: flex;
-  align-items: flex-end;
-  max-width: 12rem;
-  transform: translateY(260%);
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  // align-items: flex-end;
+  width: min(70%, 16rem);
   margin-inline: auto;
   justify-content: space-between;
-  opacity: 0.5;
-  transition: opacity 0.35s, transform 0.3s ease-in-out;
+  opacity: 0.4;
+  transition: opacity 0.2s;
 
   div {
     background-color: var(--clr-cyan-light);
-    width: 2rem;
-    height: 2rem;
+    width: clamp(2rem, 10vw, 3rem);
+    height: clamp(2rem, 10vw, 3rem);
     border-radius: 0.3rem;
     animation: load 1.5s infinite ease-in-out both;
     &:nth-child(2) {
@@ -110,7 +130,7 @@ body {
   }
 }
 
-[aria-hidden="false"].loading {
+.loading[aria-hidden="true"] {
   opacity: 0;
 }
 
@@ -141,26 +161,23 @@ body {
   &__text {
     margin-bottom: 0.95rem;
   }
-
+  &__divider {
+    width: 100%;
+    height: 1em;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url("./images/pattern-divider-mobile.svg");
+  }
 }
 
-[aria-hidden="true"].loading ~ .advice {
+.loading[aria-hidden="false"] ~ .advice {
   opacity: 0;
 }
 
-[aria-hidden="true"].loading ~ .advice > .advice__inner {
+.loading[aria-hidden="false"] ~ .advice > .advice__inner {
   height: 0;
   opacity: 0;
   transform: translateY(-100%);
-}
-
-
-.divider {
-  width: 100%;
-  height: 1em;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-image: url("./images/pattern-divider-mobile.svg");
 }
 
 .dice {
@@ -178,7 +195,7 @@ body {
   display: grid;
   place-content: center;
   box-shadow: 0 0 1rem var(--clr-blue-darkgrayish);
-    &:hover {
+  &:hover {
     box-shadow: 0 0 1.5rem var(--clr-green-neon);
   }
   &:focus {
@@ -191,9 +208,8 @@ body {
 
 .footer {
   display: flex;
-  width: 100%;
   flex: 0;
-  padding: 0.5rem;
+  // padding: 0.5rem;
   &__attribution {
     align-self: flex-end;
     text-align: center;
@@ -223,7 +239,6 @@ body {
   white-space: nowrap;
 }
 
-
 // Utils
 
 .block-footer {
@@ -233,15 +248,16 @@ body {
 // media queries
 
 @media (min-width: 456px) {
-  .component {
-    padding: 2.2em 2em 3.55em;
-  }
   .advice {
+    padding: 2.2em 2em 3.55em;
     &__number {
       margin-bottom: 1.9em;
     }
     &__text {
       margin-bottom: 1.44em;
+    }
+    &__divider {
+      background-image: url("./images/pattern-divider-desktop.svg");
     }
   }
 
@@ -259,10 +275,6 @@ body {
     &:hover {
       box-shadow: 0em 0em 1.4em var(--clr-green-neon);
     }
-  }
-
-  .divider {
-    background-image: url("./images/pattern-divider-desktop.svg");
   }
 
   .block-footer {
