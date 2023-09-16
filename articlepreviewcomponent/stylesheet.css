@@ -103,12 +103,10 @@ h6 {
     scroll-behavior: auto;
   }
   *,
-*::before,
-*::after {
-    -webkit-animation-duration: 0.01ms !important;
-            animation-duration: 0.01ms !important;
-    -webkit-animation-iteration-count: 1 !important;
-            animation-iteration-count: 1 !important;
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
   }
@@ -188,7 +186,7 @@ body {
   margin-inline: auto;
   position: relative;
   border-radius: 0.75rem;
-  box-shadow: 0 20px 50px hsl(213deg, 13%, 84%);
+  box-shadow: 0 20px 50px hsl(213, 13%, 84%);
 }
 .card__image img {
   width: 100%;
@@ -388,7 +386,7 @@ footer {
     width: 248px;
     background-color: var(--clr-grayblue-xdark);
     border-radius: 0.6rem;
-    box-shadow: 0 10px 20px hsl(209deg, 34%, 88%);
+    box-shadow: 0 10px 20px hsl(209, 34%, 88%);
   }
   .toggle.social .links__wrapper {
     position: relative;

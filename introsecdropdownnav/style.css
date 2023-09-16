@@ -125,12 +125,10 @@ h6 {
     scroll-behavior: auto;
   }
   *,
-*::before,
-*::after {
-    -webkit-animation-duration: 0.01ms !important;
-            animation-duration: 0.01ms !important;
-    -webkit-animation-iteration-count: 1 !important;
-            animation-iteration-count: 1 !important;
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
   }
@@ -439,11 +437,9 @@ button {
   opacity: 0;
   transform: translateY(-50%);
   transition: opacity 0.18s ease-in-out, transform 0.2s ease-in-out 0.1s;
-  -webkit-margin-start: 0.975rem;
-          margin-inline-start: 0.975rem;
+  margin-inline-start: 0.975rem;
 }
 .dropdown-items li a {
-  width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
   visibility: hidden;
@@ -628,9 +624,7 @@ button {
     margin-left: 1.8rem;
   }
   .nav .dropdown-items {
-    -webkit-margin-start: 0rem;
-            margin-inline-start: 0rem;
-    width: -webkit-max-content;
+    margin-inline-start: 0rem;
     width: -moz-max-content;
     width: max-content;
     top: 2.6rem;
@@ -674,8 +668,7 @@ button {
     height: 1rem;
   }
   .dropdown .link-name {
-    -webkit-margin-start: 0.1rem;
-            margin-inline-start: 0.1rem;
+    margin-inline-start: 0.1rem;
   }
   .login ul {
     flex-direction: row;
@@ -703,8 +696,7 @@ button {
     width: min(42%, 30rem);
   }
   .hero img {
-    -webkit-margin-start: auto;
-            margin-inline-start: auto;
+    margin-inline-start: auto;
   }
   .landing {
     margin-inline: clamp(0rem, -4.4rem + 7.3333vw, 2.2rem) auto;

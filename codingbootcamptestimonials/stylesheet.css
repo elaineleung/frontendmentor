@@ -111,12 +111,10 @@ h6 {
     scroll-behavior: auto;
   }
   *,
-*::before,
-*::after {
-    -webkit-animation-duration: 0.01ms !important;
-            animation-duration: 0.01ms !important;
-    -webkit-animation-iteration-count: 1 !important;
-            animation-iteration-count: 1 !important;
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
   }
@@ -235,8 +233,7 @@ body {
   position: absolute;
   left: 50%;
   bottom: -1.25rem;
-  -webkit-margin-start: -2.5rem;
-          margin-inline-start: -2.5rem;
+  margin-inline-start: -2.5rem;
   background-color: hsl(var(--clr-neutral-100));
   border-radius: 100vmax;
   z-index: 1;
@@ -470,8 +467,7 @@ body {
     display: inline-block;
   }
   .text-name {
-    -webkit-margin-end: 0.5rem;
-            margin-inline-end: 0.5rem;
+    margin-inline-end: 0.5rem;
   }
   .text-textbody {
     margin-bottom: 1.45rem;

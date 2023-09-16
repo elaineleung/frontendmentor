@@ -106,12 +106,10 @@ h6 {
     scroll-behavior: auto;
   }
   *,
-*::before,
-*::after {
-    -webkit-animation-duration: 0.01ms !important;
-            animation-duration: 0.01ms !important;
-    -webkit-animation-iteration-count: 1 !important;
-            animation-iteration-count: 1 !important;
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
   }
@@ -249,7 +247,7 @@ a:hover, a:active {
   border-radius: 1rem;
   width: min(100%, 21.85rem);
   min-width: 285px;
-  box-shadow: 5px 7px 20px hsl(217deg, 51%, 9%);
+  box-shadow: 5px 7px 20px hsl(217, 51%, 9%);
 }
 .card__image {
   width: 100%;
@@ -271,7 +269,7 @@ a:hover, a:active {
   top: 0;
   left: 0;
   z-index: 1;
-  background-color: hsla(178deg, 100%, 50%, 0.5);
+  background-color: hsla(178, 100%, 50%, 0.5);
   opacity: 0;
   display: grid;
   place-content: center;
@@ -316,8 +314,7 @@ a:hover, a:active {
   display: flex;
   align-items: center;
   gap: 0.5rem;
-  -webkit-margin-end: 0.1rem;
-          margin-inline-end: 0.1rem;
+  margin-inline-end: 0.1rem;
 }
 
 .creator__avatar {

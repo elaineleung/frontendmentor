@@ -288,7 +288,6 @@ body {
 }
 .thankyou__score {
   background-color: var(--clr-blue-medium);
-  width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
   margin: 0 auto 22px;

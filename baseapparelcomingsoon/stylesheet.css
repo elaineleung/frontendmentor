@@ -133,12 +133,10 @@ input[type=search]::-webkit-search-decoration {
     scroll-behavior: auto;
   }
   *,
-*::before,
-*::after {
-    -webkit-animation-duration: 0.01ms !important;
-            animation-duration: 0.01ms !important;
-    -webkit-animation-iteration-count: 1 !important;
-            animation-iteration-count: 1 !important;
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
   }
@@ -217,11 +215,6 @@ input::-moz-placeholder {
   opacity: 0.582;
 }
 
-input:-ms-input-placeholder {
-  color: hsla(var(--clr-primary-100), 0.9);
-  opacity: 0.582;
-}
-
 input::placeholder {
   color: hsla(var(--clr-primary-100), 0.9);
   opacity: 0.582;
@@ -273,7 +266,6 @@ input:-moz-placeholder {
 
 .logo {
   height: 1.5rem;
-  width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
 }

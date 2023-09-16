@@ -319,7 +319,7 @@ body {
 
 @media (min-width: 560px) {
   .spending,
-.balance {
+  .balance {
     border-radius: 1.25rem;
   }
   .balance {

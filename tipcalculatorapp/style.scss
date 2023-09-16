@@ -41,9 +41,9 @@
   --lh-body: 1.5;
   --lh-footer: 1.2;
 
-  --pad-header: 1rem;
+  --pad-header: clamp(2rem, 10vw, 3rem) 0.5rem;
   --pad-footer: 1rem 0.5rem 0.5rem;
-  --pad-app: 1.5rem;
+  --pad-app: 1rem;
   --pad-calculate: 0.5rem;
   --pad-results: 2.3rem 1.5rem 1.5rem;
 
@@ -60,7 +60,7 @@
     --pad-app: 2rem;
     --pad-calculate: 0.8rem 1rem 0.95rem;
     --pad-results: 3.2rem 2.5rem 2.5rem;
-    --pad-footer: 4.9rem 0.5rem 1rem;
+    // --pad-footer: 4.9rem 0.5rem 1rem;
   }
 }
 // @media (min-width: 960px) {
@@ -318,6 +318,7 @@ button:active,
   text-align: right;
   border-radius: 0.3rem;
   cursor: pointer;
+  appearance: textfield;
   -moz-appearance: textfield;
 }
 
@@ -325,7 +326,7 @@ button:active,
   -webkit-appearance: none;
   appearance: none;
   display: inline-block;
-  width: 100%;
+  // width: 100%;
   background-color: inherit;
   background-size: contain;
   border: 0;
@@ -367,7 +368,6 @@ button:active,
     }
   }
 }
-
 
 
 [type="text"]::placeholder {
@@ -412,10 +412,6 @@ fieldset[data-tab="true"]:focus-within {
   border-radius: 0.3rem;
 }
 
-.wrapper {
-  margin-inline: auto;
-}
-
 .visually-hidden {
   border: 0;
   clip: rect(0 0 0 0);
@@ -428,31 +424,47 @@ fieldset[data-tab="true"]:focus-within {
   white-space: nowrap;
 }
 
-.component {
-  flex: 1 1 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+// .component {
+//   display: flex;
+//   flex-direction: column;
+//   align-items: center;
+// }
+
+.container {
+  margin-inline: auto;
+  width: min(var(--percent) - var(--margin), var(--width));
+}
+
+.header.container,
+.main.container, 
+.footer.container {
+  --percent: 100%;
+  --margin: 0;
+  --width: 30em;
+}
+
+.header,
+.main,
+.footer > * {
+  min-width: 340px;
 }
 
 .header {
+  flex: 0;
   display: grid;
   place-content: center;
   align-items: stretch;
-  padding-top: 0.6rem;
-  height: 9rem;
+  margin-top: clamp(2rem, calc(-4.5000rem + 13.0000vw), 7.2rem);
 }
 
-.app {
+.main {
   flex: 1;
   align-self: end;
   margin-inline: auto;
-  min-width: 360px;
   border-radius: 1.5rem 1.5rem 0 0;
   outline: 0;
   border: 0;
-
-  &__container {
+  &__content {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(19.5rem, 1fr));
     gap: 1.5rem;
@@ -606,14 +618,11 @@ fieldset[data-tab="true"]:focus-within {
 }
  
 .footer {
-  flex: 0;
+  flex: 1;
   background-color: var(--clr-white);
-  align-self: flex-end;
   display: flex;
   justify-content: center;
-  width: 100%;
   text-align: center;
-  margin-inline: auto;
   &__content {
     align-self: flex-end;
   }
@@ -622,11 +631,16 @@ fieldset[data-tab="true"]:focus-within {
   }
 }
 
-@media (min-width: 428px) {
-  .app {
+@media (min-width: 30em) {
+  .main {
     border-radius: 1.5rem;
     box-shadow: 0px 10px 30px 5px hsla(186, 39%, 55%, 0.3);
   }
+  .main.container {
+    --margin: clamp(1rem, calc(-6.5000rem + 25.0000vw), 6rem);
+    --percent: 92%;
+    --width: 38rem;
+  }  
   .footer {
     background-color: transparent;
     span.after::after {
@@ -635,26 +649,24 @@ fieldset[data-tab="true"]:focus-within {
   }
 }
 
-@media (min-width: 720px) {
-  .component {
-    justify-content: center;
-    gap: clamp(2rem, calc(-0.9rem + 4.8333vw), 3.45rem);
-    padding: max(12.8vh, 2rem) 0;
+@media (min-width: 55em) {
+  .app {
+    gap: clamp(1rem, calc(-0.9rem + 4.8333vw), 2.5rem);
     margin-inline: auto;
   }
-  .header {
-    padding: 1rem;
-    height: fit-content;
-    margin-bottom: 0;
-  }
-  .app {
+  .main {
     flex: 0;
-    align-self: flex-start;
-    width: clamp(35rem, calc(-185.5rem + 360vw), 57.5rem);
-    &__container {
+    margin-bottom: 2rem;
+    &__content {
       gap: 2rem;
     }
   }
+  .main.container {
+    --width: 57.5rem;
+    --margin: clamp(2rem, 8vw, 8rem);
+    --percent: 92%;
+  }  
+
   .calculate {
     gap: 0.75rem;
     .options {

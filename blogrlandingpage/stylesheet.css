@@ -123,12 +123,10 @@ h6 {
     scroll-behavior: auto;
   }
   *,
-*::before,
-*::after {
-    -webkit-animation-duration: 0.01ms !important;
-            animation-duration: 0.01ms !important;
-    -webkit-animation-iteration-count: 1 !important;
-            animation-iteration-count: 1 !important;
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
   }
@@ -293,8 +291,8 @@ p {
 
 @media (max-width: 55em) {
   .navigation-secondary a::after,
-.dropdown-title::after,
-.login a:not(.cta)::after {
+  .dropdown-title::after,
+  .login a:not(.cta)::after {
     --bb-underline: var(--clr-blue-900);
   }
 }
@@ -374,7 +372,6 @@ body {
   background-repeat: no-repeat;
   background-size: 355%, auto;
   background-position: 36% 34%;
-  height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
   border-radius: 0 0 0 var(--br-section);
@@ -388,8 +385,7 @@ body {
 }
 .header-top .logo {
   width: 5.25rem;
-  -webkit-margin-end: 4rem;
-          margin-inline-end: 4rem;
+  margin-inline-end: 4rem;
 }
 .header-hero {
   padding-block: 7rem 7.2rem;
@@ -570,7 +566,7 @@ body {
     opacity: 0;
   }
   .navigation-primary .dropdown-btn,
-.navigation-primary .login a:not(.cta) {
+  .navigation-primary .login a:not(.cta) {
     --clr-nav: var(--clr-blue-900);
   }
   .navigation-primary > * + * {
@@ -741,7 +737,6 @@ body {
   background-position: center -14.5rem, center;
   margin-inline: auto;
   position: relative;
-  height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
   display: flex;
@@ -932,7 +927,6 @@ body {
     grid-row: 1/2;
     align-self: start;
     margin: 0;
-    width: -webkit-fit-content;
     width: -moz-fit-content;
     width: fit-content;
   }

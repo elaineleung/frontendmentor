@@ -227,9 +227,6 @@ h2.intro__title {
 .signup__form > div > input[type=text]:not(:focus):not(:-moz-placeholder-shown):valid, .signup__form > div > input[type=text]:not(:focus):not(:-moz-placeholder-shown):invalid, .signup__form > div > input[type=email]:not(:focus):not(:-moz-placeholder-shown):valid, .signup__form > div > input[type=email]:not(:focus):not(:-moz-placeholder-shown):invalid, .signup__form > div > input[type=password]:not(:focus):not(:-moz-placeholder-shown):valid, .signup__form > div > input[type=password]:not(:focus):not(:-moz-placeholder-shown):invalid {
   background: inherit;
 }
-.signup__form > div > input[type=text]:not(:focus):not(:-ms-input-placeholder):valid, .signup__form > div > input[type=text]:not(:focus):not(:-ms-input-placeholder):invalid, .signup__form > div > input[type=email]:not(:focus):not(:-ms-input-placeholder):valid, .signup__form > div > input[type=email]:not(:focus):not(:-ms-input-placeholder):invalid, .signup__form > div > input[type=password]:not(:focus):not(:-ms-input-placeholder):valid, .signup__form > div > input[type=password]:not(:focus):not(:-ms-input-placeholder):invalid {
-  background: inherit;
-}
 .signup__form > div > input[type=text]:not(:focus):not(:placeholder-shown):valid, .signup__form > div > input[type=text]:not(:focus):not(:placeholder-shown):invalid,
 .signup__form > div > input[type=email]:not(:focus):not(:placeholder-shown):valid,
 .signup__form > div > input[type=email]:not(:focus):not(:placeholder-shown):invalid,
@@ -238,9 +235,6 @@ h2.intro__title {
   background: inherit;
 }
 .signup__form > div > input[type=text]:not(:focus):not(:-moz-placeholder-shown):valid + label, .signup__form > div > input[type=text]:not(:focus):not(:-moz-placeholder-shown):invalid + label, .signup__form > div > input[type=email]:not(:focus):not(:-moz-placeholder-shown):valid + label, .signup__form > div > input[type=email]:not(:focus):not(:-moz-placeholder-shown):invalid + label, .signup__form > div > input[type=password]:not(:focus):not(:-moz-placeholder-shown):valid + label, .signup__form > div > input[type=password]:not(:focus):not(:-moz-placeholder-shown):invalid + label {
-  opacity: 0;
-}
-.signup__form > div > input[type=text]:not(:focus):not(:-ms-input-placeholder):valid + label, .signup__form > div > input[type=text]:not(:focus):not(:-ms-input-placeholder):invalid + label, .signup__form > div > input[type=email]:not(:focus):not(:-ms-input-placeholder):valid + label, .signup__form > div > input[type=email]:not(:focus):not(:-ms-input-placeholder):invalid + label, .signup__form > div > input[type=password]:not(:focus):not(:-ms-input-placeholder):valid + label, .signup__form > div > input[type=password]:not(:focus):not(:-ms-input-placeholder):invalid + label {
   opacity: 0;
 }
 .signup__form > div > input[type=text]:not(:focus):not(:placeholder-shown):valid + label, .signup__form > div > input[type=text]:not(:focus):not(:placeholder-shown):invalid + label,
@@ -278,10 +272,6 @@ h2.intro__title {
 }
 
 ::-moz-placeholder {
-  display: none;
-}
-
-:-ms-input-placeholder {
   display: none;
 }
 

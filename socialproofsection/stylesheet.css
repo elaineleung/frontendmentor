@@ -361,7 +361,6 @@ footer {
   }
   .card {
     padding: 2.6rem 2rem 2.4rem;
-    height: -webkit-fit-content;
     height: -moz-fit-content;
     height: fit-content;
   }

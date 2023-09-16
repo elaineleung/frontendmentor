@@ -149,12 +149,10 @@ h6 {
     scroll-behavior: auto;
   }
   *,
-*::before,
-*::after {
-    -webkit-animation-duration: 0.01ms !important;
-            animation-duration: 0.01ms !important;
-    -webkit-animation-iteration-count: 1 !important;
-            animation-iteration-count: 1 !important;
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
   }
@@ -408,7 +406,7 @@ nav a:hover {
   text-decoration: none;
   text-transform: uppercase;
   border: 0;
-  background: hsl(51deg, 100%, 49%);
+  background: hsl(51, 100%, 49%);
   padding: 1.25rem 1.5rem;
   font-weight: var(--fw-700);
 }
@@ -417,7 +415,7 @@ nav a:hover {
   outline: 1px solid;
 }
 .button:hover {
-  background: hsla(51deg, 100%, 49%, 0.7);
+  background: hsla(51, 100%, 49%, 0.7);
 }
 
 @media (min-width: 750px) {
@@ -433,7 +431,7 @@ nav a:hover {
     outline: 1px solid;
   }
   .button:hover {
-    background: hsla(0deg, 0%, 100%, 0.3);
+    background: hsla(0, 0%, 100%, 0.3);
     color: var(--clr-white);
   }
 }
@@ -551,7 +549,6 @@ nav a:hover {
     top: 0;
     width: 29.2rem;
     margin-right: 0.5rem;
-    height: -webkit-fit-content;
     height: -moz-fit-content;
     height: fit-content;
   }
@@ -611,7 +608,6 @@ nav a:hover {
   margin: 5.35rem 0 3.1rem;
 }
 .hero__arrow {
-  width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
   margin: 0 auto;
@@ -741,10 +737,6 @@ nav a:hover {
   width: 10.5rem;
   margin-bottom: 2.4rem;
 }
-.footer__logo svg {
-  width: 100%;
-  height: auto;
-}
 .footer__logo path {
   fill: var(--clr-primary-500);
 }
@@ -818,7 +810,6 @@ nav a:hover {
     word-spacing: -0.1rem;
   }
   .hero__arrow {
-    width: -webkit-fit-content;
     width: -moz-fit-content;
     width: fit-content;
   }

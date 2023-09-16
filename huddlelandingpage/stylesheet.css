@@ -175,13 +175,12 @@ body {
   margin: 0 auto;
   display: block;
   align-self: center;
-  width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
   background-color: var(--clr-white);
   padding: 0.875rem 4.75rem 0.75rem;
   border-radius: 1.25rem;
-  box-shadow: 2px 2px 5px hsl(257deg, 37%, 33%);
+  box-shadow: 2px 2px 5px hsl(257, 37%, 33%);
 }
 
 .footer {
@@ -303,7 +302,7 @@ span.instagram {
     align-self: left;
     padding: 16px 63px 19px 64px;
     border-radius: 32px;
-    box-shadow: 2px 4px 10px hsl(257deg, 37%, 29%);
+    box-shadow: 2px 4px 10px hsl(257, 37%, 29%);
   }
   .footer__social {
     width: 152px;
@@ -315,7 +314,7 @@ span.instagram {
     height: 40px;
   }
   span.facebook,
-span.twitter {
+  span.twitter {
     font-size: 17px;
   }
   span.instagram {

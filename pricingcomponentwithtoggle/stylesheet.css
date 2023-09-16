@@ -107,12 +107,10 @@ h6 {
     scroll-behavior: auto;
   }
   *,
-*::before,
-*::after {
-    -webkit-animation-duration: 0.01ms !important;
-            animation-duration: 0.01ms !important;
-    -webkit-animation-iteration-count: 1 !important;
-            animation-iteration-count: 1 !important;
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
   }
@@ -425,8 +423,7 @@ h1.title {
   display: inline-block;
 }
 .plan-details .price .dollar {
-  -webkit-margin-end: 0.5rem;
-          margin-inline-end: 0.5rem;
+  margin-inline-end: 0.5rem;
 }
 .plan-details .price .cost {
   letter-spacing: var(--ls-plan-cost);
@@ -466,7 +463,6 @@ h1.title {
   .plan {
     width: min(100%, 30em);
     margin-inline: 0;
-    height: -webkit-fit-content;
     height: -moz-fit-content;
     height: fit-content;
     padding: 2.25rem 2rem 1.95rem;
