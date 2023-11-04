@@ -43,7 +43,7 @@ function openElement() {
 
 function closeElement() {
   navToggleEl.setAttribute("aria-expanded", "false");
-  navListEl.setAttribute("hidden");
+  navListEl.setAttribute("hidden", "true")
   navHideEls.forEach((el) => el.removeAttribute("tabindex"));
 }
 
