@@ -38,3 +38,4 @@ GitHub landing page: [https://elaineleung.github.io/frontendmentor/](https://ela
 | 26  | [Pricing component with toggle](https://elaineleung.github.io/frontendmentor/pricingcomponentwithtoggle/)| [Link to GitHub repo](https://github.com/elaineleung/frontendmentor/tree/main/pricingcomponentwithtoggle/) |
 | 27  | [Calculator app](https://elaineleung.github.io/frontendmentor/calculatorapp/)| [Link to GitHub repo](https://github.com/elaineleung/frontendmentor/tree/main/calculatorapp/) |
 | 28  | [Blogr landing page](https://elaineleung.github.io/frontendmentor/blogrlandingpage/)| [Link to GitHub repo](https://github.com/elaineleung/frontendmentor/tree/main/blogrlandingpage/) |
+| 29  | [News Homepage](https://elaineleung.github.io/frontendmentor/newshomepage/)| [Link to GitHub repo](https://github.com/elaineleung/frontendmentor/tree/main/newshomepage/) |
