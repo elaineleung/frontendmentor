@@ -196,6 +196,12 @@ export const challenges = [
       "level": "Junior",
       "internalhost": true,
       "id": 28
+    },    {
+      "name": "newshomepage",
+      "title": "New Homepage",
+      "level": "Junior",
+      "internalhost": true,
+      "id": 29
     }
   ]
 

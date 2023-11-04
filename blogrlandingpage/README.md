@@ -66,7 +66,7 @@ Probably none!
 ## Author
 
 - Frontend Mentor - [@elaineleung](https://www.frontendmentor.io/profile/elaineleung)
-- Twitter - [@elaineclleung](https://twitter.com/elaineclleung)
+- Twitter - [@elainearray](https://twitter.com/elainearray)
 
 
 ## Acknowledgments

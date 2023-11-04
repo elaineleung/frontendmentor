@@ -33,7 +33,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Link to solution URL here](https://www.frontendmentor.io/solutions/responsive-landing-page-with-mobile-nav-and-dropdown-nav-VfVgqdT8Xe)
+- Solution URL: [Link to solution URL here](https://www.frontendmentor.io/solutions/responsive-news-homepage-with-mobile-nav-and-accessibility-design-IcU5INA1N2)
 - Live Site URL: [Link to live site](https://elaineleung.github.io/frontendmentor/newshomepage/)
 
 ## My process
@@ -82,7 +82,7 @@ I wanted to test this out on a screenreader; hopefully I can get around to it so
 ## Author
 
 - Frontend Mentor - [@elaineleung](https://www.frontendmentor.io/profile/elaineleung)
-- Twitter - [@elaineclleung](https://twitter.com/elainearray)
+- Twitter - [@elainearray](https://twitter.com/elainearray)
 
 ## Acknowledgments
 
