@@ -436,7 +436,7 @@ body:not(.with-js) .primary-navigation {
     z-index: -10;
   }
   html.open body.with-js .container {
-    margin-inline: 1rem auto;
+    margin-inline: auto;
   }
   .nav-primary-list {
     padding-block: 1.5rem 0;
