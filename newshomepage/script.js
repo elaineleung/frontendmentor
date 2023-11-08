@@ -6,6 +6,14 @@ const navFocusables = navEl.querySelectorAll("button, a");
 
 document.body.classList.add("with-js"); // Adds class if JS is available in browser
 
+document.body.querySelectorAll("a").forEach( link => {
+  link.addEventListener("click", function (event) {
+    event.preventDefault()
+    setTimeout(() => {
+      document.body.scrollIntoView(true)
+    }, 300)  })
+})
+
 window.addEventListener("keydown", (event) => loopFocusInNav(event));
 
 window.addEventListener("resize", (event) => {
@@ -17,13 +25,15 @@ window.addEventListener("resize", (event) => {
 navEl.addEventListener("click", (event) => {
   const target = event.target;
   
-  const isFocusable =
+  const navBtn =
     target.parentElement.localName === "button" ||
-    target.localName === "button" ||
+    target.localName === "button"
+  const navLink =
     target.parentElement.localName === "a" ||
     target.localName === "a";
 
-  if (isFocusable || target.classList.value === "overlay") toggleNav();
+  if (target.classList.value === "overlay" || navBtn ) toggleNav();
+  if (navLink) setTimeout(() => toggleNav(), 300) 
 });
 
 function toggleNav() {
@@ -66,3 +76,4 @@ function loopFocusInNav(event) {
     }
   }
 }
+
