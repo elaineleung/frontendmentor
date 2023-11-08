@@ -31,24 +31,24 @@ body {
   }
 }
 
-.footer {
+footer {
   color: var(--clr-white);
   font-weight: 400;
-  &__attribution {
+  .attribution {
     text-align: center;
     font-size: var(--fs-xsmall);
     color: inherit;
-  }
-  &__attribution a {
-    font-size: inherit;
-    color: inherit;
-    &:hover {
-      opacity: 0.8;
-    }
-    &:active,
-    &:focus {
-      border: 2px solid var(--clr-accent);
-      outline: 0;
+    a {
+      font-size: inherit;
+      color: inherit;
+      &:hover {
+        opacity: 0.8;
+      }
+      &:active,
+      &:focus {
+        border: 2px solid var(--clr-accent);
+        outline: 0;
+      }
     }
   }
 }
@@ -206,16 +206,19 @@ body {
   }
 }
 
-.footer {
+footer {
   display: flex;
   flex: 0;
   // padding: 0.5rem;
-  &__attribution {
+  .attribution {
     align-self: flex-end;
     text-align: center;
     width: 100%;
-    &-content {
-      margin: 0 auto;
+    span {
+      display: inline-block;
+    }
+    > * + * {
+      margin-left: 0.1rem;
     }
   }
 }

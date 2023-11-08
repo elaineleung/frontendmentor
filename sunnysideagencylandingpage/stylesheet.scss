@@ -776,6 +776,7 @@ nav {
     &-icon {
       display: block;
       svg {
+        width: 20px;
         fill: var(--clr-primary-500);
       }
       &:hover svg {
@@ -795,11 +796,15 @@ nav {
         opacity: 0.8;
       }
     }
-    &-content {
-      margin: 0 auto;
+    .attribution {
       align-self: flex-end;
-      .block-footer {
-        display: block;
+      text-align: center;
+      width: 100%;
+      span {
+        display: inline-block;
+      }
+      > * + * {
+        margin-left: 0.1rem;
       }
     }
 

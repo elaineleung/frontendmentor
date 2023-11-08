@@ -169,10 +169,6 @@ li {
   margin: 0rem auto;
 }
 
-.block-footer {
-  display: block;
-}
-
 .visually-hidden {
   clip: rect(0 0 0 0);
   clip-path: inset(50%);
@@ -232,16 +228,30 @@ li {
   }
 }
 
-.footer {
-  color: var(--clr-brown-dark);
-  &__attribution {
+footer {
+  color: inherit;
+  display: flex;
+  padding: 1rem 0.5rem;
+
+  .attribution {
+    align-self: flex-end;
     text-align: center;
     font-size: var(--fs-xsmall);
-    color: inherit;
-  }
-  &__attribution a {
-    font-size: inherit;
-    color: inherit;
+    width: 100%;
+    span {
+      display: inline-block;
+    }
+    a {
+      font-size: inherit;
+      color: inherit;
+      &:hover {
+        opacity: 0.8;
+      }
+    }
+    > * + * {
+      margin-left: 0.1rem;
+    }
+    
   }
 }
 

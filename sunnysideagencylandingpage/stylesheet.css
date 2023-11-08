@@ -757,6 +757,7 @@ nav a:hover {
   display: block;
 }
 .footer__social-icon svg {
+  width: 20px;
   fill: var(--clr-primary-500);
 }
 .footer__social-icon:hover svg {
@@ -775,12 +776,16 @@ nav a:hover {
 .footer__attribution a:hover {
   opacity: 0.8;
 }
-.footer__attribution-content {
-  margin: 0 auto;
+.footer__attribution .attribution {
   align-self: flex-end;
+  text-align: center;
+  width: 100%;
 }
-.footer__attribution-content .block-footer {
-  display: block;
+.footer__attribution .attribution span {
+  display: inline-block;
+}
+.footer__attribution .attribution > * + * {
+  margin-left: 0.1rem;
 }
 
 @media (min-width: 450px) {

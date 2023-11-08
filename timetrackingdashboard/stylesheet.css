@@ -152,10 +152,6 @@ li {
   margin: 0rem auto;
 }
 
-.block-footer {
-  display: block;
-}
-
 .visually-hidden {
   clip: rect(0 0 0 0);
   -webkit-clip-path: inset(50%);
@@ -207,17 +203,29 @@ li {
   letter-spacing: var(--ls-p-prev);
 }
 
-.footer {
-  color: var(--clr-brown-dark);
+footer {
+  color: inherit;
+  display: flex;
+  padding: 1rem 0.5rem;
 }
-.footer__attribution {
+footer .attribution {
+  align-self: flex-end;
   text-align: center;
   font-size: var(--fs-xsmall);
-  color: inherit;
+  width: 100%;
 }
-.footer__attribution a {
+footer .attribution span {
+  display: inline-block;
+}
+footer .attribution a {
   font-size: inherit;
   color: inherit;
+}
+footer .attribution a:hover {
+  opacity: 0.8;
+}
+footer .attribution > * + * {
+  margin-left: 0.1rem;
 }
 
 body {
