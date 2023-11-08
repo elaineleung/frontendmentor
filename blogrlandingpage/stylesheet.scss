@@ -976,10 +976,10 @@ body {
     flex-direction: column;
     padding-inline: 1rem;
     padding-block: 1.5rem;
-    &-content {
-      margin-top: auto;
-      justify-self: flex-end;
-    }
+    // &-content {
+    //   margin-top: auto;
+    //   justify-self: flex-end;
+    // }
   }
 }
 
@@ -1021,6 +1021,11 @@ body {
 
     .attribution {
       padding-block: 3.45rem 0.5rem;
+      flex-direction: row;
+      justify-content: center;
+      > * + * {
+        margin-left: 0.2rem;
+      }
     }
   }
 }

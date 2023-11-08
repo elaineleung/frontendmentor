@@ -339,14 +339,15 @@ body {
   }
 }
 
-.footer {
+footer {
   position: relative;
   display: flex;
   width: 100%;
   padding: 0.5rem;
   background-color: transparent;
   font-size: var(--fs-small);
-  &__attribution {
+  
+  .attribution {
     align-self: flex-end;
     text-align: center;
     width: 100%;
@@ -408,7 +409,7 @@ body {
   background-size: contain;
 }
 
-.footer::after {
+footer::after {
   content: "";
   position: absolute;
   z-index: -10;
@@ -436,7 +437,7 @@ body {
     height: 100px;
     background-position: top 0rem left 0;
   }
-  .footer::after {
+  footer::after {
     background-position: left 0 bottom 0rem;
   }
 }
@@ -523,7 +524,7 @@ body {
     }
   }
 
-  .footer {
+  footer {
     margin-block: 4rem 0rem;
   }
 }

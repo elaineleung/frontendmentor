@@ -568,21 +568,24 @@ button {
   justify-content: center;
 }
 
-.footer {
-  flex: 1;
+footer {
   display: flex;
-  align-items: flex-end;
-  flex-wrap: wrap;
-  justify-content: center;
+  flex: 0;
   padding: 0.5rem;
 }
-.footer .content {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-.footer a {
+footer a {
   text-decoration: underline;
+}
+footer .attribution {
+  align-self: flex-end;
+  text-align: center;
+  width: 100%;
+}
+footer .attribution span {
+  display: inline-block;
+}
+footer .attribution > * + * {
+  margin-left: 0.1rem;
 }
 
 @media (min-width: 375px) {

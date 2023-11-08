@@ -425,20 +425,26 @@ button {
   }
 }
 
-.footer {
-  flex: 1;
+
+footer {
   display: flex;
-  align-items: flex-end;
-  flex-wrap: wrap;
-  justify-content: center;
+  flex: 0;
   padding: 0.5rem;
-  .content {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
+
   a {
     text-decoration: underline;
+  }
+
+  .attribution {
+    align-self: flex-end;
+    text-align: center;
+    width: 100%;
+    span {
+      display: inline-block;
+    }
+    > * + * {
+      margin-left: 0.1rem;
+    }
   }
 }
 

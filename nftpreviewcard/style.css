@@ -183,10 +183,6 @@ h6 {
   line-height: var(--lh-product-description);
 }
 
-.lh-footer {
-  line-height: var(--lh-footer);
-}
-
 .bg-blue-900 {
   background-color: var(--clr-blue-900);
 }
@@ -330,7 +326,7 @@ a:hover, a:active {
   letter-spacing: 0.01rem;
 }
 
-.footer {
+footer {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
@@ -339,6 +335,9 @@ a:hover, a:active {
   padding: 1rem;
   margin-inline: auto;
 }
-.footer span {
+footer .attribution span {
   display: inline-block;
+}
+footer .attribution > * + * {
+  margin-left: 0.1rem;
 }/*# sourceMappingURL=style.css.map */

@@ -437,11 +437,17 @@ body {
 
 
 
-.footer {
-  width: 100%;
+footer {
+  font-size: var(--fs-footer);
+
   font-weight: 400;
-  .block-footer {
-    display: none;
+  padding-block: 1rem 0.5rem;
+  width: 100%;
+
+  .attribution {
+    display: flex;
+    flex-direction: column;
+    padding-inline: 1rem;
   }
 }
 
@@ -502,13 +508,18 @@ body {
     }
   }
 
-  .footer {
+  footer {
+
     .container {
       width: 100%;
     }
     padding-block: 1rem 0.5rem;
-    .block-footer {
-      display: inline;
+    .attribution {
+      flex-direction: row;
+      justify-content: center;
+      > * + * {
+        margin-left: 0.2rem;
+      }
     }
   }
 }
@@ -542,9 +553,6 @@ body {
 }
 .fs-small {
   font-size: var(--fs-small);
-}
-.fs-footer {
-  font-size: var(--fs-footer);
 }
 .fs-keys {
   font-size: var(--fs-keys);

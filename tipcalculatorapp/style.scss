@@ -617,17 +617,22 @@ fieldset[data-tab="true"]:focus-within {
   }
 }
  
-.footer {
+footer {
   flex: 1;
   background-color: var(--clr-white);
   display: flex;
   justify-content: center;
   text-align: center;
-  &__content {
+  
+  .attribution {
     align-self: flex-end;
+    padding-block: 1rem 0.8rem;
   }
   span {
     display: inline-block;
+  }
+  > * + * {
+    margin-left: 0.1rem;
   }
 }
 
@@ -641,11 +646,9 @@ fieldset[data-tab="true"]:focus-within {
     --percent: 92%;
     --width: 38rem;
   }  
-  .footer {
+  
+  footer {
     background-color: transparent;
-    span.after::after {
-      content: "";
-    }
   }
 }
 

@@ -607,18 +607,22 @@ fieldset[data-tab=true]:focus-within {
   outline: 0;
 }
 
-.footer {
+footer {
   flex: 1;
   background-color: var(--clr-white);
   display: flex;
   justify-content: center;
   text-align: center;
 }
-.footer__content {
+footer .attribution {
   align-self: flex-end;
+  padding-block: 1rem 0.8rem;
 }
-.footer span {
+footer span {
   display: inline-block;
+}
+footer > * + * {
+  margin-left: 0.1rem;
 }
 
 @media (min-width: 30em) {
@@ -631,11 +635,8 @@ fieldset[data-tab=true]:focus-within {
     --percent: 92%;
     --width: 38rem;
   }
-  .footer {
+  footer {
     background-color: transparent;
-  }
-  .footer span.after::after {
-    content: "";
   }
 }
 @media (min-width: 55em) {

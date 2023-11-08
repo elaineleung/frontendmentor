@@ -1,3 +1,8 @@
+export const info = {
+  "twitter": "https://twitter.com/elainearray",
+  "fem": "https://elaineleung.github.io/frontendmentor/"
+}
+
 export const challenges = [
     {
       "name": "ordersummary",
@@ -204,4 +209,3 @@ export const challenges = [
       "id": 29
     }
   ]
-

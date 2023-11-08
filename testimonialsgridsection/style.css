@@ -317,12 +317,20 @@ body {
   right: 1.5rem;
 }
 
-.footer {
-  justify-self: flex-end;
-  text-align: center;
+footer {
+  display: flex;
+  padding-block: 1rem 0.8rem;
 }
-.footer span {
+footer .attribution {
+  align-self: flex-end;
+  text-align: center;
+  width: 100%;
+}
+footer .attribution span {
   display: inline-block;
+}
+footer .attribution > * + * {
+  margin-left: 0.1rem;
 }
 
 @media (min-width: 600px) {

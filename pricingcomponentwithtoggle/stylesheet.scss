@@ -478,15 +478,14 @@ h1.title {
 
 // Footer
 
-.footer {
+footer {
   display: flex;
   flex: 0;
   padding: 0.5rem;
-  &__attribution {
+  .attribution {
     align-self: flex-end;
     text-align: center;
     width: 100%;
-    height: 100%;
     span {
       display: inline-block;
     }

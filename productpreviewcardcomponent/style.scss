@@ -174,9 +174,6 @@ h6 {
 .lh-product-description {
   line-height: var(--lh-product-description);
 }
-.lh-footer {
-  line-height: var(--lh-footer);
-}
 .bg-cream {
   background-color: var(--clr-cream);
 }
@@ -304,17 +301,19 @@ body {
   }
 }
 
-.attribution {
+footer {
   flex: 0;
   display: flex;
   width: 100%;
-  height: 100%;
   margin-top: 0.5rem;
-  &__content {
+  padding: 1rem 0.5rem;
+  line-height: var(--lh-footer);
+
+  .attribution {
     align-self: flex-end;
     margin-inline: auto;
-    .block-footer {
-      display: none;
+    span {
+      display: inline-block;
     }
     a {
       color: var(--clr-neutral-700);
@@ -366,8 +365,8 @@ body {
     }
   }
 
-  .attribution {
-    &__content {
+   footer {
+    .attribution {
       .block-footer {
         display: inline-block;
       }

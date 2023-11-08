@@ -1,4 +1,4 @@
-import { challenges } from './challenges.js'
+import { challenges } from "./data.js"
 
 loadData()
 

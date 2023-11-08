@@ -189,10 +189,6 @@ h6 {
 .lh-product-description {
   line-height: var(--lh-product-description);
 }
-.lh-footer {
-  line-height: var(--lh-footer);
-}
-
 .bg-blue-900 {
   background-color: var(--clr-blue-900);
 }
@@ -332,7 +328,7 @@ a {
   }
 }
 
-.footer {
+footer {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
@@ -340,7 +336,13 @@ a {
   text-align: center;
   padding: 1rem;
   margin-inline: auto;
-  span {
-    display: inline-block;
+
+  .attribution {
+    span {
+      display: inline-block;
+    }
+    > * + * {
+      margin-left: 0.1rem;
+    }
   }
 }

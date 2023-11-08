@@ -316,11 +316,20 @@ body {
   right: 1.5rem;
 }
 
-.footer {
-  justify-self: flex-end;
-  text-align: center;
-  span {
-    display: inline-block;
+footer {
+  display: flex;
+  padding-block: 1rem 0.8rem;
+
+  .attribution {
+    align-self: flex-end;
+    text-align: center;
+    width: 100%;
+    span {
+      display: inline-block;
+    }
+    > * + * {
+      margin-left: 0.1rem;
+    }
   }
 }
 

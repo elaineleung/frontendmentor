@@ -429,18 +429,17 @@ h1.title {
   letter-spacing: var(--ls-plan-cost);
 }
 
-.footer {
+footer {
   display: flex;
   flex: 0;
   padding: 0.5rem;
 }
-.footer__attribution {
+footer .attribution {
   align-self: flex-end;
   text-align: center;
   width: 100%;
-  height: 100%;
 }
-.footer__attribution span {
+footer .attribution span {
   display: inline-block;
 }
 
