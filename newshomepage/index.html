@@ -77,14 +77,21 @@
     <main class="container nav-hide">
       <h1 class="visually-hidden">News Homepage</h1>
       <section class="trending">
-        <img
+        <picture class="image">
+          <source media="(min-width: 55em)" srcset="./assets/images/image-web-3-desktop.jpg" />
+          <img
+            src="./assets/images/image-web-3-mobile.jpg"
+            alt="illustration of a representation of Web 3 containing blocks of different shapes"
+          />
+        </picture>
+        <!-- <img
           class="image"
           src="./assets/images/image-web-3-mobile.jpg"
           srcset="./assets/images/image-web-3-mobile.jpg 686w,
             ./assets/images/image-web-3-desktop.jpg 1460w"
           sizes="(min-width: 55em) 1460px"
           alt="illustration of a representation of Web 3 containing blocks of different shapes"
-        />
+        /> -->
         <h2 class="heading">The Bright Future of Web 3.0?</h2>
         <p class="bodytext">
           We dive into the next evolution of the web that claims to put the

@@ -585,8 +585,12 @@ main > section + section {
     grid-area: img;
     margin-bottom: 1.9rem;
     align-self: stretch;
+    height: auto;
+  }
+  .trending .image img {
     -o-object-fit: cover;
        object-fit: cover;
+    height: 100%;
   }
   .trending .heading {
     grid-area: heading;
