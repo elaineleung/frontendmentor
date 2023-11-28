@@ -618,7 +618,6 @@ main > section + section {
 }
 .new .headline {
   margin-bottom: 0.45rem;
-  text-wrap: balance;
 }
 
 @media (min-width: 55em) {

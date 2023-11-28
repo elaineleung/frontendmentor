@@ -42,7 +42,7 @@ function toggleNav() {
     : closeElement();
 
   // Prevents background from being scrollable
-  document.querySelector("html").classList.toggle("open");
+  // document.querySelector("html").classList.toggle("open");
 }
 
 function openElement() {
