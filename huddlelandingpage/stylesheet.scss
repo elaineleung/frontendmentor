@@ -87,6 +87,12 @@ body {
   position: relative;
 }
 
+a {
+  color: inherit;
+  &:hover {
+    opacity: 0.8;
+  }
+}
 /* Typography */
 
 .intro {
@@ -119,20 +125,15 @@ body {
   }
 }
 
-.footer {
-  &__social {
+footer {
+  .social {
     a {
       text-decoration: none;
     }
   }
-  &__attribution {
+  .attribution {
     text-align: center;
     font-size: var(--fs-xsmall);
-    color: inherit;
-  }
-  &__attribution a {
-    font-size: inherit;
-    color: inherit;
   }
 }
 
@@ -141,73 +142,77 @@ body {
 .container {
   width: min(100% - clamp(4.5rem, 18vw, 8rem), 81rem);
   margin-inline: auto;
-  display: grid;
-  align-items: center;
-  align-content: center;
+  // display: grid;
+  // align-items: center;
+  // align-content: center;
   margin-inline: auto;
 }
 
-.header {
+header {
   padding-block: 2rem 1rem;
   align-self: left;
   text-align: left;
-  &__logo {
+  .logo {
     width: 129px;
     margin-left: -0.1875rem;
   }
 }
 
-.main {
-  flex: 1;
+main {
+  // flex: 1;
   padding-block: 0 4rem;
-}
 
-.hero {
-  display: flex;
-  width: min(100%, 30rem);
-  margin-inline: auto;
-  &__img {
-    padding: 2.5625rem 0 3.4375rem;
-  }
-}
-
-.intro {
-  &__title {
-    margin-bottom: 0.8125rem;
+  .hero {
+    display: flex;
     width: min(100%, 30rem);
     margin-inline: auto;
+    &__img {
+      padding: 2.5625rem 0 3.4375rem;
+    }
   }
-  &__body {
-    margin-bottom: 1.5rem;
-  }
-  &__cta {
-    width: 100%;
-    &-btn {
-      cursor: pointer;
-      margin: 0 auto;
-      display: block;
-      align-self: center;
-      width: fit-content;
-      background-color: var(--clr-white);
-      padding: 0.875rem 4.75rem 0.75rem;
-      border-radius: 1.25rem;
-      box-shadow: 2px 2px 5px hsl(257, 37%, 33%);
+  
+  .intro {
+    &__title {
+      margin-bottom: 0.8125rem;
+      width: min(100%, 30rem);
+      margin-inline: auto;
+    }
+    &__body {
+      margin-bottom: 1.5rem;
+    }
+    &__cta {
+      width: 100%;
+      &-btn {
+        cursor: pointer;
+        margin: 0 auto;
+        display: block;
+        align-self: center;
+        width: fit-content;
+        background-color: var(--clr-white);
+        padding: 0.875rem 4.75rem 0.75rem;
+        border-radius: 1.25rem;
+        box-shadow: 2px 2px 5px hsl(257, 37%, 33%);
+      }
     }
   }
 }
 
-.footer {
+
+
+footer {
   display: flex;
   flex-direction: column;
   flex: 1;
-  &__social {    
+  padding: 0.5rem;
+
+  .social {    
     flex: 0 1 auto;
     width: 105px;
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
     margin-bottom: 6px;
-    &-icon {
+    &__icon {
       display: grid;
       place-content: center;
       border-radius: 50%;
@@ -221,25 +226,22 @@ body {
       }
     }
   }
-  &__attribution {
-    display: flex;
-    flex: 1;
+  .attribution {
+    align-self: flex-end;
     text-align: center;
     width: 100%;
-    height: 100%;
-    padding: 1rem;
-    &-content {
-      align-self: flex-end;  
-      margin: 0 auto;
+    padding-block: 1rem;
+    span {
+      display: inline-block;
+    }
+    > * + * {
+      margin-left: 0.1rem;
     }
   }
 }
 
 .block-title {
   display: inline;
-}
-.block-footer {
-  display: block;
 }
 
 .visually-hidden {
@@ -273,58 +275,63 @@ span.instagram {
 
 @media (min-width: 980px) {
 
-  .header {
+  header {
     padding-block: 3.25rem 1.1rem;
-    &__logo {
+    .logo {
       width: 216px;
       margin-left: -0.25rem;
     }
   }
-  .main {
+  main {
     display: flex;
-    align-items: flex-start;
+    flex:1;
+    align-items: center;
     padding-block: 4rem 0.9375rem;
     justify-content: space-between;
     gap: 3rem;
-  }
-  .hero {
-    width: min(75%, 44.3rem);
-    margin-inline: 0 auto;
-    text-align: left;
-    &__img {
-      padding: 0;
-    }
-  }
-  .intro {
-    width: min(100%, 33.25rem);
-    padding-block: clamp(0rem, calc(-5.8587rem + 9.5652vw), 2.75rem) 0;
-    padding-inline: 0 0.5rem;
-    text-align: left;
-    &__title {
+
+    .hero {
+      width: min(75%, 44.3rem);
       margin-inline: 0 auto;
-      margin-bottom: 19px;
-    }
-    &__body {
-      margin-bottom: 25px;
-    }
-    &__cta {
-      &-btn {
-        margin: 0 auto 0 0;
-        cursor: pointer;
-        display: block;
-        align-self: left;
-        padding: 16px 63px 19px 64px;
-        border-radius: 32px;
-        box-shadow: 2px 4px 10px hsl(257, 37%, 29%);
+      text-align: left;
+      &__img {
+        padding: 0;
       }
     }
+    .intro {
+      width: min(100%, 33.25rem);
+      padding-block: clamp(0rem, calc(-5.8587rem + 9.5652vw), 2.75rem) 0;
+      padding-inline: 0 0.5rem;
+      text-align: left;
+      &__title {
+        margin-inline: 0 auto;
+        margin-bottom: 19px;
+      }
+      &__body {
+        margin-bottom: 25px;
+      }
+      &__cta {
+        &-btn {
+          margin: 0 auto 0 0;
+          cursor: pointer;
+          display: block;
+          align-self: left;
+          padding: 16px 63px 19px 64px;
+          border-radius: 32px;
+          box-shadow: 2px 4px 10px hsl(257, 37%, 29%);
+        }
+      }
+    }
+
   }
-  .footer {
-    &__social {
+
+  footer {
+    flex: 0;
+    .social {
       width: 152px;
       margin: 1px 7px 0 auto;
       margin-bottom: 0px;
-      &-icon {
+      &__icon {
         width: 40px;
         height: 40px;
       }
@@ -341,12 +348,9 @@ span.instagram {
   .block-title {
     display: block;
   }
-  .block-footer {
-    display: inline;
-  }
 }
 
-@media (min-width: 1400px) {
+@media (min-width: 1500px) {
   body {
     background-image: url("./images/bg-desktop.svg");
     background-size: contain;

@@ -25,38 +25,34 @@
   <body>
     <main class="container">
       <section id="cardEl" class="card">
-        <div class="header">
-          <div class="header__logo">
-            <img
-              src="./images/icon-star.svg"
-              alt="orange star shaped icon"
-            />
-          </div>
-          <h1 class="header__title">How did we do?</h1>
+        <div class="logo">
+          <img src="./images/icon-star.svg" alt="orange star shaped icon" />
         </div>
-  
+        <h1 class="title">How did we do?</h1>
+
         <div class="content">
           <p class="textbody">
-            Please let us know how we did with your support request. All feedback
-            is appreciated to help us improve our offering!
-          
+            Please let us know how we did with your support request. All
+            feedback is appreciated to help us improve our offering!
           </p>
-   
+
           <form id="formEl" class="form">
             <div id="scoreEl" class="buttons" role="radiogroup">
-              <input type="radio" value="1" id="one" name="score"/>
+              <input type="radio" value="1" id="one" name="score" />
               <label for="one">1</label>
-              <input type="radio" value="2" id="two" name="score"/>
+              <input type="radio" value="2" id="two" name="score" />
               <label for="two">2</label>
-              <input type="radio" value="3" id="three" name="score"/>
+              <input type="radio" value="3" id="three" name="score" />
               <label for="three">3</label>
-              <input type="radio" value="4" id="four" name="score"/>
+              <input type="radio" value="4" id="four" name="score" />
               <label for="four">4</label>
-              <input type="radio" value="5" id="five" name="score"/>
+              <input type="radio" value="5" id="five" name="score" />
               <label for="five">5</label>
             </div>
             <div>
-              <button id="submitEl" type="submit" class="submit" disabled>Submit</button>
+              <button id="submitEl" type="submit" class="submit" disabled>
+                Submit
+              </button>
             </div>
           </form>
         </div>
@@ -64,18 +60,9 @@
     </main>
 
     <footer class="footer">
-      <div class="footer__attribution">
-        <p>
-          Challenge by
-          <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
-            >Frontend Mentor</a
-          >. Coded by <a href="https://twitter.com/elaineclleung">Elaine</a>.
-        </p>
-        <p>
-          Other <a href="https://elaineleung.github.io/frontendmentor/">Frontend Mentor Challenges</a> by Elaine
-        </p>
-      </div>
+      <p class="attribution"></p>
     </footer>
   </body>
   <script src="script.js"></script>
+  <script src="../public/js/footer.js" type="module"></script>
 </html>

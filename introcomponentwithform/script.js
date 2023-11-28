@@ -14,21 +14,25 @@ inputs.forEach(inputDiv => {
   const input = inputDiv.querySelector("input")
   const label = inputDiv.querySelector("label")
   const message = inputDiv.querySelector(".input__message")
+  const validRegex = /^[a-zA-Z0-9.!#$%&'*+\/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/
   
-  input.addEventListener("invalid", (event) => {
+  input.addEventListener("invalid", function (event) {
     event.preventDefault()
-    input.classList.add("is-invalid")
-    if(event.target.validity.valueMissing){
-      message.textContent = `${label.textContent} cannot be empty`
-    }
-    if(event.target.validity.patternMismatch){
+
+    this.classList.add("is-invalid")
+
+    if(!input.value.match(validRegex)){
       message.textContent = `Looks like this is not ${input.type === "email" ? "an" : "a"} ${input.type}`
     }
     if(event.target.validity.tooShort){
       message.textContent = `${label.textContent} needs to be longer than ${input.minLength} characters`
     }
+    if(event.target.validity.valueMissing){
+      message.textContent = `${label.textContent} cannot be empty`
+    }
 
-    // console.log(event.target.validity)
+
+    console.log(event.target.validity)
     // input.classList.add("is-invalid")
     // if(event.target.validity.valueMissing) {
     //   input.querySelector(".requirements").textContent = `Cannot be empty`

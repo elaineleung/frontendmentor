@@ -14,7 +14,7 @@
   --fs-score: 13.5px;
   --fs-cta: 14px;
   --fs-small: 14px;
-  --fs-xsmall: 10px;
+  --fs-xsmall: 12px;
   --lh-body: 1.5;
   --lh-title: 1.7;
   --lh-cta: 1.15;
@@ -87,6 +87,12 @@ button {
   outline: 0;
 }
 
+a {
+  color: inherit;
+}
+a:hover {
+  opacity: 0.8;
+}
 a:focus {
   outline: var(--clr-orange) 0.2rem solid;
 }
@@ -106,7 +112,7 @@ body {
 }
 
 /* Typography */
-.header__title {
+.title {
   font-weight: 700;
   color: var(--clr-white);
   font-size: var(--fs-title-rating);
@@ -143,15 +149,10 @@ body {
   letter-spacing: var(--ls-body-ty);
 }
 
-.footer__attribution {
+.attribution {
   text-align: center;
   font-size: var(--fs-xsmall);
   width: 100%;
-  color: inherit;
-}
-
-.footer__attribution a {
-  font-size: inherit;
   color: inherit;
 }
 
@@ -169,13 +170,7 @@ body {
   border-radius: 0.8em;
 }
 
-.header {
-  text-align: left;
-  display: flex;
-  flex-direction: column;
-  align-items: left;
-}
-.header__logo {
+.logo {
   background-color: var(--clr-blue-medium);
   width: 40px;
   height: 40px;
@@ -184,12 +179,13 @@ body {
   border-radius: 50%;
   margin-bottom: 14px;
 }
-.header__logo img {
+.logo img {
   width: 14px;
   height: 14px;
   margin: 0 auto;
 }
-.header__title {
+
+.title {
   margin-bottom: 6px;
 }
 
@@ -298,13 +294,21 @@ body {
   margin-bottom: 6px;
 }
 
-.footer {
+footer {
   padding: 20px 0;
   flex: 0;
 }
-
-.footer__attribution {
+footer .attribution {
   align-self: flex-end;
+  text-align: center;
+  width: 100%;
+  padding-block: 1rem;
+}
+footer .attribution span {
+  display: inline-block;
+}
+footer .attribution > * + * {
+  margin-left: 0.1rem;
 }
 
 @media (min-width: 640px) {

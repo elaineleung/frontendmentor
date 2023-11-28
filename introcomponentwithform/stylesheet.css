@@ -36,8 +36,6 @@
 @media (min-width: 769px) {
   :root {
     --fs-title: 48px;
-    --pad-ver-s: 40px;
-    --pad-ver-m: 70px;
     /* --bkg-body: linear-gradient(135deg, hsl(0, 0%, 100%), hsl(0, 40%, 91%)); */
   }
 }
@@ -101,10 +99,12 @@ button:focus {
   outline: 0;
 }
 
+a {
+  font-size: inherit;
+  color: inherit;
+}
+
 body {
-  width: 100%;
-  height: 100%;
-  min-width: 375px;
   min-height: 100vh;
   position: relative;
   font-family: var(--ff-primary);
@@ -116,25 +116,29 @@ body {
   background-size: cover;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
   padding: 0;
+  text-align: center;
 }
 
-.sr-only {
-  position: absolute;
-  top: -500px;
-  width: 1px;
+.visually-hidden {
+  clip: rect(0 0 0 0);
+  -webkit-clip-path: inset(50%);
+          clip-path: inset(50%);
   height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
 }
 
 /* Typography */
-h2.intro__title {
+.intro__title {
   font-weight: 700;
   font-size: var(--fs-title);
   line-height: var(--lh-title);
   letter-spacing: var(--ls-title);
 }
-
 .intro__body {
   letter-spacing: var(--ls-body);
 }
@@ -146,7 +150,6 @@ h2.intro__title {
   font-weight: 300;
   opacity: 0.9;
 }
-
 .banner__text span {
   font-weight: 600;
 }
@@ -159,42 +162,38 @@ h2.intro__title {
   line-height: var(--lh-cta);
   font-weight: 600;
 }
-
 .signup__tns {
   color: var(--clr-grayblue);
   font-size: var(--fs-xsmall);
   font-weight: 500;
   line-height: var(--lh-tns);
 }
-
 .signup__tns a {
   color: var(--clr-red);
   font-weight: 700;
   text-decoration: none;
 }
-
-.submit__title {
-  color: var(--clr-blue-dark);
-  font-weight: 600;
-}
-
-.submit__message {
-  color: var(--clr-blue-dark);
-}
-
-.signup__form > div {
-  position: relative;
-}
-.signup__form > div > label {
-  position: absolute;
+.signup__form ::-moz-placeholder {
+  /* Chrome/Opera/Safari */
   color: var(--clr-blue-dark);
   font-size: var(--fs-input);
   opacity: 0.7;
   font-weight: 600;
-  height: 100%;
-  top: 20px;
-  left: 20px;
   letter-spacing: var(--ls-input);
+}
+.signup__form ::placeholder,
+.signup__form ::-moz-placeholder,
+.signup__form ::-webkit-input-placeholder,
+.signup__form :-ms-input-placeholder {
+  /* Chrome/Opera/Safari */
+  color: var(--clr-blue-dark);
+  font-size: var(--fs-input);
+  opacity: 0.7;
+  font-weight: 600;
+  letter-spacing: var(--ls-input);
+}
+.signup__form > div {
+  position: relative;
 }
 .signup__form > div > input[type=text],
 .signup__form > div > input[type=email],
@@ -271,27 +270,16 @@ h2.intro__title {
   font-weight: 500;
 }
 
-::-moz-placeholder {
-  display: none;
+.submit__title {
+  color: var(--clr-blue-dark);
+  font-weight: 600;
+}
+.submit__message {
+  color: var(--clr-blue-dark);
 }
 
-::placeholder {
-  display: none;
-}
-
-::-moz-placeholder {
-  /* Firefox 19+ */
-  display: none;
-}
-
-:-ms-input-placeholder {
-  /* IE 10+ */
-  display: none;
-}
-
-:-moz-placeholder {
-  /* Firefox 18- */
-  display: none;
+.attribution {
+  font-size: var(--fs-small);
 }
 
 /* Structure */
@@ -302,14 +290,9 @@ h2.intro__title {
   width: 100%;
 }
 
-.banner,
-.signup__tns,
-.attribution {
-  text-align: center;
-}
-
-.main {
+main {
   width: clamp(375px, 65vw, 40em);
+  margin-inline: auto;
   height: 100%;
   display: flex;
   flex-grow: 1;
@@ -323,9 +306,7 @@ h2.intro__title {
 
 .intro {
   margin-bottom: 38px;
-  text-align: center;
 }
-
 .intro__title {
   margin-bottom: 22px;
 }
@@ -337,7 +318,6 @@ h2.intro__title {
   border-radius: 10px;
   filter: drop-shadow(0px 7px 1px var(--clr-red-dark));
 }
-
 .banner__text {
   width: clamp(220px, 48vw, 22em);
   margin: 0 auto;
@@ -346,14 +326,12 @@ h2.intro__title {
 .signup {
   position: relative;
 }
-
 .signup__content {
   background: var(--clr-white);
   padding: 24px;
   border-radius: 8px;
   filter: drop-shadow(0px 8px 1px var(--clr-red-dark));
 }
-
 .signup__form {
   width: 100%;
   display: flex;
@@ -361,9 +339,26 @@ h2.intro__title {
   row-gap: 16px;
   margin-bottom: 9px;
 }
-
 .signup__form > * {
   width: 100%;
+}
+.signup__submit {
+  cursor: pointer;
+  padding: 21px 0 13px;
+  border-radius: 5px;
+  background: var(--clr-green);
+  border-bottom: 4px solid var(--clr-green-dark);
+}
+.signup__submit:hover {
+  opacity: 0.7;
+}
+.signup__submit__title {
+  margin-bottom: 8px;
+}
+.signup__tns {
+  padding: 0 16px;
+  width: clamp(280px, 70vw, 22em);
+  margin: 0 auto;
 }
 
 .input {
@@ -374,67 +369,26 @@ h2.intro__title {
   display: flex;
   justify-content: space-between;
 }
-
 .input__message {
   margin-top: 4px;
   text-align: right;
 }
 
-button.signup__submit {
-  cursor: pointer;
-  padding: 21px 0 13px;
-  border-radius: 5px;
-  background: var(--clr-green);
-  border-bottom: 4px solid var(--clr-green-dark);
-}
-
-.signup__submit:hover {
-  opacity: 0.7;
-}
-
-.signup__tns {
-  padding: 0 16px;
-  width: clamp(280px, 70vw, 22em);
-  margin: 0 auto;
-}
-
-.submit__title,
-.submit__message {
-  text-align: center;
-}
-
-.submit__title {
-  margin-bottom: 8px;
-}
-
-.visually-hidden {
-  clip: rect(0 0 0 0);
-  -webkit-clip-path: inset(50%);
-          clip-path: inset(50%);
-  height: 1px;
-  overflow: hidden;
-  position: absolute;
-  white-space: nowrap;
-  width: 1px;
-}
-
-.attribution {
-  display: grid;
-  place-content: center;
+footer {
+  display: flex;
   width: 100%;
-  background: transparent;
-  color: inherit;
-  font-size: 11px;
-  height: 24px;
+  padding: 1rem 0.5rem;
 }
-
-.attribution__content {
-  text-align: inherit;
+footer .attribution {
+  align-self: flex-end;
+  text-align: center;
+  width: 100%;
 }
-
-.attribution a {
-  font-size: inherit;
-  color: inherit;
+footer .attribution span {
+  display: inline-block;
+}
+footer .attribution > * + * {
+  margin-left: 0.1rem;
 }
 
 @media (min-width: 1098px) {
@@ -443,10 +397,10 @@ button.signup__submit {
     background-position: top left 14px;
     background-size: 98% 100%;
   }
-  .main {
+  main {
     width: clamp(1000px, 77.1vw, 80em);
     display: grid;
-    padding: 0;
+    padding-block: 2rem;
     margin-top: 24px;
     place-content: center;
     grid-template-areas: "intro banner" "intro signup";
@@ -496,12 +450,12 @@ button.signup__submit {
   .signup__form div > .input.is-invalid {
     padding: 16px 30px 14px;
   }
-  .signup__form div .input__message {
+  .signup__form div > .input__message {
     margin-top: 4px;
     margin-bottom: -1px;
     text-align: right;
   }
-  button.signup__submit {
+  .signup__submit {
     padding: 21px 0 15px;
   }
   .signup__tns {

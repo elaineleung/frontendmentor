@@ -14,7 +14,7 @@
   --fs-score: 13.5px;
   --fs-cta: 14px;
   --fs-small: 14px;
-  --fs-xsmall: 10px;
+  --fs-xsmall: 12px;
   --lh-body: 1.5;
   --lh-title: 1.7;
   --lh-cta: 1.15;
@@ -88,8 +88,14 @@ button {
   outline: 0;
 }
 
-a:focus {
-  outline: var(--clr-orange) 0.2rem solid;
+a {
+  color: inherit;
+  &:hover {
+    opacity: 0.8;
+  }
+  &:focus {
+    outline: var(--clr-orange) 0.2rem solid;
+  }
 }
 
 body {
@@ -108,7 +114,7 @@ body {
 
 /* Typography */
 
-.header__title {
+.title {
   font-weight: 700;
   color: var(--clr-white);
   font-size: var(--fs-title-rating);
@@ -142,21 +148,16 @@ body {
     font-size: var(--fs-score);
     color: var(--clr-orange);
   }
-  
+
   &__body {
     letter-spacing: var(--ls-body-ty);
   }
 }
 
-.footer__attribution {
+.attribution {
   text-align: center;
   font-size: var(--fs-xsmall);
   width: 100%;
-  color: inherit;
-}
-
-.footer__attribution a {
-  font-size: inherit;
   color: inherit;
 }
 
@@ -179,30 +180,22 @@ body {
   border-radius: 0.8em;
 }
 
-.header {
-  text-align: left;
-  display: flex;
-  flex-direction: column;
-  align-items: left;
-  // rating logo
-
-  &__logo {
-    background-color: var(--clr-blue-medium);
-    width: 40px;
-    height: 40px;
-    display: grid;
-    place-content: center;
-    border-radius: 50%;
-    margin-bottom: 14px;
-    img {
-      width: 14px;
-      height: 14px;
-      margin: 0 auto;
-    }
+.logo {
+  background-color: var(--clr-blue-medium);
+  width: 40px;
+  height: 40px;
+  display: grid;
+  place-content: center;
+  border-radius: 50%;
+  margin-bottom: 14px;
+  img {
+    width: 14px;
+    height: 14px;
+    margin: 0 auto;
   }
-  &__title {
-    margin-bottom: 6px;
-  }
+}
+.title {
+  margin-bottom: 6px;
 }
 
 // rating title
@@ -217,22 +210,21 @@ body {
   }
 }
 
-
 // rating buttons
 
 [type="radio"] {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  clip: rect(0 0 0 0); 
+  clip: rect(0 0 0 0);
   clip-path: inset(50%);
   height: 1px;
   overflow: hidden;
   position: absolute;
-  white-space: nowrap; 
+  white-space: nowrap;
   width: 1px;
-} 
- 
+}
+
 [type="radio"] + label {
   display: inline-block;
   width: 100%;
@@ -297,7 +289,7 @@ body {
 }
 
 .submit:focus {
-  box-shadow: 0 0 0 0.2rem var(--clr-white);  
+  box-shadow: 0 0 0 0.2rem var(--clr-white);
 }
 
 // thank you state
@@ -322,14 +314,25 @@ body {
   }
 }
 
-.footer {
+footer {
   padding: 20px 0;
   flex: 0;
+
+  .attribution {
+    align-self: flex-end;
+    text-align: center;
+    width: 100%;
+    padding-block: 1rem;
+    span {
+      display: inline-block;
+    }
+    > * + * {
+      margin-left: 0.1rem;
+    }
+  }
 }
 
-.footer__attribution {
-  align-self: flex-end;
-}
+
 
 @media (min-width: 640px) {
   .card {
@@ -379,7 +382,6 @@ body {
       width: 162px;
       margin-bottom: 27px;
       margin-inline: auto;
-
     }
     &__score {
       margin: 0 auto 29px;

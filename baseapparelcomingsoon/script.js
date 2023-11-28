@@ -1,35 +1,37 @@
-const ctaEl = document.getElementById("ctaEl");
+const contentEl = document.querySelector(".content");
 const inputEl = document.getElementById("inputEl");
-const messageEl = document.getElementById("messageEl");
+const notificationEl = document.getElementById("notificationEl");;
 const formEl = document.getElementById("formEl");
 const btnEl = document.getElementById("btnEl");
 
 inputEl.addEventListener("invalid", (event) => {
+  const validRegex = /^[a-zA-Z0-9.!#$%&'*+\/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/
+
   event.preventDefault();
   if (!event.target.validity.valid) {
-    ctaEl.classList.add("error");
+    contentEl.classList.add("error");
     // inputEl.classList.add("invalid animated shake")
-    if (event.target.validity.patternMismatch) {
-      messageEl.textContent = "Please provide a valid email.";
+    if(!inputEl.value.match(validRegex)) {
+      notificationEl.textContent = "Please provide a valid email.";
     } else if (event.target.validity.valueMissing) {
-      messageEl.textContent =
+      notificationEl.textContent =
         "Email field cannot be empty. Please enter a valid email.";
     } else if (event.target.validity.tooShort) {
-      messageEl.textContent =
+      notificationEl.textContent =
         "Email address too short. Please enter a longer valid email address.";
     } else {
-      messageEl.textContent = "Please provide a valid email.";
+      notificationEl.textContent = "Please provide a valid email.";
     }
   }
 });
 
 inputEl.addEventListener("input", () => {
-  ctaEl.classList.remove("error");
+  contentEl.classList.remove("error");
 });
 
 formEl.addEventListener("submit", () => {
-  ctaEl.innerHTML = `
-        <div class="submit__message">
+  contentEl.innerHTML = `
+        <div class="content__message">
           <p>Thank you for signing up!</p>
           <p>We hope to share our latest updates with you soon.</p>
         </div>

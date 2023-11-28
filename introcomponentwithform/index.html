@@ -25,12 +25,12 @@
     <link rel="stylesheet" href="stylesheet.css" />
   </head>
   <body>
-    <header class="header">
-      <h1 class="sr-only">
-        Frontend Mentor challenge: Base Apparel coming soon page
+    <header>
+      <h1 class="visually-hidden">
+        Frontend Mentor challenge: Intro Component with Form
       </h1>
     </header>
-    <main class="main">
+    <main>
       <section class="intro">
         <h2 class="intro__title">Learn to code by watching others</h2>
         <p class="intro__body">
@@ -39,26 +39,25 @@
           invaluable.
         </p>
       </section>
-      <div class="banner">
+      <section class="banner">
         <p class="banner__text">
           <span>Try it free 7 days</span> then $20/mo. thereafter
         </p>
-      </div>
-      <div class="signup">
+      </section>
+      <section class="signup">
         <div class="signup__content" id="signupEl">
           <form id="formEl" class="signup__form">
             <div class="form__input input__firstname" id="firstnameEl">
-              <!-- <div class="input__field field-firstname"> -->
               <input
                 class="input input-firstname"
                 type="text"
                 id="firstname"
                 name="firstname"
-                placeholder=" "
+                placeholder="First Name"
                 minlength="2"
                 required
               />
-              <label for="firstname">First Name</label>
+              <label for="firstname" class="visually-hidden">First Name</label>
               <!-- </div> -->
               <p class="input__message message-firstname"></p>
             </div>
@@ -69,10 +68,10 @@
                 name="lastname"
                 id="lastname"
                 minlength="2"
-                placeholder=" "
+                placeholder="Last Name"
                 required
               />
-              <label for="lastname">Last Name</label>
+              <label for="lastname" class="visually-hidden">Last Name</label>
               <p class="input__message message-lastname"></p>
             </div>
             <div class="form__input input__email" id="emailEl">
@@ -81,12 +80,11 @@
                 type="email"
                 name="email"
                 id="email"
-                placeholder=" "
-                minlength="8"
-                pattern="^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$"
+                placeholder="Email Address"
+                minlength="6"
                 required
               />
-              <label for="email">Email Address</label>
+              <label for="email" class="visually-hidden">Email Address</label>
               <p class="input__message message-email"></p>
             </div>
             <div class="form__input input__password" id="passwordEl">
@@ -95,11 +93,11 @@
                 type="password"
                 name="password"
                 id="password"
-                placeholder=" "
+                placeholder="Password"
                 minlength="8"
                 required
               />
-              <label for="password">Password</label>
+              <label for="password" class="visually-hidden">Password</label>
               <p class="input__message message-password"></p>
             </div>
             <button
@@ -116,17 +114,13 @@
             <a href="/#">Terms and Services</a>
           </p>
         </div>
-      </div>
+      </section>
     </main>
 
-    <footer class="attribution">
-      <p class="attribution__content">
-        Challenge by
-        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
-          >Frontend Mentor</a
-        >. Coded by <a href="https://twitter.com/elaineclleung">Elaine</a>.
-      </p>
+    <footer>
+      <p class="attribution"></p>
     </footer>
     <script src="script.js"></script>
+    <script src="../public/js/footer.js" type="module"></script>
   </body>
 </html>
