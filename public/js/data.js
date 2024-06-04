@@ -138,13 +138,11 @@ export const challenges = [
       "id": 19
     },
     {
-      "name": "introsecdropdownnav",
+      "name": "introsecdropdownnav-react",
       "title": "Intro section with dropdown nav (React)",
       "level": "Junior",
-      "internalhost": false,
+      "internalhost": true,
       "id": 20,
-      "url": "https://fem-introsecdropdownnav.vercel.app/",
-      "repo": "https://github.com/elaineleung/fem-introsecdropdownnav"
     },
     {
       "name": "nftpreviewcard",
